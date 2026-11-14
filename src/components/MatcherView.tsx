@@ -91,22 +91,26 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
     return [...new Set(cards.filter((card) => form.fuelClass === "any" || card.fuel_class === form.fuelClass).map((card) => card.fuel_name))].sort();
   }, [cards, form.fuelClass]);
 
-  const query: ConditionQuery | null = valid
-    ? {
-        o2Pct,
-        pressureKpa,
-        gravity: form.gravity,
-        fuelClass: form.fuelClass,
-        flowCmS: form.flow ? Number(form.flow) : null,
-        fuelName: form.fuelName || null,
-      }
-    : null;
+  const query: ConditionQuery | null = useMemo(
+    () =>
+      valid
+        ? {
+            o2Pct,
+            pressureKpa,
+            gravity: form.gravity,
+            fuelClass: form.fuelClass,
+            flowCmS: form.flow ? Number(form.flow) : null,
+            fuelName: form.fuelName || null,
+          }
+        : null,
+    [valid, o2Pct, pressureKpa, form.gravity, form.fuelClass, form.flow, form.fuelName],
+  );
 
   const result = useMemo(() => {
     if (!cards || !query) return null;
     const pool = query.fuelName ? cards.filter((card) => card.fuel_name === query.fuelName) : cards;
     return classifyEvidence(query, pool);
-  }, [cards, query?.o2Pct, query?.pressureKpa, query?.gravity, query?.fuelClass, query?.fuelName, query?.flowCmS]);
+  }, [cards, query]);
 
   const nearestInvestigations = [...new Set(result?.nearestCards.map((entry) => entry.card.investigation_id) ?? [])];
   const related = query ? relevantFindings(query, nearestInvestigations, findings) : [];

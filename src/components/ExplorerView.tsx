@@ -116,6 +116,9 @@ export function ExplorerView({ hulls, envelopes }: { hulls: Hull[]; envelopes: I
           ) : (
             <div className="flex h-[560px] items-center justify-center text-sm text-muted">Loading 1,732 burn cards…</div>
           )}
+          <p className="px-2 pb-1 pt-2 text-[11px] text-muted sm:hidden">
+            <span style={{ color: fuelColors.gas }}>● gas</span> · <span style={{ color: fuelColors.liquid }}>● liquid</span> · <span style={{ color: fuelColors.solid }}>● solid</span> · filled = stated, open = nominal · ◆ lunar · ■ 1 g control · <span className="text-habitat">+ habitats</span> · green ring = d ≤ 0.35
+          </p>
           {options.gravityOverlay && analysis ? (
             <p className="px-2 pb-2 text-sm text-tier-analog">
               Gravity overlay: only {analysis.nonMicro.length} of {cards?.length} cards are not microgravity ({analysis.nonMicro.map((card) => card.card_id).join(", ")}), all LUCI at 20–21% O₂ and normal pressure. Large diamonds are lunar, squares are the 1 g controls.
@@ -278,7 +281,7 @@ export function ExplorerView({ hulls, envelopes }: { hulls: Hull[]; envelopes: I
             })}
         </div>
         <p className="mt-3 text-[11px] text-muted">
-          Bar colour = best dataset tier: {Object.entries(datasetTierLabels).map(([key, value]) => `${value.short} ${value.label}`).join(" · ")}. Scale 0–90% O₂.
+          Bar colour = best dataset tier: {Object.values(datasetTierLabels).map((value) => `${value.short} ${value.label}`).join(" · ")}. Scale 0–90% O₂.
         </p>
       </section>
 

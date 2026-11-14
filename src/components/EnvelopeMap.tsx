@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Data, Layout, PlotMouseEvent } from "plotly.js";
 import { basisKind, isSolidBasis, normalizeGravity, type GravityRegime } from "@/lib/basis";
 import { distanceEllipse } from "@/lib/geometry";
@@ -61,6 +61,14 @@ export function EnvelopeMap({
   height?: number;
 }) {
   const byId = useMemo(() => new Map(cards.map((card) => [card.card_id, card])), [cards]);
+  const [narrow, setNarrow] = useState(false);
+  useEffect(() => {
+    const query = window.matchMedia("(max-width: 640px)");
+    const update = () => setNarrow(query.matches);
+    update();
+    query.addEventListener("change", update);
+    return () => query.removeEventListener("change", update);
+  }, []);
 
   const data = useMemo(() => {
     const traces: Data[] = [];
@@ -244,11 +252,12 @@ export function EnvelopeMap({
         ticktext: options.logX ? ["25", "30", "40", "56.5", "70", "101", "150", "200", "300", "500"] : undefined,
       },
       yaxis: { ...darkAxis, title: { text: "Oxygen (% by volume)" }, range: [8, 60] },
+      showlegend: !narrow,
       legend: { orientation: "h", y: 1.01, yanchor: "bottom", x: 0, bgcolor: "rgba(0,0,0,0)", font: { size: 11 } },
-      margin: { l: 56, r: 12, t: 64, b: 48 },
+      margin: { l: 48, r: 8, t: narrow ? 12 : 64, b: 48 },
       dragmode: "pan",
     }),
-    [options.logX, height],
+    [options.logX, height, narrow],
   );
 
   const handleClick = (event: PlotMouseEvent) => {

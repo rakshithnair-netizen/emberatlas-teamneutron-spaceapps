@@ -54,11 +54,6 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
   const [hoveredEdge, setHoveredEdge] = useState<FamilyTreeEdge | null>(null);
 
   const infoById = useMemo(() => new Map(nodeInfo.map((node) => [node.investigation_id, node])), [nodeInfo]);
-  const familyOf = useMemo(() => {
-    const map = new Map<string, (typeof families)[number]>();
-    families.forEach((family) => family.ids.forEach((id) => map.set(id, family)));
-    return map;
-  }, []);
 
   const sharedOptions = useMemo(() => {
     const values = new Set<string>();

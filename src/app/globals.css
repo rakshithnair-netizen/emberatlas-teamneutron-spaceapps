@@ -133,3 +133,12 @@ input,
 textarea {
   color-scheme: dark;
 }
+
+.grid > * {
+  min-width: 0;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
