@@ -1,0 +1,1919 @@
+[
+ {
+  "edge_id": "E0001",
+  "source_investigation": "PSI-47",
+  "target_investigation": "PSI-102",
+  "edge_type": "precursor_of",
+  "shared_items": "DAFT checked the modified particle counter ahead of SAME",
+  "weight": 1,
+  "basis": "nasa_stated",
+  "evidence_source_ids": [
+   "S37"
+  ],
+  "directed": true
+ },
+ {
+  "edge_id": "E0002",
+  "source_investigation": "PSI-69",
+  "target_investigation": "PSI-68",
+  "edge_type": "follow_on_of",
+  "shared_items": "FLEX-2 builds upon FLEX",
+  "weight": 1,
+  "basis": "nasa_stated",
+  "evidence_source_ids": [
+   "S15"
+  ],
+  "directed": true
+ },
+ {
+  "edge_id": "E0003",
+  "source_investigation": "PSI-98",
+  "target_investigation": "PSI-99",
+  "edge_type": "series_succession",
+  "shared_items": "Saffire-I then Saffire-II",
+  "weight": 1,
+  "basis": "nasa_stated",
+  "evidence_source_ids": [
+   "S26"
+  ],
+  "directed": true
+ },
+ {
+  "edge_id": "E0004",
+  "source_investigation": "PSI-99",
+  "target_investigation": "PSI-100",
+  "edge_type": "series_succession",
+  "shared_items": "Saffire-II then Saffire-III",
+  "weight": 1,
+  "basis": "nasa_stated",
+  "evidence_source_ids": [
+   "S26"
+  ],
+  "directed": true
+ },
+ {
+  "edge_id": "E0005",
+  "source_investigation": "PSI-100",
+  "target_investigation": "SAFFIRE-IV",
+  "edge_type": "series_succession",
+  "shared_items": "Saffire-III then Saffire-IV",
+  "weight": 1,
+  "basis": "nasa_stated",
+  "evidence_source_ids": [
+   "S26",
+   "S29"
+  ],
+  "directed": true
+ },
+ {
+  "edge_id": "E0006",
+  "source_investigation": "SAFFIRE-IV",
+  "target_investigation": "SAFFIRE-V",
+  "edge_type": "series_succession",
+  "shared_items": "Saffire-IV then Saffire-V",
+  "weight": 1,
+  "basis": "nasa_stated",
+  "evidence_source_ids": [
+   "S26",
+   "S29"
+  ],
+  "directed": true
+ },
+ {
+  "edge_id": "E0007",
+  "source_investigation": "SAFFIRE-V",
+  "target_investigation": "SAFFIRE-VI",
+  "edge_type": "series_succession",
+  "shared_items": "Saffire-VI builds on Saffire-I through V",
+  "weight": 1,
+  "basis": "nasa_stated",
+  "evidence_source_ids": [
+   "S26"
+  ],
+  "directed": true
+ },
+ {
+  "edge_id": "E0008",
+  "source_investigation": "PSI-102",
+  "target_investigation": "PSI-115",
+  "edge_type": "data_reused_by",
+  "shared_items": "PSI-115 models smoke generation using SAME data",
+  "weight": 1,
+  "basis": "investigation_title",
+  "evidence_source_ids": [
+   "PSI-115"
+  ],
+  "directed": true
+ },
+ {
+  "edge_id": "E0009",
+  "source_investigation": "PSI-107",
+  "target_investigation": "PSI-60",
+  "edge_type": "data_reused_by",
+  "shared_items": "PSI-60 analyses SPICE data sets",
+  "weight": 1,
+  "basis": "investigation_title",
+  "evidence_source_ids": [
+   "PSI-60"
+  ],
+  "directed": true
+ },
+ {
+  "edge_id": "E0010",
+  "source_investigation": "PSI-26",
+  "target_investigation": "PSI-62",
+  "edge_type": "data_reused_by",
+  "shared_items": "PSI-62 compares flame spread modelling with BASS experiments",
+  "weight": 1,
+  "basis": "investigation_title",
+  "evidence_source_ids": [
+   "PSI-62"
+  ],
+  "directed": true
+ },
+ {
+  "edge_id": "E0011",
+  "source_investigation": "PSI-25",
+  "target_investigation": "PSI-62",
+  "edge_type": "data_reused_by",
+  "shared_items": "PSI-62 compares flame spread modelling with BASS experiments (BASS or BASS-II not specified)",
+  "weight": 1,
+  "basis": "investigation_title",
+  "evidence_source_ids": [
+   "PSI-62"
+  ],
+  "directed": true
+ },
+ {
+  "edge_id": "E0012",
+  "source_investigation": "PSI-69",
+  "target_investigation": "PSI-117",
+  "edge_type": "related_via_keyword",
+  "shared_items": "FLEX appears in PSI-117 keywords (cool flame dynamics)",
+  "weight": 1,
+  "basis": "investigation_keywords",
+  "evidence_source_ids": [
+   "PSI-117"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0013",
+  "source_investigation": "PSI-69",
+  "target_investigation": "PSI-142",
+  "edge_type": "related_via_keyword",
+  "shared_items": "FLEX appears in PSI-142 keywords (cool flame transitions)",
+  "weight": 1,
+  "basis": "investigation_keywords",
+  "evidence_source_ids": [
+   "PSI-142"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0014",
+  "source_investigation": "PSI-39",
+  "target_investigation": "PSI-117",
+  "edge_type": "related_via_topic",
+  "shared_items": "cool flames",
+  "weight": 1,
+  "basis": "investigation_title",
+  "evidence_source_ids": [
+   "PSI-39",
+   "PSI-117"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0015",
+  "source_investigation": "PSI-39",
+  "target_investigation": "PSI-142",
+  "edge_type": "related_via_topic",
+  "shared_items": "cool flames",
+  "weight": 1,
+  "basis": "investigation_title",
+  "evidence_source_ids": [
+   "PSI-39",
+   "PSI-142"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0016",
+  "source_investigation": "PSI-106",
+  "target_investigation": "PSI-107",
+  "edge_type": "same_test_campaign",
+  "shared_items": "SLICE table notes SPICE testing on its last test day (2012)",
+  "weight": 1,
+  "basis": "psi_experimental_table",
+  "evidence_source_ids": [
+   "PSI-106"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0017",
+  "source_investigation": "PSI-26",
+  "target_investigation": "PSI-25",
+  "edge_type": "series_succession",
+  "shared_items": "BASS then BASS-II (same MSG hardware)",
+  "weight": 1,
+  "basis": "inferred_from_name",
+  "evidence_source_ids": [
+   "PSI-25",
+   "PSI-26"
+  ],
+  "directed": true
+ },
+ {
+  "edge_id": "E0018",
+  "source_investigation": "PSI-99",
+  "target_investigation": "SAFFIRE-IV",
+  "edge_type": "related_materials",
+  "shared_items": "Saffire-IV burned the same materials as Saffire-II at different conditions",
+  "weight": 1,
+  "basis": "nasa_stated",
+  "evidence_source_ids": [
+   "S26"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0019",
+  "source_investigation": "PSI-26",
+  "target_investigation": "SAFFIRE-V",
+  "edge_type": "validation_link",
+  "shared_items": "BASS-II/Saffire compare small-scale tests with large-scale exploration-atmosphere fires",
+  "weight": 1,
+  "basis": "nasa_stated",
+  "evidence_source_ids": [
+   "S31"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0020",
+  "source_investigation": "SAFFIRE-VI",
+  "target_investigation": "LUCI",
+  "edge_type": "complementary_evidence",
+  "shared_items": "Large-scale microgravity fire vs lunar-gravity small-scale fire: both feed the 1-g screening gap",
+  "weight": 1,
+  "basis": "nasa_stated",
+  "evidence_source_ids": [
+   "S09",
+   "S10"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0021",
+  "source_investigation": "LUCI",
+  "target_investigation": "FM2",
+  "edge_type": "precursor_of",
+  "shared_items": "LUCI is a stepping stone to FM2 on the lunar surface",
+  "weight": 1,
+  "basis": "nasa_stated",
+  "evidence_source_ids": [
+   "S07"
+  ],
+  "directed": true
+ },
+ {
+  "edge_id": "E0022",
+  "source_investigation": "PSI-100",
+  "target_investigation": "PSI-25",
+  "edge_type": "shared_fuel",
+  "shared_items": "SIBAL;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-100",
+   "PSI-25"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0023",
+  "source_investigation": "PSI-100",
+  "target_investigation": "PSI-26",
+  "edge_type": "shared_fuel",
+  "shared_items": "SIBAL;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-100",
+   "PSI-26"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0024",
+  "source_investigation": "PSI-100",
+  "target_investigation": "PSI-98",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-100",
+   "PSI-98"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0025",
+  "source_investigation": "PSI-100",
+  "target_investigation": "PSI-98",
+  "edge_type": "shared_fuel",
+  "shared_items": "SIBAL;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-100",
+   "PSI-98"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0026",
+  "source_investigation": "PSI-100",
+  "target_investigation": "PSI-99",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-100",
+   "PSI-99"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0027",
+  "source_investigation": "PSI-100",
+  "target_investigation": "PSI-99",
+  "edge_type": "shared_fuel",
+  "shared_items": "SIBAL;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-100",
+   "PSI-99"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0028",
+  "source_investigation": "PSI-100",
+  "target_investigation": "SAFFIRE-IV",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-100",
+   "SAFFIRE-IV"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0029",
+  "source_investigation": "PSI-100",
+  "target_investigation": "SAFFIRE-IV",
+  "edge_type": "shared_fuel",
+  "shared_items": "SIBAL;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-100",
+   "SAFFIRE-IV"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0030",
+  "source_investigation": "PSI-100",
+  "target_investigation": "SAFFIRE-V",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-100",
+   "SAFFIRE-V"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0031",
+  "source_investigation": "PSI-100",
+  "target_investigation": "SAFFIRE-V",
+  "edge_type": "shared_fuel",
+  "shared_items": "cotton",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-100",
+   "SAFFIRE-V"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0032",
+  "source_investigation": "PSI-100",
+  "target_investigation": "SAFFIRE-VI",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-100",
+   "SAFFIRE-VI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0033",
+  "source_investigation": "PSI-100",
+  "target_investigation": "SAFFIRE-VI",
+  "edge_type": "shared_fuel",
+  "shared_items": "SIBAL;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-100",
+   "SAFFIRE-VI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0034",
+  "source_investigation": "PSI-100",
+  "target_investigation": "LUCI",
+  "edge_type": "shared_fuel",
+  "shared_items": "SIBAL;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-100",
+   "LUCI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0035",
+  "source_investigation": "PSI-102",
+  "target_investigation": "PSI-99",
+  "edge_type": "shared_fuel",
+  "shared_items": "silicone",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-102",
+   "PSI-99"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0036",
+  "source_investigation": "PSI-106",
+  "target_investigation": "PSI-107",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethane;ethylene",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-106",
+   "PSI-107"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0037",
+  "source_investigation": "PSI-106",
+  "target_investigation": "PSI-10",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-106",
+   "PSI-10"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0038",
+  "source_investigation": "PSI-106",
+  "target_investigation": "PSI-159",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethane",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-106",
+   "PSI-159"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0039",
+  "source_investigation": "PSI-106",
+  "target_investigation": "PSI-20",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene;methane",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-106",
+   "PSI-20"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0040",
+  "source_investigation": "PSI-106",
+  "target_investigation": "PSI-21",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethane;ethylene;methane",
+  "weight": 3,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-106",
+   "PSI-21"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0041",
+  "source_investigation": "PSI-106",
+  "target_investigation": "PSI-22",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene;methane",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-106",
+   "PSI-22"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0042",
+  "source_investigation": "PSI-106",
+  "target_investigation": "PSI-23",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene;methane",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-106",
+   "PSI-23"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0043",
+  "source_investigation": "PSI-107",
+  "target_investigation": "PSI-10",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene;propane",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-107",
+   "PSI-10"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0044",
+  "source_investigation": "PSI-107",
+  "target_investigation": "PSI-159",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethane;propane",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-107",
+   "PSI-159"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0045",
+  "source_investigation": "PSI-107",
+  "target_investigation": "PSI-20",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-107",
+   "PSI-20"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0046",
+  "source_investigation": "PSI-107",
+  "target_investigation": "PSI-21",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethane;ethylene",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-107",
+   "PSI-21"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0047",
+  "source_investigation": "PSI-107",
+  "target_investigation": "PSI-22",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-107",
+   "PSI-22"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0048",
+  "source_investigation": "PSI-107",
+  "target_investigation": "PSI-23",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-107",
+   "PSI-23"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0049",
+  "source_investigation": "PSI-107",
+  "target_investigation": "PSI-25",
+  "edge_type": "shared_hardware",
+  "shared_items": "MSG",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-107",
+   "PSI-25"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0050",
+  "source_investigation": "PSI-107",
+  "target_investigation": "PSI-26",
+  "edge_type": "shared_hardware",
+  "shared_items": "MSG",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-107",
+   "PSI-26"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0051",
+  "source_investigation": "PSI-10",
+  "target_investigation": "PSI-159",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-10",
+   "PSI-159"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0052",
+  "source_investigation": "PSI-10",
+  "target_investigation": "PSI-159",
+  "edge_type": "shared_fuel",
+  "shared_items": "propane",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-10",
+   "PSI-159"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0053",
+  "source_investigation": "PSI-10",
+  "target_investigation": "PSI-20",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-10",
+   "PSI-20"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0054",
+  "source_investigation": "PSI-10",
+  "target_investigation": "PSI-20",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-10",
+   "PSI-20"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0055",
+  "source_investigation": "PSI-10",
+  "target_investigation": "PSI-21",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-10",
+   "PSI-21"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0056",
+  "source_investigation": "PSI-10",
+  "target_investigation": "PSI-21",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-10",
+   "PSI-21"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0057",
+  "source_investigation": "PSI-10",
+  "target_investigation": "PSI-22",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-10",
+   "PSI-22"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0058",
+  "source_investigation": "PSI-10",
+  "target_investigation": "PSI-22",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-10",
+   "PSI-22"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0059",
+  "source_investigation": "PSI-10",
+  "target_investigation": "PSI-23",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-10",
+   "PSI-23"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0060",
+  "source_investigation": "PSI-10",
+  "target_investigation": "PSI-23",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-10",
+   "PSI-23"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0061",
+  "source_investigation": "PSI-10",
+  "target_investigation": "PSI-39",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-10",
+   "PSI-39"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0062",
+  "source_investigation": "PSI-10",
+  "target_investigation": "PSI-68",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-10",
+   "PSI-68"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0063",
+  "source_investigation": "PSI-10",
+  "target_investigation": "PSI-69",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-10",
+   "PSI-69"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0064",
+  "source_investigation": "PSI-159",
+  "target_investigation": "PSI-20",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-159",
+   "PSI-20"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0065",
+  "source_investigation": "PSI-159",
+  "target_investigation": "PSI-21",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-159",
+   "PSI-21"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0066",
+  "source_investigation": "PSI-159",
+  "target_investigation": "PSI-21",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethane",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-159",
+   "PSI-21"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0067",
+  "source_investigation": "PSI-159",
+  "target_investigation": "PSI-22",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-159",
+   "PSI-22"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0068",
+  "source_investigation": "PSI-159",
+  "target_investigation": "PSI-23",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-159",
+   "PSI-23"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0069",
+  "source_investigation": "PSI-159",
+  "target_investigation": "PSI-39",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-159",
+   "PSI-39"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0070",
+  "source_investigation": "PSI-159",
+  "target_investigation": "PSI-68",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-159",
+   "PSI-68"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0071",
+  "source_investigation": "PSI-159",
+  "target_investigation": "PSI-69",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-159",
+   "PSI-69"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0072",
+  "source_investigation": "PSI-20",
+  "target_investigation": "PSI-21",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-20",
+   "PSI-21"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0073",
+  "source_investigation": "PSI-20",
+  "target_investigation": "PSI-21",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene;methane",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-20",
+   "PSI-21"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0074",
+  "source_investigation": "PSI-20",
+  "target_investigation": "PSI-22",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-20",
+   "PSI-22"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0075",
+  "source_investigation": "PSI-20",
+  "target_investigation": "PSI-22",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene;methane",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-20",
+   "PSI-22"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0076",
+  "source_investigation": "PSI-20",
+  "target_investigation": "PSI-23",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-20",
+   "PSI-23"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0077",
+  "source_investigation": "PSI-20",
+  "target_investigation": "PSI-23",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene;methane",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-20",
+   "PSI-23"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0078",
+  "source_investigation": "PSI-20",
+  "target_investigation": "PSI-39",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-20",
+   "PSI-39"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0079",
+  "source_investigation": "PSI-20",
+  "target_investigation": "PSI-68",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-20",
+   "PSI-68"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0080",
+  "source_investigation": "PSI-20",
+  "target_investigation": "PSI-69",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-20",
+   "PSI-69"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0081",
+  "source_investigation": "PSI-21",
+  "target_investigation": "PSI-22",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-21",
+   "PSI-22"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0082",
+  "source_investigation": "PSI-21",
+  "target_investigation": "PSI-22",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene;methane",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-21",
+   "PSI-22"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0083",
+  "source_investigation": "PSI-21",
+  "target_investigation": "PSI-23",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-21",
+   "PSI-23"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0084",
+  "source_investigation": "PSI-21",
+  "target_investigation": "PSI-23",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene;methane",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-21",
+   "PSI-23"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0085",
+  "source_investigation": "PSI-21",
+  "target_investigation": "PSI-39",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-21",
+   "PSI-39"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0086",
+  "source_investigation": "PSI-21",
+  "target_investigation": "PSI-68",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-21",
+   "PSI-68"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0087",
+  "source_investigation": "PSI-21",
+  "target_investigation": "PSI-69",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-21",
+   "PSI-69"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0088",
+  "source_investigation": "PSI-22",
+  "target_investigation": "PSI-23",
+  "edge_type": "shared_hardware",
+  "shared_items": "ACME;CIR",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-22",
+   "PSI-23"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0089",
+  "source_investigation": "PSI-22",
+  "target_investigation": "PSI-23",
+  "edge_type": "shared_fuel",
+  "shared_items": "ethylene;methane",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-22",
+   "PSI-23"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0090",
+  "source_investigation": "PSI-22",
+  "target_investigation": "PSI-39",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-22",
+   "PSI-39"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0091",
+  "source_investigation": "PSI-22",
+  "target_investigation": "PSI-68",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-22",
+   "PSI-68"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0092",
+  "source_investigation": "PSI-22",
+  "target_investigation": "PSI-69",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-22",
+   "PSI-69"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0093",
+  "source_investigation": "PSI-23",
+  "target_investigation": "PSI-39",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-23",
+   "PSI-39"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0094",
+  "source_investigation": "PSI-23",
+  "target_investigation": "PSI-68",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-23",
+   "PSI-68"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0095",
+  "source_investigation": "PSI-23",
+  "target_investigation": "PSI-69",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-23",
+   "PSI-69"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0096",
+  "source_investigation": "PSI-25",
+  "target_investigation": "PSI-26",
+  "edge_type": "shared_hardware",
+  "shared_items": "MSG",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-25",
+   "PSI-26"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0097",
+  "source_investigation": "PSI-25",
+  "target_investigation": "PSI-26",
+  "edge_type": "shared_fuel",
+  "shared_items": "Nomex;PMMA;SIBAL;cotton;wax",
+  "weight": 5,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-25",
+   "PSI-26"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0098",
+  "source_investigation": "PSI-25",
+  "target_investigation": "PSI-98",
+  "edge_type": "shared_fuel",
+  "shared_items": "SIBAL;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-25",
+   "PSI-98"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0099",
+  "source_investigation": "PSI-25",
+  "target_investigation": "PSI-99",
+  "edge_type": "shared_fuel",
+  "shared_items": "Nomex;PMMA;SIBAL;cotton",
+  "weight": 4,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-25",
+   "PSI-99"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0100",
+  "source_investigation": "PSI-25",
+  "target_investigation": "SAFFIRE-IV",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;SIBAL;cotton",
+  "weight": 3,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-25",
+   "SAFFIRE-IV"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0101",
+  "source_investigation": "PSI-25",
+  "target_investigation": "SAFFIRE-V",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-25",
+   "SAFFIRE-V"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0102",
+  "source_investigation": "PSI-25",
+  "target_investigation": "SAFFIRE-VI",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;SIBAL;cotton",
+  "weight": 3,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-25",
+   "SAFFIRE-VI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0103",
+  "source_investigation": "PSI-25",
+  "target_investigation": "LUCI",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;SIBAL;cotton",
+  "weight": 3,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-25",
+   "LUCI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0104",
+  "source_investigation": "PSI-26",
+  "target_investigation": "PSI-98",
+  "edge_type": "shared_fuel",
+  "shared_items": "SIBAL;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-26",
+   "PSI-98"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0105",
+  "source_investigation": "PSI-26",
+  "target_investigation": "PSI-99",
+  "edge_type": "shared_fuel",
+  "shared_items": "Nomex;PMMA;SIBAL;cotton",
+  "weight": 4,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-26",
+   "PSI-99"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0106",
+  "source_investigation": "PSI-26",
+  "target_investigation": "SAFFIRE-IV",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;SIBAL;cotton",
+  "weight": 3,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-26",
+   "SAFFIRE-IV"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0107",
+  "source_investigation": "PSI-26",
+  "target_investigation": "SAFFIRE-V",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-26",
+   "SAFFIRE-V"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0108",
+  "source_investigation": "PSI-26",
+  "target_investigation": "SAFFIRE-VI",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;SIBAL;cotton",
+  "weight": 3,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-26",
+   "SAFFIRE-VI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0109",
+  "source_investigation": "PSI-26",
+  "target_investigation": "LUCI",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;SIBAL;cotton",
+  "weight": 3,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-26",
+   "LUCI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0110",
+  "source_investigation": "PSI-39",
+  "target_investigation": "PSI-68",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR;MDCA",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-39",
+   "PSI-68"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0111",
+  "source_investigation": "PSI-39",
+  "target_investigation": "PSI-69",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR;MDCA",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-39",
+   "PSI-69"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0112",
+  "source_investigation": "PSI-68",
+  "target_investigation": "PSI-69",
+  "edge_type": "shared_hardware",
+  "shared_items": "CIR;MDCA",
+  "weight": 2,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-68",
+   "PSI-69"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0113",
+  "source_investigation": "PSI-68",
+  "target_investigation": "PSI-69",
+  "edge_type": "shared_fuel",
+  "shared_items": "heptane",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-68",
+   "PSI-69"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0114",
+  "source_investigation": "PSI-98",
+  "target_investigation": "PSI-99",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-98",
+   "PSI-99"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0115",
+  "source_investigation": "PSI-98",
+  "target_investigation": "PSI-99",
+  "edge_type": "shared_fuel",
+  "shared_items": "SIBAL;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-98",
+   "PSI-99"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0116",
+  "source_investigation": "PSI-98",
+  "target_investigation": "SAFFIRE-IV",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-98",
+   "SAFFIRE-IV"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0117",
+  "source_investigation": "PSI-98",
+  "target_investigation": "SAFFIRE-IV",
+  "edge_type": "shared_fuel",
+  "shared_items": "SIBAL;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-98",
+   "SAFFIRE-IV"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0118",
+  "source_investigation": "PSI-98",
+  "target_investigation": "SAFFIRE-V",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-98",
+   "SAFFIRE-V"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0119",
+  "source_investigation": "PSI-98",
+  "target_investigation": "SAFFIRE-V",
+  "edge_type": "shared_fuel",
+  "shared_items": "cotton",
+  "weight": 1,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-98",
+   "SAFFIRE-V"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0120",
+  "source_investigation": "PSI-98",
+  "target_investigation": "SAFFIRE-VI",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-98",
+   "SAFFIRE-VI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0121",
+  "source_investigation": "PSI-98",
+  "target_investigation": "SAFFIRE-VI",
+  "edge_type": "shared_fuel",
+  "shared_items": "SIBAL;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-98",
+   "SAFFIRE-VI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0122",
+  "source_investigation": "PSI-98",
+  "target_investigation": "LUCI",
+  "edge_type": "shared_fuel",
+  "shared_items": "SIBAL;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-98",
+   "LUCI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0123",
+  "source_investigation": "PSI-99",
+  "target_investigation": "SAFFIRE-IV",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-99",
+   "SAFFIRE-IV"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0124",
+  "source_investigation": "PSI-99",
+  "target_investigation": "SAFFIRE-IV",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;SIBAL;cotton",
+  "weight": 3,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-99",
+   "SAFFIRE-IV"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0125",
+  "source_investigation": "PSI-99",
+  "target_investigation": "SAFFIRE-V",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-99",
+   "SAFFIRE-V"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0126",
+  "source_investigation": "PSI-99",
+  "target_investigation": "SAFFIRE-V",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-99",
+   "SAFFIRE-V"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0127",
+  "source_investigation": "PSI-99",
+  "target_investigation": "SAFFIRE-VI",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "PSI-99",
+   "SAFFIRE-VI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0128",
+  "source_investigation": "PSI-99",
+  "target_investigation": "SAFFIRE-VI",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;SIBAL;cotton",
+  "weight": 3,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-99",
+   "SAFFIRE-VI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0129",
+  "source_investigation": "PSI-99",
+  "target_investigation": "LUCI",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;SIBAL;cotton",
+  "weight": 3,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "PSI-99",
+   "LUCI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0130",
+  "source_investigation": "SAFFIRE-IV",
+  "target_investigation": "SAFFIRE-V",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "SAFFIRE-IV",
+   "SAFFIRE-V"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0131",
+  "source_investigation": "SAFFIRE-IV",
+  "target_investigation": "SAFFIRE-V",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "SAFFIRE-IV",
+   "SAFFIRE-V"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0132",
+  "source_investigation": "SAFFIRE-IV",
+  "target_investigation": "SAFFIRE-VI",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "SAFFIRE-IV",
+   "SAFFIRE-VI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0133",
+  "source_investigation": "SAFFIRE-IV",
+  "target_investigation": "SAFFIRE-VI",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;SIBAL;cotton",
+  "weight": 3,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "SAFFIRE-IV",
+   "SAFFIRE-VI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0134",
+  "source_investigation": "SAFFIRE-IV",
+  "target_investigation": "LUCI",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;SIBAL;cotton",
+  "weight": 3,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "SAFFIRE-IV",
+   "LUCI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0135",
+  "source_investigation": "SAFFIRE-V",
+  "target_investigation": "SAFFIRE-VI",
+  "edge_type": "shared_hardware",
+  "shared_items": "Saffire flow unit / Cygnus",
+  "weight": 1,
+  "basis": "derived_from_investigation_metadata",
+  "evidence_source_ids": [
+   "SAFFIRE-V",
+   "SAFFIRE-VI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0136",
+  "source_investigation": "SAFFIRE-V",
+  "target_investigation": "SAFFIRE-VI",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "SAFFIRE-V",
+   "SAFFIRE-VI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0137",
+  "source_investigation": "SAFFIRE-V",
+  "target_investigation": "LUCI",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;cotton",
+  "weight": 2,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "SAFFIRE-V",
+   "LUCI"
+  ],
+  "directed": false
+ },
+ {
+  "edge_id": "E0138",
+  "source_investigation": "SAFFIRE-VI",
+  "target_investigation": "LUCI",
+  "edge_type": "shared_fuel",
+  "shared_items": "PMMA;SIBAL;cotton",
+  "weight": 3,
+  "basis": "derived_from_burn_cards_and_campaigns",
+  "evidence_source_ids": [
+   "SAFFIRE-VI",
+   "LUCI"
+  ],
+  "directed": false
+ }
+]

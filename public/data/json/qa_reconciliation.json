@@ -1,0 +1,112 @@
+[
+ {
+  "source_file": "PSI-10_Experimental_table_Flame_Design_Normal_Flame.csv",
+  "raw_records": "207",
+  "cards_or_campaign_rows": "207"
+ },
+ {
+  "source_file": "PSI-10_Experimental_table_Flame_Design_Inverse_Flame.csv",
+  "raw_records": "120",
+  "cards_or_campaign_rows": "120"
+ },
+ {
+  "source_file": "PSI-159_Experimental_table_CFI-G_Normal_Flames.csv",
+  "raw_records": "179",
+  "cards_or_campaign_rows": "179"
+ },
+ {
+  "source_file": "PSI-159_Experimental_table_CFI-G_Inverse_Flames.csv",
+  "raw_records": "1015",
+  "cards_or_campaign_rows": "154"
+ },
+ {
+  "source_file": "PSI-39_Experimental_table_CFI.csv",
+  "raw_records": "87",
+  "cards_or_campaign_rows": "79"
+ },
+ {
+  "source_file": "PSI-69_Experimental_table_FLEX.csv",
+  "raw_records": "274",
+  "cards_or_campaign_rows": "274"
+ },
+ {
+  "source_file": "PSI-25_Experimental_table_BASS-II.csv",
+  "raw_records": "129",
+  "cards_or_campaign_rows": "129"
+ },
+ {
+  "source_file": "PSI-26_Experimental_table_BASS.csv",
+  "raw_records": "122",
+  "cards_or_campaign_rows": "122"
+ },
+ {
+  "source_file": "PSI-107_Experimental_table_Spice.csv",
+  "raw_records": "469",
+  "cards_or_campaign_rows": "435"
+ },
+ {
+  "source_file": "PSI-102_Experimental_table_SAME.csv",
+  "raw_records": "8",
+  "cards_or_campaign_rows": "8"
+ },
+ {
+  "source_file": "PSI-98_Experimental_table_SAFFIRE-1.csv",
+  "raw_records": "4",
+  "cards_or_campaign_rows": "2"
+ },
+ {
+  "source_file": "PSI-99_Experimental_table_SAFFIRE-2.csv",
+  "raw_records": "15",
+  "cards_or_campaign_rows": "9"
+ },
+ {
+  "source_file": "PSI-100_Experimental_table_SAFFIRE-3.csv",
+  "raw_records": "2",
+  "cards_or_campaign_rows": "2"
+ },
+ {
+  "source_file": "saffire_iv_vi_conditions.csv",
+  "raw_records": "9",
+  "cards_or_campaign_rows": "8"
+ },
+ {
+  "source_file": "luci_results.csv (4 burn configurations)",
+  "raw_records": "4",
+  "cards_or_campaign_rows": "4"
+ },
+ {
+  "source_file": "PSI-20_Experimental_table_ACME_BRE.csv",
+  "raw_records": "18",
+  "cards_or_campaign_rows": "18"
+ },
+ {
+  "source_file": "PSI-21_Experimental_table_CLD_Flame.csv",
+  "raw_records": "32",
+  "cards_or_campaign_rows": "32"
+ },
+ {
+  "source_file": "PSI-22_Experimental_table_ACME_E-FIELD_Flames.csv",
+  "raw_records": "32",
+  "cards_or_campaign_rows": "32"
+ },
+ {
+  "source_file": "PSI-23_Experimental_table_ACME_s-Flame.csv",
+  "raw_records": "18",
+  "cards_or_campaign_rows": "18"
+ },
+ {
+  "source_file": "PSI-106_Experimental_table_Slice.csv",
+  "raw_records": "12",
+  "cards_or_campaign_rows": "12"
+ },
+ {
+  "source_file": "PSI-47_Experimental_table_DAFT.csv",
+  "raw_records": "2",
+  "cards_or_campaign_rows": "2"
+ },
+ {
+  "source_file": "PSI-68_Experimental_table_Flex2.csv",
+  "raw_records": "8",
+  "cards_or_campaign_rows": "8"
+ }
+]

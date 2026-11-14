@@ -208,6 +208,9 @@ function computeDerived() {
   fs.writeFileSync(path.join(appRoot, "src/data/derived.json"), JSON.stringify(derived, null, 1));
   ensureDir(publicDataDir);
   fs.copyFileSync(path.join(rawDir, "burn_cards.json"), path.join(publicDataDir, "burn_cards.json"));
+  const publicJsonDir = path.join(publicDataDir, "json");
+  ensureDir(publicJsonDir);
+  for (const table of tables) fs.copyFileSync(path.join(rawDir, `${table}.json`), path.join(publicJsonDir, `${table}.json`));
   console.log(`Derived: ${hulls.length} hulls, tier A ${tierA.length}, highest solid ${highestSolid.card_id} at ${highestSolid.o2_pct}% O2`);
 }
 

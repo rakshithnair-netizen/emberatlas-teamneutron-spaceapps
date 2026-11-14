@@ -1,0 +1,112 @@
+[
+ {
+  "platform_id": "PLT-01",
+  "platform": "GASP and BTF (GRC)",
+  "duration": "full burn",
+  "gravity_g": "1",
+  "o2_pct": "21",
+  "pressure_psia": "14.7",
+  "status": "ground",
+  "source_ids": [
+   "S06"
+  ]
+ },
+ {
+  "platform_id": "PLT-02",
+  "platform": "MSG (ISS)",
+  "duration": "full burn",
+  "gravity_g": "0",
+  "o2_pct": "21",
+  "pressure_psia": "14.7",
+  "status": "flown",
+  "source_ids": [
+   "S06"
+  ]
+ },
+ {
+  "platform_id": "PLT-03",
+  "platform": "CIR (ISS)",
+  "duration": "full burn",
+  "gravity_g": "0",
+  "o2_pct": "10-40",
+  "pressure_psia": "0.29-44",
+  "status": "flown",
+  "source_ids": [
+   "S06"
+  ]
+ },
+ {
+  "platform_id": "PLT-04",
+  "platform": "ZGRF drop tower centrifuge rig (GRC)",
+  "duration": "5.2 s",
+  "gravity_g": "0.165",
+  "o2_pct": "21",
+  "pressure_psia": "14.7",
+  "status": "ground",
+  "source_ids": [
+   "S06"
+  ]
+ },
+ {
+  "platform_id": "PLT-05",
+  "platform": "Parabolic aircraft / DIAMONDS (CNES)",
+  "duration": "about 30 s",
+  "gravity_g": "0-0.379",
+  "o2_pct": "<21",
+  "pressure_psia": "7.3-20",
+  "status": "flown",
+  "source_ids": [
+   "S06"
+  ]
+ },
+ {
+  "platform_id": "PLT-06",
+  "platform": "Blue Origin New Shepard rotating capsule",
+  "duration": "about 120 s",
+  "gravity_g": "0.165",
+  "o2_pct": "about 34",
+  "pressure_psia": "about 8.2",
+  "status": "listed as resource in 2021 paper",
+  "source_ids": [
+   "S06"
+  ]
+ },
+ {
+  "platform_id": "PLT-07",
+  "platform": "Commercial Lunar Payload Services experiments",
+  "duration": "full burn",
+  "gravity_g": "0.165",
+  "o2_pct": "about 34",
+  "pressure_psia": "about 8.2",
+  "status": "listed as resource in 2021 paper",
+  "source_ids": [
+   "S06"
+  ]
+ },
+ {
+  "platform_id": "PLT-08",
+  "platform": "LUCI (New Shepard, flown Feb 4 2025)",
+  "duration": "over 2.5 min burn",
+  "gravity_g": "0.165",
+  "o2_pct": "air (about 20)",
+  "pressure_psia": "normal pressure (air)",
+  "status": "flown",
+  "source_ids": [
+   "S07",
+   "S33"
+  ]
+ },
+ {
+  "platform_id": "PLT-09",
+  "platform": "FM2 (CLPS lander CP-21, planned)",
+  "duration": null,
+  "gravity_g": "0.165",
+  "o2_pct": "21 and 34",
+  "pressure_psia": "14.7 and 8.2",
+  "status": "planned; launch listed as late 2026 in sources",
+  "source_ids": [
+   "S08",
+   "S09"
+  ]
+ }
+]
