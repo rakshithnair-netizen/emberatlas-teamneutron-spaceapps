@@ -78,8 +78,8 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
         result.push({
           id,
           position,
-          sourcePosition: layout === "family" && row === 0 ? Position.Right : Position.Bottom,
-          targetPosition: layout === "family" && row === 0 ? Position.Left : Position.Top,
+          sourcePosition: layout === "family" ? Position.Right : Position.Bottom,
+          targetPosition: layout === "family" ? Position.Left : Position.Top,
           data: {
             label: (
               <div className="text-left">
