@@ -2,36 +2,42 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { habitatList, shortHabitatName, useHabitat } from "./HabitatProvider";
 
-export const navItems = [
-  { href: "/explorer", label: "Envelope Map", short: "Map" },
-  { href: "/matcher", label: "Condition Matcher", short: "Matcher" },
-  { href: "/atlas", label: "Ask Atlas", short: "Atlas" },
-  { href: "/library", label: "Flame Library", short: "Library" },
-  { href: "/family-tree", label: "Family Tree", short: "Family Tree" },
-  { href: "/learn", label: "Learn", short: "Learn" },
-  { href: "/earth", label: "Earth Applications", short: "Earth" },
-  { href: "/fire-watch", label: "Fire Watch", short: "Fire Watch" },
-  { href: "/method", label: "Data & Method", short: "Method" },
+const primaryNav = [
+  { href: "/", label: "Home" },
+  { href: "/matcher", label: "Check a habitat" },
+  { href: "/explorer", label: "Explore evidence" },
+  { href: "/library", label: "Sources & library" },
+  { href: "/method", label: "Method & limits" },
+];
+
+const secondaryNav = [
+  { href: "/atlas", label: "Ask Atlas" },
+  { href: "/ranking", label: "Rankings" },
+  { href: "/learn", label: "Learn" },
+  { href: "/fire-watch", label: "Fire Watch" },
+  { href: "/earth", label: "Earth Applications" },
+  { href: "/family-tree", label: "Family Tree" },
 ];
 
 export function HabitatPicker({ compact = false }: { compact?: boolean }) {
   const { habitatId, setHabitatId, habitat } = useHabitat();
+  const selectedLabel = (entry: (typeof habitatList)[number]) => `${shortHabitatName(entry).replace(/\s+\d+(?:\.\d+)?%$/, "")} · ${entry.o2_pct}% O₂ · ${entry.pressure_kpa.toFixed(1)} kPa`;
   return (
     <label className="flex items-center gap-2 text-xs">
-      <span className={compact ? "sr-only" : "eyebrow 2xl:not-sr-only sr-only"}>Habitat</span>
+      <span className={compact ? "sr-only" : "eyebrow"}>Target:</span>
       <span className="relative">
         <select
           value={habitatId}
           onChange={(event) => setHabitatId(event.target.value)}
           className="num appearance-none rounded-md border border-habitat/40 bg-habitat/10 py-1.5 pl-2.5 pr-7 text-xs text-habitat hover:border-habitat/70"
-          aria-label="Habitat atmosphere"
+          aria-label="Target habitat atmosphere"
         >
           {habitatList.map((entry) => (
             <option key={entry.habitat_id} value={entry.habitat_id}>
-              {shortHabitatName(entry)} · {entry.o2_pct}% / {entry.pressure_kpa} kPa
+              {selectedLabel(entry)}
             </option>
           ))}
         </select>
@@ -47,7 +53,22 @@ export function HabitatPicker({ compact = false }: { compact?: boolean }) {
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
+  const mobileNav = useRef<HTMLElement>(null);
   useEffect(() => setOpen(false), [pathname]);
+  useEffect(() => {
+    if (!open) return;
+    const firstLink = mobileNav.current?.querySelector<HTMLElement>("a, summary");
+    firstLink?.focus();
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        menuButton.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg/85 backdrop-blur">
@@ -72,30 +93,38 @@ export function SiteHeader() {
             Flame <span className="text-muted">in</span> Freefall
           </span>
         </Link>
-        <nav className="hidden flex-1 items-center gap-0.5 overflow-x-auto xl:flex" aria-label="Main">
-          {navItems.map((item) => {
-            const active = pathname.startsWith(item.href);
+        <nav className="hidden flex-1 items-center gap-0.5 xl:flex" aria-label="Primary">
+          {primaryNav.map((item) => {
+            const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
             return (
               <Link
                 key={item.href}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
-                className={`whitespace-nowrap rounded-md px-2 py-1.5 text-[13px] ${active ? "bg-panel-2 text-ink" : "text-muted hover:text-ink"}`}
+                className={`inline-flex min-h-11 items-center whitespace-nowrap rounded-md px-2 text-[13px] ${active ? "bg-panel-2 text-ink" : "text-muted hover:text-ink"}`}
               >
-                {item.short}
+                {item.label}
               </Link>
             );
           })}
+          <details className="relative">
+            <summary className="flex min-h-11 cursor-pointer list-none items-center rounded-md px-2 text-[13px] text-muted hover:text-ink">More tools</summary>
+            <ul className="absolute right-0 top-full z-50 mt-1 min-w-52 rounded-lg border border-line bg-panel p-2 shadow-xl">
+              {secondaryNav.map((item) => <li key={item.href}><Link href={item.href} aria-current={pathname.startsWith(item.href) ? "page" : undefined} className="flex min-h-11 items-center rounded px-3 text-sm text-muted hover:bg-panel-2 hover:text-ink">{item.label}</Link></li>)}
+            </ul>
+          </details>
         </nav>
         <div className="ml-auto flex items-center gap-2">
           <div className="hidden sm:block">
             <HabitatPicker />
           </div>
           <button
+            ref={menuButton}
             type="button"
-            className="rounded-md border border-line p-2 xl:hidden"
+            className="flex min-h-11 min-w-11 items-center justify-center rounded-md border border-line xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
             onClick={() => setOpen((value) => !value)}
           >
             <span className="sr-only">Menu</span>
@@ -110,22 +139,29 @@ export function SiteHeader() {
         </div>
       </div>
       {open ? (
-        <nav id="mobile-nav" className="border-t border-line bg-bg px-4 pb-4 pt-2 xl:hidden" aria-label="Main mobile">
+        <nav id="mobile-nav" ref={mobileNav} className="border-t border-line bg-bg px-4 pb-4 pt-2 xl:hidden" aria-label="Primary">
           <div className="mb-3 sm:hidden">
             <HabitatPicker />
           </div>
-          <ul className="grid grid-cols-2 gap-1">
-            {navItems.map((item) => (
+          <ul className="grid gap-1 sm:grid-cols-2">
+            {primaryNav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`block rounded-md px-3 py-2 text-sm ${pathname.startsWith(item.href) ? "bg-panel-2 text-ink" : "text-muted"}`}
+                  aria-current={pathname === item.href ? "page" : undefined}
+                  className={`flex min-h-11 items-center rounded-md px-3 text-sm ${pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) ? "bg-panel-2 text-ink" : "text-muted"}`}
                 >
                   {item.label}
                 </Link>
               </li>
             ))}
           </ul>
+          <details className="mt-2 border-t border-line pt-2">
+            <summary className="flex min-h-11 cursor-pointer items-center rounded-md px-3 text-sm font-medium text-habitat">More tools</summary>
+            <ul className="grid gap-1 sm:grid-cols-2">
+              {secondaryNav.map((item) => <li key={item.href}><Link href={item.href} aria-current={pathname.startsWith(item.href) ? "page" : undefined} className="flex min-h-11 items-center rounded-md px-3 text-sm text-muted hover:bg-panel-2 hover:text-ink">{item.label}</Link></li>)}
+            </ul>
+          </details>
         </nav>
       ) : null}
     </header>

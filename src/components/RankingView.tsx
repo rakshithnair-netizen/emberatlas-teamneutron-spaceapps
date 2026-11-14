@@ -5,6 +5,7 @@ import type { InsightWithTier } from "@/lib/insights-server";
 import { defaultWeights, insightsToCsv, rerank, weightLabels, type RankingWeights } from "@/lib/ranking";
 import { useHabitat } from "./HabitatProvider";
 import { InsightRow } from "./InsightList";
+import { EvidenceTierGuide } from "./EvidenceTierGuide";
 
 const weightHelp: Record<keyof RankingWeights, string> = {
   proximity: "1 − d/3 for the closest linked card to the selected habitat (d capped at 3). Habitat-materials findings use their stated 34% O₂ / 8.2 psia condition.",
@@ -43,6 +44,7 @@ export function RankingView({ byHabitat }: { byHabitat: Record<string, InsightWi
           Every finding and in-scope investigation gets five transparent component scores between 0 and 1. The final score is their weighted mean. Move the sliders to change the weights; the list re-ranks for <span className="text-habitat">{habitat.name}</span>.
         </p>
       </div>
+      <EvidenceTierGuide compact />
       <div className="grid gap-4 lg:grid-cols-[22rem_1fr]">
         <aside className="panel h-fit space-y-4 p-4 lg:sticky lg:top-20">
           {(Object.keys(weights) as (keyof RankingWeights)[]).map((key) => (

@@ -74,7 +74,7 @@ export default function MethodPage() {
             Row reconciliation
           </h2>
           <p className="mt-1 text-xs text-muted">Every raw record becomes a card or campaign row, or is logged in rejected_rows.</p>
-          <div className="mt-3 overflow-x-auto">
+          <div className="mt-3 overflow-x-auto" tabIndex={0} aria-label="Scrollable row reconciliation table">
             <table className="w-full min-w-[420px] text-xs">
               <thead>
                 <tr className="text-left text-muted">
@@ -148,7 +148,7 @@ export default function MethodPage() {
         <h2 id="disc-title" className="font-semibold">
           Known discrepancies ({discrepancies.length})
         </h2>
-        <div className="mt-3 overflow-x-auto">
+        <div className="mt-3 overflow-x-auto" tabIndex={0} aria-label="Scrollable known discrepancies table">
           <table className="w-full min-w-[720px] text-xs">
             <thead>
               <tr className="text-left text-muted">

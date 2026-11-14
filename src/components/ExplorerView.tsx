@@ -9,6 +9,7 @@ import type { BurnCard, InvestigationEnvelope } from "@/lib/types";
 import { CardDrawer } from "./CardDrawer";
 import { EnvelopeMap, fuelColors, type EnvelopeOptions, type Hull } from "./EnvelopeMap";
 import { EvidenceBadge } from "./EvidenceBadge";
+import { EvidenceTierGuide } from "./EvidenceTierGuide";
 import { habitatList, useHabitat } from "./HabitatProvider";
 import { useCards } from "./useCards";
 import { Value, formatNumber } from "./Value";
@@ -171,6 +172,7 @@ export function ExplorerView({ hulls, envelopes }: { hulls: Hull[]; envelopes: I
                     ))}
                   </tbody>
                 </table>
+                <div className="mt-3"><EvidenceTierGuide compact /></div>
                 {solidGap ? <p className="mt-3 text-sm leading-relaxed">{solidGap.gapStatement}</p> : null}
                 <Link
                   href={`/matcher?o2=${habitat.o2_pct}&p=${habitat.pressure_kpa}&g=lunar&fuel=solid`}
@@ -207,6 +209,7 @@ export function ExplorerView({ hulls, envelopes }: { hulls: Hull[]; envelopes: I
                     </div>
                   );
                 })}
+                <p className="mt-3 text-xs leading-relaxed text-muted">These A–F labels are dataset relevance bands; they are separate from the five condition-specific evidence grades above. <Link href="/method" className="text-habitat underline">How bands and grades differ</Link>.</p>
               </section>
 
               <section className="panel p-4" aria-labelledby="nearest-title">

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { AtlasAnswer } from "@/lib/atlas/lite";
+import { evidenceTierMeta } from "@/lib/evidence";
 import { EvidenceBadge } from "./EvidenceBadge";
 import { SourceChips } from "./SourceChips";
 
@@ -49,6 +50,7 @@ function AnswerCard({ answer }: { answer: AtlasAnswer }) {
       <AnswerText text={answer.answer} />
       <div className="flex flex-wrap items-center gap-2">
         <EvidenceBadge tier={answer.tier} />
+        <span className="text-xs text-muted">{evidenceTierMeta[answer.tier].description}</span>
         <span className="text-xs text-muted">{answer.tierReason}</span>
       </div>
       <SourceChips ids={answer.sourceIds} label="Cited sources" />

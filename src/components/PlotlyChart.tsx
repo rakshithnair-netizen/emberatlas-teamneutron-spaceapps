@@ -81,7 +81,7 @@ export function PlotlyChart({
   }, []);
 
   return (
-    <div className={`relative ${className ?? ""}`} role="img" aria-label={ariaLabel}>
+    <div className={`relative ${className ?? ""}`} role="group" aria-label={ariaLabel} aria-roledescription="interactive chart">
       <div ref={container} className="h-full w-full" />
       {status !== "ready" ? (
         <div className="absolute inset-0 flex items-center justify-center text-xs text-muted">
