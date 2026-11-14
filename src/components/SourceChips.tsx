@@ -18,9 +18,9 @@ export function SourceChips({ ids, label = "Sources" }: { ids: string[]; label?:
         const source = sourceById.get(id);
         if (!source) {
           return (
-            <span key={id} className="num rounded border border-line px-1.5 py-0.5 text-[11px] text-faint" title="Source ID not found in sources table">
+            <a key={id} href={`/library/${encodeURIComponent(id)}`} className="num rounded border border-line px-1.5 py-0.5 text-[11px] text-muted hover:text-ink" title="Investigation record in this dataset (its NASA sources are listed on the investigation page)">
               {id}
-            </span>
+            </a>
           );
         }
         return (
