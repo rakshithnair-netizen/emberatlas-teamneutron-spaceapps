@@ -1,0 +1,52 @@
+export interface BankQuestion {
+  id: string;
+  module: string;
+  prompt: string;
+  options: string[];
+  answer: number;
+  explanation: string;
+  findingIds: string[];
+  sourceIds: string[];
+}
+
+export const questionBank: BankQuestion[] = [
+  { id: "Q-SPH-1", module: "spherical-flames", prompt: "Why does a flame around a fuel droplet become nearly spherical in orbit?", options: ["Hot gas no longer rises, so there is no buoyant plume", "The ISS cabin has more oxygen", "The droplet spins"], answer: 0, explanation: "Without gravity-driven buoyancy, hot products do not rise, so the flame wraps evenly around the fuel (fuels burn as oval balls).", findingIds: ["F001"], sourceIds: ["S16", "S15"] },
+  { id: "Q-SPH-2", module: "spherical-flames", prompt: "How much more soot did microgravity flames contain than equivalent normal-gravity flames?", options: ["About the same", "5 to 8 times more", "Half as much"], answer: 1, explanation: "ACME reports 5–8× more soot in microgravity flames, giving strong model benchmarks.", findingIds: ["F005"], sourceIds: ["S17"] },
+  { id: "Q-SPH-3", module: "spherical-flames", prompt: "BASS-II's simple, round flames are mainly used to…", options: ["Certify spacecraft materials", "Evaluate fuel-burning computer models", "Measure cabin pressure"], answer: 1, explanation: "The simpler process is used to evaluate combustion models later applied to wildfires and building fires.", findingIds: ["F001"], sourceIds: ["S16"] },
+
+  { id: "Q-FLOW-1", module: "buoyancy-flow", prompt: "In a spacecraft, what replaces buoyancy as the main supply of fresh oxygen to a fire?", options: ["Ventilation airflow", "Radiation", "Gravity gradients"], answer: 0, explanation: "With no buoyant convection, forced ventilation flow feeds the flame, which is why isolation starts by turning off airflow.", findingIds: ["F029"], sourceIds: ["S15"] },
+  { id: "Q-FLOW-2", module: "buoyancy-flow", prompt: "Why can a local suppressant jet make things worse?", options: ["It is too cold", "It entrains air and can sustain the flame", "It increases cabin pressure"], answer: 1, explanation: "BASS found local application inadequate: the jet entrains air, and nitrogen can even strengthen a flame.", findingIds: ["F025"], sourceIds: ["S15", "S44"] },
+  { id: "Q-FLOW-3", module: "buoyancy-flow", prompt: "In KC-135 PMMA tests, required suppressant concentration rose with flow velocity up to about…", options: ["1 cm/s", "10 cm/s", "100 cm/s"], answer: 1, explanation: "Required concentration rises with flow up to about 10 cm/s, where effective enthalpy is near the normal-gravity value.", findingIds: ["F026"], sourceIds: ["S25"] },
+
+  { id: "Q-LIM-1", module: "spread-limits", prompt: "FLEX relates the limiting oxygen index (LOI) to the minimum extinguishing concentration (MEC) as…", options: ["LOI = 0.209 × (1 − MEC)", "LOI = MEC / 2", "LOI = 0.5 + MEC"], answer: 0, explanation: "The FLEX requirements document gives LOI = 0.209 × (1 − MEC).", findingIds: ["F022"], sourceIds: ["S24"] },
+  { id: "Q-LIM-2", module: "spread-limits", prompt: "NASA's standard material flammability screening (NASA-STD-6001 Test 1) is run in…", options: ["Microgravity", "Lunar gravity", "Normal (1 g) gravity"], answer: 2, explanation: "Test 1 is a 1 g test; sources disagree on whether it is conservative for microgravity or partial gravity.", findingIds: ["F036"], sourceIds: ["S09", "S15"] },
+  { id: "Q-LIM-3", module: "spread-limits", prompt: "Which O₂ range did FLEX plan to cover?", options: ["O₂ mole fraction 0.10–0.50", "Exactly 0.21", "0.60–0.90"], answer: 0, explanation: "FLEX's envelope: O₂ 0.10–0.50, suppressant 0–0.70, pressure 0.5–3.0 atm.", findingIds: ["F020"], sourceIds: ["S24", "S45"] },
+
+  { id: "Q-PP-1", module: "oxygen-pressure", prompt: "The exploration atmosphere (8.2 psia, 34% O₂) has a ppO₂ of about 19.2 kPa. Sea-level air is about…", options: ["10 kPa", "21 kPa", "40 kPa"], answer: 1, explanation: "Air at 14.7 psia and 21% O₂ is about 21.3 kPa ppO₂, so crews breathe similar oxygen while the O₂ fraction rises.", findingIds: [], sourceIds: ["S04", "S05", "S06"] },
+  { id: "Q-PP-2", module: "oxygen-pressure", prompt: "At 34% O₂ and 8.2 psia, materials that are non-flammable on Earth…", options: ["Are always safer", "Can become flammable and need less ignition energy", "Cannot ignite"], answer: 1, explanation: "Raising the O₂ fraction raises flammability even when ppO₂ is similar.", findingIds: ["F054"], sourceIds: ["S35"] },
+  { id: "Q-PP-3", module: "oxygen-pressure", prompt: "Melamine foam insulation at 34–40% O₂, 8.2 psia was assessed as…", options: ["Acceptable", "Flammable", "Not tested"], answer: 1, explanation: "Acceptable at 30% O₂ / 10.2 psia but flammable at 34–40% O₂ / 8.2 psia; Solimide HT-340 was suggested as a replacement.", findingIds: ["F049"], sourceIds: ["S03"] },
+
+  { id: "Q-COOL-1", module: "cool-flames", prompt: "What surprising thing did FLEX show about cool flames?", options: ["They only burn above 50% O₂", "They can keep burning after the visible flame goes out", "They produce no heat at all"], answer: 1, explanation: "Cool flames can burn for a prolonged period after visible flame extinction.", findingIds: ["F028"], sourceIds: ["S15"] },
+  { id: "Q-COOL-2", module: "cool-flames", prompt: "Which fuels did FLEX burn as droplets?", options: ["Heptane and methanol", "PMMA and cotton", "Methane and ethylene"], answer: 0, explanation: "FLEX used heptane and methanol droplets to find limiting oxygen and suppressant effects.", findingIds: ["F021"], sourceIds: ["S18", "S15"] },
+  { id: "Q-COOL-3", module: "cool-flames", prompt: "Cool-flame chemistry matters on Earth for…", options: ["Internal combustion engines", "Smoke detectors", "Solar panels"], answer: 0, explanation: "The same low-temperature chemistry matters for higher-efficiency, lower-emission engines.", findingIds: ["F008"], sourceIds: ["S15", "S18"] },
+
+  { id: "Q-SMOKE-1", module: "smoke-detection", prompt: "How often did the ISS smoke detector fail to alarm for Kapton smoke?", options: ["Never", "In about half the tests", "Always"], answer: 1, explanation: "It failed for Kapton smoke in half of tests and Teflon smoke in two-thirds.", findingIds: ["F012"], sourceIds: ["S06"] },
+  { id: "Q-SMOKE-2", module: "smoke-detection", prompt: "Why did the ISS detector struggle with Kapton and Teflon smoke?", options: ["Particles under 300 nm were too small for its near-IR scattering", "The smoke was too hot", "The detector was switched off"], answer: 0, explanation: "The forward-scattering detector is most sensitive above 1 µm; Kapton and Teflon smoke was under 300 nm.", findingIds: ["F014", "F013"], sourceIds: ["S23", "S19", "S21"] },
+  { id: "Q-SMOKE-3", module: "smoke-detection", prompt: "In an early, small fire, ISS air filtration can…", options: ["Speed up detection", "Outpace smoke build-up and delay detection", "Extinguish the fire"], answer: 1, explanation: "ECLSS filtration can remove smoke faster than it accumulates, delaying the alarm.", findingIds: ["F019"], sourceIds: ["S06"] },
+
+  { id: "Q-SAF-1", module: "large-scale-fire", prompt: "Where were the Saffire large-scale fire experiments run?", options: ["Inside the ISS cabin", "In Cygnus cargo vehicles after leaving the ISS", "On the Moon"], answer: 1, explanation: "Saffire burned large samples inside uncrewed Cygnus vehicles after departure from the ISS.", findingIds: [], sourceIds: ["S26", "S30"] },
+  { id: "Q-SAF-2", module: "large-scale-fire", prompt: "In Saffire-VI, when did the smoke alarm threshold arrive?", options: ["Before ignition", "At 981 s, after most hazardous gas had been released", "Never"], answer: 1, explanation: "Alarm threshold came at 981 s; PMMA tests exceeded 1-hour CO₂ and 24-hour CO limits.", findingIds: ["F018"], sourceIds: ["S01"] },
+  { id: "Q-SAF-3", module: "large-scale-fire", prompt: "What was the highest O₂ at which a solid burned in a flight test in this dataset?", options: ["21%", "31% (Saffire-VI)", "40%"], answer: 1, explanation: "Saffire-VI SIBAL at 31% O₂ and 54.1 kPa, flagged for re-verification against the PDF. No flight solid test reached 34%.", findingIds: [], sourceIds: ["S01"] },
+
+  { id: "Q-PG-1", module: "partial-gravity", prompt: "In LUCI, the PMMA rod's flame tip spread in lunar gravity at what fraction of the 1 g rate?", options: ["About 0.38×", "About 2×", "Exactly the same"], answer: 0, explanation: "0.15 cm/s at lunar g vs 0.40 cm/s at 1 g, a ratio of 0.38.", findingIds: ["F043"], sourceIds: ["S07"] },
+  { id: "Q-PG-2", module: "partial-gravity", prompt: "Can partial-gravity fire behaviour be interpolated between 0 g and 1 g results?", options: ["Yes, linearly", "No, it cannot be expected to", "Only for liquids"], answer: 1, explanation: "Fire behaviour in partial gravity cannot be expected to be interpolated from 0 g and 1 g.", findingIds: ["F033"], sourceIds: ["S11"] },
+  { id: "Q-PG-3", module: "partial-gravity", prompt: "What did SIBAL fabric do in lunar gravity that it did not do in Earth gravity?", options: ["It burned downward in air", "It refused to ignite", "It exploded"], answer: 0, explanation: "SIBAL burns downward in air in lunar gravity but extinguishes right after ignition in Earth gravity.", findingIds: ["F035"], sourceIds: ["S08"] },
+
+  { id: "Q-TIER-1", module: "evidence-tiers", prompt: "A query sits 3 O₂ points beyond the highest test for that fuel and gravity. Which tier applies?", options: ["Measured", "Extrapolated", "Interpolated"], answer: 1, explanation: "Outside the tested coverage for that fuel class and gravity regime is Extrapolated, with the distance and direction shown.", findingIds: [], sourceIds: [] },
+  { id: "Q-TIER-2", module: "evidence-tiers", prompt: "Values drawn with a dotted underline and ≈ mean…", options: ["Measured precisely", "Platform-nominal or approximate, not measured", "Missing"], answer: 1, explanation: "Many MSG tests report the platform's nominal 14.7 psi cabin air rather than a measured value.", findingIds: [], sourceIds: ["S06"] },
+  { id: "Q-TIER-3", module: "evidence-tiers", prompt: "There are no Mars-gravity burns, but microgravity cards exist near the condition. The tier is…", options: ["No data", "Analog", "Measured"], answer: 1, explanation: "Related evidence in another regime is an Analog, not a measurement.", findingIds: [], sourceIds: [] },
+];
+
+export function questionsForModule(module: string): BankQuestion[] {
+  return questionBank.filter((question) => question.module === module);
+}
