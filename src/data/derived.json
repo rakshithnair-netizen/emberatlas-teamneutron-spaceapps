@@ -1,0 +1,227 @@
+{
+ "generatedFrom": "scripts/prepare-data.ts",
+ "totals": {
+  "cards": 1732,
+  "located": 1596
+ },
+ "tierCounts": {
+  "D_ambient_reference": 987,
+  "B_elevated_O2_normal_pressure": 409,
+  "F_beyond_exploration_O2": 35,
+  "C_reduced_pressure_normal_O2": 103,
+  "E_not_assessable": 140,
+  "A_exploration_atmosphere_range": 58
+ },
+ "headline": {
+  "tierA": {
+   "count": 58,
+   "pct": 3.3,
+   "cardIds": [
+    "PSI-10-0242",
+    "PSI-10-0289",
+    "PSI-10-0290",
+    "PSI-159-0031",
+    "PSI-159-0032",
+    "PSI-159-0033",
+    "PSI-159-0034",
+    "PSI-159-0035",
+    "PSI-159-0036",
+    "PSI-159-0037",
+    "PSI-159-0038",
+    "PSI-159-0039",
+    "PSI-159-0125",
+    "PSI-159-0126",
+    "PSI-159-0127",
+    "PSI-159-0128",
+    "PSI-159-0129",
+    "PSI-159-0130",
+    "PSI-159-0152",
+    "PSI-159-0153",
+    "PSI-159-0154",
+    "PSI-159-0155",
+    "PSI-159-0156",
+    "PSI-159-0214",
+    "PSI-159-0271",
+    "PSI-159-0275",
+    "PSI-159-0323",
+    "PSI-159-0324",
+    "PSI-159-0333",
+    "PSI-69-0019",
+    "PSI-69-0020",
+    "PSI-69-0021",
+    "PSI-69-0022",
+    "PSI-69-0023",
+    "PSI-69-0024",
+    "PSI-69-0025",
+    "PSI-69-0026",
+    "PSI-69-0027",
+    "PSI-69-0028",
+    "PSI-69-0037",
+    "PSI-69-0038",
+    "PSI-69-0039",
+    "PSI-69-0040",
+    "PSI-69-0041",
+    "PSI-69-0042",
+    "PSI-69-0043",
+    "PSI-69-0088",
+    "PSI-69-0089",
+    "PSI-69-0090",
+    "PSI-69-0091",
+    "PSI-69-0092",
+    "PSI-69-0093",
+    "SAFFIRE-V-0001",
+    "SAFFIRE-V-0002",
+    "SAFFIRE-V-0003",
+    "SAFFIRE-VI-0001",
+    "SAFFIRE-VI-0002",
+    "SAFFIRE-VI-0003"
+   ]
+  },
+  "highestSolidMicrogravity": {
+   "cardId": "SAFFIRE-VI-0001",
+   "acronym": "SAFFIRE-VI",
+   "fuelName": "SIBAL (cotton-fiberglass fabric)",
+   "o2Pct": 31,
+   "pressureKpa": 54.1
+  },
+  "partialGravity": {
+   "lunarCount": 2,
+   "nonMicrogravityCount": 4,
+   "cardIds": [
+    "LUCI-0001",
+    "LUCI-0002",
+    "LUCI-0003",
+    "LUCI-0004"
+   ],
+   "acronyms": [
+    "LUCI"
+   ]
+  },
+  "closestCard": {
+   "cardId": "PSI-159-0128",
+   "acronym": "ACME CFI-G",
+   "distance": 0.146
+  }
+ },
+ "hulls": [
+  {
+   "fuelClass": "gas",
+   "gravity": "microgravity",
+   "count": 1084,
+   "points": [
+    [
+     43.161,
+     84.998
+    ],
+    [
+     43.437,
+     21.229
+    ],
+    [
+     49.538,
+     15
+    ],
+    [
+     110.33,
+     12
+    ],
+    [
+     330.99,
+     21
+    ],
+    [
+     330.99,
+     85
+    ],
+    [
+     55.165,
+     85
+    ]
+   ]
+  },
+  {
+   "fuelClass": "liquid",
+   "gravity": "microgravity",
+   "count": 352,
+   "points": [
+    [
+     50.663,
+     21
+    ],
+    [
+     71.127,
+     15
+    ],
+    [
+     101.538,
+     12
+    ],
+    [
+     102.925,
+     12
+    ],
+    [
+     506.625,
+     21
+    ],
+    [
+     72.367,
+     34
+    ],
+    [
+     71.234,
+     34
+    ]
+   ]
+  },
+  {
+   "fuelClass": "solid",
+   "gravity": "microgravity",
+   "count": 156,
+   "points": [
+    [
+     54.1,
+     31
+    ],
+    [
+     55.2,
+     28.8
+    ],
+    [
+     101.4,
+     13.6
+    ],
+    [
+     101.4,
+     22.2
+    ]
+   ]
+  },
+  {
+   "fuelClass": "solid",
+   "gravity": "lunar",
+   "count": 2,
+   "points": [
+    [
+     101.325,
+     20
+    ]
+   ]
+  },
+  {
+   "fuelClass": "solid",
+   "gravity": "earth",
+   "count": 2,
+   "points": [
+    [
+     101.325,
+     20
+    ],
+    [
+     101.325,
+     21
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,139 @@
+edge_id,source_investigation,target_investigation,edge_type,shared_items,weight,basis,evidence_source_ids,directed
+E0001,PSI-47,PSI-102,precursor_of,DAFT checked the modified particle counter ahead of SAME,1,nasa_stated,S37,true
+E0002,PSI-69,PSI-68,follow_on_of,FLEX-2 builds upon FLEX,1,nasa_stated,S15,true
+E0003,PSI-98,PSI-99,series_succession,Saffire-I then Saffire-II,1,nasa_stated,S26,true
+E0004,PSI-99,PSI-100,series_succession,Saffire-II then Saffire-III,1,nasa_stated,S26,true
+E0005,PSI-100,SAFFIRE-IV,series_succession,Saffire-III then Saffire-IV,1,nasa_stated,S26;S29,true
+E0006,SAFFIRE-IV,SAFFIRE-V,series_succession,Saffire-IV then Saffire-V,1,nasa_stated,S26;S29,true
+E0007,SAFFIRE-V,SAFFIRE-VI,series_succession,Saffire-VI builds on Saffire-I through V,1,nasa_stated,S26,true
+E0008,PSI-102,PSI-115,data_reused_by,PSI-115 models smoke generation using SAME data,1,investigation_title,PSI-115,true
+E0009,PSI-107,PSI-60,data_reused_by,PSI-60 analyses SPICE data sets,1,investigation_title,PSI-60,true
+E0010,PSI-26,PSI-62,data_reused_by,PSI-62 compares flame spread modelling with BASS experiments,1,investigation_title,PSI-62,true
+E0011,PSI-25,PSI-62,data_reused_by,PSI-62 compares flame spread modelling with BASS experiments (BASS or BASS-II not specified),1,investigation_title,PSI-62,true
+E0012,PSI-69,PSI-117,related_via_keyword,FLEX appears in PSI-117 keywords (cool flame dynamics),1,investigation_keywords,PSI-117,false
+E0013,PSI-69,PSI-142,related_via_keyword,FLEX appears in PSI-142 keywords (cool flame transitions),1,investigation_keywords,PSI-142,false
+E0014,PSI-39,PSI-117,related_via_topic,cool flames,1,investigation_title,PSI-39;PSI-117,false
+E0015,PSI-39,PSI-142,related_via_topic,cool flames,1,investigation_title,PSI-39;PSI-142,false
+E0016,PSI-106,PSI-107,same_test_campaign,SLICE table notes SPICE testing on its last test day (2012),1,psi_experimental_table,PSI-106,false
+E0017,PSI-26,PSI-25,series_succession,BASS then BASS-II (same MSG hardware),1,inferred_from_name,PSI-25;PSI-26,true
+E0018,PSI-99,SAFFIRE-IV,related_materials,Saffire-IV burned the same materials as Saffire-II at different conditions,1,nasa_stated,S26,false
+E0019,PSI-26,SAFFIRE-V,validation_link,BASS-II/Saffire compare small-scale tests with large-scale exploration-atmosphere fires,1,nasa_stated,S31,false
+E0020,SAFFIRE-VI,LUCI,complementary_evidence,Large-scale microgravity fire vs lunar-gravity small-scale fire: both feed the 1-g screening gap,1,nasa_stated,S09;S10,false
+E0021,LUCI,FM2,precursor_of,LUCI is a stepping stone to FM2 on the lunar surface,1,nasa_stated,S07,true
+E0022,PSI-100,PSI-25,shared_fuel,SIBAL;cotton,2,derived_from_burn_cards_and_campaigns,PSI-100;PSI-25,false
+E0023,PSI-100,PSI-26,shared_fuel,SIBAL;cotton,2,derived_from_burn_cards_and_campaigns,PSI-100;PSI-26,false
+E0024,PSI-100,PSI-98,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,PSI-100;PSI-98,false
+E0025,PSI-100,PSI-98,shared_fuel,SIBAL;cotton,2,derived_from_burn_cards_and_campaigns,PSI-100;PSI-98,false
+E0026,PSI-100,PSI-99,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,PSI-100;PSI-99,false
+E0027,PSI-100,PSI-99,shared_fuel,SIBAL;cotton,2,derived_from_burn_cards_and_campaigns,PSI-100;PSI-99,false
+E0028,PSI-100,SAFFIRE-IV,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,PSI-100;SAFFIRE-IV,false
+E0029,PSI-100,SAFFIRE-IV,shared_fuel,SIBAL;cotton,2,derived_from_burn_cards_and_campaigns,PSI-100;SAFFIRE-IV,false
+E0030,PSI-100,SAFFIRE-V,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,PSI-100;SAFFIRE-V,false
+E0031,PSI-100,SAFFIRE-V,shared_fuel,cotton,1,derived_from_burn_cards_and_campaigns,PSI-100;SAFFIRE-V,false
+E0032,PSI-100,SAFFIRE-VI,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,PSI-100;SAFFIRE-VI,false
+E0033,PSI-100,SAFFIRE-VI,shared_fuel,SIBAL;cotton,2,derived_from_burn_cards_and_campaigns,PSI-100;SAFFIRE-VI,false
+E0034,PSI-100,LUCI,shared_fuel,SIBAL;cotton,2,derived_from_burn_cards_and_campaigns,PSI-100;LUCI,false
+E0035,PSI-102,PSI-99,shared_fuel,silicone,1,derived_from_burn_cards_and_campaigns,PSI-102;PSI-99,false
+E0036,PSI-106,PSI-107,shared_fuel,ethane;ethylene,2,derived_from_burn_cards_and_campaigns,PSI-106;PSI-107,false
+E0037,PSI-106,PSI-10,shared_fuel,ethylene,1,derived_from_burn_cards_and_campaigns,PSI-106;PSI-10,false
+E0038,PSI-106,PSI-159,shared_fuel,ethane,1,derived_from_burn_cards_and_campaigns,PSI-106;PSI-159,false
+E0039,PSI-106,PSI-20,shared_fuel,ethylene;methane,2,derived_from_burn_cards_and_campaigns,PSI-106;PSI-20,false
+E0040,PSI-106,PSI-21,shared_fuel,ethane;ethylene;methane,3,derived_from_burn_cards_and_campaigns,PSI-106;PSI-21,false
+E0041,PSI-106,PSI-22,shared_fuel,ethylene;methane,2,derived_from_burn_cards_and_campaigns,PSI-106;PSI-22,false
+E0042,PSI-106,PSI-23,shared_fuel,ethylene;methane,2,derived_from_burn_cards_and_campaigns,PSI-106;PSI-23,false
+E0043,PSI-107,PSI-10,shared_fuel,ethylene;propane,2,derived_from_burn_cards_and_campaigns,PSI-107;PSI-10,false
+E0044,PSI-107,PSI-159,shared_fuel,ethane;propane,2,derived_from_burn_cards_and_campaigns,PSI-107;PSI-159,false
+E0045,PSI-107,PSI-20,shared_fuel,ethylene,1,derived_from_burn_cards_and_campaigns,PSI-107;PSI-20,false
+E0046,PSI-107,PSI-21,shared_fuel,ethane;ethylene,2,derived_from_burn_cards_and_campaigns,PSI-107;PSI-21,false
+E0047,PSI-107,PSI-22,shared_fuel,ethylene,1,derived_from_burn_cards_and_campaigns,PSI-107;PSI-22,false
+E0048,PSI-107,PSI-23,shared_fuel,ethylene,1,derived_from_burn_cards_and_campaigns,PSI-107;PSI-23,false
+E0049,PSI-107,PSI-25,shared_hardware,MSG,1,derived_from_investigation_metadata,PSI-107;PSI-25,false
+E0050,PSI-107,PSI-26,shared_hardware,MSG,1,derived_from_investigation_metadata,PSI-107;PSI-26,false
+E0051,PSI-10,PSI-159,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-10;PSI-159,false
+E0052,PSI-10,PSI-159,shared_fuel,propane,1,derived_from_burn_cards_and_campaigns,PSI-10;PSI-159,false
+E0053,PSI-10,PSI-20,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-10;PSI-20,false
+E0054,PSI-10,PSI-20,shared_fuel,ethylene,1,derived_from_burn_cards_and_campaigns,PSI-10;PSI-20,false
+E0055,PSI-10,PSI-21,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-10;PSI-21,false
+E0056,PSI-10,PSI-21,shared_fuel,ethylene,1,derived_from_burn_cards_and_campaigns,PSI-10;PSI-21,false
+E0057,PSI-10,PSI-22,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-10;PSI-22,false
+E0058,PSI-10,PSI-22,shared_fuel,ethylene,1,derived_from_burn_cards_and_campaigns,PSI-10;PSI-22,false
+E0059,PSI-10,PSI-23,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-10;PSI-23,false
+E0060,PSI-10,PSI-23,shared_fuel,ethylene,1,derived_from_burn_cards_and_campaigns,PSI-10;PSI-23,false
+E0061,PSI-10,PSI-39,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-10;PSI-39,false
+E0062,PSI-10,PSI-68,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-10;PSI-68,false
+E0063,PSI-10,PSI-69,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-10;PSI-69,false
+E0064,PSI-159,PSI-20,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-159;PSI-20,false
+E0065,PSI-159,PSI-21,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-159;PSI-21,false
+E0066,PSI-159,PSI-21,shared_fuel,ethane,1,derived_from_burn_cards_and_campaigns,PSI-159;PSI-21,false
+E0067,PSI-159,PSI-22,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-159;PSI-22,false
+E0068,PSI-159,PSI-23,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-159;PSI-23,false
+E0069,PSI-159,PSI-39,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-159;PSI-39,false
+E0070,PSI-159,PSI-68,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-159;PSI-68,false
+E0071,PSI-159,PSI-69,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-159;PSI-69,false
+E0072,PSI-20,PSI-21,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-20;PSI-21,false
+E0073,PSI-20,PSI-21,shared_fuel,ethylene;methane,2,derived_from_burn_cards_and_campaigns,PSI-20;PSI-21,false
+E0074,PSI-20,PSI-22,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-20;PSI-22,false
+E0075,PSI-20,PSI-22,shared_fuel,ethylene;methane,2,derived_from_burn_cards_and_campaigns,PSI-20;PSI-22,false
+E0076,PSI-20,PSI-23,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-20;PSI-23,false
+E0077,PSI-20,PSI-23,shared_fuel,ethylene;methane,2,derived_from_burn_cards_and_campaigns,PSI-20;PSI-23,false
+E0078,PSI-20,PSI-39,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-20;PSI-39,false
+E0079,PSI-20,PSI-68,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-20;PSI-68,false
+E0080,PSI-20,PSI-69,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-20;PSI-69,false
+E0081,PSI-21,PSI-22,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-21;PSI-22,false
+E0082,PSI-21,PSI-22,shared_fuel,ethylene;methane,2,derived_from_burn_cards_and_campaigns,PSI-21;PSI-22,false
+E0083,PSI-21,PSI-23,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-21;PSI-23,false
+E0084,PSI-21,PSI-23,shared_fuel,ethylene;methane,2,derived_from_burn_cards_and_campaigns,PSI-21;PSI-23,false
+E0085,PSI-21,PSI-39,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-21;PSI-39,false
+E0086,PSI-21,PSI-68,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-21;PSI-68,false
+E0087,PSI-21,PSI-69,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-21;PSI-69,false
+E0088,PSI-22,PSI-23,shared_hardware,ACME;CIR,2,derived_from_investigation_metadata,PSI-22;PSI-23,false
+E0089,PSI-22,PSI-23,shared_fuel,ethylene;methane,2,derived_from_burn_cards_and_campaigns,PSI-22;PSI-23,false
+E0090,PSI-22,PSI-39,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-22;PSI-39,false
+E0091,PSI-22,PSI-68,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-22;PSI-68,false
+E0092,PSI-22,PSI-69,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-22;PSI-69,false
+E0093,PSI-23,PSI-39,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-23;PSI-39,false
+E0094,PSI-23,PSI-68,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-23;PSI-68,false
+E0095,PSI-23,PSI-69,shared_hardware,CIR,1,derived_from_investigation_metadata,PSI-23;PSI-69,false
+E0096,PSI-25,PSI-26,shared_hardware,MSG,1,derived_from_investigation_metadata,PSI-25;PSI-26,false
+E0097,PSI-25,PSI-26,shared_fuel,Nomex;PMMA;SIBAL;cotton;wax,5,derived_from_burn_cards_and_campaigns,PSI-25;PSI-26,false
+E0098,PSI-25,PSI-98,shared_fuel,SIBAL;cotton,2,derived_from_burn_cards_and_campaigns,PSI-25;PSI-98,false
+E0099,PSI-25,PSI-99,shared_fuel,Nomex;PMMA;SIBAL;cotton,4,derived_from_burn_cards_and_campaigns,PSI-25;PSI-99,false
+E0100,PSI-25,SAFFIRE-IV,shared_fuel,PMMA;SIBAL;cotton,3,derived_from_burn_cards_and_campaigns,PSI-25;SAFFIRE-IV,false
+E0101,PSI-25,SAFFIRE-V,shared_fuel,PMMA;cotton,2,derived_from_burn_cards_and_campaigns,PSI-25;SAFFIRE-V,false
+E0102,PSI-25,SAFFIRE-VI,shared_fuel,PMMA;SIBAL;cotton,3,derived_from_burn_cards_and_campaigns,PSI-25;SAFFIRE-VI,false
+E0103,PSI-25,LUCI,shared_fuel,PMMA;SIBAL;cotton,3,derived_from_burn_cards_and_campaigns,PSI-25;LUCI,false
+E0104,PSI-26,PSI-98,shared_fuel,SIBAL;cotton,2,derived_from_burn_cards_and_campaigns,PSI-26;PSI-98,false
+E0105,PSI-26,PSI-99,shared_fuel,Nomex;PMMA;SIBAL;cotton,4,derived_from_burn_cards_and_campaigns,PSI-26;PSI-99,false
+E0106,PSI-26,SAFFIRE-IV,shared_fuel,PMMA;SIBAL;cotton,3,derived_from_burn_cards_and_campaigns,PSI-26;SAFFIRE-IV,false
+E0107,PSI-26,SAFFIRE-V,shared_fuel,PMMA;cotton,2,derived_from_burn_cards_and_campaigns,PSI-26;SAFFIRE-V,false
+E0108,PSI-26,SAFFIRE-VI,shared_fuel,PMMA;SIBAL;cotton,3,derived_from_burn_cards_and_campaigns,PSI-26;SAFFIRE-VI,false
+E0109,PSI-26,LUCI,shared_fuel,PMMA;SIBAL;cotton,3,derived_from_burn_cards_and_campaigns,PSI-26;LUCI,false
+E0110,PSI-39,PSI-68,shared_hardware,CIR;MDCA,2,derived_from_investigation_metadata,PSI-39;PSI-68,false
+E0111,PSI-39,PSI-69,shared_hardware,CIR;MDCA,2,derived_from_investigation_metadata,PSI-39;PSI-69,false
+E0112,PSI-68,PSI-69,shared_hardware,CIR;MDCA,2,derived_from_investigation_metadata,PSI-68;PSI-69,false
+E0113,PSI-68,PSI-69,shared_fuel,heptane,1,derived_from_burn_cards_and_campaigns,PSI-68;PSI-69,false
+E0114,PSI-98,PSI-99,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,PSI-98;PSI-99,false
+E0115,PSI-98,PSI-99,shared_fuel,SIBAL;cotton,2,derived_from_burn_cards_and_campaigns,PSI-98;PSI-99,false
+E0116,PSI-98,SAFFIRE-IV,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,PSI-98;SAFFIRE-IV,false
+E0117,PSI-98,SAFFIRE-IV,shared_fuel,SIBAL;cotton,2,derived_from_burn_cards_and_campaigns,PSI-98;SAFFIRE-IV,false
+E0118,PSI-98,SAFFIRE-V,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,PSI-98;SAFFIRE-V,false
+E0119,PSI-98,SAFFIRE-V,shared_fuel,cotton,1,derived_from_burn_cards_and_campaigns,PSI-98;SAFFIRE-V,false
+E0120,PSI-98,SAFFIRE-VI,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,PSI-98;SAFFIRE-VI,false
+E0121,PSI-98,SAFFIRE-VI,shared_fuel,SIBAL;cotton,2,derived_from_burn_cards_and_campaigns,PSI-98;SAFFIRE-VI,false
+E0122,PSI-98,LUCI,shared_fuel,SIBAL;cotton,2,derived_from_burn_cards_and_campaigns,PSI-98;LUCI,false
+E0123,PSI-99,SAFFIRE-IV,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,PSI-99;SAFFIRE-IV,false
+E0124,PSI-99,SAFFIRE-IV,shared_fuel,PMMA;SIBAL;cotton,3,derived_from_burn_cards_and_campaigns,PSI-99;SAFFIRE-IV,false
+E0125,PSI-99,SAFFIRE-V,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,PSI-99;SAFFIRE-V,false
+E0126,PSI-99,SAFFIRE-V,shared_fuel,PMMA;cotton,2,derived_from_burn_cards_and_campaigns,PSI-99;SAFFIRE-V,false
+E0127,PSI-99,SAFFIRE-VI,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,PSI-99;SAFFIRE-VI,false
+E0128,PSI-99,SAFFIRE-VI,shared_fuel,PMMA;SIBAL;cotton,3,derived_from_burn_cards_and_campaigns,PSI-99;SAFFIRE-VI,false
+E0129,PSI-99,LUCI,shared_fuel,PMMA;SIBAL;cotton,3,derived_from_burn_cards_and_campaigns,PSI-99;LUCI,false
+E0130,SAFFIRE-IV,SAFFIRE-V,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,SAFFIRE-IV;SAFFIRE-V,false
+E0131,SAFFIRE-IV,SAFFIRE-V,shared_fuel,PMMA;cotton,2,derived_from_burn_cards_and_campaigns,SAFFIRE-IV;SAFFIRE-V,false
+E0132,SAFFIRE-IV,SAFFIRE-VI,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,SAFFIRE-IV;SAFFIRE-VI,false
+E0133,SAFFIRE-IV,SAFFIRE-VI,shared_fuel,PMMA;SIBAL;cotton,3,derived_from_burn_cards_and_campaigns,SAFFIRE-IV;SAFFIRE-VI,false
+E0134,SAFFIRE-IV,LUCI,shared_fuel,PMMA;SIBAL;cotton,3,derived_from_burn_cards_and_campaigns,SAFFIRE-IV;LUCI,false
+E0135,SAFFIRE-V,SAFFIRE-VI,shared_hardware,Saffire flow unit / Cygnus,1,derived_from_investigation_metadata,SAFFIRE-V;SAFFIRE-VI,false
+E0136,SAFFIRE-V,SAFFIRE-VI,shared_fuel,PMMA;cotton,2,derived_from_burn_cards_and_campaigns,SAFFIRE-V;SAFFIRE-VI,false
+E0137,SAFFIRE-V,LUCI,shared_fuel,PMMA;cotton,2,derived_from_burn_cards_and_campaigns,SAFFIRE-V;LUCI,false
+E0138,SAFFIRE-VI,LUCI,shared_fuel,PMMA;SIBAL;cotton,3,derived_from_burn_cards_and_campaigns,SAFFIRE-VI;LUCI,false

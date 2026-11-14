@@ -1,0 +1,7 @@
+habitat_id,name,role,pressure_psia,pressure_kpa,o2_pct,n2_pct,ppo2_kpa,ppo2_basis,note,source_ids
+HAB-01,Standard air / ISS cabin,reference,14.7,101.35,21.0,79.0,21.28,derived,"Reference atmosphere (MSG, ISS)",S06
+HAB-02,Shuttle staged decompression,reference,10.2,70.33,26.5,73.5,18.64,derived,Used on Shuttle missions; physiologically similar to 8.2/34,S05
+HAB-03,Exploration atmosphere (current),habitat,8.2,56.54,34.0,66.0,19.2,stated,Lunar habitat and EVA-intensive operations; ppN2 5.41 psi,S04;S05;S06
+HAB-04,Exploration atmosphere (2006),habitat_prior,8.0,55.16,32.0,68.0,17.7,stated,Replaced in 2012 by 8.2/34,S04;S05
+HAB-05,Exploration atmosphere design maximum,habitat_bound,8.2,56.54,40.0,60.0,22.62,derived,Hardware assessed up to 40% O2 at 8.2 psia; max could be 36-40% by vehicle,S03
+HAB-06,EVA suit,suit,4.3,29.65,80.0,20.0,23.72,derived,Suit pressure 4.3 psi with 80% or 95% O2 purge; prebreathe at 6.0 psi,S04

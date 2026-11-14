@@ -1,0 +1,18 @@
+investigation,record,field,psi_or_primary_value,conflicting_or_expected_value,handling
+PSI-100,SAFFIRE-III S1/S2,air flow,30 cm/s (PSI table),25 cm/s for sample III-1 (S02 Table 2),PSI value kept; flagged flow_conflict_with_S02_25_cm_s
+PSI-99,2-6,air flow,20 cm/s (PSI table),25 cm/s for II-6 (S02 Table 2),PSI value kept; discrepancy recorded
+PSI-99,2-5,oxygen,"~22.1% (derived from CO2 by NASA, PSI table)",21% for II-5 (S02 Table 2),PSI value kept; discrepancy recorded
+PSI-98,SAFFIRE-I S1/S2,sample length and width,"length 40.6 cm, width 94 cm (PSI table)","width 41 cm, length 94 cm for I-1 (S02 Table 2)",Swapped in cards; flagged length_width_swapped_in_source_corrected_vs_S02
+PSI-98;PSI-100,SAFFIRE-I and -III,sample thickness,0.37 cm and .33 cm (PSI tables),SAFFIRE-II rows print the same SIBAL as 0.37 mm,Kept as printed in measurements; flagged thickness_unit_suspect_printed_cm; not used as numeric thickness
+PSI-99,2-1 to 2-9,thickness text such as 037 mm,037 mm,decimal point missing,Read as 0.37 mm; flagged thickness_decimal_point_assumed
+PSI-69,FLEX test 114,ambient pressure,0 mmHg,physically impossible for a burning droplet test,Pressure blanked; flagged pressure_zero_invalid
+PSI-69,all rows,CO column header,CO initial ambient composition,"FLEX suppressants are CO2 and He (S18, S24)",Interpreted as CO2 fraction; flagged co2_header_says_CO
+PSI-69,all rows,Burning rate; mm,unit printed as mm,burning rate would normally be an area rate,Kept raw as burn_rate_raw; flagged burn_rate_unit_unclear
+PSI-10,"inverse flame tests 22024K2, 22024K3",XO2 and flows,LOW O2,text instead of numbers,O2 left blank; flagged o2_reported_as_LOW_O2
+PSI-107,several rows,air rate,"negative values (-0.28, -5.92)",negative flow not meaningful,Flow blanked; flagged negative_flow_invalid
+FM2,planned conditions,oxygen,21% and 34% O2 (NTRS 20240015307),"37% O2 (April 2024 BPS briefing, S42)",Both recorded; unresolved until results published
+PSI-25,B2,final oxygen,initial 22.2% / final 1.6%,final O2 differs from initial by more than 5 points,Kept as printed; flagged o2_final_outlier
+PSI-25,P22a,final oxygen,initial 20.8% / final 0.6%,final O2 differs from initial by more than 5 points,Kept as printed; flagged o2_final_outlier
+PSI-25,P22b,final oxygen,initial 20.0% / final 39.1%,final O2 differs from initial by more than 5 points,Kept as printed; flagged o2_final_outlier
+PSI-25,T28a,final oxygen,initial 20.7% / final 0.9%,final O2 differs from initial by more than 5 points,Kept as printed; flagged o2_final_outlier
+PSI-25,T28b,final oxygen,initial 20.7% / final 40.4%,final O2 differs from initial by more than 5 points,Kept as printed; flagged o2_final_outlier

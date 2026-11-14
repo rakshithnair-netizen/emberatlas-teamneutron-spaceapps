@@ -1,0 +1,23 @@
+source_file,raw_records,cards_or_campaign_rows
+PSI-10_Experimental_table_Flame_Design_Normal_Flame.csv,207,207
+PSI-10_Experimental_table_Flame_Design_Inverse_Flame.csv,120,120
+PSI-159_Experimental_table_CFI-G_Normal_Flames.csv,179,179
+PSI-159_Experimental_table_CFI-G_Inverse_Flames.csv,1015,154
+PSI-39_Experimental_table_CFI.csv,87,79
+PSI-69_Experimental_table_FLEX.csv,274,274
+PSI-25_Experimental_table_BASS-II.csv,129,129
+PSI-26_Experimental_table_BASS.csv,122,122
+PSI-107_Experimental_table_Spice.csv,469,435
+PSI-102_Experimental_table_SAME.csv,8,8
+PSI-98_Experimental_table_SAFFIRE-1.csv,4,2
+PSI-99_Experimental_table_SAFFIRE-2.csv,15,9
+PSI-100_Experimental_table_SAFFIRE-3.csv,2,2
+saffire_iv_vi_conditions.csv,9,8
+luci_results.csv (4 burn configurations),4,4
+PSI-20_Experimental_table_ACME_BRE.csv,18,18
+PSI-21_Experimental_table_CLD_Flame.csv,32,32
+PSI-22_Experimental_table_ACME_E-FIELD_Flames.csv,32,32
+PSI-23_Experimental_table_ACME_s-Flame.csv,18,18
+PSI-106_Experimental_table_Slice.csv,12,12
+PSI-47_Experimental_table_DAFT.csv,2,2
+PSI-68_Experimental_table_Flex2.csv,8,8

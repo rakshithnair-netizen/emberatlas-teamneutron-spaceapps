@@ -1,0 +1,165 @@
+table,column,description,non_empty,total
+burn_cards,card_id,Unique burn card ID,1732,1732
+burn_cards,data_origin,PSI_repository or NASA_publication,1732,1732
+burn_cards,investigation_id,Investigation ID (PSI-nnn or a name for publication-only missions),1732,1732
+burn_cards,acronym,Investigation acronym,1732,1732
+burn_cards,source_file,Raw table the row came from,1732,1732
+burn_cards,source_row,Row number in the raw table,1732,1732
+burn_cards,test_id,Test or sample identifier as printed,1731,1732
+burn_cards,test_date,Test date (ISO) where known,553,1732
+burn_cards,gmt_day_of_year,GMT day of year where printed,686,1732
+burn_cards,fuel_name,Fuel or sample material,1732,1732
+burn_cards,fuel_formula,Chemical formula where applicable,1448,1732
+burn_cards,fuel_class,"gas, liquid, solid, etc.",1732,1732
+burn_cards,fuel_composition,Composition text,1174,1732
+burn_cards,sample_description,Free-text sample description,263,1732
+burn_cards,geometry,Sample or flame geometry,1732,1732
+burn_cards,flame_type,"Flame type (diffusion, spread, droplet, etc.)",1732,1732
+burn_cards,sample_thickness_mm,Sample thickness in mm,53,1732
+burn_cards,sample_size_mm,Sample size in mm,204,1732
+burn_cards,flow_cm_s,Flow velocity cm/s,432,1732
+burn_cards,flow_direction,Flow direction relative to spread,456,1732
+burn_cards,o2_pct,Oxygen % (point value; midpoint when a range),1597,1732
+burn_cards,o2_pct_low,O2 % lower bound,11,1732
+burn_cards,o2_pct_high,O2 % upper bound,11,1732
+burn_cards,o2_pct_final,O2 % at end of test,496,1732
+burn_cards,o2_basis,"measured, nominal, derived or range",1732,1732
+burn_cards,pressure_kpa,Pressure kPa (point value),1731,1732
+burn_cards,pressure_kpa_low,Pressure lower bound kPa,0,1732
+burn_cards,pressure_kpa_high,Pressure upper bound kPa,0,1732
+burn_cards,pressure_basis,"measured, nominal, derived or range",1732,1732
+burn_cards,n2_frac,N2 fraction,353,1732
+burn_cards,he_frac,He fraction,353,1732
+burn_cards,co2_frac,CO2 fraction,274,1732
+burn_cards,ppo2_kpa,Oxygen partial pressure kPa (computed from o2 and pressure),1596,1732
+burn_cards,gravity_regime,"microgravity, lunar or earth",1732,1732
+burn_cards,platform,"Platform (ISS, Cygnus, etc.)",1732,1732
+burn_cards,hardware,Hardware,1732,1732
+burn_cards,outcome,"Outcome (ignited, extinguished, etc.)",1732,1732
+burn_cards,burn_time_s,Burn time in seconds,960,1732
+burn_cards,habitat_relevance_tier,Tier A to F against 8.2 psi / 34% O2 (see README),1732,1732
+burn_cards,measurements_json,Other measurements as JSON,1731,1732
+burn_cards,quality_flags,Semicolon-separated data-quality flags,1090,1732
+burn_cards,source_ids,Semicolon-separated source IDs (see sources.csv),1732,1732
+test_campaigns,campaign_id,Unique campaign row ID,122,122
+test_campaigns,investigation_id,Investigation ID (PSI-nnn or a name for publication-only missions),122,122
+test_campaigns,acronym,Investigation acronym,122,122
+test_campaigns,record_type,"daily_summary, planned_matrix or instrument_session",122,122
+test_campaigns,date,Date,103,122
+test_campaigns,test_day_code,Test day code,71,122
+test_campaigns,fuel,Fuel,111,122
+test_campaigns,fuel_concentration_text,Fuel concentration text,76,122
+test_campaigns,o2_text,O2 as printed,44,122
+test_campaigns,o2_pct_low,O2 % lower bound,44,122
+test_campaigns,o2_pct_high,O2 % upper bound,44,122
+test_campaigns,pressure_atm_low,Pressure low (atm),8,122
+test_campaigns,pressure_atm_high,Pressure high (atm),8,122
+test_campaigns,n_flames_ignited,Number of flames ignited,89,122
+test_campaigns,burner_or_hardware_note,Burner or hardware note,110,122
+test_campaigns,notes,Notes,29,122
+test_campaigns,source_file,Raw table the row came from,122,122
+test_campaigns,source_row,Row number in the raw table,122,122
+test_campaigns,source_ids,Semicolon-separated source IDs (see sources.csv),122,122
+investigations,investigation_id,Investigation ID (PSI-nnn or a name for publication-only missions),30,30
+investigations,acronym,Acronym,30,30
+investigations,title,Title,30,30
+investigations,data_origin,PSI_repository or NASA_publication,30,30
+investigations,in_scope,true if relevant to fire safety,30,30
+investigations,platform,"Platform (ISS, Cygnus, etc.)",27,30
+investigations,hardware,Hardware,24,30
+investigations,research_area,NASA research area,30,30
+investigations,sub_area,NASA sub-area,23,30
+investigations,managing_center,Managing NASA center,25,30
+investigations,start_date,Start date,25,30
+investigations,end_date,End date,21,30
+investigations,status,"completed, flown or planned",5,30
+investigations,fire_safety_roles,Curated roles in fire safety,28,30
+investigations,role_curation_note,How roles were assigned,30,30
+investigations,keywords,Keywords,25,30
+investigations,objective,Objective,30,30
+investigations,hypothesis,Hypothesis,24,30
+investigations,approach,Approach,25,30
+investigations,research_impacts_earth_benefits,Earth benefits text,25,30
+investigations,n_publications,Publication count,25,30
+investigations,principal_investigators,Principal investigators,25,30
+investigations,doi,DOI,25,30
+investigations,psi_url,PSI page URL,25,30
+investigation_envelope,investigation_id,Investigation ID,15,15
+investigation_envelope,n_cards,Number of burn cards,15,15
+investigation_envelope,n_cards_with_o2_and_pressure,Cards having both O2 and pressure,15,15
+investigation_envelope,o2_pct_min,Minimum O2 %,13,15
+investigation_envelope,o2_pct_max,Maximum O2 %,13,15
+investigation_envelope,pressure_kpa_min,Minimum pressure kPa,13,15
+investigation_envelope,pressure_kpa_max,Maximum pressure kPa,13,15
+investigation_envelope,closest_card_id,Card closest to the exploration atmosphere,13,15
+investigation_envelope,closest_distance_to_8p2psi_34pct,Normalized distance sqrt(((o2-34)/10)^2+((p-56.5)/40)^2),13,15
+investigation_envelope,closest_o2_pct,O2 % of closest card,13,15
+investigation_envelope,closest_pressure_kpa,Pressure of closest card (kPa),13,15
+investigation_envelope,n_tier_A,Cards in tier A,15,15
+investigation_envelope,n_tier_B,Cards in tier B,15,15
+investigation_envelope,n_tier_C,Cards in tier C,15,15
+investigation_envelope,n_tier_D,Cards in tier D,15,15
+investigation_envelope,n_tier_F,Cards in tier F,15,15
+investigation_envelope,n_tier_E,Cards in tier E,15,15
+investigation_envelope,fuel_classes,Fuel classes covered,15,15
+investigation_envelope,fuel_names,Fuel names covered,15,15
+investigation_envelope,best_tier,Best tier in the investigation,15,15
+habitat_atmospheres,habitat_id,Habitat ID,6,6
+habitat_atmospheres,name,Name,6,6
+habitat_atmospheres,role,Role,6,6
+habitat_atmospheres,pressure_psia,Pressure psia,6,6
+habitat_atmospheres,pressure_kpa,Pressure kPa (point value),6,6
+habitat_atmospheres,o2_pct,Oxygen %,6,6
+habitat_atmospheres,n2_pct,N2 %,6,6
+habitat_atmospheres,ppo2_kpa,Oxygen partial pressure kPa (computed from o2 and pressure),6,6
+habitat_atmospheres,ppo2_basis,How ppO2 was derived,6,6
+habitat_atmospheres,note,Note,6,6
+habitat_atmospheres,source_ids,Semicolon-separated source IDs (see sources.csv),6,6
+family_tree_edges,edge_id,Edge ID,138,138
+family_tree_edges,source_investigation,Edge source,138,138
+family_tree_edges,target_investigation,Edge target,138,138
+family_tree_edges,edge_type,Relationship type,138,138
+family_tree_edges,shared_items,"Shared hardware, fuel or description",138,138
+family_tree_edges,weight,Number of shared items or 1,138,138
+family_tree_edges,basis,How the edge was established,138,138
+family_tree_edges,evidence_source_ids,Source IDs,138,138
+family_tree_edges,directed,true if direction matters,138,138
+findings,finding_id,Finding ID,54,54
+findings,area,Finding area,54,54
+findings,subarea,Sub-area or topic,54,54
+findings,statement,Paraphrased statement,54,54
+findings,quantitative_detail,Quantitative detail,4,54
+findings,linked_investigations,Linked investigations,36,54
+findings,earth_domain,Earth application domain,29,54
+findings,source_ids,Semicolon-separated source IDs (see sources.csv),54,54
+publications,investigation_id,Investigation ID (PSI-nnn or a name for publication-only missions),361,361
+publications,title,Title,361,361
+publications,doi,DOI,290,361
+publications,authors,Authors,361,361
+sources,source_id,Source ID (S-numbers for NASA reports; PSI-nnn for PSI pages),67,67
+sources,source_type,Type of source,67,67
+sources,title,Title,67,67
+sources,url,URL,67,67
+sources,nasa_id,NASA document ID or DOI,67,67
+sources,retrieved,Date retrieved,67,67
+test_platforms,platform_id,Platform ID,9,9
+test_platforms,platform,"Platform (ISS, Cygnus, etc.)",9,9
+test_platforms,duration,Test duration,8,9
+test_platforms,gravity_g,Gravity level (g),9,9
+test_platforms,o2_pct,Oxygen % of the test atmosphere,9,9
+test_platforms,pressure_psia,Pressure in psia,9,9
+test_platforms,status,"completed, flown or planned",9,9
+test_platforms,source_ids,Semicolon-separated source IDs (see sources.csv),9,9
+known_discrepancies,investigation,Investigation,17,17
+known_discrepancies,record,Affected record,17,17
+known_discrepancies,field,Affected field,17,17
+known_discrepancies,psi_or_primary_value,Value in primary source,17,17
+known_discrepancies,conflicting_or_expected_value,Conflicting or expected value,17,17
+known_discrepancies,handling,How handled,17,17
+rejected_rows,source_file,Raw table the row came from,912,912
+rejected_rows,source_row,Row number in the raw table,912,912
+rejected_rows,reason,Rejection reason,912,912
+rejected_rows,raw,Raw row text,51,912
+qa_reconciliation,source_file,Raw table the row came from,22,22
+qa_reconciliation,raw_records,Raw records in the source file,22,22
+qa_reconciliation,cards_or_campaign_rows,Rows produced,22,22

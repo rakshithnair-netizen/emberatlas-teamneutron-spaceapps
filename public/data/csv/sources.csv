@@ -1,0 +1,68 @@
+source_id,source_type,title,url,nasa_id,retrieved
+S01,NASA technical report or page,Saffire IV-VI heat release and CO/CO2 (ICES-2024-365),https://ntrs.nasa.gov/citations/20240002981,NTRS 20240002981,2026-11-14
+S02,NASA technical report or page,Fire Safety Implications of Preliminary Results from Saffire IV-V (ICES-2021-266),https://ntrs.nasa.gov/citations/20210011521,NTRS 20210011521,2026-11-14
+S03,NASA technical report or page,Low-pressure ECLSS / exploration atmosphere hardware flammability (ICES-2022-45),https://ntrs.nasa.gov/citations/20220006612,NTRS 20220006612,2026-11-14
+S04,NASA technical report or page,"Modeling a 15-min EVA prebreathe protocol, 8.2 psi / 34% O2 atmosphere",https://www.nasa.gov/wp-content/uploads/2023/03/abercromby-8.2-34-atm-2015.pdf,nasa.gov PDF,2026-11-14
+S05,NASA technical report or page,Evidence Report: Risk of Hypoxia from the Exploration Atmosphere,https://ntrs.nasa.gov/citations/20150021491,NTRS 20150021491,2026-11-14
+S06,NASA technical report or page,Research Questions and Challenges for Improved Spacecraft Fire Detection,https://ntrs.nasa.gov/citations/20210022143,NTRS 20210022143,2026-11-14
+S07,NASA technical report or page,Lunar Combustion Investigation (LUCI): Flammability Results from a Rotating Sounding Rocket,https://ntrs.nasa.gov/citations/20250010653,NTRS 20250010653,2026-11-14
+S08,NASA technical report or page,Flammability of Materials on the Moon (FM2) abstract,https://ntrs.nasa.gov/citations/20240015307,NTRS 20240015307,2026-11-14
+S09,NASA technical report or page,Material Flammability at Lunar and Martian Gravity (LPSC 2026),https://ntrs.nasa.gov/citations/20260000646,NTRS 20260000646,2026-11-14
+S10,NASA technical report or page,Decadal Survey white paper: flammability in partial gravity (Miller),https://science.nasa.gov/wp-content/uploads/2023/05/217_5dda37a2b088281953e769f275061ac8_MillerFletcherJ.pdf,science.nasa.gov PDF,2026-11-14
+S11,NASA technical report or page,Challenges and Research Needs for Micro- and Partial-Gravity Fires (Liao),https://science.nasa.gov/wp-content/uploads/2023/05/60_afb22b1e538432728848e83bb3ade8c2_LiaoYaTingT.pdf,science.nasa.gov PDF,2026-11-14
+S12,NASA technical report or page,Solid Fuel Combustion in Partial and Micro-Gravity (Gollner),https://science.nasa.gov/wp-content/uploads/2023/05/217_9ba7198f4af1488d0b4795cf594a906f_GollnerMichaelJ.pdf,science.nasa.gov PDF,2026-11-14
+S13,NASA technical report or page,Fire on the Moon overview charts,https://ntrs.nasa.gov/citations/20210020516,NTRS 20210020516,2026-11-14
+S14,NASA technical report or page,Upward Flame Spread Over Thin Solids in Partial Gravity (AIAA 2001-0466),https://ntrs.nasa.gov/citations/20010059376,NTRS 20010059376,2026-11-14
+S15,NASA technical report or page,A Researcher's Guide to Combustion in Reduced Gravity (ISS),https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf,nasa.gov PDF,2026-11-14
+S16,NASA technical report or page,BASS-II (NASA Glenn),https://www1.grc.nasa.gov/space/iss-research/msg/bass-2/,grc.nasa.gov,2026-11-14
+S17,NASA technical report or page,Advanced Combustion via Microgravity Experiments (ACME) fact sheet,https://www.nasa.gov/wp-content/uploads/2025/07/advanced-combustion-via-microgravity-experiments-acme.pdf,nasa.gov PDF,2026-11-14
+S18,NASA technical report or page,PSI-69 FLEX investigation page,https://psi.nasa.gov/physci/repo/data/investigations/PSI-69,psi.nasa.gov,2026-11-14
+S19,NASA technical report or page,Smoke Aerosol Measurement Experiment (SAME) fact sheet,https://www.nasa.gov/wp-content/uploads/2025/07/smoke-aerosol-measurement-experiment-same.pdf,nasa.gov PDF,2026-11-14
+S20,NASA technical report or page,SAME smoke particle size results (AIAA),https://ntrs.nasa.gov/citations/20120012884,NTRS 20120012884,2026-11-14
+S21,NASA technical report or page,Evaluation of Low-Gravity Smoke Particulate for Spacecraft Fire Detection,https://ntrs.nasa.gov/citations/20140006579,NTRS 20140006579,2026-11-14
+S22,NASA technical report or page,Spacecraft Fire Detection: Smoke Properties and Transport,https://ntrs.nasa.gov/citations/20080012612,NTRS 20080012612,2026-11-14
+S23,NASA technical report or page,An Overview of Smoke Detection and Spacecraft Fire Safety in Low Gravity,https://ntrs.nasa.gov/citations/20205008167,NTRS 20205008167,2026-11-14
+S24,NASA technical report or page,FLEX Research Requirements Document (EIRD v4),https://www1.grc.nasa.gov/wp-content/uploads/FLEX_EIRD_v4.pdf,grc.nasa.gov PDF,2026-11-14
+S25,NASA technical report or page,"Evaluation of CO2, N2 and He as Fire Suppression Agents in Microgravity",https://ntrs.nasa.gov/citations/20040161262,NTRS 20040161262,2026-11-14
+S26,NASA technical report or page,Spacecraft Fire Safety Demonstration (Saffire) fact sheet,https://www.nasa.gov/wp-content/uploads/2025/07/spacecraft-fire-safety-demonstration-saffire.pdf,nasa.gov PDF,2026-11-14
+S27,NASA technical report or page,Flame Burns Out on NASA's Long-Running Spacecraft Fire Experiment,https://www.nasa.gov/centers-and-facilities/glenn/flame-burns-out-on-nasas-long-running-spacecraft-fire-experiment/,nasa.gov,2026-11-14
+S28,NASA technical report or page,Saffire Ignites New Discoveries in Space,https://www.nasa.gov/humans-in-space/saffire-ignites-new-discoveries-in-space/,nasa.gov,2026-11-14
+S29,NASA technical report or page,ECLSS overview incl. Saffire IV/V observations (ICES-2021-384),https://ntrs.nasa.gov/citations/20210010866,NTRS 20210010866,2026-11-14
+S30,NASA technical report or page,Operation and Development Status of Saffire (2017),https://ntrs.nasa.gov/citations/20170000230,NTRS 20170000230,2026-11-14
+S31,NASA technical report or page,"Saffire status: IV, V, VI objectives",https://ntrs.nasa.gov/citations/20170002628,NTRS 20170002628,2026-11-14
+S32,NASA technical report or page,Why NASA is studying flames in space,https://science.nasa.gov/biological-physical/resources/explainers-infographics/why-nasa-is-studying-flames-in-space/,science.nasa.gov,2026-11-14
+S33,NASA technical report or page,Moon Material Flammability (Houston We Have a Podcast ep. 386),https://www.nasa.gov/podcasts/houston-we-have-a-podcast/moon-material-flammability/,nasa.gov,2026-11-14
+S34,NASA technical report or page,Development of Spacecraft Fire Safety Technology (2021),https://ntrs.nasa.gov/citations/20210021318,NTRS 20210021318,2026-11-14
+S35,NASA technical report or page,Recommendations for Fire Extinguisher Research (Easton),https://ntrs.nasa.gov/citations/20210023340,NTRS 20210023340,2026-11-14
+S37,NASA technical report or page,Combustion Science (NASA Glenn),https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/,nasa.gov,2026-11-14
+S38,NASA technical report or page,Space Station's Quest for the Secrets of Fire,https://www.nasa.gov/humans-in-space/space-stations-quest-for-the-secrets-of-fire/,nasa.gov,2026-11-14
+S42,NASA technical report or page,"BPS fluids/combustion status briefing, Apr 2024 (FM2 note)",https://science.nasa.gov/wp-content/uploads/2024/09/1-9-fluids-combustion-materials-carpenter-2024.pdf,science.nasa.gov PDF,2026-11-14
+S43,NASA technical report or page,"NASA Materials Flammability Update (Urban, FLARE workshop 2021)",https://ntrs.nasa.gov/citations/20210021181,NTRS 20210021181,2026-11-14
+S46,NASA technical report or page,"Aeronautics and Space Report of the President, FY2025",https://www.nasa.gov/wp-content/uploads/2026/06/fy-2025-presidents-report-tagged.pdf,nasa.gov PDF,2026-11-14
+S44,NASA technical report or page,BASS fact sheet,https://www.nasa.gov/wp-content/uploads/2025/07/burning-and-suppression-of-solids-bass.pdf,nasa.gov PDF,2026-11-14
+S45,NASA technical report or page,FLEX fact sheet,https://www.nasa.gov/wp-content/uploads/2025/07/flame-extinguishment-experiment-flex.pdf,nasa.gov PDF,2026-11-14
+PSI-100,NASA PSI investigation and experimental table,PSI-100 SAFFIRE-III,https://psi.nasa.gov/physci/repo/data/investigations/PSI-100,doi:10.60555/040q-4h36,2026-11-13
+PSI-102,NASA PSI investigation and experimental table,PSI-102 SAME,https://psi.nasa.gov/physci/repo/data/investigations/PSI-102,doi:10.60555/gd4k-8h62,2026-11-13
+PSI-106,NASA PSI investigation and experimental table,PSI-106 SLICE,https://psi.nasa.gov/physci/repo/data/investigations/PSI-106,doi:10.60555/pm12-rg61,2026-11-13
+PSI-107,NASA PSI investigation and experimental table,PSI-107 SPICE,https://psi.nasa.gov/physci/repo/data/investigations/PSI-107,doi:10.60555/9kbh-e962,2026-11-13
+PSI-108,NASA PSI investigation and experimental table,PSI-108 STDCE-1,https://psi.nasa.gov/physci/repo/data/investigations/PSI-108,doi:10.60555/j1z3-bw42,2026-11-13
+PSI-10,NASA PSI investigation and experimental table,PSI-10 ACME/Flame Design,https://psi.nasa.gov/physci/repo/data/investigations/PSI-10,doi:10.60555/w4zy-bt45,2026-11-13
+PSI-115,NASA PSI investigation and experimental table,PSI-115 SAME-data modelling,https://psi.nasa.gov/physci/repo/data/investigations/PSI-115,doi:10.60555/q0v5-1v28,2026-11-13
+PSI-117,NASA PSI investigation and experimental table,PSI-117 Cool-flame CFD,https://psi.nasa.gov/physci/repo/data/investigations/PSI-117,doi:10.60555/gz0q-b577,2026-11-13
+PSI-142,NASA PSI investigation and experimental table,PSI-142 Cool-flame counterflow,https://psi.nasa.gov/physci/repo/data/investigations/PSI-142,doi:10.60555/80qf-vj95,2026-11-13
+PSI-159,NASA PSI investigation and experimental table,PSI-159 ACME CFI-G,https://psi.nasa.gov/physci/repo/data/investigations/PSI-159,doi:10.60555/cyt1-kh64,2026-11-13
+PSI-181,NASA PSI investigation and experimental table,PSI-181 Solder microgravity,https://psi.nasa.gov/physci/repo/data/investigations/PSI-181,doi:10.60555/td9e-cz97,2026-11-13
+PSI-20,NASA PSI investigation and experimental table,PSI-20 ACME BRE,https://psi.nasa.gov/physci/repo/data/investigations/PSI-20,doi:10.60555/vb93-3y72,2026-11-13
+PSI-21,NASA PSI investigation and experimental table,PSI-21 ACME CLD Flame,https://psi.nasa.gov/physci/repo/data/investigations/PSI-21,doi:10.60555/23e1-9950,2026-11-13
+PSI-22,NASA PSI investigation and experimental table,PSI-22 ACME E-FIELD Flames,https://psi.nasa.gov/physci/repo/data/investigations/PSI-22,doi:10.60555/se5a-8c73,2026-11-13
+PSI-23,NASA PSI investigation and experimental table,PSI-23 ACME s-Flame,https://psi.nasa.gov/physci/repo/data/investigations/PSI-23,doi:10.60555/k57n-p030,2026-11-13
+PSI-25,NASA PSI investigation and experimental table,PSI-25 BASS-II,https://psi.nasa.gov/physci/repo/data/investigations/PSI-25,doi:10.60555/4qc4-de67,2026-11-13
+PSI-26,NASA PSI investigation and experimental table,PSI-26 BASS,https://psi.nasa.gov/physci/repo/data/investigations/PSI-26,doi:10.60555/58h4-dy80,2026-11-13
+PSI-39,NASA PSI investigation and experimental table,PSI-39 CFI,https://psi.nasa.gov/physci/repo/data/investigations/PSI-39,doi:10.60555/m6pj-a914,2026-11-13
+PSI-47,NASA PSI investigation and experimental table,PSI-47 DAFT / DAFT-2,https://psi.nasa.gov/physci/repo/data/investigations/PSI-47,doi:10.60555/ztgj-d202,2026-11-13
+PSI-60,NASA PSI investigation and experimental table,PSI-60 SPICE data analysis,https://psi.nasa.gov/physci/repo/data/investigations/PSI-60,doi:10.60555/mzjm-yv57,2026-11-13
+PSI-62,NASA PSI investigation and experimental table,PSI-62 BASS flamelet modelling,https://psi.nasa.gov/physci/repo/data/investigations/PSI-62,doi:10.60555/e9xp-ex83,2026-11-13
+PSI-68,NASA PSI investigation and experimental table,PSI-68 FLEX-2,https://psi.nasa.gov/physci/repo/data/investigations/PSI-68,doi:10.60555/byp8-h018,2026-11-13
+PSI-69,NASA PSI investigation and experimental table,PSI-69 FLEX,https://psi.nasa.gov/physci/repo/data/investigations/PSI-69,doi:10.60555/mbq8-0451,2026-11-13
+PSI-98,NASA PSI investigation and experimental table,PSI-98 SAFFIRE-I,https://psi.nasa.gov/physci/repo/data/investigations/PSI-98,doi:10.60555/0t15-1z43,2026-11-13
+PSI-99,NASA PSI investigation and experimental table,PSI-99 SAFFIRE-II,https://psi.nasa.gov/physci/repo/data/investigations/PSI-99,doi:10.60555/2chp-m469,2026-11-13

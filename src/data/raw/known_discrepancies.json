@@ -1,0 +1,138 @@
+[
+ {
+  "investigation": "PSI-100",
+  "record": "SAFFIRE-III S1/S2",
+  "field": "air flow",
+  "psi_or_primary_value": "30 cm/s (PSI table)",
+  "conflicting_or_expected_value": "25 cm/s for sample III-1 (S02 Table 2)",
+  "handling": "PSI value kept; flagged flow_conflict_with_S02_25_cm_s"
+ },
+ {
+  "investigation": "PSI-99",
+  "record": "2-6",
+  "field": "air flow",
+  "psi_or_primary_value": "20 cm/s (PSI table)",
+  "conflicting_or_expected_value": "25 cm/s for II-6 (S02 Table 2)",
+  "handling": "PSI value kept; discrepancy recorded"
+ },
+ {
+  "investigation": "PSI-99",
+  "record": "2-5",
+  "field": "oxygen",
+  "psi_or_primary_value": "~22.1% (derived from CO2 by NASA, PSI table)",
+  "conflicting_or_expected_value": "21% for II-5 (S02 Table 2)",
+  "handling": "PSI value kept; discrepancy recorded"
+ },
+ {
+  "investigation": "PSI-98",
+  "record": "SAFFIRE-I S1/S2",
+  "field": "sample length and width",
+  "psi_or_primary_value": "length 40.6 cm, width 94 cm (PSI table)",
+  "conflicting_or_expected_value": "width 41 cm, length 94 cm for I-1 (S02 Table 2)",
+  "handling": "Swapped in cards; flagged length_width_swapped_in_source_corrected_vs_S02"
+ },
+ {
+  "investigation": "PSI-98;PSI-100",
+  "record": "SAFFIRE-I and -III",
+  "field": "sample thickness",
+  "psi_or_primary_value": "0.37 cm and .33 cm (PSI tables)",
+  "conflicting_or_expected_value": "SAFFIRE-II rows print the same SIBAL as 0.37 mm",
+  "handling": "Kept as printed in measurements; flagged thickness_unit_suspect_printed_cm; not used as numeric thickness"
+ },
+ {
+  "investigation": "PSI-99",
+  "record": "2-1 to 2-9",
+  "field": "thickness text such as 037 mm",
+  "psi_or_primary_value": "037 mm",
+  "conflicting_or_expected_value": "decimal point missing",
+  "handling": "Read as 0.37 mm; flagged thickness_decimal_point_assumed"
+ },
+ {
+  "investigation": "PSI-69",
+  "record": "FLEX test 114",
+  "field": "ambient pressure",
+  "psi_or_primary_value": "0 mmHg",
+  "conflicting_or_expected_value": "physically impossible for a burning droplet test",
+  "handling": "Pressure blanked; flagged pressure_zero_invalid"
+ },
+ {
+  "investigation": "PSI-69",
+  "record": "all rows",
+  "field": "CO column header",
+  "psi_or_primary_value": "CO initial ambient composition",
+  "conflicting_or_expected_value": "FLEX suppressants are CO2 and He (S18, S24)",
+  "handling": "Interpreted as CO2 fraction; flagged co2_header_says_CO"
+ },
+ {
+  "investigation": "PSI-69",
+  "record": "all rows",
+  "field": "Burning rate; mm",
+  "psi_or_primary_value": "unit printed as mm",
+  "conflicting_or_expected_value": "burning rate would normally be an area rate",
+  "handling": "Kept raw as burn_rate_raw; flagged burn_rate_unit_unclear"
+ },
+ {
+  "investigation": "PSI-10",
+  "record": "inverse flame tests 22024K2, 22024K3",
+  "field": "XO2 and flows",
+  "psi_or_primary_value": "LOW O2",
+  "conflicting_or_expected_value": "text instead of numbers",
+  "handling": "O2 left blank; flagged o2_reported_as_LOW_O2"
+ },
+ {
+  "investigation": "PSI-107",
+  "record": "several rows",
+  "field": "air rate",
+  "psi_or_primary_value": "negative values (-0.28, -5.92)",
+  "conflicting_or_expected_value": "negative flow not meaningful",
+  "handling": "Flow blanked; flagged negative_flow_invalid"
+ },
+ {
+  "investigation": "FM2",
+  "record": "planned conditions",
+  "field": "oxygen",
+  "psi_or_primary_value": "21% and 34% O2 (NTRS 20240015307)",
+  "conflicting_or_expected_value": "37% O2 (April 2024 BPS briefing, S42)",
+  "handling": "Both recorded; unresolved until results published"
+ },
+ {
+  "investigation": "PSI-25",
+  "record": "B2",
+  "field": "final oxygen",
+  "psi_or_primary_value": "initial 22.2% / final 1.6%",
+  "conflicting_or_expected_value": "final O2 differs from initial by more than 5 points",
+  "handling": "Kept as printed; flagged o2_final_outlier"
+ },
+ {
+  "investigation": "PSI-25",
+  "record": "P22a",
+  "field": "final oxygen",
+  "psi_or_primary_value": "initial 20.8% / final 0.6%",
+  "conflicting_or_expected_value": "final O2 differs from initial by more than 5 points",
+  "handling": "Kept as printed; flagged o2_final_outlier"
+ },
+ {
+  "investigation": "PSI-25",
+  "record": "P22b",
+  "field": "final oxygen",
+  "psi_or_primary_value": "initial 20.0% / final 39.1%",
+  "conflicting_or_expected_value": "final O2 differs from initial by more than 5 points",
+  "handling": "Kept as printed; flagged o2_final_outlier"
+ },
+ {
+  "investigation": "PSI-25",
+  "record": "T28a",
+  "field": "final oxygen",
+  "psi_or_primary_value": "initial 20.7% / final 0.9%",
+  "conflicting_or_expected_value": "final O2 differs from initial by more than 5 points",
+  "handling": "Kept as printed; flagged o2_final_outlier"
+ },
+ {
+  "investigation": "PSI-25",
+  "record": "T28b",
+  "field": "final oxygen",
+  "psi_or_primary_value": "initial 20.7% / final 40.4%",
+  "conflicting_or_expected_value": "final O2 differs from initial by more than 5 points",
+  "handling": "Kept as printed; flagged o2_final_outlier"
+ }
+]

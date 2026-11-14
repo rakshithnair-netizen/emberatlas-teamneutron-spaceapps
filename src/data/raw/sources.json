@@ -1,0 +1,538 @@
+[
+ {
+  "source_id": "S01",
+  "source_type": "NASA technical report or page",
+  "title": "Saffire IV-VI heat release and CO/CO2 (ICES-2024-365)",
+  "url": "https://ntrs.nasa.gov/citations/20240002981",
+  "nasa_id": "NTRS 20240002981",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S02",
+  "source_type": "NASA technical report or page",
+  "title": "Fire Safety Implications of Preliminary Results from Saffire IV-V (ICES-2021-266)",
+  "url": "https://ntrs.nasa.gov/citations/20210011521",
+  "nasa_id": "NTRS 20210011521",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S03",
+  "source_type": "NASA technical report or page",
+  "title": "Low-pressure ECLSS / exploration atmosphere hardware flammability (ICES-2022-45)",
+  "url": "https://ntrs.nasa.gov/citations/20220006612",
+  "nasa_id": "NTRS 20220006612",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S04",
+  "source_type": "NASA technical report or page",
+  "title": "Modeling a 15-min EVA prebreathe protocol, 8.2 psi / 34% O2 atmosphere",
+  "url": "https://www.nasa.gov/wp-content/uploads/2023/03/abercromby-8.2-34-atm-2015.pdf",
+  "nasa_id": "nasa.gov PDF",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S05",
+  "source_type": "NASA technical report or page",
+  "title": "Evidence Report: Risk of Hypoxia from the Exploration Atmosphere",
+  "url": "https://ntrs.nasa.gov/citations/20150021491",
+  "nasa_id": "NTRS 20150021491",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S06",
+  "source_type": "NASA technical report or page",
+  "title": "Research Questions and Challenges for Improved Spacecraft Fire Detection",
+  "url": "https://ntrs.nasa.gov/citations/20210022143",
+  "nasa_id": "NTRS 20210022143",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S07",
+  "source_type": "NASA technical report or page",
+  "title": "Lunar Combustion Investigation (LUCI): Flammability Results from a Rotating Sounding Rocket",
+  "url": "https://ntrs.nasa.gov/citations/20250010653",
+  "nasa_id": "NTRS 20250010653",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S08",
+  "source_type": "NASA technical report or page",
+  "title": "Flammability of Materials on the Moon (FM2) abstract",
+  "url": "https://ntrs.nasa.gov/citations/20240015307",
+  "nasa_id": "NTRS 20240015307",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S09",
+  "source_type": "NASA technical report or page",
+  "title": "Material Flammability at Lunar and Martian Gravity (LPSC 2026)",
+  "url": "https://ntrs.nasa.gov/citations/20260000646",
+  "nasa_id": "NTRS 20260000646",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S10",
+  "source_type": "NASA technical report or page",
+  "title": "Decadal Survey white paper: flammability in partial gravity (Miller)",
+  "url": "https://science.nasa.gov/wp-content/uploads/2023/05/217_5dda37a2b088281953e769f275061ac8_MillerFletcherJ.pdf",
+  "nasa_id": "science.nasa.gov PDF",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S11",
+  "source_type": "NASA technical report or page",
+  "title": "Challenges and Research Needs for Micro- and Partial-Gravity Fires (Liao)",
+  "url": "https://science.nasa.gov/wp-content/uploads/2023/05/60_afb22b1e538432728848e83bb3ade8c2_LiaoYaTingT.pdf",
+  "nasa_id": "science.nasa.gov PDF",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S12",
+  "source_type": "NASA technical report or page",
+  "title": "Solid Fuel Combustion in Partial and Micro-Gravity (Gollner)",
+  "url": "https://science.nasa.gov/wp-content/uploads/2023/05/217_9ba7198f4af1488d0b4795cf594a906f_GollnerMichaelJ.pdf",
+  "nasa_id": "science.nasa.gov PDF",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S13",
+  "source_type": "NASA technical report or page",
+  "title": "Fire on the Moon overview charts",
+  "url": "https://ntrs.nasa.gov/citations/20210020516",
+  "nasa_id": "NTRS 20210020516",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S14",
+  "source_type": "NASA technical report or page",
+  "title": "Upward Flame Spread Over Thin Solids in Partial Gravity (AIAA 2001-0466)",
+  "url": "https://ntrs.nasa.gov/citations/20010059376",
+  "nasa_id": "NTRS 20010059376",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S15",
+  "source_type": "NASA technical report or page",
+  "title": "A Researcher's Guide to Combustion in Reduced Gravity (ISS)",
+  "url": "https://www.nasa.gov/wp-content/uploads/2016/05/np-2015-10-034-jsc_combustion_in_reduced_gravity-iss-mini-book-011116-508.pdf",
+  "nasa_id": "nasa.gov PDF",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S16",
+  "source_type": "NASA technical report or page",
+  "title": "BASS-II (NASA Glenn)",
+  "url": "https://www1.grc.nasa.gov/space/iss-research/msg/bass-2/",
+  "nasa_id": "grc.nasa.gov",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S17",
+  "source_type": "NASA technical report or page",
+  "title": "Advanced Combustion via Microgravity Experiments (ACME) fact sheet",
+  "url": "https://www.nasa.gov/wp-content/uploads/2025/07/advanced-combustion-via-microgravity-experiments-acme.pdf",
+  "nasa_id": "nasa.gov PDF",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S18",
+  "source_type": "NASA technical report or page",
+  "title": "PSI-69 FLEX investigation page",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+  "nasa_id": "psi.nasa.gov",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S19",
+  "source_type": "NASA technical report or page",
+  "title": "Smoke Aerosol Measurement Experiment (SAME) fact sheet",
+  "url": "https://www.nasa.gov/wp-content/uploads/2025/07/smoke-aerosol-measurement-experiment-same.pdf",
+  "nasa_id": "nasa.gov PDF",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S20",
+  "source_type": "NASA technical report or page",
+  "title": "SAME smoke particle size results (AIAA)",
+  "url": "https://ntrs.nasa.gov/citations/20120012884",
+  "nasa_id": "NTRS 20120012884",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S21",
+  "source_type": "NASA technical report or page",
+  "title": "Evaluation of Low-Gravity Smoke Particulate for Spacecraft Fire Detection",
+  "url": "https://ntrs.nasa.gov/citations/20140006579",
+  "nasa_id": "NTRS 20140006579",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S22",
+  "source_type": "NASA technical report or page",
+  "title": "Spacecraft Fire Detection: Smoke Properties and Transport",
+  "url": "https://ntrs.nasa.gov/citations/20080012612",
+  "nasa_id": "NTRS 20080012612",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S23",
+  "source_type": "NASA technical report or page",
+  "title": "An Overview of Smoke Detection and Spacecraft Fire Safety in Low Gravity",
+  "url": "https://ntrs.nasa.gov/citations/20205008167",
+  "nasa_id": "NTRS 20205008167",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S24",
+  "source_type": "NASA technical report or page",
+  "title": "FLEX Research Requirements Document (EIRD v4)",
+  "url": "https://www1.grc.nasa.gov/wp-content/uploads/FLEX_EIRD_v4.pdf",
+  "nasa_id": "grc.nasa.gov PDF",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S25",
+  "source_type": "NASA technical report or page",
+  "title": "Evaluation of CO2, N2 and He as Fire Suppression Agents in Microgravity",
+  "url": "https://ntrs.nasa.gov/citations/20040161262",
+  "nasa_id": "NTRS 20040161262",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S26",
+  "source_type": "NASA technical report or page",
+  "title": "Spacecraft Fire Safety Demonstration (Saffire) fact sheet",
+  "url": "https://www.nasa.gov/wp-content/uploads/2025/07/spacecraft-fire-safety-demonstration-saffire.pdf",
+  "nasa_id": "nasa.gov PDF",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S27",
+  "source_type": "NASA technical report or page",
+  "title": "Flame Burns Out on NASA's Long-Running Spacecraft Fire Experiment",
+  "url": "https://www.nasa.gov/centers-and-facilities/glenn/flame-burns-out-on-nasas-long-running-spacecraft-fire-experiment/",
+  "nasa_id": "nasa.gov",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S28",
+  "source_type": "NASA technical report or page",
+  "title": "Saffire Ignites New Discoveries in Space",
+  "url": "https://www.nasa.gov/humans-in-space/saffire-ignites-new-discoveries-in-space/",
+  "nasa_id": "nasa.gov",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S29",
+  "source_type": "NASA technical report or page",
+  "title": "ECLSS overview incl. Saffire IV/V observations (ICES-2021-384)",
+  "url": "https://ntrs.nasa.gov/citations/20210010866",
+  "nasa_id": "NTRS 20210010866",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S30",
+  "source_type": "NASA technical report or page",
+  "title": "Operation and Development Status of Saffire (2017)",
+  "url": "https://ntrs.nasa.gov/citations/20170000230",
+  "nasa_id": "NTRS 20170000230",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S31",
+  "source_type": "NASA technical report or page",
+  "title": "Saffire status: IV, V, VI objectives",
+  "url": "https://ntrs.nasa.gov/citations/20170002628",
+  "nasa_id": "NTRS 20170002628",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S32",
+  "source_type": "NASA technical report or page",
+  "title": "Why NASA is studying flames in space",
+  "url": "https://science.nasa.gov/biological-physical/resources/explainers-infographics/why-nasa-is-studying-flames-in-space/",
+  "nasa_id": "science.nasa.gov",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S33",
+  "source_type": "NASA technical report or page",
+  "title": "Moon Material Flammability (Houston We Have a Podcast ep. 386)",
+  "url": "https://www.nasa.gov/podcasts/houston-we-have-a-podcast/moon-material-flammability/",
+  "nasa_id": "nasa.gov",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S34",
+  "source_type": "NASA technical report or page",
+  "title": "Development of Spacecraft Fire Safety Technology (2021)",
+  "url": "https://ntrs.nasa.gov/citations/20210021318",
+  "nasa_id": "NTRS 20210021318",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S35",
+  "source_type": "NASA technical report or page",
+  "title": "Recommendations for Fire Extinguisher Research (Easton)",
+  "url": "https://ntrs.nasa.gov/citations/20210023340",
+  "nasa_id": "NTRS 20210023340",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S37",
+  "source_type": "NASA technical report or page",
+  "title": "Combustion Science (NASA Glenn)",
+  "url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/",
+  "nasa_id": "nasa.gov",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S38",
+  "source_type": "NASA technical report or page",
+  "title": "Space Station's Quest for the Secrets of Fire",
+  "url": "https://www.nasa.gov/humans-in-space/space-stations-quest-for-the-secrets-of-fire/",
+  "nasa_id": "nasa.gov",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S42",
+  "source_type": "NASA technical report or page",
+  "title": "BPS fluids/combustion status briefing, Apr 2024 (FM2 note)",
+  "url": "https://science.nasa.gov/wp-content/uploads/2024/09/1-9-fluids-combustion-materials-carpenter-2024.pdf",
+  "nasa_id": "science.nasa.gov PDF",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S43",
+  "source_type": "NASA technical report or page",
+  "title": "NASA Materials Flammability Update (Urban, FLARE workshop 2021)",
+  "url": "https://ntrs.nasa.gov/citations/20210021181",
+  "nasa_id": "NTRS 20210021181",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S46",
+  "source_type": "NASA technical report or page",
+  "title": "Aeronautics and Space Report of the President, FY2025",
+  "url": "https://www.nasa.gov/wp-content/uploads/2026/06/fy-2025-presidents-report-tagged.pdf",
+  "nasa_id": "nasa.gov PDF",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S44",
+  "source_type": "NASA technical report or page",
+  "title": "BASS fact sheet",
+  "url": "https://www.nasa.gov/wp-content/uploads/2025/07/burning-and-suppression-of-solids-bass.pdf",
+  "nasa_id": "nasa.gov PDF",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "S45",
+  "source_type": "NASA technical report or page",
+  "title": "FLEX fact sheet",
+  "url": "https://www.nasa.gov/wp-content/uploads/2025/07/flame-extinguishment-experiment-flex.pdf",
+  "nasa_id": "nasa.gov PDF",
+  "retrieved": "2026-11-14"
+ },
+ {
+  "source_id": "PSI-100",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-100 SAFFIRE-III",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-100",
+  "nasa_id": "doi:10.60555/040q-4h36",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-102",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-102 SAME",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-102",
+  "nasa_id": "doi:10.60555/gd4k-8h62",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-106",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-106 SLICE",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-106",
+  "nasa_id": "doi:10.60555/pm12-rg61",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-107",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-107 SPICE",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-107",
+  "nasa_id": "doi:10.60555/9kbh-e962",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-108",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-108 STDCE-1",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-108",
+  "nasa_id": "doi:10.60555/j1z3-bw42",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-10",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-10 ACME/Flame Design",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-10",
+  "nasa_id": "doi:10.60555/w4zy-bt45",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-115",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-115 SAME-data modelling",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-115",
+  "nasa_id": "doi:10.60555/q0v5-1v28",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-117",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-117 Cool-flame CFD",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-117",
+  "nasa_id": "doi:10.60555/gz0q-b577",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-142",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-142 Cool-flame counterflow",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-142",
+  "nasa_id": "doi:10.60555/80qf-vj95",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-159",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-159 ACME CFI-G",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-159",
+  "nasa_id": "doi:10.60555/cyt1-kh64",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-181",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-181 Solder microgravity",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-181",
+  "nasa_id": "doi:10.60555/td9e-cz97",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-20",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-20 ACME BRE",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-20",
+  "nasa_id": "doi:10.60555/vb93-3y72",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-21",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-21 ACME CLD Flame",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-21",
+  "nasa_id": "doi:10.60555/23e1-9950",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-22",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-22 ACME E-FIELD Flames",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-22",
+  "nasa_id": "doi:10.60555/se5a-8c73",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-23",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-23 ACME s-Flame",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-23",
+  "nasa_id": "doi:10.60555/k57n-p030",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-25",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-25 BASS-II",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-25",
+  "nasa_id": "doi:10.60555/4qc4-de67",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-26",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-26 BASS",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-26",
+  "nasa_id": "doi:10.60555/58h4-dy80",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-39",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-39 CFI",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-39",
+  "nasa_id": "doi:10.60555/m6pj-a914",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-47",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-47 DAFT / DAFT-2",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-47",
+  "nasa_id": "doi:10.60555/ztgj-d202",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-60",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-60 SPICE data analysis",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-60",
+  "nasa_id": "doi:10.60555/mzjm-yv57",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-62",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-62 BASS flamelet modelling",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-62",
+  "nasa_id": "doi:10.60555/e9xp-ex83",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-68",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-68 FLEX-2",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-68",
+  "nasa_id": "doi:10.60555/byp8-h018",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-69",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-69 FLEX",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-69",
+  "nasa_id": "doi:10.60555/mbq8-0451",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-98",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-98 SAFFIRE-I",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-98",
+  "nasa_id": "doi:10.60555/0t15-1z43",
+  "retrieved": "2026-11-13"
+ },
+ {
+  "source_id": "PSI-99",
+  "source_type": "NASA PSI investigation and experimental table",
+  "title": "PSI-99 SAFFIRE-II",
+  "url": "https://psi.nasa.gov/physci/repo/data/investigations/PSI-99",
+  "nasa_id": "doi:10.60555/2chp-m469",
+  "retrieved": "2026-11-13"
+ }
+]

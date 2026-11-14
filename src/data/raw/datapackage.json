@@ -1,0 +1,815 @@
+{
+ "name": "flame-in-freefall-dataset",
+ "title": "Flame in Freefall: NASA microgravity combustion and fire-safety dataset",
+ "version": "1.0.0",
+ "created": "2026-11-14",
+ "description": "Unified burn cards, investigations, campaigns, habitat atmospheres, findings and sources assembled only from NASA PSI repository records and NASA publications, for the 2026 NASA Space Apps Challenge.",
+ "licenses": [
+  {
+   "name": "NASA-public",
+   "title": "NASA material; check each source for terms",
+   "path": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+  }
+ ],
+ "resources": [
+  {
+   "name": "burn_cards",
+   "path": "burn_cards.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "description": "One row per test or burn; the core table for the envelope map, condition matcher and flame library.",
+   "schema": {
+    "fields": [
+     {
+      "name": "card_id",
+      "description": "Unique burn card ID"
+     },
+     {
+      "name": "data_origin",
+      "description": "PSI_repository or NASA_publication"
+     },
+     {
+      "name": "investigation_id",
+      "description": "Investigation ID (PSI-nnn or a name for publication-only missions)"
+     },
+     {
+      "name": "acronym",
+      "description": "Investigation acronym"
+     },
+     {
+      "name": "source_file",
+      "description": "Raw table the row came from"
+     },
+     {
+      "name": "source_row",
+      "description": "Row number in the raw table"
+     },
+     {
+      "name": "test_id",
+      "description": "Test or sample identifier as printed"
+     },
+     {
+      "name": "test_date",
+      "description": "Test date (ISO) where known"
+     },
+     {
+      "name": "gmt_day_of_year",
+      "description": "GMT day of year where printed"
+     },
+     {
+      "name": "fuel_name",
+      "description": "Fuel or sample material"
+     },
+     {
+      "name": "fuel_formula",
+      "description": "Chemical formula where applicable"
+     },
+     {
+      "name": "fuel_class",
+      "description": "gas, liquid, solid, etc."
+     },
+     {
+      "name": "fuel_composition",
+      "description": "Composition text"
+     },
+     {
+      "name": "sample_description",
+      "description": "Free-text sample description"
+     },
+     {
+      "name": "geometry",
+      "description": "Sample or flame geometry"
+     },
+     {
+      "name": "flame_type",
+      "description": "Flame type (diffusion, spread, droplet, etc.)"
+     },
+     {
+      "name": "sample_thickness_mm",
+      "description": "Sample thickness in mm"
+     },
+     {
+      "name": "sample_size_mm",
+      "description": "Sample size in mm"
+     },
+     {
+      "name": "flow_cm_s",
+      "description": "Flow velocity cm/s"
+     },
+     {
+      "name": "flow_direction",
+      "description": "Flow direction relative to spread"
+     },
+     {
+      "name": "o2_pct",
+      "description": "Oxygen % (point value; midpoint when a range)"
+     },
+     {
+      "name": "o2_pct_low",
+      "description": "O2 % lower bound"
+     },
+     {
+      "name": "o2_pct_high",
+      "description": "O2 % upper bound"
+     },
+     {
+      "name": "o2_pct_final",
+      "description": "O2 % at end of test"
+     },
+     {
+      "name": "o2_basis",
+      "description": "measured, nominal, derived or range"
+     },
+     {
+      "name": "pressure_kpa",
+      "description": "Pressure kPa (point value)"
+     },
+     {
+      "name": "pressure_kpa_low",
+      "description": "Pressure lower bound kPa"
+     },
+     {
+      "name": "pressure_kpa_high",
+      "description": "Pressure upper bound kPa"
+     },
+     {
+      "name": "pressure_basis",
+      "description": "measured, nominal, derived or range"
+     },
+     {
+      "name": "n2_frac",
+      "description": "N2 fraction"
+     },
+     {
+      "name": "he_frac",
+      "description": "He fraction"
+     },
+     {
+      "name": "co2_frac",
+      "description": "CO2 fraction"
+     },
+     {
+      "name": "ppo2_kpa",
+      "description": "Oxygen partial pressure kPa (computed from o2 and pressure)"
+     },
+     {
+      "name": "gravity_regime",
+      "description": "microgravity, lunar or earth"
+     },
+     {
+      "name": "platform",
+      "description": "Platform (ISS, Cygnus, etc.)"
+     },
+     {
+      "name": "hardware",
+      "description": "Hardware"
+     },
+     {
+      "name": "outcome",
+      "description": "Outcome (ignited, extinguished, etc.)"
+     },
+     {
+      "name": "burn_time_s",
+      "description": "Burn time in seconds"
+     },
+     {
+      "name": "habitat_relevance_tier",
+      "description": "Tier A to F against 8.2 psi / 34% O2 (see README)"
+     },
+     {
+      "name": "measurements_json",
+      "description": "Other measurements as JSON"
+     },
+     {
+      "name": "quality_flags",
+      "description": "Semicolon-separated data-quality flags"
+     },
+     {
+      "name": "source_ids",
+      "description": "Semicolon-separated source IDs (see sources.csv)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "test_campaigns",
+   "path": "test_campaigns.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "description": "Daily summaries, planned test matrices and instrument sessions that are not single burns.",
+   "schema": {
+    "fields": [
+     {
+      "name": "campaign_id",
+      "description": "Unique campaign row ID"
+     },
+     {
+      "name": "investigation_id",
+      "description": "Investigation ID (PSI-nnn or a name for publication-only missions)"
+     },
+     {
+      "name": "acronym",
+      "description": "Investigation acronym"
+     },
+     {
+      "name": "record_type",
+      "description": "daily_summary, planned_matrix or instrument_session"
+     },
+     {
+      "name": "date",
+      "description": "Date"
+     },
+     {
+      "name": "test_day_code",
+      "description": "Test day code"
+     },
+     {
+      "name": "fuel",
+      "description": "Fuel"
+     },
+     {
+      "name": "fuel_concentration_text",
+      "description": "Fuel concentration text"
+     },
+     {
+      "name": "o2_text",
+      "description": "O2 as printed"
+     },
+     {
+      "name": "o2_pct_low",
+      "description": "O2 % lower bound"
+     },
+     {
+      "name": "o2_pct_high",
+      "description": "O2 % upper bound"
+     },
+     {
+      "name": "pressure_atm_low",
+      "description": "Pressure low (atm)"
+     },
+     {
+      "name": "pressure_atm_high",
+      "description": "Pressure high (atm)"
+     },
+     {
+      "name": "n_flames_ignited",
+      "description": "Number of flames ignited"
+     },
+     {
+      "name": "burner_or_hardware_note",
+      "description": "Burner or hardware note"
+     },
+     {
+      "name": "notes",
+      "description": "Notes"
+     },
+     {
+      "name": "source_file",
+      "description": "Raw table the row came from"
+     },
+     {
+      "name": "source_row",
+      "description": "Row number in the raw table"
+     },
+     {
+      "name": "source_ids",
+      "description": "Semicolon-separated source IDs (see sources.csv)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "investigations",
+   "path": "investigations.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "description": "One row per NASA investigation (PSI repository or NASA publication) with curated fire-safety roles.",
+   "schema": {
+    "fields": [
+     {
+      "name": "investigation_id",
+      "description": "Investigation ID (PSI-nnn or a name for publication-only missions)"
+     },
+     {
+      "name": "acronym",
+      "description": "Acronym"
+     },
+     {
+      "name": "title",
+      "description": "Title"
+     },
+     {
+      "name": "data_origin",
+      "description": "PSI_repository or NASA_publication"
+     },
+     {
+      "name": "in_scope",
+      "description": "true if relevant to fire safety"
+     },
+     {
+      "name": "platform",
+      "description": "Platform (ISS, Cygnus, etc.)"
+     },
+     {
+      "name": "hardware",
+      "description": "Hardware"
+     },
+     {
+      "name": "research_area",
+      "description": "NASA research area"
+     },
+     {
+      "name": "sub_area",
+      "description": "NASA sub-area"
+     },
+     {
+      "name": "managing_center",
+      "description": "Managing NASA center"
+     },
+     {
+      "name": "start_date",
+      "description": "Start date"
+     },
+     {
+      "name": "end_date",
+      "description": "End date"
+     },
+     {
+      "name": "status",
+      "description": "completed, flown or planned"
+     },
+     {
+      "name": "fire_safety_roles",
+      "description": "Curated roles in fire safety"
+     },
+     {
+      "name": "role_curation_note",
+      "description": "How roles were assigned"
+     },
+     {
+      "name": "keywords",
+      "description": "Keywords"
+     },
+     {
+      "name": "objective",
+      "description": "Objective"
+     },
+     {
+      "name": "hypothesis",
+      "description": "Hypothesis"
+     },
+     {
+      "name": "approach",
+      "description": "Approach"
+     },
+     {
+      "name": "research_impacts_earth_benefits",
+      "description": "Earth benefits text"
+     },
+     {
+      "name": "n_publications",
+      "description": "Publication count"
+     },
+     {
+      "name": "principal_investigators",
+      "description": "Principal investigators"
+     },
+     {
+      "name": "doi",
+      "description": "DOI"
+     },
+     {
+      "name": "psi_url",
+      "description": "PSI page URL"
+     }
+    ]
+   }
+  },
+  {
+   "name": "investigation_envelope",
+   "path": "investigation_envelope.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "description": "Per-investigation O2 and pressure coverage and the closest card to the 8.2 psi / 34% O2 exploration atmosphere.",
+   "schema": {
+    "fields": [
+     {
+      "name": "investigation_id",
+      "description": "Investigation ID"
+     },
+     {
+      "name": "n_cards",
+      "description": "Number of burn cards"
+     },
+     {
+      "name": "n_cards_with_o2_and_pressure",
+      "description": "Cards having both O2 and pressure"
+     },
+     {
+      "name": "o2_pct_min",
+      "description": "Minimum O2 %"
+     },
+     {
+      "name": "o2_pct_max",
+      "description": "Maximum O2 %"
+     },
+     {
+      "name": "pressure_kpa_min",
+      "description": "Minimum pressure kPa"
+     },
+     {
+      "name": "pressure_kpa_max",
+      "description": "Maximum pressure kPa"
+     },
+     {
+      "name": "closest_card_id",
+      "description": "Card closest to the exploration atmosphere"
+     },
+     {
+      "name": "closest_distance_to_8p2psi_34pct",
+      "description": "Normalized distance sqrt(((o2-34)/10)^2+((p-56.5)/40)^2)"
+     },
+     {
+      "name": "closest_o2_pct",
+      "description": "O2 % of closest card"
+     },
+     {
+      "name": "closest_pressure_kpa",
+      "description": "Pressure of closest card (kPa)"
+     },
+     {
+      "name": "n_tier_A",
+      "description": "Cards in tier A"
+     },
+     {
+      "name": "n_tier_B",
+      "description": "Cards in tier B"
+     },
+     {
+      "name": "n_tier_C",
+      "description": "Cards in tier C"
+     },
+     {
+      "name": "n_tier_D",
+      "description": "Cards in tier D"
+     },
+     {
+      "name": "n_tier_F",
+      "description": "Cards in tier F"
+     },
+     {
+      "name": "n_tier_E",
+      "description": "Cards in tier E"
+     },
+     {
+      "name": "fuel_classes",
+      "description": "Fuel classes covered"
+     },
+     {
+      "name": "fuel_names",
+      "description": "Fuel names covered"
+     },
+     {
+      "name": "best_tier",
+      "description": "Best tier in the investigation"
+     }
+    ]
+   }
+  },
+  {
+   "name": "habitat_atmospheres",
+   "path": "habitat_atmospheres.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "description": "Reference crew-cabin atmospheres (ISS, Shuttle, exploration, suit).",
+   "schema": {
+    "fields": [
+     {
+      "name": "habitat_id",
+      "description": "Habitat ID"
+     },
+     {
+      "name": "name",
+      "description": "Name"
+     },
+     {
+      "name": "role",
+      "description": "Role"
+     },
+     {
+      "name": "pressure_psia",
+      "description": "Pressure psia"
+     },
+     {
+      "name": "pressure_kpa",
+      "description": "Pressure kPa (point value)"
+     },
+     {
+      "name": "o2_pct",
+      "description": "Oxygen %"
+     },
+     {
+      "name": "n2_pct",
+      "description": "N2 %"
+     },
+     {
+      "name": "ppo2_kpa",
+      "description": "Oxygen partial pressure kPa (computed from o2 and pressure)"
+     },
+     {
+      "name": "ppo2_basis",
+      "description": "How ppO2 was derived"
+     },
+     {
+      "name": "note",
+      "description": "Note"
+     },
+     {
+      "name": "source_ids",
+      "description": "Semicolon-separated source IDs (see sources.csv)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "family_tree_edges",
+   "path": "family_tree_edges.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "description": "Relationships between investigations: curated lineage plus edges derived from shared hardware and fuels.",
+   "schema": {
+    "fields": [
+     {
+      "name": "edge_id",
+      "description": "Edge ID"
+     },
+     {
+      "name": "source_investigation",
+      "description": "Edge source"
+     },
+     {
+      "name": "target_investigation",
+      "description": "Edge target"
+     },
+     {
+      "name": "edge_type",
+      "description": "Relationship type"
+     },
+     {
+      "name": "shared_items",
+      "description": "Shared hardware, fuel or description"
+     },
+     {
+      "name": "weight",
+      "description": "Number of shared items or 1"
+     },
+     {
+      "name": "basis",
+      "description": "How the edge was established"
+     },
+     {
+      "name": "evidence_source_ids",
+      "description": "Source IDs"
+     },
+     {
+      "name": "directed",
+      "description": "true if direction matters"
+     }
+    ]
+   }
+  },
+  {
+   "name": "findings",
+   "path": "findings.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "description": "Paraphrased NASA findings by area, linked to investigations and Earth-application domains.",
+   "schema": {
+    "fields": [
+     {
+      "name": "finding_id",
+      "description": "Finding ID"
+     },
+     {
+      "name": "area",
+      "description": "Finding area"
+     },
+     {
+      "name": "subarea",
+      "description": "Sub-area or topic"
+     },
+     {
+      "name": "statement",
+      "description": "Paraphrased statement"
+     },
+     {
+      "name": "quantitative_detail",
+      "description": "Quantitative detail"
+     },
+     {
+      "name": "linked_investigations",
+      "description": "Linked investigations"
+     },
+     {
+      "name": "earth_domain",
+      "description": "Earth application domain"
+     },
+     {
+      "name": "source_ids",
+      "description": "Semicolon-separated source IDs (see sources.csv)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "publications",
+   "path": "publications.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "description": "Publications listed in PSI metadata per investigation.",
+   "schema": {
+    "fields": [
+     {
+      "name": "investigation_id",
+      "description": "Investigation ID (PSI-nnn or a name for publication-only missions)"
+     },
+     {
+      "name": "title",
+      "description": "Title"
+     },
+     {
+      "name": "doi",
+      "description": "DOI"
+     },
+     {
+      "name": "authors",
+      "description": "Authors"
+     }
+    ]
+   }
+  },
+  {
+   "name": "sources",
+   "path": "sources.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "description": "Source register: every source_id used anywhere in the dataset with its URL.",
+   "schema": {
+    "fields": [
+     {
+      "name": "source_id",
+      "description": "Source ID (S-numbers for NASA reports; PSI-nnn for PSI pages)"
+     },
+     {
+      "name": "source_type",
+      "description": "Type of source"
+     },
+     {
+      "name": "title",
+      "description": "Title"
+     },
+     {
+      "name": "url",
+      "description": "URL"
+     },
+     {
+      "name": "nasa_id",
+      "description": "NASA document ID or DOI"
+     },
+     {
+      "name": "retrieved",
+      "description": "Date retrieved"
+     }
+    ]
+   }
+  },
+  {
+   "name": "test_platforms",
+   "path": "test_platforms.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "description": "Test platforms with gravity level, duration and atmosphere.",
+   "schema": {
+    "fields": [
+     {
+      "name": "platform_id",
+      "description": "Platform ID"
+     },
+     {
+      "name": "platform",
+      "description": "Platform (ISS, Cygnus, etc.)"
+     },
+     {
+      "name": "duration",
+      "description": "Test duration"
+     },
+     {
+      "name": "gravity_g",
+      "description": "Gravity level (g)"
+     },
+     {
+      "name": "o2_pct",
+      "description": "Oxygen % of the test atmosphere"
+     },
+     {
+      "name": "pressure_psia",
+      "description": "Pressure in psia"
+     },
+     {
+      "name": "status",
+      "description": "completed, flown or planned"
+     },
+     {
+      "name": "source_ids",
+      "description": "Semicolon-separated source IDs (see sources.csv)"
+     }
+    ]
+   }
+  },
+  {
+   "name": "known_discrepancies",
+   "path": "known_discrepancies.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "description": "Conflicts between sources and how each was handled.",
+   "schema": {
+    "fields": [
+     {
+      "name": "investigation",
+      "description": "Investigation"
+     },
+     {
+      "name": "record",
+      "description": "Affected record"
+     },
+     {
+      "name": "field",
+      "description": "Affected field"
+     },
+     {
+      "name": "psi_or_primary_value",
+      "description": "Value in primary source"
+     },
+     {
+      "name": "conflicting_or_expected_value",
+      "description": "Conflicting or expected value"
+     },
+     {
+      "name": "handling",
+      "description": "How handled"
+     }
+    ]
+   }
+  },
+  {
+   "name": "rejected_rows",
+   "path": "rejected_rows.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "description": "Raw rows not turned into cards (blank, duplicate, non-burn) with the reason.",
+   "schema": {
+    "fields": [
+     {
+      "name": "source_file",
+      "description": "Raw table the row came from"
+     },
+     {
+      "name": "source_row",
+      "description": "Row number in the raw table"
+     },
+     {
+      "name": "reason",
+      "description": "Rejection reason"
+     },
+     {
+      "name": "raw",
+      "description": "Raw row text"
+     }
+    ]
+   }
+  },
+  {
+   "name": "qa_reconciliation",
+   "path": "qa_reconciliation.csv",
+   "format": "csv",
+   "mediatype": "text/csv",
+   "description": "Raw record counts vs cards or campaign rows per source file.",
+   "schema": {
+    "fields": [
+     {
+      "name": "source_file",
+      "description": "Raw table the row came from"
+     },
+     {
+      "name": "raw_records",
+      "description": "Raw records in the source file"
+     },
+     {
+      "name": "cards_or_campaign_rows",
+      "description": "Rows produced"
+     }
+    ]
+   }
+  }
+ ]
+}

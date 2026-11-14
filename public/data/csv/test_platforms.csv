@@ -1,0 +1,10 @@
+platform_id,platform,duration,gravity_g,o2_pct,pressure_psia,status,source_ids
+PLT-01,GASP and BTF (GRC),full burn,1,21,14.7,ground,S06
+PLT-02,MSG (ISS),full burn,0,21,14.7,flown,S06
+PLT-03,CIR (ISS),full burn,0,10-40,0.29-44,flown,S06
+PLT-04,ZGRF drop tower centrifuge rig (GRC),5.2 s,0.165,21,14.7,ground,S06
+PLT-05,Parabolic aircraft / DIAMONDS (CNES),about 30 s,0-0.379,<21,7.3-20,flown,S06
+PLT-06,Blue Origin New Shepard rotating capsule,about 120 s,0.165,about 34,about 8.2,listed as resource in 2021 paper,S06
+PLT-07,Commercial Lunar Payload Services experiments,full burn,0.165,about 34,about 8.2,listed as resource in 2021 paper,S06
+PLT-08,"LUCI (New Shepard, flown Feb 4 2025)",over 2.5 min burn,0.165,air (about 20),normal pressure (air),flown,S07;S33
+PLT-09,"FM2 (CLPS lander CP-21, planned)",,0.165,21 and 34,14.7 and 8.2,planned; launch listed as late 2026 in sources,S08;S09

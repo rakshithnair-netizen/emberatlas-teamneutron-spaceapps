@@ -1,0 +1,55 @@
+finding_id,area,subarea,statement,quantitative_detail,linked_investigations,earth_domain,source_ids
+F001,earth_application,Models for wildfires and building fires,"BASS-II: in space fuels burn as oval balls, a simpler process used to evaluate fuel-burning computer models that can then study wildfires, building fires, waste-to-energy recapture",,PSI-25,wildfire_and_building_fire_models,S16
+F002,earth_application,Validated combustion models,BASS: models validated in microgravity flow environment build up to more complex normal-gravity models with wide terrestrial applicability,,PSI-26;PSI-25,combustion_model_validation,S44;S15
+F003,earth_application,Cleaner engines and furnaces,ACME: improve combustion efficiency and cut pollutant emissions; soot control; oxygen-enriched combustion that could enable carbon sequestration; better models cut combustor design time and cost,,PSI-20;PSI-21;PSI-22;PSI-23;PSI-10;PSI-159,efficiency_and_emissions,S17
+F004,earth_application,"Furnaces, power plants, boilers","ACME project scientist: knowledge can help design furnaces, power plants and boilers that are more efficient, less polluting and safer",,PSI-20;PSI-21;PSI-22;PSI-23;PSI-10;PSI-159,efficiency_and_emissions,S38
+F005,earth_application,Soot,"Microgravity flames contain 5-8 times more soot than equivalent normal-gravity flames, giving model benchmarks",,PSI-20;PSI-21;PSI-22;PSI-23,soot_and_air_quality,S17
+F006,earth_application,Weak-flame stability,"Highly diluted weak flames are more stable in microgravity, extending dilution limits; useful for stabilization mechanism understanding",,PSI-20;PSI-21;PSI-22;PSI-23,flame_stability,S17
+F007,earth_application,Fire suppression systems,FLEX: more efficient and less harmful suppression systems with lower risk of toxic byproducts; relevance to confined or reduced-gravity settings such as submarines and high-altitude aircraft,,PSI-69;PSI-68,fire_suppression,S18
+F008,earth_application,Next-generation engines,FLEX cool-flame chemistry matters for internal combustion engines with higher efficiency and lower emissions,,PSI-69;PSI-39,engines,S15;S18
+F009,earth_application,Low-emission burners,"Premixed flame work led to a burner with ultra-low pollutant emissions, with application in domestic water heaters and furnaces",,,burners_and_heating,S15
+F010,earth_application,Smoke detectors,"Microgravity showed fire-generated particle sizes differ, so detectors tuned to terrestrial smoke may look for the wrong signature",,PSI-102;PSI-47,smoke_detection,S15
+F011,detection,SAME test scale,"SAME-1 tested 30 samples (6 each of Teflon, Kapton, silicone rubber, cellulose, dibutyl phthalate on wick) on ISS Expedition 15; SAME-2 (Expedition 24, 2010) tested five materials incl. cotton and Pyrell with over 100 samples",,PSI-102,smoke_detection,S19;S21
+F012,detection,ISS detector misses,ISS detector failed to alarm for Kapton smoke in half of tests and Teflon smoke in two-thirds,,PSI-102;PSI-47,smoke_detection,S06
+F013,detection,Particle size,All fuels produced substantial sub-micron particles; sizes 100-600 nm; Teflon and Kapton smallest,,PSI-102;PSI-47,smoke_detection,S21;S23
+F014,detection,Detector response,"ISS forward light scattering detector (near-IR, most sensitive above 1 micron) had diminished response to Kapton and Teflon smoke under 300 nm; ionization detector responded slightly better, especially to Teflon",,PSI-102;PSI-47,smoke_detection,S23;S19
+F015,detection,Gravity effect,Low-gravity smoke count mean diameter about 50% larger than similar normal-gravity conditions,,PSI-102;PSI-47,smoke_detection,S22
+F016,detection,Flow and aging,Particle size increases at low flow and with aging; smoke in poorly ventilated enclosures is larger,,PSI-102;PSI-47,smoke_detection,S21
+F017,detection,ISS alarm threshold,ISS detector alarm point on the order of 0.5 mg/m3,,PSI-102;PSI-47,smoke_detection,S22
+F018,detection,Saffire-VI detection,"Alarm threshold reached at 981 s, after most hazardous gas release; PMMA tests exceeded 1-hour CO2 and 24-hour CO limits",,SAFFIRE-VI,smoke_detection,S01
+F019,detection,Early-fire detection risk,"ECLSS particle filtration can outpace smoke accumulation in an early small fire, so detection may be delayed",,PSI-102;PSI-47,smoke_detection,S06
+F020,suppression,FLEX test envelope,"O2 mole fraction 0.10-0.50, suppressant (CO2, He) 0-0.70, pressure 0.5-3.0 atm",,PSI-69;PSI-68,fire_suppression,S24;S45
+F021,suppression,FLEX approach,Heptane and methanol droplets; determines limiting oxygen index (LOI) and how suppressants shift it,,PSI-69,fire_suppression,S18;S15
+F022,suppression,LOI relation,LOI = 0.209 x (1 - MEC),,PSI-69,fire_suppression,S24
+F023,suppression,CO2 caveat,CO2 is radiatively active and not removed by buoyant convection; also not physiologically inert at extinguishing concentrations,,PSI-69,fire_suppression,S24
+F024,suppression,Low-g suppression margin,Terrestrial inert-gas suppressant standards do not give the same safety margin in low gravity,,,fire_suppression,S15
+F025,suppression,Local suppressant jet,Local suppressant application is not adequate; jet entrains air and can sustain the flame; nitrogen can strengthen a flame,,PSI-26;PSI-25,fire_suppression,S15;S44
+F026,suppression,KC-135 PMMA study,"CO2, N2 and He act as passive suppressants via O2 displacement and cooling; required concentration rises with flow velocity up to about 10 cm/s, where effective enthalpy is near the normal-gravity value",,,fire_suppression,S25
+F027,suppression,ISS CO2 spec basis,"Specification based on NFPA 12: 30% by volume for flaming fires, 50% for smoldering fires with a 20 minute hold",,,fire_suppression,S25
+F028,suppression,Cool flames,FLEX showed cool flames can burn for a prolonged period after visible flame extinction,,PSI-69;PSI-39,engines,S15
+F029,suppression,First-response practice,Isolation: turn off local power and airflow,,,fire_suppression,S15
+F030,partial_gravity,Lunar gravity may be the most flammable condition for some fuels,Numerical and experimental evidence suggests lunar gravity is near the most flammable condition; minimum O2 for flammability near lunar g (model); downward spread rate peaks in partial g,,,,S13;S09
+F031,partial_gravity,Partial-g vs 0-g vs 1-g flammability limits,Centrifuge facility showed flammability limits depend on gravity level; most flammable upward spread for certain fuels near lunar g; differences in ULOI and MOC largest at lunar g (table not captured),,,,S10
+F032,partial_gravity,Spread rate vs gravity,Limited data suggest upward spread rate for very thin fuels is proportional to gravity; downward spread is non-monotonic,,,,S11
+F033,partial_gravity,Interpolation warning,Fire behavior in partial gravity cannot be expected to be interpolated from 0-g and 1-g,,,,S11
+F034,partial_gravity,KC-135 flame spread studies,"Thin solid upward spread tested at 0.10 g, 0.16 g (lunar), 0.38 g (Martian) and 1 g; extinction pressure depends on gravity and sample width",,,,S14
+F035,partial_gravity,Material that burns only in lunar g,SIBAL burns downward in air in lunar gravity but extinguishes right after ignition in Earth gravity,,LUCI;FM2,,S08
+F036,partial_gravity,1-g screening gap,"NASA-STD-6001 Test 1 is run in 1-g; one source says it is not conservative for microgravity, another says 1-g may not be the most flammable condition (lunar g could be worse)",,,,S09;S15
+F037,partial_gravity,Stated data gap,"Material flammability in actual partial gravity is poorly understood; partial-gravity data are limited to aircraft, centrifuge drop rig, LUCI",,,,S10;S12;S07
+F038,partial_gravity,FM2 plan,"Four solid samples: two SIBAL burned in air (21% O2, 14.7 psia) and two acrylic rods in 34% O2, 8.2 psia, each upward and downward; CLPS lander CP-21; launch listed as planned for late 2026",,LUCI;FM2,,S08;S09
+F039,partial_gravity,FM2 O2 value discrepancy,A 2024 NASA briefing lists FM2 tests at 37% O2; the FM2 abstract lists 21% and 34%. Treat conditions as unconfirmed until FM2 results are published,,LUCI;FM2,,S42;S08
+F040,partial_gravity,FM2 ground tests,In FY2025 researchers ran lunar-gravity and lunar-atmosphere simulation tests in NASA's Zero Gravity Facility (President's Aeronautics and Space Report FY2025),,LUCI;FM2,,S46
+F041,partial_gravity,LUCI: SIBAL flame base spread rate,0.9 mm/s (lunar g) vs 1.5 mm/s (1-g); ratio 0.6,ratio 0.6,LUCI,,S07
+F042,partial_gravity,LUCI: SIBAL flame tip spread rate,1.1 mm/s (lunar g) vs 2.8 mm/s (1-g); ratio 0.39,ratio 0.39,LUCI,,S07
+F043,partial_gravity,LUCI: PMMA rod flame tip spread rate,0.15 cm/s (lunar g) vs 0.40 cm/s (1-g); ratio 0.38,ratio 0.38,LUCI,,S07
+F044,partial_gravity,LUCI: SIBAL semi-steady flame size in lunar g,"about 3.2 cm wide, about 1.5 cm long",,LUCI,,S07
+F045,partial_gravity,LUCI: SIBAL extinction timing,1-g extinction occurred about 45 s sooner than in lunar g,,LUCI,,S07
+F046,partial_gravity,LUCI: Chamber O2 during SIBAL lunar-g burn,fell from about 20% to about 18%,,LUCI,,S07
+F047,partial_gravity,LUCI: Chamber O2 during PMMA lunar-g burn,fell from 20% to 14.3%,,LUCI,,S07
+F048,partial_gravity,LUCI: LUCI test setup,"11 RPM rotation, 1.22 m effective radius, lunar-g centrifugal acceleration, normal-pressure air, two samples (SIBAL fabric and 4 mm PMMA rod), burn over 2.5 min; Coriolis force is a stated caveat",Coriolis force is a stated caveat,LUCI,,S07
+F049,habitat_materials,Melamine foam insulation,"Melamine foam insulation: Acceptable at 30% O2, 10.2 psia; Flammable at 34-40% O2, 8.2 psia; Solimide HT-340 suggested as possible replacement",,,,S03
+F050,habitat_materials,Nomex,"Nomex: Acceptable to 30% O2, 10.2 psia; Unlikely acceptable at 34-40% O2, 8.2 psia; Fire-retardant treatment may make it acceptable",,,,S03
+F051,habitat_materials,Portable fire extinguisher (PFE),Portable fire extinguisher (PFE): Will not meet flammability requirements at the highest exploration O2,,,,S03
+F052,habitat_materials,BPA bladder material,"BPA bladder material: Flammable in ISS environments; used up to 30% O2 at 10.2 psia; Needs additional testing at 34-40% O2, 8.2 psia",,,,S03
+F053,habitat_materials,Ammonia cartridges for emergency mask,Ammonia cartridges for emergency mask: Flammable but acceptable; Acceptable status at 34-40% O2 not established in captured text; Reduced cartridge performance possible at 8.2 psia,,,,S03
+F054,habitat_materials,General statement,General statement: At 34% O2 and 8.2 psia materials that are non-flammable on Earth can become flammable and flammable materials need lower ignition energy; From extinguisher research paper,,,,S35

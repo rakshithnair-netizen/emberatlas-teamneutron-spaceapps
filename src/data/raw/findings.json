@@ -1,0 +1,770 @@
+[
+ {
+  "finding_id": "F001",
+  "area": "earth_application",
+  "subarea": "Models for wildfires and building fires",
+  "statement": "BASS-II: in space fuels burn as oval balls, a simpler process used to evaluate fuel-burning computer models that can then study wildfires, building fires, waste-to-energy recapture",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-25"
+  ],
+  "earth_domain": "wildfire_and_building_fire_models",
+  "source_ids": [
+   "S16"
+  ]
+ },
+ {
+  "finding_id": "F002",
+  "area": "earth_application",
+  "subarea": "Validated combustion models",
+  "statement": "BASS: models validated in microgravity flow environment build up to more complex normal-gravity models with wide terrestrial applicability",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-26",
+   "PSI-25"
+  ],
+  "earth_domain": "combustion_model_validation",
+  "source_ids": [
+   "S44",
+   "S15"
+  ]
+ },
+ {
+  "finding_id": "F003",
+  "area": "earth_application",
+  "subarea": "Cleaner engines and furnaces",
+  "statement": "ACME: improve combustion efficiency and cut pollutant emissions; soot control; oxygen-enriched combustion that could enable carbon sequestration; better models cut combustor design time and cost",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-20",
+   "PSI-21",
+   "PSI-22",
+   "PSI-23",
+   "PSI-10",
+   "PSI-159"
+  ],
+  "earth_domain": "efficiency_and_emissions",
+  "source_ids": [
+   "S17"
+  ]
+ },
+ {
+  "finding_id": "F004",
+  "area": "earth_application",
+  "subarea": "Furnaces, power plants, boilers",
+  "statement": "ACME project scientist: knowledge can help design furnaces, power plants and boilers that are more efficient, less polluting and safer",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-20",
+   "PSI-21",
+   "PSI-22",
+   "PSI-23",
+   "PSI-10",
+   "PSI-159"
+  ],
+  "earth_domain": "efficiency_and_emissions",
+  "source_ids": [
+   "S38"
+  ]
+ },
+ {
+  "finding_id": "F005",
+  "area": "earth_application",
+  "subarea": "Soot",
+  "statement": "Microgravity flames contain 5-8 times more soot than equivalent normal-gravity flames, giving model benchmarks",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-20",
+   "PSI-21",
+   "PSI-22",
+   "PSI-23"
+  ],
+  "earth_domain": "soot_and_air_quality",
+  "source_ids": [
+   "S17"
+  ]
+ },
+ {
+  "finding_id": "F006",
+  "area": "earth_application",
+  "subarea": "Weak-flame stability",
+  "statement": "Highly diluted weak flames are more stable in microgravity, extending dilution limits; useful for stabilization mechanism understanding",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-20",
+   "PSI-21",
+   "PSI-22",
+   "PSI-23"
+  ],
+  "earth_domain": "flame_stability",
+  "source_ids": [
+   "S17"
+  ]
+ },
+ {
+  "finding_id": "F007",
+  "area": "earth_application",
+  "subarea": "Fire suppression systems",
+  "statement": "FLEX: more efficient and less harmful suppression systems with lower risk of toxic byproducts; relevance to confined or reduced-gravity settings such as submarines and high-altitude aircraft",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-69",
+   "PSI-68"
+  ],
+  "earth_domain": "fire_suppression",
+  "source_ids": [
+   "S18"
+  ]
+ },
+ {
+  "finding_id": "F008",
+  "area": "earth_application",
+  "subarea": "Next-generation engines",
+  "statement": "FLEX cool-flame chemistry matters for internal combustion engines with higher efficiency and lower emissions",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-69",
+   "PSI-39"
+  ],
+  "earth_domain": "engines",
+  "source_ids": [
+   "S15",
+   "S18"
+  ]
+ },
+ {
+  "finding_id": "F009",
+  "area": "earth_application",
+  "subarea": "Low-emission burners",
+  "statement": "Premixed flame work led to a burner with ultra-low pollutant emissions, with application in domestic water heaters and furnaces",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": "burners_and_heating",
+  "source_ids": [
+   "S15"
+  ]
+ },
+ {
+  "finding_id": "F010",
+  "area": "earth_application",
+  "subarea": "Smoke detectors",
+  "statement": "Microgravity showed fire-generated particle sizes differ, so detectors tuned to terrestrial smoke may look for the wrong signature",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-102",
+   "PSI-47"
+  ],
+  "earth_domain": "smoke_detection",
+  "source_ids": [
+   "S15"
+  ]
+ },
+ {
+  "finding_id": "F011",
+  "area": "detection",
+  "subarea": "SAME test scale",
+  "statement": "SAME-1 tested 30 samples (6 each of Teflon, Kapton, silicone rubber, cellulose, dibutyl phthalate on wick) on ISS Expedition 15; SAME-2 (Expedition 24, 2010) tested five materials incl. cotton and Pyrell with over 100 samples",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-102"
+  ],
+  "earth_domain": "smoke_detection",
+  "source_ids": [
+   "S19",
+   "S21"
+  ]
+ },
+ {
+  "finding_id": "F012",
+  "area": "detection",
+  "subarea": "ISS detector misses",
+  "statement": "ISS detector failed to alarm for Kapton smoke in half of tests and Teflon smoke in two-thirds",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-102",
+   "PSI-47"
+  ],
+  "earth_domain": "smoke_detection",
+  "source_ids": [
+   "S06"
+  ]
+ },
+ {
+  "finding_id": "F013",
+  "area": "detection",
+  "subarea": "Particle size",
+  "statement": "All fuels produced substantial sub-micron particles; sizes 100-600 nm; Teflon and Kapton smallest",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-102",
+   "PSI-47"
+  ],
+  "earth_domain": "smoke_detection",
+  "source_ids": [
+   "S21",
+   "S23"
+  ]
+ },
+ {
+  "finding_id": "F014",
+  "area": "detection",
+  "subarea": "Detector response",
+  "statement": "ISS forward light scattering detector (near-IR, most sensitive above 1 micron) had diminished response to Kapton and Teflon smoke under 300 nm; ionization detector responded slightly better, especially to Teflon",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-102",
+   "PSI-47"
+  ],
+  "earth_domain": "smoke_detection",
+  "source_ids": [
+   "S23",
+   "S19"
+  ]
+ },
+ {
+  "finding_id": "F015",
+  "area": "detection",
+  "subarea": "Gravity effect",
+  "statement": "Low-gravity smoke count mean diameter about 50% larger than similar normal-gravity conditions",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-102",
+   "PSI-47"
+  ],
+  "earth_domain": "smoke_detection",
+  "source_ids": [
+   "S22"
+  ]
+ },
+ {
+  "finding_id": "F016",
+  "area": "detection",
+  "subarea": "Flow and aging",
+  "statement": "Particle size increases at low flow and with aging; smoke in poorly ventilated enclosures is larger",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-102",
+   "PSI-47"
+  ],
+  "earth_domain": "smoke_detection",
+  "source_ids": [
+   "S21"
+  ]
+ },
+ {
+  "finding_id": "F017",
+  "area": "detection",
+  "subarea": "ISS alarm threshold",
+  "statement": "ISS detector alarm point on the order of 0.5 mg/m3",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-102",
+   "PSI-47"
+  ],
+  "earth_domain": "smoke_detection",
+  "source_ids": [
+   "S22"
+  ]
+ },
+ {
+  "finding_id": "F018",
+  "area": "detection",
+  "subarea": "Saffire-VI detection",
+  "statement": "Alarm threshold reached at 981 s, after most hazardous gas release; PMMA tests exceeded 1-hour CO2 and 24-hour CO limits",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "SAFFIRE-VI"
+  ],
+  "earth_domain": "smoke_detection",
+  "source_ids": [
+   "S01"
+  ]
+ },
+ {
+  "finding_id": "F019",
+  "area": "detection",
+  "subarea": "Early-fire detection risk",
+  "statement": "ECLSS particle filtration can outpace smoke accumulation in an early small fire, so detection may be delayed",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-102",
+   "PSI-47"
+  ],
+  "earth_domain": "smoke_detection",
+  "source_ids": [
+   "S06"
+  ]
+ },
+ {
+  "finding_id": "F020",
+  "area": "suppression",
+  "subarea": "FLEX test envelope",
+  "statement": "O2 mole fraction 0.10-0.50, suppressant (CO2, He) 0-0.70, pressure 0.5-3.0 atm",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-69",
+   "PSI-68"
+  ],
+  "earth_domain": "fire_suppression",
+  "source_ids": [
+   "S24",
+   "S45"
+  ]
+ },
+ {
+  "finding_id": "F021",
+  "area": "suppression",
+  "subarea": "FLEX approach",
+  "statement": "Heptane and methanol droplets; determines limiting oxygen index (LOI) and how suppressants shift it",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-69"
+  ],
+  "earth_domain": "fire_suppression",
+  "source_ids": [
+   "S18",
+   "S15"
+  ]
+ },
+ {
+  "finding_id": "F022",
+  "area": "suppression",
+  "subarea": "LOI relation",
+  "statement": "LOI = 0.209 x (1 - MEC)",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-69"
+  ],
+  "earth_domain": "fire_suppression",
+  "source_ids": [
+   "S24"
+  ]
+ },
+ {
+  "finding_id": "F023",
+  "area": "suppression",
+  "subarea": "CO2 caveat",
+  "statement": "CO2 is radiatively active and not removed by buoyant convection; also not physiologically inert at extinguishing concentrations",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-69"
+  ],
+  "earth_domain": "fire_suppression",
+  "source_ids": [
+   "S24"
+  ]
+ },
+ {
+  "finding_id": "F024",
+  "area": "suppression",
+  "subarea": "Low-g suppression margin",
+  "statement": "Terrestrial inert-gas suppressant standards do not give the same safety margin in low gravity",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": "fire_suppression",
+  "source_ids": [
+   "S15"
+  ]
+ },
+ {
+  "finding_id": "F025",
+  "area": "suppression",
+  "subarea": "Local suppressant jet",
+  "statement": "Local suppressant application is not adequate; jet entrains air and can sustain the flame; nitrogen can strengthen a flame",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-26",
+   "PSI-25"
+  ],
+  "earth_domain": "fire_suppression",
+  "source_ids": [
+   "S15",
+   "S44"
+  ]
+ },
+ {
+  "finding_id": "F026",
+  "area": "suppression",
+  "subarea": "KC-135 PMMA study",
+  "statement": "CO2, N2 and He act as passive suppressants via O2 displacement and cooling; required concentration rises with flow velocity up to about 10 cm/s, where effective enthalpy is near the normal-gravity value",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": "fire_suppression",
+  "source_ids": [
+   "S25"
+  ]
+ },
+ {
+  "finding_id": "F027",
+  "area": "suppression",
+  "subarea": "ISS CO2 spec basis",
+  "statement": "Specification based on NFPA 12: 30% by volume for flaming fires, 50% for smoldering fires with a 20 minute hold",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": "fire_suppression",
+  "source_ids": [
+   "S25"
+  ]
+ },
+ {
+  "finding_id": "F028",
+  "area": "suppression",
+  "subarea": "Cool flames",
+  "statement": "FLEX showed cool flames can burn for a prolonged period after visible flame extinction",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "PSI-69",
+   "PSI-39"
+  ],
+  "earth_domain": "engines",
+  "source_ids": [
+   "S15"
+  ]
+ },
+ {
+  "finding_id": "F029",
+  "area": "suppression",
+  "subarea": "First-response practice",
+  "statement": "Isolation: turn off local power and airflow",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": "fire_suppression",
+  "source_ids": [
+   "S15"
+  ]
+ },
+ {
+  "finding_id": "F030",
+  "area": "partial_gravity",
+  "subarea": "Lunar gravity may be the most flammable condition for some fuels",
+  "statement": "Numerical and experimental evidence suggests lunar gravity is near the most flammable condition; minimum O2 for flammability near lunar g (model); downward spread rate peaks in partial g",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": null,
+  "source_ids": [
+   "S13",
+   "S09"
+  ]
+ },
+ {
+  "finding_id": "F031",
+  "area": "partial_gravity",
+  "subarea": "Partial-g vs 0-g vs 1-g flammability limits",
+  "statement": "Centrifuge facility showed flammability limits depend on gravity level; most flammable upward spread for certain fuels near lunar g; differences in ULOI and MOC largest at lunar g (table not captured)",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": null,
+  "source_ids": [
+   "S10"
+  ]
+ },
+ {
+  "finding_id": "F032",
+  "area": "partial_gravity",
+  "subarea": "Spread rate vs gravity",
+  "statement": "Limited data suggest upward spread rate for very thin fuels is proportional to gravity; downward spread is non-monotonic",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": null,
+  "source_ids": [
+   "S11"
+  ]
+ },
+ {
+  "finding_id": "F033",
+  "area": "partial_gravity",
+  "subarea": "Interpolation warning",
+  "statement": "Fire behavior in partial gravity cannot be expected to be interpolated from 0-g and 1-g",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": null,
+  "source_ids": [
+   "S11"
+  ]
+ },
+ {
+  "finding_id": "F034",
+  "area": "partial_gravity",
+  "subarea": "KC-135 flame spread studies",
+  "statement": "Thin solid upward spread tested at 0.10 g, 0.16 g (lunar), 0.38 g (Martian) and 1 g; extinction pressure depends on gravity and sample width",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": null,
+  "source_ids": [
+   "S14"
+  ]
+ },
+ {
+  "finding_id": "F035",
+  "area": "partial_gravity",
+  "subarea": "Material that burns only in lunar g",
+  "statement": "SIBAL burns downward in air in lunar gravity but extinguishes right after ignition in Earth gravity",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "LUCI",
+   "FM2"
+  ],
+  "earth_domain": null,
+  "source_ids": [
+   "S08"
+  ]
+ },
+ {
+  "finding_id": "F036",
+  "area": "partial_gravity",
+  "subarea": "1-g screening gap",
+  "statement": "NASA-STD-6001 Test 1 is run in 1-g; one source says it is not conservative for microgravity, another says 1-g may not be the most flammable condition (lunar g could be worse)",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": null,
+  "source_ids": [
+   "S09",
+   "S15"
+  ]
+ },
+ {
+  "finding_id": "F037",
+  "area": "partial_gravity",
+  "subarea": "Stated data gap",
+  "statement": "Material flammability in actual partial gravity is poorly understood; partial-gravity data are limited to aircraft, centrifuge drop rig, LUCI",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": null,
+  "source_ids": [
+   "S10",
+   "S12",
+   "S07"
+  ]
+ },
+ {
+  "finding_id": "F038",
+  "area": "partial_gravity",
+  "subarea": "FM2 plan",
+  "statement": "Four solid samples: two SIBAL burned in air (21% O2, 14.7 psia) and two acrylic rods in 34% O2, 8.2 psia, each upward and downward; CLPS lander CP-21; launch listed as planned for late 2026",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "LUCI",
+   "FM2"
+  ],
+  "earth_domain": null,
+  "source_ids": [
+   "S08",
+   "S09"
+  ]
+ },
+ {
+  "finding_id": "F039",
+  "area": "partial_gravity",
+  "subarea": "FM2 O2 value discrepancy",
+  "statement": "A 2024 NASA briefing lists FM2 tests at 37% O2; the FM2 abstract lists 21% and 34%. Treat conditions as unconfirmed until FM2 results are published",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "LUCI",
+   "FM2"
+  ],
+  "earth_domain": null,
+  "source_ids": [
+   "S42",
+   "S08"
+  ]
+ },
+ {
+  "finding_id": "F040",
+  "area": "partial_gravity",
+  "subarea": "FM2 ground tests",
+  "statement": "In FY2025 researchers ran lunar-gravity and lunar-atmosphere simulation tests in NASA's Zero Gravity Facility (President's Aeronautics and Space Report FY2025)",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "LUCI",
+   "FM2"
+  ],
+  "earth_domain": null,
+  "source_ids": [
+   "S46"
+  ]
+ },
+ {
+  "finding_id": "F041",
+  "area": "partial_gravity",
+  "subarea": "LUCI: SIBAL flame base spread rate",
+  "statement": "0.9 mm/s (lunar g) vs 1.5 mm/s (1-g); ratio 0.6",
+  "quantitative_detail": "ratio 0.6",
+  "linked_investigations": [
+   "LUCI"
+  ],
+  "earth_domain": null,
+  "source_ids": [
+   "S07"
+  ]
+ },
+ {
+  "finding_id": "F042",
+  "area": "partial_gravity",
+  "subarea": "LUCI: SIBAL flame tip spread rate",
+  "statement": "1.1 mm/s (lunar g) vs 2.8 mm/s (1-g); ratio 0.39",
+  "quantitative_detail": "ratio 0.39",
+  "linked_investigations": [
+   "LUCI"
+  ],
+  "earth_domain": null,
+  "source_ids": [
+   "S07"
+  ]
+ },
+ {
+  "finding_id": "F043",
+  "area": "partial_gravity",
+  "subarea": "LUCI: PMMA rod flame tip spread rate",
+  "statement": "0.15 cm/s (lunar g) vs 0.40 cm/s (1-g); ratio 0.38",
+  "quantitative_detail": "ratio 0.38",
+  "linked_investigations": [
+   "LUCI"
+  ],
+  "earth_domain": null,
+  "source_ids": [
+   "S07"
+  ]
+ },
+ {
+  "finding_id": "F044",
+  "area": "partial_gravity",
+  "subarea": "LUCI: SIBAL semi-steady flame size in lunar g",
+  "statement": "about 3.2 cm wide, about 1.5 cm long",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "LUCI"
+  ],
+  "earth_domain": null,
+  "source_ids": [
+   "S07"
+  ]
+ },
+ {
+  "finding_id": "F045",
+  "area": "partial_gravity",
+  "subarea": "LUCI: SIBAL extinction timing",
+  "statement": "1-g extinction occurred about 45 s sooner than in lunar g",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "LUCI"
+  ],
+  "earth_domain": null,
+  "source_ids": [
+   "S07"
+  ]
+ },
+ {
+  "finding_id": "F046",
+  "area": "partial_gravity",
+  "subarea": "LUCI: Chamber O2 during SIBAL lunar-g burn",
+  "statement": "fell from about 20% to about 18%",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "LUCI"
+  ],
+  "earth_domain": null,
+  "source_ids": [
+   "S07"
+  ]
+ },
+ {
+  "finding_id": "F047",
+  "area": "partial_gravity",
+  "subarea": "LUCI: Chamber O2 during PMMA lunar-g burn",
+  "statement": "fell from 20% to 14.3%",
+  "quantitative_detail": null,
+  "linked_investigations": [
+   "LUCI"
+  ],
+  "earth_domain": null,
+  "source_ids": [
+   "S07"
+  ]
+ },
+ {
+  "finding_id": "F048",
+  "area": "partial_gravity",
+  "subarea": "LUCI: LUCI test setup",
+  "statement": "11 RPM rotation, 1.22 m effective radius, lunar-g centrifugal acceleration, normal-pressure air, two samples (SIBAL fabric and 4 mm PMMA rod), burn over 2.5 min; Coriolis force is a stated caveat",
+  "quantitative_detail": "Coriolis force is a stated caveat",
+  "linked_investigations": [
+   "LUCI"
+  ],
+  "earth_domain": null,
+  "source_ids": [
+   "S07"
+  ]
+ },
+ {
+  "finding_id": "F049",
+  "area": "habitat_materials",
+  "subarea": "Melamine foam insulation",
+  "statement": "Melamine foam insulation: Acceptable at 30% O2, 10.2 psia; Flammable at 34-40% O2, 8.2 psia; Solimide HT-340 suggested as possible replacement",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": null,
+  "source_ids": [
+   "S03"
+  ]
+ },
+ {
+  "finding_id": "F050",
+  "area": "habitat_materials",
+  "subarea": "Nomex",
+  "statement": "Nomex: Acceptable to 30% O2, 10.2 psia; Unlikely acceptable at 34-40% O2, 8.2 psia; Fire-retardant treatment may make it acceptable",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": null,
+  "source_ids": [
+   "S03"
+  ]
+ },
+ {
+  "finding_id": "F051",
+  "area": "habitat_materials",
+  "subarea": "Portable fire extinguisher (PFE)",
+  "statement": "Portable fire extinguisher (PFE): Will not meet flammability requirements at the highest exploration O2",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": null,
+  "source_ids": [
+   "S03"
+  ]
+ },
+ {
+  "finding_id": "F052",
+  "area": "habitat_materials",
+  "subarea": "BPA bladder material",
+  "statement": "BPA bladder material: Flammable in ISS environments; used up to 30% O2 at 10.2 psia; Needs additional testing at 34-40% O2, 8.2 psia",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": null,
+  "source_ids": [
+   "S03"
+  ]
+ },
+ {
+  "finding_id": "F053",
+  "area": "habitat_materials",
+  "subarea": "Ammonia cartridges for emergency mask",
+  "statement": "Ammonia cartridges for emergency mask: Flammable but acceptable; Acceptable status at 34-40% O2 not established in captured text; Reduced cartridge performance possible at 8.2 psia",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": null,
+  "source_ids": [
+   "S03"
+  ]
+ },
+ {
+  "finding_id": "F054",
+  "area": "habitat_materials",
+  "subarea": "General statement",
+  "statement": "General statement: At 34% O2 and 8.2 psia materials that are non-flammable on Earth can become flammable and flammable materials need lower ignition energy; From extinguisher research paper",
+  "quantitative_detail": null,
+  "linked_investigations": [],
+  "earth_domain": null,
+  "source_ids": [
+   "S35"
+  ]
+ }
+]

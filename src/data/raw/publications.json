@@ -1,0 +1,2168 @@
+[
+ {
+  "investigation_id": "PSI-100",
+  "title": "Buoyant Effects on the Flammability of Silicone Samples Planned for the Spacecraft Fire Experiment (Saffire), 45th International Conference on Environmental Systems ICES-2015-[293] 12-16 July 2015, Bellevue, Washington",
+  "doi": null,
+  "authors": "JE Niehaus, PV Ferkul, SA Gokoglu, GA Ruff"
+ },
+ {
+  "investigation_id": "PSI-100",
+  "title": "The Spacecraft Fire Experiment (Saffire) - Objectives, Development and Status",
+  "doi": null,
+  "authors": "W Schoren, GA Ruff, DL Urban"
+ },
+ {
+  "investigation_id": "PSI-100",
+  "title": "Operation and Development Status of the Spacecraft Fire Experiments (Saffire), 46th International Conference on Environmental Systems (ICES), July 2016",
+  "doi": null,
+  "authors": "https://ntrs.nasa.gov/citations/20170000230"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "Measurement of Smoke Particle Size under Low-Gravity Conditions",
+  "doi": "10.4271/2008-01-2089",
+  "authors": "Urban David L., Ruff Gary A., Mulholland George W., Cleary Thomas G., Yang Jiann C., Yuan Zengguang"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "Properties of Smoke from Overheated Spacecraft Materials in Low-Gravity",
+  "doi": "10.4271/2009-01-2468",
+  "authors": "DL Urban, GA Ruff, W Sheredy, T Cleary, J Yang, G Mulholland, Z Yuan"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "Smoke Particle Sizes in Low-Gravity and Implications for Spacecraft Smoke Detector Design",
+  "doi": "10.2514/6.2008-806",
+  "authors": "Urban David L., Ruff Gary A., Mulholland George W., Cleary Thomas G., Yang Jiann C., Yuan Zengguang, Bryg Victoria"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "Spacecraft Fire Detection: Smoke Properties and Transport in Low-Gravity",
+  "doi": "10.4271/2007-01-3076",
+  "authors": "Urban David, Ruff Gary, Brooker John, Cleary Thomas, Yang Jiann, Mulholland George, Yuan Zeng-Guang"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "ISS Destiny Laboratory Smoke Detection Model",
+  "doi": "10.1017/S1431927610060563",
+  "authors": "Brooker John E., Urban David L., Ruff Gary A."
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "Smoke: Characterization of Smoke Particulate for Spacecraft Fire Detection, Seventh International Microgravity Combustion Workshop",
+  "doi": "10.2514/6.2005-341",
+  "authors": "DL Urban, GW Mulholland, J Yang, TG Cleary, and ZG Yuan"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "Smoke: Characterization of Smoke Particulate for Spacecraft Fire Detection",
+  "doi": "10.1080/02786826.2015.1025125",
+  "authors": "DL Urban, GW Mulholland, J Yang, TG Cleary, ZG Yuan"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "Characterization of Nuisance Particulates in the ISS: Space Smoke Aerosols and Lunar Dust Abatement",
+  "doi": "10.1080/02786826.2015.1025124",
+  "authors": "Bryg VM, Yuan Z-G, Urban DL, Ruff G, Mulholland G, Agui J"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "Combustion Research on the International Space Station",
+  "doi": "10.1016/j.firesaf.2018.04.004",
+  "authors": "Malley, WA Sheredy, DP Stocker"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "Detection of Smoke from Microgravity Fires",
+  "doi": "10.2514/6.2007-546",
+  "authors": "DL Urban, D Griffin, G Ruff, T Cleary, J Yang, G Mulholland, ZG Yuan"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "A Research Plan for Fire Prevention, Detection and Suppression in Crewed Exploration Systems",
+  "doi": null,
+  "authors": "Ruff Gary, Urban David, King Merrill"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "Pyrolysis Smoke Generated Under Low-Gravity Conditions",
+  "doi": null,
+  "authors": "Mulholland George W., Meyer Marit, Urban David L., Ruff Gary A., Yuan Zeng-guang, Bryg Victoria, Cleary Thomas, Yang Jiann"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "Smoke Characterization and Feasibility of the Moment Method for Spacecraft Fire Detection",
+  "doi": null,
+  "authors": "Meyer Marit E., Mulholland George W., Bryg Victoria, Urban David L., Yuan Zeng-Guang, Ruff Gary A., Cleary Thomas, Yang Jiann"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "Evaluation of spacecraft smoke detector performance in the low-gravity environment",
+  "doi": null,
+  "authors": "Meyer Marit E., Urban David L., Mulholland George W., Bryg Victoria, Yuan Zeng-Guang, Ruff Gary A., Cleary Thomas, Yang Jiann"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "The Microgravity Science Glovebox (MSG), a Resource for Gravity-Dependent Phenomena Research on the International Space Station (ISS)",
+  "doi": null,
+  "authors": "Spivey Reggie, Jeter Linda, Vonk Chris"
+ },
+ {
+  "investigation_id": "PSI-102",
+  "title": "AN OVERVIEW OF THE MICROGRAVITY SCIENCE GLOVEBOX (MSG) FACILITY, AND THE GRAVITY-DEPENDENT PHENOMENARESEARCH PERFORMED IN THE MSG ON THE INTERNATIONAL SPACE STATION (ISS)",
+  "doi": null,
+  "authors": "Reggie Spivey, Kenneth B. Morris"
+ },
+ {
+  "investigation_id": "PSI-106",
+  "title": "A computational and experimental study of coflow laminar methane/air diffusion flames: Effects of fuel dilution, inlet velocity, and gravity",
+  "doi": "10.1016/j.proci.2014.05.138",
+  "authors": "Cao S., Ma B., Bennett B.A.V., Giassi D., Stocker D.P., Takahashi F., Long M.B., Smooke M.D."
+ },
+ {
+  "investigation_id": "PSI-106",
+  "title": "A Combined Experimental and Computational Study of Soot Formation in Normal and Microgravity Conditions",
+  "doi": "10.1080/00102202.2022.2041621",
+  "authors": "Dobbins Richard R., Tinjero Jesse, Squeo Joseph, Zhao Xinyu, Hall Robert J., Colket Meredith B., Long Marshall B., Smooke Mitchell D."
+ },
+ {
+  "investigation_id": "PSI-106",
+  "title": "Effects of Fuel Dilution and Gravity on Laminar Coflow Methane-Air Diffusion Flames: A Computational and Experimental Investigation",
+  "doi": "10.1016/j.proci.2014.05.064",
+  "authors": "S Cao, BAV Bennett, B Ma, D Giassi, DP Stocker, F Takahashi, MB Long, MD Smooke"
+ },
+ {
+  "investigation_id": "PSI-106",
+  "title": "An experimental and computational study of soot formation in a coflow jet flame under microgravity and normal gravity",
+  "doi": "10.1016/j.combustflame.2016.02.012",
+  "authors": "Ma Bin, Cao Su, Giassi Davide, Stocker Dennis P., Takahashi Fumiaki, Bennett Beth Anne V., Smooke Mitchell D., Long Marshall B."
+ },
+ {
+  "investigation_id": "PSI-106",
+  "title": "Analysis of CH* concentration and flame heat release rate in laminar coflow diffusion flames under microgravity and normal gravity",
+  "doi": null,
+  "authors": "Giassi Davide, Cao Su, Bennett Beth Anne V., Stocker Dennis P., Takahashi Fumiaki, Smooke Mitchell D., Long Marshall B."
+ },
+ {
+  "investigation_id": "PSI-107",
+  "title": "Laminar Smoke Points in Coflow Measured Aboard the International Space Station",
+  "doi": "10.2514/6.2010-1105",
+  "authors": "Dotson Keenan, Sunderland Peter, Yuan Zeng-Guang, Urban David"
+ },
+ {
+  "investigation_id": "PSI-107",
+  "title": "Scaling of Gas-Jet Flame Lengths in Elevated Gravity",
+  "doi": "10.1007/978-1-4020-8682-3_22",
+  "authors": "Sunderland Peter B., Urban David L., Nayagam Vedha"
+ },
+ {
+  "investigation_id": "PSI-107",
+  "title": "The Microgravity Science Glovebox (MSG), a Resource for Gravity-Dependent Phenomena Research on the International Space Station (ISS)",
+  "doi": "10.2514/6.2006-941",
+  "authors": "RA Spivey, LB Jeter, C Vonk"
+ },
+ {
+  "investigation_id": "PSI-107",
+  "title": "The Microgravity Science Glovebox as a Platform for Exploration Research on the International Space Station",
+  "doi": "10.1080/00102202.2022.2041621",
+  "authors": "Spivey Reggie, Luz Paul"
+ },
+ {
+  "investigation_id": "PSI-107",
+  "title": "A Combined Experimental and Computational Study of Soot Formation in Normal and Microgravity Conditions",
+  "doi": "10.1016/j.combustflame.2004.12.009",
+  "authors": "Dobbins Richard R., Tinjero Jesse, Squeo Joseph, Zhao Xinyu, Hall Robert J., Colket Meredith B., Long Marshall B., Smooke Mitchell D."
+ },
+ {
+  "investigation_id": "PSI-107",
+  "title": "Shapes of nonbuoyant round hydrocarbon-fueled laminar-jet diffusion flames in still air",
+  "doi": "10.1016/S0010-2180(98)00100-X",
+  "authors": "Aalburg C., Diez F.J., Faeth G.M., Sunderland P.B., Urban D.L., Yuan Z.-G."
+ },
+ {
+  "investigation_id": "PSI-107",
+  "title": "Shapes of nonbuoyant round luminous hydrocarbon/air laminar jet diffusion flames",
+  "doi": "10.1016/j.firesaf.2011.08.002",
+  "authors": "LIN K, FAETH G, SUNDERLAND P, URBAN D, YUAN Z"
+ },
+ {
+  "investigation_id": "PSI-107",
+  "title": "Smoke Points of Microgravity and Normal Gravity Coflow Diffusion",
+  "doi": null,
+  "authors": "KT Dotson"
+ },
+ {
+  "investigation_id": "PSI-107",
+  "title": "Laminar smoke points of coflowing flames in microgravity",
+  "doi": null,
+  "authors": "Dotson K.T., Sunderland P.B., Yuan Z.-G., Urban D.L."
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "Surface Tension Driven Convection Experiment Completed",
+  "doi": "10.1016/S0273-1177(99)00746-2",
+  "authors": "TP Jacobson, DA Sedlak"
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "Containment of a silicone fluid free surface in reduced gravity using barrier coatings",
+  "doi": "10.1115/1.2824346",
+  "authors": "AD Pline, TP Jacobson"
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "Infrared Surface Temperature Measurements for the Surface Tension Driven Convection Experiment",
+  "doi": "10.1016/S0017-9310(98)00163-X",
+  "authors": "AD Pline"
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "Development of an Infrared Imaging System for the Surface Tension Driven Convection Experiment",
+  "doi": "10.2514/2.6207",
+  "authors": "AD Pline"
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "Particle Image Velocimetry for the Surface Tensions Driven Convection Experiment Using a Particle Displacement Tracking",
+  "doi": "10.2514/3.759",
+  "authors": "MP Wernet, AD Pline"
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "Thermocapillary flow under microgravity — Experimental results",
+  "doi": "10.1115/1.2822621",
+  "authors": "Kamotani Y."
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "Theoretical Analysis of Thermocapillary Flow in Cylindrical Columns of High Prandtl Number Fluids",
+  "doi": "10.1016/0094-5765(95)00004-J",
+  "authors": "Kamotani Y., Ostrach S."
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "Oscillatory thermocapillary flows in open cylindrical containers induced by CO2 laser heating",
+  "doi": "10.1063/1.868432",
+  "authors": "Kamotani Y., Ostrach S., Masud J."
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "Oscillatory Thermocapillary Flow in Cylindrical Columns of High Prandtl Number Fluids",
+  "doi": "10.1038/s41526-022-00189-5",
+  "authors": "Masud J., Kamotani Y., Ostrach S."
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "Effects of Heating Mode on Steady Axisymmetric Thermocapillary Flows in Microgravity",
+  "doi": null,
+  "authors": "Y Kamotani, A Chang, S Ostrach"
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "Oscillatory convection due to combined buoyancy and thermocapillarity",
+  "doi": null,
+  "authors": "Kamotani Y., Masud J., Pline A."
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "A Thermocapillary Convection Experiment in Microgravity",
+  "doi": null,
+  "authors": "Kamotani Y., Ostrach S., Pline A."
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "An experimental study of free surface deformation in oscillatory thermocapillary flow",
+  "doi": null,
+  "authors": "Lin Jianlian, Kamotani Yasuhiro, Ostrach Simon"
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "Analysis of velocity data taken in Surface Tension Driven Convection Experiment in microgravity",
+  "doi": null,
+  "authors": "Kamotani Y., Ostrach S., Pline A."
+ },
+ {
+  "investigation_id": "PSI-108",
+  "title": "Revisiting the NASA surface tension driven convection experiments",
+  "doi": null,
+  "authors": "Sequeira Yohan, Maitra Abhradeep, Pandey Anupam, Jung Sunghwan"
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "The kinetics and warm flame chemistry associated with radiative extinction of spherical diffusion flames",
+  "doi": "10.1080/13647830.2024.2326830",
+  "authors": "Waddell Kendyl A., Irace Phillip H., Yablonsky Gregory, Constales Denis, Sunderland Peter B., Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Soot Formation in Spherical Diffusion Flames",
+  "doi": "10.3390/math11020261",
+  "authors": "Frolov Sergey M., Ivanov Vladislav S., Frolov Fedor S., Vlasov Pavel A., Axelbaum Richard, Irace Phillip H., Yablonsky Grigoriy, Waddell Kendyl"
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "On the existence of steady-state gaseous microgravity spherical diffusion flames in the presence of radiation heat loss",
+  "doi": "10.1016/j.proci.2022.07.049",
+  "authors": "Irace Phillip H., Waddell Kendyl A., Constales Denis, Kim Minhyeng, Yablonsky Gregory, Sunderland Peter B., Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Critical temperature and reactant mass flux for radiative extinction of ethylene microgravity spherical diffusion flames at 1 bar",
+  "doi": "10.1016/j.proci.2022.07.043",
+  "authors": "Irace Phillip H., Waddell Kendyl A., Constales Denis, Sunderland Peter B., Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "An investigation of thermal radiation from laminar diffusion flames in a tri-coflow burner with central oxygen",
+  "doi": "10.1016/j.combustflame.2022.112158",
+  "authors": "Irace P.H., Gopan A., Axelbaum R.L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "SPHERICAL DIFFUSION FLAME IN MICROGRAVITY CONDITIONS: FIRST RESULTS OF JOINT RUSSIAN-AMERICAN SPACE EXPERIMENT FLAME DESIGN - ADAMANT",
+  "doi": "10.30826/NEPCAP9B-13",
+  "authors": "undefined undefined, FROLOV S. M."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Observations of long duration microgravity spherical diffusion flames aboard the International Space Station",
+  "doi": "10.1016/j.combustflame.2021.02.019",
+  "authors": "Irace Phillip H., Lee Han Ju, Waddell Kendyl, Tan Logan, Stocker Dennis P., Sunderland Peter B., Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Double blue zones in inverse and normal laminar jet diffusion flames",
+  "doi": "10.1016/j.combustflame.2019.09.014",
+  "authors": "Wang Zhengyang, Sunderland Peter B., Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Dilution effects on laminar jet diffusion flame lengths",
+  "doi": "10.1016/j.proci.2018.06.085",
+  "authors": "Wang Zhengyang, Sunderland Peter B., Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "A new method of flame temperature measurement utilizing the acoustic emissions from laser-induced plasmas",
+  "doi": "10.1016/j.proci.2018.07.096",
+  "authors": "Wu Wendong, Adeosun Adewale, Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Structure and extinction of spherical burner-stabilized diffusion flames that are attached to the burner surface",
+  "doi": "10.1016/j.combustflame.2017.08.024",
+  "authors": "Rodenhurst Melvin K., Chao Beei-Huan, Sunderland Peter B., Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Effects of Inert Placement (Z st) on Soot and Radiative Heat Flux in Turbulent Diffusion Flames",
+  "doi": "10.1021/acs.energyfuels.7b01092",
+  "authors": "Gopan Akshay, Yang Zhiwei, Kumfer Benjamin M., Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Observation of water–gas shift equilibrium in diffusion flames",
+  "doi": "10.1016/j.combustflame.2016.07.025",
+  "authors": "Wu Wendong, Yablonsky Gregory, Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "An Approach to Thermocouple Measurements That Reduces Uncertainties in High-Temperature Environments",
+  "doi": "10.1021/acs.energyfuels.5b00071",
+  "authors": "Krishnan Siddharth, Kumfer Benjamin M., Wu Wendong, Li Jichuan, Nehorai Arye, Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Modeled quenching limits of spherical hydrogen diffusion flames",
+  "doi": "10.1016/j.proci.2012.07.029",
+  "authors": "Lecoustre V.R., Sunderland P.B., Chao B.H., Axelbaum R.L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Simplifying the complexity of diffusion flames through interpretation in C/O ratio space",
+  "doi": "10.1016/j.camwa.2013.01.008",
+  "authors": "Xia Fei, Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Numerical study of flame structure and soot inception interpreted in carbon-to-oxygen atom ratio space",
+  "doi": "10.1016/j.proci.2012.06.043",
+  "authors": "Xia Fei, Yablonsky Gregory S., Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Stability of spray combustion for water/alcohols mixtures in oxygen-enriched air",
+  "doi": "10.1016/j.proci.2012.05.088",
+  "authors": "Yi Fei, Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Numerical investigation of spherical diffusion flames at their sooting limits",
+  "doi": "10.1016/j.combustflame.2011.05.022",
+  "authors": "Lecoustre V.R., Sunderland P.B., Chao B.H., Axelbaum R.L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Kinetic and radiative extinctions of spherical burner-stabilized diffusion flames",
+  "doi": "10.1016/j.combustflame.2010.12.007",
+  "authors": "Wang Q., Chao B.H."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Extremely weak hydrogen flames",
+  "doi": "10.1016/j.combustflame.2010.07.024",
+  "authors": "Lecoustre V.R., Sunderland P.B., Chao B.H., Axelbaum R.L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Characteristics of non-premixed oxygen-enhanced combustion: II. Flame structure effects on soot precursor kinetics resulting in soot-free flames",
+  "doi": "10.1016/j.combustflame.2010.04.013",
+  "authors": "Skeen S.A., Yablonsky G., Axelbaum R.L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Characteristics of non-premixed oxygen-enhanced combustion: I. The presence of appreciable oxygen at the location of maximum temperature",
+  "doi": "10.1016/j.combustflame.2009.07.009",
+  "authors": "Skeen S.A., Yablonsky G., Axelbaum R.L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Soot inception limits in laminar diffusion flames with application to oxy–fuel combustion",
+  "doi": "10.1016/j.combustflame.2008.03.008",
+  "authors": "Kumfer B.M., Skeen S.A., Axelbaum R.L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Radiative extinction of gaseous spherical diffusion flames in microgravity",
+  "doi": "10.1016/j.combustflame.2007.08.009",
+  "authors": "SANTA K, CHAO B, SUNDERLAND P, URBAN D, STOCKER D, AXELBAUM R"
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Numerical and experimental observations of spherical diffusion flames",
+  "doi": "10.1080/13647830601161567",
+  "authors": "Santa K. J., Sun Z., Chao B. H., Sunderland P. B., Axelbaum R. L., Urban D. L., Stocker D. P."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "The effects of elevated pressure on the kinetics and extinction of hot, warm, and cool gaseous ethylene spherical diffusion flames",
+  "doi": "10.1016/j.proci.2024.105400",
+  "authors": "Waddell Kendyl A., Yablonsky Gregory, Constales Denis, Sunderland Peter B., Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "On Soot Inception in Nonpremixed Flames and the Effects of Flame Structure",
+  "doi": "10.1080/00102209808952065",
+  "authors": "CHAO B. H., LIU S., AXELBAUM R. L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Measurement and analysis of soot inception limits of oxygen-enriched coflow flames",
+  "doi": "10.1016/j.combustflame.2006.08.004",
+  "authors": "Kumfer B.M., Skeen S.A., Chen R., Axelbaum R.L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Scalar dissipation rate at extinction and the effects of oxygen-enriched combustion",
+  "doi": "10.1016/j.combustflame.2005.02.008",
+  "authors": "Chen R., Axelbaum R.L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "A theoretical study on soot inception in spherical burner-stabilized diffusion flames",
+  "doi": "10.1016/j.combustflame.2004.08.016",
+  "authors": "Liu S., Chao B.H., Axelbaum R.L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "SOOTING LIMITS OF MICROGRAVITY SPHERICAL DIFFUSION FLAMES IN OXYGEN-ENRICHED AIR AND DILUTED FUEL",
+  "doi": "10.1080/00102200490514994",
+  "authors": "SUNDERLAND P. B., URBAN D. L., STOCKER D. P., CHAO B.-H., AXELBAUM∗ R. L."
+ },
+ {
+  "investigation_id": "PSI-10",
+  "title": "Effects of structure and hydrodynamics on the sooting behavior of spherical microgravity diffusion flames",
+  "doi": "10.1016/S0010-2180(02)00424-8",
+  "authors": "Sunderland P"
+ },
+ {
+  "investigation_id": "PSI-117",
+  "title": "Extinction characteristics of isolated n-alkane fuel droplets during low temperature cool flame burning in air (2023)",
+  "doi": "10.1016/j.proci.2022.07.094",
+  "authors": "Farouk Tanvir I., Dryer Frederick L."
+ },
+ {
+  "investigation_id": "PSI-117",
+  "title": "Sub-millimeter sized multi-component jet fuel surrogate droplet combustion: Physicochemical preferential vaporization effects (2021)",
+  "doi": "10.1016/j.proci.2020.06.200",
+  "authors": "Farouk Tanvir I., Won Sang Hee, Dryer Frederick L."
+ },
+ {
+  "investigation_id": "PSI-117",
+  "title": "Initial diameter effects on combustion of unsupported equi-volume n-heptane/iso-octane mixture droplets and the transition to cool flame behavior: Experimental observations and detailed numerical modeling (2020)",
+  "doi": "10.1016/j.combustflame.2020.06.012",
+  "authors": "Xu Yuhao, Farouk Tanvir I., Hicks Michael C., Avedisian C. Thomas"
+ },
+ {
+  "investigation_id": "PSI-117",
+  "title": "Oscillatory cool flame combustion behavior of submillimeter sized n-alkane droplet under near limit conditions (2019)",
+  "doi": "10.1016/j.proci.2018.05.151",
+  "authors": "Alam Fahd E., Aghdam Ali Charchi, Dryer Frederick L., Farouk Tanvir I."
+ },
+ {
+  "investigation_id": "PSI-117",
+  "title": "Investigating the role of preferential vaporization during submillimeter sized multicomponent jet fuel surrogate droplet combustion (2019)",
+  "doi": "10.1016/j.pecs.2019.100787",
+  "authors": "Farouk T, Won S, Dryer F."
+ },
+ {
+  "investigation_id": "PSI-117",
+  "title": "Multi-component jet fuel surrogate droplet combustion: Preferential vaporization behaviors under spray relevant conditions and effects on combustion behaviors (2019)",
+  "doi": null,
+  "authors": "Farouk T, Won S, Dryer F."
+ },
+ {
+  "investigation_id": "PSI-117",
+  "title": "Cool Flame Combustion of Sub-Millimeter Sized Higher n-Alkane Droplets at Atmospheric Condition (2017)",
+  "doi": null,
+  "authors": "Alam F, Dryer F, Farouk T."
+ },
+ {
+  "investigation_id": "PSI-117",
+  "title": "Non-Premixed - Partially Premixed to Diffusive Burning: Initial Transient of Direct Cool Flame Burn (2017)",
+  "doi": null,
+  "authors": "Alam F, Dryer F, Farouk T."
+ },
+ {
+  "investigation_id": "PSI-117",
+  "title": "Oscillatory Cool Flame Combustion Behavior of Submillimeter Sized n-Alkane Droplet under Near Limit Conditions (2018)",
+  "doi": null,
+  "authors": "Alam F, Charchi A, Dryer F, Farouk T."
+ },
+ {
+  "investigation_id": "PSI-117",
+  "title": "Dynamics of cool flames (2019)",
+  "doi": null,
+  "authors": "Ju Yiguang, Reuter Christopher B., Yehia Omar R., Farouk Tanvir I., Won Sang Hee"
+ },
+ {
+  "investigation_id": "PSI-142",
+  "title": "Dynamics of cool flames",
+  "doi": "10.1016/j.pecs.2019.100787",
+  "authors": "Ju Yiguang, Reuter Christopher B., Yehia Omar R., Farouk Tanvir I., Won Sang Hee"
+ },
+ {
+  "investigation_id": "PSI-142",
+  "title": "The radical index and the effect of oxygen concentration on non-premixed cool flame extinction of large n-alkanes",
+  "doi": "10.1016/j.combustflame.2021.111471",
+  "authors": "Zhou Mengni, Yehia Omar R., Xu Wenbin, Reuter Christopher B., Wang Ziyu, Yan Chao, Jiang Bo, Ju Yiguang"
+ },
+ {
+  "investigation_id": "PSI-142",
+  "title": "On the propagation limits and speeds of premixed cool flames at elevated pressures",
+  "doi": "10.1016/j.combustflame.2017.01.006",
+  "authors": "Ju Yiguang"
+ },
+ {
+  "investigation_id": "PSI-142",
+  "title": "Study of the low-temperature reactivity of large n-alkanes through cool diffusion flame extinction",
+  "doi": "10.1016/j.combustflame.2017.01.028",
+  "authors": "Reuter Christopher B., Lee Minhyeok, Won Sang Hee, Ju Yiguang"
+ },
+ {
+  "investigation_id": "PSI-142",
+  "title": "Counterflow flame experiments and chemical kinetic modeling of dimethyl ether/methane mixtures",
+  "doi": "10.1016/j.combustflame.2018.06.004",
+  "authors": "Reuter Christopher B., Zhang Rui, Yehia Omar R., Rezgui Yacine, Ju Yiguang"
+ },
+ {
+  "investigation_id": "PSI-142",
+  "title": "Low-temperature multistage warm diffusion flames",
+  "doi": "10.1016/j.combustflame.2018.03.013",
+  "authors": "Yehia Omar R., Reuter Christopher B., Ju Yiguang"
+ },
+ {
+  "investigation_id": "PSI-142",
+  "title": "Dynamics and burning limits of near-limit hot, warm, and cool diffusion flames of dimethyl ether at elevated pressures",
+  "doi": "10.1016/j.proci.2018.05.082",
+  "authors": "Lin Eric, Reuter Christopher B., Ju Yiguang"
+ },
+ {
+  "investigation_id": "PSI-142",
+  "title": "On the chemical characteristics and dynamics of n-alkane low-temperature multistage diffusion flames",
+  "doi": "10.1016/j.proci.2018.06.161",
+  "authors": "Yehia Omar R., Reuter Christopher B., Ju Yiguang"
+ },
+ {
+  "investigation_id": "PSI-142",
+  "title": "Quantitative measurements of HO 2 /H 2 O 2 and intermediate species in low and intermediate temperature oxidation of dimethyl ether",
+  "doi": "10.1016/j.proci.2014.05.120",
+  "authors": "Kurimoto Naoki, Brumfield Brian, Yang Xueliang, Wada Tomoya, Diévart Pascal, Wysocki Gerard, Ju Yiguang"
+ },
+ {
+  "investigation_id": "PSI-142",
+  "title": "SUPPLEMENTARY MATERIAL The radical index and the effect of oxygen concentration on non-premixed cool flame extinction of large n-alkanes",
+  "doi": "10.1016/j.proci.2018.07.050",
+  "authors": "Yiguang Ju, Mengni Zhou, Omar R. Yehia, Wenbin Xu, Christopher B. Reuter, Ziyu Wang, Chao Yan"
+ },
+ {
+  "investigation_id": "PSI-142",
+  "title": "Pressure and Radiation Effects on the Dynamics of Hot and Cool Diffusion Flames",
+  "doi": null,
+  "authors": "CB. Reuter, E. Lin, Y. Ju"
+ },
+ {
+  "investigation_id": "PSI-142",
+  "title": "Transient interactions between a premixed double flame and a vortex",
+  "doi": null,
+  "authors": "Reuter Christopher B., Katta Viswanath R., Yehia Omar R., Ju Yiguang"
+ },
+ {
+  "investigation_id": "PSI-159",
+  "title": "Spherical gas-fueled cool diffusion flames",
+  "doi": "10.1016/j.proci.2022.07.015",
+  "authors": "Kim Minhyeng, Waddell Kendyl A., Sunderland Peter B., Nayagam Vedha, Stocker Dennis P., Dietrich Daniel L., Ju Yiguang, Williams Forman A., Irace Phillip, Axelbaum Richard L."
+ },
+ {
+  "investigation_id": "PSI-159",
+  "title": "Cool diffusion flames in a stably stratified stagnation flow",
+  "doi": "10.1016/j.combustflame.2023.112852",
+  "authors": "Waddell Kendyl A., Lee Han Ju, Nayagam Vedha, Axelbaum Richard L., Sunderland Peter B."
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Burning on flat wicks at various orientations",
+  "doi": "10.1177/0734904113495650",
+  "authors": "Zhang Yi, Bustamante Michael J, Gollner Michael J, Sunderland Peter B, Quintiere James G"
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "A Gas Burner to Emulate Condensed-Phase Burning",
+  "doi": "10.3850/978-981-07-5936-0_03-01",
+  "authors": "Zhang Y., Bustamante M. J., Dotson K. T., Sunderland P. B., Quintiere J. G."
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Experimental Investigation of Liquid and Gas Fueled Flames Towards the Development of a Burning Rate Emulator (BRE) for Microgravity Applications",
+  "doi": "10.1016/j.combustflame.2021.01.035",
+  "authors": "MJ Bustamante"
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Burning in microgravity: Experimental results and analysis",
+  "doi": "10.1016/j.proci.2020.06.110",
+  "authors": "P Dehghani, PB Sunderland, JG Quintiere, JL deRis"
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Transient dynamics of radiative extinction in low-momentum microgravity diffusion flames",
+  "doi": "10.1002/fam.2896",
+  "authors": "Snegirev Alexander, Kuznetsov Egor, Markus Ekaterina, Dehghani Parham, Sunderland Peter"
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Emulation of condensed fuel flames with gaseous fuels supplied through a porous copper calorimeter",
+  "doi": "10.1134/S0010508220040036",
+  "authors": "Auth Eric, Quintiere James G., Sunderland Peter B."
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Radiative Extinction of Laminar Diffusion Flame above the Flat Porous Burner in Microgravity: A Computational Study",
+  "doi": "10.1016/j.combustflame.2019.09.030",
+  "authors": "Kuznetsov E. A., Snegirev A. Yu., Markus E. S."
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Transient ellipsoidal combustion model for a porous burner in microgravity",
+  "doi": "10.1016/j.proci.2018.05.006",
+  "authors": "Markan Akshit, Baum Howard R., Sunderland Peter B., Quintiere James G., de Ris John L."
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Measuring heat flux to a porous burner in microgravity",
+  "doi": "10.1016/j.firesaf.2019.02.003",
+  "authors": "Markan Akshit, Sunderland Peter B., Quintiere James G., de Ris John L., Baum Howard R."
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Analysis of extinction and sustained ignition",
+  "doi": "10.1016/j.combustflame.2018.01.044",
+  "authors": "Vermina Plathner Frida, Quintiere James G., van Hees Patrick"
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "A Burning Rate Emulator (BRE) for study of condensed fuel burning in microgravity",
+  "doi": "10.1016/j.firesaf.2016.11.003",
+  "authors": "Markan Akshit, Sunderland Peter B., Quintiere James G., de Ris John L., Stocker Dennis P., Baum Howard R."
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Study of ignition and extinction of small-scale fires in experiments with an emulating gas burner",
+  "doi": "10.1016/j.combustflame.2015.05.005",
+  "authors": "Lundström Frida Vermina, Sunderland Peter B., Quintiere James G., van Hees Patrick, de Ris John L."
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Emulation of condensed fuel flames with gases in microgravity",
+  "doi": "10.1016/j.combustflame.2023.112809",
+  "authors": "Zhang Yi, Kim Matt, Guo Haiqing, Sunderland Peter B., Quintiere James G., deRis John, Stocker Dennis P."
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Flammability maps for microgravity burning of a small flat material in a quiescent ambient",
+  "doi": "10.1016/j.proci.2022.08.107",
+  "authors": "Dehghani Parham, Quintiere James G."
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Demonstrating steady burning for small flat materials in microgravity in a quiescent ambient",
+  "doi": "10.1016/j.combustflame.2021.111572",
+  "authors": "Dehghani Parham, de Ris John L., Quintiere James G."
+ },
+ {
+  "investigation_id": "PSI-20",
+  "title": "Theoretical analysis and predictions of burning in microgravity using a burning emulator",
+  "doi": null,
+  "authors": "Dehghani Parham, Quintiere James G."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "Analysis of CH* concentration and flame heat release rate in laminar coflow diffusion flames under microgravity and normal gravity",
+  "doi": "10.1016/j.combustflame.2016.02.012",
+  "authors": "D Giassi, S Cao, BA Bennett, DP Stocker, F Takahashi, MD Smooke, MB Long"
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "Signal-to-noise ratio improvements in laser flow diagnostics using time-resolved image averaging and high dynamic range imaging",
+  "doi": "10.1007/s00348-016-2218-5",
+  "authors": "Giassi Davide, Long Marshall B."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "A computational and experimental study of coflow laminar methane/air diffusion flames: Effects of fuel dilution, inlet velocity, and gravity",
+  "doi": "10.1016/j.proci.2014.05.138",
+  "authors": "Cao S., Ma B., Bennett B.A.V., Giassi D., Stocker D.P., Takahashi F., Long M.B., Smooke M.D."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "A Combined Experimental and Computational Study of Soot Formation in Normal and Microgravity Conditions",
+  "doi": "10.1080/00102202.2022.2041621",
+  "authors": "Dobbins Richard R., Tinjero Jesse, Squeo Joseph, Zhao Xinyu, Hall Robert J., Colket Meredith B., Long Marshall B., Smooke Mitchell D."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "Constrained-temperature solutions of coflow laminar diffusion flames",
+  "doi": "10.1016/j.proci.2020.06.034",
+  "authors": "Kempema Nathan J., Dobbins Richard R., Long Marshall B., Smooke Mitchell D."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "Effects of pressure and fuel dilution on coflow laminar methane–air diffusion flames: A computational and experimental study",
+  "doi": "10.1080/13647830.2017.1403051",
+  "authors": "Cao Su, Ma Bin, Giassi Davide, Bennett Beth Anne V., Long Marshall B., Smooke Mitchell D."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "Effect of soot self-absorption on color-ratio pyrometry in laminar coflow diffusion flames",
+  "doi": "10.1364/OL.43.001103",
+  "authors": "Kempema Nathan J., Long Marshall B."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "A computational and experimental study of coflow laminar methane/air diffusion flames: Effects of fuel dilution, inlet velocity, and gravity",
+  "doi": "10.1016/j.proci.2014.05.138",
+  "authors": "Cao S., Ma B., Bennett B.A.V., Giassi D., Stocker D.P., Takahashi F., Long M.B., Smooke M.D."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "An experimental and computational study of soot formation in a coflow jet flame under microgravity and normal gravity",
+  "doi": "10.1016/j.proci.2014.05.064",
+  "authors": "Ma Bin, Cao Su, Giassi Davide, Stocker Dennis P., Takahashi Fumiaki, Bennett Beth Anne V., Smooke Mitchell D., Long Marshall B."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "Absolute light calibration using S-type thermocouples",
+  "doi": "10.1016/j.proci.2012.05.030",
+  "authors": "Ma Bin, Long Marshall B."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "A comparison of Raman signatures and laser-induced incandescence with direct numerical simulation of soot growth in non-premixed ethylene/air flames",
+  "doi": "10.1016/j.carbon.2011.07.050",
+  "authors": "Herdman Jennifer D., Connelly Blair C., Smooke Mitchell D., Long Marshall B., Miller J. Houston"
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "Soot and thin-filament pyrometry using a color digital camera",
+  "doi": "10.1016/j.proci.2010.05.006",
+  "authors": "Kuhn Peter B., Ma Bin, Connelly Blair C., Smooke Mitchell D., Long Marshall B."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "IMAGING FLAMES: FROM ADVANCED LASER DIAGNOSTICS TO SNAPSHOTS",
+  "doi": "10.1142/9789814295789_0004",
+  "authors": "LONG MARSHALL"
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "A paradigm shift in the interaction of experiments and computations in combustion research",
+  "doi": "10.1016/j.proci.2008.05.066",
+  "authors": "Connelly B.C., Bennett B.A.V., Smooke M.D., Long M.B."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "Computational and experimental investigation of the interaction of soot and NO in coflow diffusion flames",
+  "doi": "10.1016/j.proci.2008.06.182",
+  "authors": "Connelly B.C., Long M.B., Smooke M.D., Hall R.J., Colket M.B."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "Distributed-memory parallel computation of a forced, time-dependent, sooting, ethylene/air coflow diffusion flame",
+  "doi": "10.1080/13647830903159293",
+  "authors": "Dworkin S. B., Cooke J. A., Bennett B. A.V., Connelly B. C., Long M. B., Smooke M. D., Hall R. J., Colket M. B."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "Measurements and calculations of formaldehyde concentrations in a methane/N2/air, non-premixed flame: Implications for heat release rate",
+  "doi": "10.1016/j.proci.2008.05.083",
+  "authors": "Dworkin S.B., Schaffer A.M., Connelly B.C., Long M.B., Smooke M.D., Puccio M.A., McAndrew B., Miller J.H."
+ },
+ {
+  "investigation_id": "PSI-21",
+  "title": "Computational and experimental study of a forced, time-dependent, methane–air coflow diffusion flame",
+  "doi": "10.1016/j.proci.2006.08.109",
+  "authors": "Dworkin S.B., Connelly B.C., Schaffer A.M., Bennett B.A.V., Long M.B., Smooke M.D., Puccio M.P., McAndrews B., Miller J.H."
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Ion Current and Flame Changes with Electric Fields in Microgravity",
+  "doi": "10.3390/en11051235",
+  "authors": "YC Chien, J Tinajero, D Stocker, U Hegde, D Dunn-Rankin"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Electric Field Induced Changes of a Diffusion Flame and Heat Transfer near an Impinging Surface",
+  "doi": "10.1016/j.combustflame.2009.08.008",
+  "authors": "Chien Yu-Chien, Dunn-Rankin Derek"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Electrical Aspects of Impinging Flames",
+  "doi": "10.1080/13647830701383814",
+  "authors": "Y-C Chien"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "The Influence of Electric Field Power Systems on Flame Behavior",
+  "doi": "10.1196/annals.1362.038",
+  "authors": "K Yamashita, Y-C Chien, S Karnani, D Dunn-Rankin"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Ionization and chemiluminescence during the progressive aeration of methane flames",
+  "doi": "10.1016/j.combustflame.2015.03.019",
+  "authors": "Weinberg Felix, Carleton Fred"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Modelling electric field driven convection in small combustion plasmas and surrounding gases",
+  "doi": "10.1016/S0010-2180(01)00247-4",
+  "authors": "Papac M. J., Dunn-Rankin D."
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Canceling buoyancy of gaseous fuel flames in a gravitational environment using an ion-driven wind.",
+  "doi": "10.1016/j.combustflame.2022.112067",
+  "authors": "Papac MJ, Dunn-Rankin D."
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Detailed characterization of DC electric field effects on small non-premixed flames",
+  "doi": "10.1016/j.combustflame.2019.03.022",
+  "authors": "Karnani Sunny, Dunn-Rankin Derek"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Microgravity burner-generated spherical diffusion flames: experiment and computation. Currently at Department of Mechanical and Aerospace Engineering, Case Western Reserve University, Cleveland, OH 44106.",
+  "doi": "10.1016/j.combustflame.2018.10.036",
+  "authors": "Tse Stephen D, Zhu Delin, Sung Chih-Jen, Ju Yiguang, Law Chung K"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "PLIF and chemiluminescence in a small laminar coflow methane-air diffusion flame at elevated pressures",
+  "doi": "10.1016/j.proci.2016.06.193",
+  "authors": "Escofet-Martin David, Chien Yu-Chien, Dunn-Rankin Derek"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Ion current and carbon monoxide release from an impinging methane/air coflow flame in an electric field",
+  "doi": "10.1080/00102202.2017.1331218",
+  "authors": "Chien Yu-Chien, Escofet-Martin David, Dunn-Rankin Derek"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Non-premixed axisymmetric flames driven by ion currents",
+  "doi": "10.1016/j.combustflame.2016.09.004",
+  "authors": "Tinajero Jesse, Dunn-Rankin Derek"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Impinging nonpremixed coflow methane–air flames with unity Lewis number",
+  "doi": "10.1016/j.proci.2012.07.007",
+  "authors": "M. Sauer Vinicius, Dunn-Rankin Derek"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Characterizing I-V Curves for Non-Premixed Methane Flames Stabilized on Different Burner Configurations",
+  "doi": "10.1016/j.combustflame.2011.06.002",
+  "authors": "Tinajero Jesse, Bernard Guillaume, Autef Louise, Dunn-Rankin Derek"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "CO emission from an impinging non-premixed flame",
+  "doi": "10.1016/j.combustflame.2009.02.002",
+  "authors": "Chien Yu-Chien, Escofet-Martin David, Dunn-Rankin Derek"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Electrical aspects of flame quenching",
+  "doi": "10.1016/j.combustflame.2007.07.007",
+  "authors": "Weinberg F.J., Dunn-Rankin D., Carleton F.B., Karnani S., Markides C., Zhai M."
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Behavior of a small diffusion flame as an electrically active component in a high-voltage circuit",
+  "doi": "10.1016/j.elstat.2007.04.003",
+  "authors": "Borgatelli Francesco, Dunn-Rankin Derek"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Numerical prediction of ion current from a small methane jet flame",
+  "doi": "10.1196/annals.1362.037",
+  "authors": "Yamashita Kiyotaka, Karnani Sunny, Dunn-Rankin Derek"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Electric field-controlled mesoscale burners",
+  "doi": "10.1016/j.elstat.2005.09.005",
+  "authors": "Weinberg Felix, Carleton Fred, Dunn-Rankin Derek"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Numerical simulation of a tubular ion-driven wind generator",
+  "doi": "10.1007/s00348-005-0062-0",
+  "authors": "Rickard Matthew, Dunn-Rankin Derek"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Using large electric fields to control transport in microgravity.",
+  "doi": "10.1080/00102202.2023.2182205",
+  "authors": "Dunn-Rankin D, Weinberg FJ."
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Maximizing ion-driven gas flows",
+  "doi": "10.1016/j.combustflame.2022.112443",
+  "authors": "Rickard Matthew, Dunn-Rankin Derek, Weinberg Felix, Carleton Fred"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Inducing gas flow and swirl in tubes using ionic wind from corona discharges",
+  "doi": null,
+  "authors": "Weinberg Felix, Carleton Fred, Kara Dhiren, Xavier Agatha, Dunn-Rankin Derek, Rickard Matthew"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Modeling of Elevated Pressure Diffusion Flames with Water Addition",
+  "doi": null,
+  "authors": "Chien Yu-Chien, Girodon Hugo, Esquivias Rodriguez Brandon"
+ },
+ {
+  "investigation_id": "PSI-22",
+  "title": "Electric-field effects on methane coflow flames aboard the international space station (ISS): ACME E-FIELD flames",
+  "doi": null,
+  "authors": "Chien Yu-Chien, Stocker Dennis P., Hegde Uday G., Dunn-Rankin Derek"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Opportunities and challenges of combustion in microgravity",
+  "doi": "10.1016/0360-1285(94)90006-X",
+  "authors": "Law C.K., Faeth G.M."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "On burner-stabilized cylindrical premixed flames in microgravity",
+  "doi": "10.1016/S0082-0784(06)80819-2",
+  "authors": "Eng J.A., Law C.K., Zhu D.L."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "On the structure, stabilization, and dual response of flat-burner flames",
+  "doi": "10.1016/0010-2180(94)00102-X",
+  "authors": "Eng J.A., Zhu D.L., Law C.K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Extinction mechanisms of near-limit premixed flames and extended limits of flammability",
+  "doi": "10.1016/S0082-0784(96)80296-7",
+  "authors": "Sung C.J., Law C.K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "On the spreading of unsteady cylindrical diffusion flames",
+  "doi": "10.1016/S0010-2180(97)00069-2",
+  "authors": "Qian J., Law C.K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "On the response of spherical premixed flames under rotation",
+  "doi": "10.1016/S0010-2180(97)00051-5",
+  "authors": "Qian J., Bechtold J.K., Law C.K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Role of flamefront motion and criterion for global quasi-steadiness in droplet burning",
+  "doi": "10.1016/S0082-0784(98)80038-6",
+  "authors": "He Longtin, Tse Stephen D., Law Chung K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "On micro-buoyancy spherical diffusion flames and a double luminous zone structure of the hydrogen/methane flame",
+  "doi": "10.1016/S0082-0784(98)80108-2",
+  "authors": "Sung C.J., Zhu D.L., Law C.K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Structure, aerodynamics, and geometry of premixed flamelets",
+  "doi": "10.1016/S0360-1285(00)00018-6",
+  "authors": "Law C.K, Sung C.J"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Microgravity burner-generated spherical diffusion flames: experiment and computation‡‡Currently at Department of Mechanical and Aerospace Engineering, Case Western Reserve University, Cleveland, OH 44106.",
+  "doi": "10.1016/S0010-2180(01)00247-4",
+  "authors": "Tse Stephen D, Zhu Delin, Sung Chih-Jen, Ju Yiguang, Law Chung K"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Chemiluminescent OH* and CH* flame structure and aerodynamic scaling of weakly buoyant, nearly spherical diffusion flames",
+  "doi": "10.1016/S1540-7489(02)80204-8",
+  "authors": "Yoo S.W., Law C.K., Tse S.D."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Oscillatory extinction of spherical diffusion flames: Micro-buoyancy experiment and computation",
+  "doi": "10.1016/S1540-7489(02)80008-6",
+  "authors": "Yoo S.W., Christiansen E.W., Law C.K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Development of Comprehensive Detailed and Reduced Reaction Mechanisms for Combustion Modeling",
+  "doi": "10.2514/2.7289",
+  "authors": "Law C. K., Sung C. J., Wang H., Lu T. F."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Response of spherical diffusion flames under rotation with general Lewis numbers",
+  "doi": "10.1080/13647830500098423",
+  "authors": "Yoo S. W., Qian J., Bechtold J. K., Law C. K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Porous spherical burner for combustion experimentation",
+  "doi": "10.1063/1.2212399",
+  "authors": "Yoo Sean W., Zhu Delin, Law Chung K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "On intrinsic oscillation in radiation-affected diffusion flames",
+  "doi": "10.1016/j.proci.2006.07.183",
+  "authors": "Wang H.Y., Law C.K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Effects of variable density on response of spherical diffusion flames under rotation",
+  "doi": "10.1016/j.ijheatmasstransfer.2006.12.014",
+  "authors": "Yoo S.W., Law C.K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "A mechanistic study of Soret diffusion in hydrogen–air flames",
+  "doi": "10.1016/j.combustflame.2009.09.018",
+  "authors": "Yang F., Law C.K., Sung C.J., Zhang H.Q."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Self-similar accelerative propagation of expanding wrinkled flames and explosion triggering",
+  "doi": "10.1103/PhysRevE.83.026305",
+  "authors": "Akkerman V’yacheslav, Law Chung K., Bychkov Vitaly"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Response of spherical diffusion flames subjected to rotation: Microgravity experimentation and computational simulation",
+  "doi": "10.1016/j.combustflame.2011.07.013",
+  "authors": "Yoo Sean W., Chaudhuri Swetaprovo, Sacksteder Kurt R., Zhang Peng, Zhu Delin, Law Chung K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Fuel Options for Next-Generation Chemical Propulsion",
+  "doi": "10.2514/1.J051328",
+  "authors": "Law Chung K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "A mechanistic evaluation of Soret diffusion in heptane/air flames",
+  "doi": "10.1016/j.combustflame.2012.03.005",
+  "authors": "Xin Yuxuan, Sung Chih-Jen, Law Chung K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "An experimental investigation on self-acceleration of cellular spherical flames",
+  "doi": "10.1016/j.proci.2012.05.068",
+  "authors": "Wu Fujia, Jomaas Grunde, Law Chung K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Initiation and propagation of laminar premixed cool flames",
+  "doi": "10.1016/j.fuel.2015.11.025",
+  "authors": "Zhao Peng, Liang Wenkai, Deng Sili, Law Chung K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "On colliding spherical flames: Morphology, corner dynamics, and flame-generated vorticity",
+  "doi": "10.1016/j.combustflame.2015.10.029",
+  "authors": "Yang Sheng, Zhu Delin, Law Chung K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Extended flammability limits of n-heptane/air mixtures with cool flames",
+  "doi": "10.1016/j.combustflame.2017.06.015",
+  "authors": "Liang Wenkai, Law Chung K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Theory of first-stage ignition delay in hydrocarbon NTC chemistry",
+  "doi": "10.1016/j.combustflame.2017.10.003",
+  "authors": "Liang Wenkai, Law Chung K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Direct Numerical Simulation of turbulent nonpremixed “cool” flames: Applicability of flamelet models",
+  "doi": "10.1016/j.proci.2018.06.191",
+  "authors": "Novoselov Alex G., Law Chung K., Mueller Michael E."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "On Radical-Induced Ignition in Combustion Systems",
+  "doi": "10.1146/annurev-chembioeng-060718-030141",
+  "authors": "Liang Wenkai, Law Chung K."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Binary collision of a burning droplet and a non-burning droplet of xylene: Outcome regimes and flame dynamics",
+  "doi": "10.1016/j.proci.2018.06.198",
+  "authors": "Xiong Gang, Gandhi Rahul, Zhong Xiaosheng, Mädler Lutz, Tse Stephen D."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Stabilization mechanisms and burning rates of cylindrical burner flames",
+  "doi": "10.2514/6.1994-571",
+  "authors": "Eng J., Law C., Zhu D."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "On burner-supported, spherical diffusion flames under micro-buoyancy conditions",
+  "doi": "10.2514/6.1998-563",
+  "authors": "Sung C., Zhu D., Tse S., Law C."
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Microgravity burner-generated spherical diffusion flames - Experiment and computation",
+  "doi": "10.2514/6.2005-1140",
+  "authors": "SD Tse, DL Zhu, CJ Sung, CK Law"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Thin-Flame Theory for Droplet Combustion at Low Grashof Numbers",
+  "doi": "10.2514/6.2005-544",
+  "authors": "Chen Shr-Jing, Tse Stephen"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Nonlinear Analysis of Pulsating Instabilities in Diffusion Flames",
+  "doi": "10.2514/6.2005-1141",
+  "authors": "Wang Heyang, Bechtold John, Law Chung"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "An Experimental Study on the Response of Spherical Diffusion Flames Subjected to Rotation and Nonequidiffusion",
+  "doi": "10.2514/6.2009-988",
+  "authors": "Zhu Delin, Yoo Sean, Law C, Sacksteder Kurt"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "A Mechanistic Study of Soret Diffusion in Hydrogen-Air Flames",
+  "doi": "10.2514/6.2012-1251",
+  "authors": "Yang Fan, Law C.K., Sung C.J., Zhang Huiqiang"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "A comprehensive evaluation of soret diffusion in heptane-air flames",
+  "doi": null,
+  "authors": "YX Xin, CJ Sung, CK Law"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Dynamics and morphology of spherical diffusion flames under rotation",
+  "doi": null,
+  "authors": "S Yoo, S Chaudhuri, K Sacksteder, P Zhang, D Zhu, C Law"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Dynamics and morphology of colliding spherical flames",
+  "doi": null,
+  "authors": "S Yang, S Chaudhuri, D Zhu, CK Law"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "On the structure and dynamics of stationary and rotating spherical diffusion flames",
+  "doi": null,
+  "authors": "SW Yoo"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Weakly Buoyant Spherical Diffusion Flames: Properties of Hydrogen-CO Ethylene Flames",
+  "doi": null,
+  "authors": "L Paxton"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Computational Simulation of Spherical Diffusion Flame Dynamics and Extinction in Microgravity",
+  "doi": null,
+  "authors": "T Xia"
+ },
+ {
+  "investigation_id": "PSI-23",
+  "title": "Combustion Science: A Researcher&#x27;s Guide to International Space Station",
+  "doi": null,
+  "authors": "SA Gokoglu, DL Dietrich, DP Stocker, PV Ferkul, SL Olson"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Microgravity flammability boundary for PMMA rods in axial stagnation flow: Experimental results and energy balance analyses",
+  "doi": "10.1016/j.combustflame.2017.03.001",
+  "authors": "Olson Sandra L., Ferkul Paul V."
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Temperature and CO2 fields of a downward spreading flame over thin cellulose: A comparison of experimental and computational results",
+  "doi": "10.1016/j.proci.2014.05.093",
+  "authors": "Bhattacharjee Subrata, Paolini Christopher, Tran Wynn, Villaraza Jeanie Ray, Takahashi Shuhei"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Opposed-flow flame spread: A comparison of microgravity and normal gravity experiments to establish the thermal regime",
+  "doi": "10.1016/j.firesaf.2015.11.011",
+  "authors": "Bhattacharjee Subrata, Laue Matthew, Carmignani Luca, Ferkul Paul, Olson Sandra"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "The critical flow velocity for radiative extinction in opposed-flow flame spread in a microgravity environment: A comparison of experimental, computational, and theoretical results",
+  "doi": "10.1016/j.combustflame.2015.10.023",
+  "authors": "Bhattacharjee Subrata, Simsek Aslihan, Olson Sandra, Ferkul Paul"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Experimental validation of a correlation capturing the boundary layer effect on spread rate in the kinetic regime of opposed-flow flame spread",
+  "doi": "10.1016/j.proci.2014.06.125",
+  "authors": "Bhattacharjee Subrata, Tran Wynn, Laue Matthew, Paolini Christopher, Nakamura Yuji"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Results from on-board CSA-CP and CDM Sensor Readings during the Burning and Suppression of Solids - II (BASS-II) Experiment in the Microgravity Science Glovebox (MSG)",
+  "doi": "10.1016/j.proci.2016.06.025",
+  "authors": "SL Olson, PV Ferkul, S Bhattacharjee, FJ Miller, C Fernandez-Pello, S Link, JS Tien, I Wichman"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Modeling and Analysis of Intermediate Thickness PMMA Sheets Burning in Microgravity Opposed Flow",
+  "doi": "10.1016/j.proci.2016.06.028",
+  "authors": "TJ Shah, FJ Miller, S Olson, I Wichman"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Concurrent flame growth, spread and extinction over composite fabric samples in low speed purely forced flow in microgravity",
+  "doi": "10.2514/6.2012-3493",
+  "authors": "X Zhao, JS Tien, PV Ferkul, S. Olson"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Radiative, thermal, and kinetic regimes of opposed-flow flame spread: A comparison between experiment and theory",
+  "doi": "10.1511/2016.118.44",
+  "authors": "Bhattacharjee Subrata, Simsek Aslihan, Miller Fletcher, Olson Sandra, Ferkul Paul"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Concurrent flame growth, spread, and quenching over composite fabric samples in low speed purely forced flow in microgravity",
+  "doi": null,
+  "authors": "Zhao Xiaoyang, Liao Ya-Ting T., Johnston Michael C., T'ien James S., Ferkul Paul V., Olson Sandra L."
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "A Study of the Effectiveness of a Narrow Channel Apparatus in Simulating Microgravity Flame Spread over Thin Fuels",
+  "doi": null,
+  "authors": "Pepper Jacob, Miller Fletcher, Olson Sandra, Wichman Indrek"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "BASS-II Summary Report",
+  "doi": null,
+  "authors": "J Marcum, S Olson, P Ferkul"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Correlation of normal gravity mixed convection blowoff limits with microgravity forced flow blowoff limits",
+  "doi": null,
+  "authors": "JW Marcum, SL Olson, PV Ferkul"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Fire in Microgravity",
+  "doi": null,
+  "authors": "Hariharan Ashwin, Miller Fletcher, Olson Sandra, Wichman Indrek"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Microgravity Flammability of PMMA Rods in Concurrent Flow",
+  "doi": null,
+  "authors": "SL Olson, PV Ferkul"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Using a Narrow Channel Apparatus to Study Thermally-Intermediate Fuel Combustion in a Simulated 0g Environment",
+  "doi": null,
+  "authors": "G Bornand, G Sullivan, T Shah, F Miller"
+ },
+ {
+  "investigation_id": "PSI-25",
+  "title": "Burning and Suppression of Solids – II Fire Safety Investigation for the Microgravity Science Glovebox",
+  "doi": null,
+  "authors": "SL Olson, PV Ferkul, S Bhattacharjee, FJ Miller, AC Fernandez-Pello, JS Tien"
+ },
+ {
+  "investigation_id": "PSI-26",
+  "title": "The Microgravity Science Glovebox as a Platform for Exploration Research on the International Space Station",
+  "doi": "10.2514/6.2006-941",
+  "authors": "Spivey Reggie, Luz Paul"
+ },
+ {
+  "investigation_id": "PSI-26",
+  "title": "Opposed-flow flame spread: A comparison of microgravity and normal gravity experiments to establish the thermal regime",
+  "doi": "10.1016/j.firesaf.2015.11.011",
+  "authors": "Bhattacharjee Subrata, Laue Matthew, Carmignani Luca, Ferkul Paul, Olson Sandra"
+ },
+ {
+  "investigation_id": "PSI-26",
+  "title": "Simplified model for predicting difference between flammability limits of a thin material in normal gravity and microgravity environments",
+  "doi": "10.1016/j.proci.2014.07.017",
+  "authors": "Takahashi Shuhei, Ebisawa Tomoya, Bhattacharjee Subrata, Ihara Tadayoshi"
+ },
+ {
+  "investigation_id": "PSI-26",
+  "title": "A Correlation for an Effective Flow Velocity for Capturing the Boundary Layer Effect in Opposed-Flow Flame Spread over Thin Fuels",
+  "doi": "10.1080/00102202.2014.900056",
+  "authors": "S Bhattacharjee, R Nagarkar, Y Nakamura"
+ },
+ {
+  "investigation_id": "PSI-26",
+  "title": "Radiation signature in opposed-flow flame spread",
+  "doi": "10.1504/PCFD.2012.048249",
+  "authors": "Bhattacharjee Subrata, Paolini Christopher P., Miller Fletcher, Nagarkar Rohit"
+ },
+ {
+  "investigation_id": "PSI-26",
+  "title": "OS24-1 The Effect of Boundary Layer on Blow-Off Extinction in Opposed-Flow Flame Spread: Results of Experiments and Simplified Analysis(invited,Scale modeling on solid combustion,OS24 Scale modeling,FLUID AND THERMODYNAMICS)",
+  "doi": "10.1299/jsmeatem.2015.14.289",
+  "authors": "Bhattacharjee Subrata, Cartnignani Luca"
+ },
+ {
+  "investigation_id": "PSI-26",
+  "title": "Role of Gas Radiation in the Mechanism of Opposed-Flow Flame Spread in a Microgravity Environment",
+  "doi": "10.1016/j.proci.2012.05.076",
+  "authors": "JR Villaraza, L Carmignani, S Bhattacharjee"
+ },
+ {
+  "investigation_id": "PSI-26",
+  "title": "Thickness and Fuel Preheating Effects on Material Flammability in Microgravity from the BASS Experiment",
+  "doi": null,
+  "authors": "P Ferkul, SL Olson, F Takahashi, M Endo, MC Johnston, JS Tien"
+ },
+ {
+  "investigation_id": "PSI-26",
+  "title": "A novel apparatus for flame spread study",
+  "doi": null,
+  "authors": "S Bhattacharjee, M Bundy, C Paolini, G Patel, W Tran."
+ },
+ {
+  "investigation_id": "PSI-26",
+  "title": "Opposed-Flow Flame Spread in a Narrow Channel Apparatus over Thin PMMA Sheets",
+  "doi": null,
+  "authors": "GR Bornand, FJ Miller, JM Pepper, SL Olson, IS Wichman"
+ },
+ {
+  "investigation_id": "PSI-39",
+  "title": "Can cool flames support quasi-steady alkane droplet burning?",
+  "doi": "10.1016/j.combustflame.2012.07.012",
+  "authors": "V Nayagam, DL Dietrich, PV Ferkul, MC Hicks, FA Williams"
+ },
+ {
+  "investigation_id": "PSI-39",
+  "title": "Cool-flame extinction during n-alkane droplet combustion in microgravity",
+  "doi": "10.1016/j.combustflame.2015.01.012",
+  "authors": "V Nayagam, DL Dietrich, MC Hicks, FA Williams"
+ },
+ {
+  "investigation_id": "PSI-39",
+  "title": "Partial-Burning Regime for Quasi-Steady Droplet Combustion Supported by Cool Flames",
+  "doi": "10.2514/1.J054437",
+  "authors": "Nayagam Vedha, Dietrich Daniel L., Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-39",
+  "title": "The role of cool-flame chemistry in quasi-steady combustion and extinction of n-heptane droplets",
+  "doi": "10.1080/13647830.2014.934296",
+  "authors": "Paczko Guenter, Peters Norbert, Seshadri Kalyanasundaram, Williams Forman Arthur"
+ },
+ {
+  "investigation_id": "PSI-39",
+  "title": "Asymptotic analysis of quasi-steady n-heptane droplet combustion supported by cool-flame chemistry",
+  "doi": "10.1080/13647830.2016.1248494",
+  "authors": "Seshadri Kalyanasundaram, Peters Norbert, Williams Forman A., Nayagam Vedha, Paczko Guenter"
+ },
+ {
+  "investigation_id": "PSI-39",
+  "title": "Science in Short: Cool Flames",
+  "doi": "10.1007/s12217-024-10115-x",
+  "authors": "Rachel Barry"
+ },
+ {
+  "investigation_id": "PSI-39",
+  "title": "Low Temperature n-Dodecane Droplet Combustion Experiments Aboard the International Space Station",
+  "doi": null,
+  "authors": "Dietrich Daniel, Krause Timmothy, Nayagam Vedha, Farouk Tanvir, Dryer Frederick, Williams Forman"
+ },
+ {
+  "investigation_id": "PSI-47",
+  "title": "A Research Plan for Fire Prevention, Detection and Suppression in Crewed Exploration Systems",
+  "doi": "10.2514/6.2005-341",
+  "authors": "Ruff Gary, Urban David, King Merrill"
+ },
+ {
+  "investigation_id": "PSI-47",
+  "title": "Detection of Smoke from Microgravity Fires",
+  "doi": "10.4271/2005-01-2930",
+  "authors": "Urban David, Griffin DeVon, Ruff Gary, Cleary Thomas, Yang Jiann, Mulholland George, Yuan Zeng-guang"
+ },
+ {
+  "investigation_id": "PSI-60",
+  "title": "A Combined Experimental and Computational Study of Soot Formation in Normal and Microgravity Conditions (2022)",
+  "doi": "10.1080/00102202.2022.2041621",
+  "authors": "Dobbins Richard R., Tinjero Jesse, Squeo Joseph, Zhao Xinyu, Hall Robert J., Colket Meredith B., Long Marshall B., Smooke Mitchell D."
+ },
+ {
+  "investigation_id": "PSI-62",
+  "title": "Microgravity flammability boundary for PMMA rods in axial stagnation flow: Experimental results and energy balance analyses (2017)",
+  "doi": "10.1016/j.combustflame.2017.03.001",
+  "authors": "Olson Sandra L., Ferkul Paul V."
+ },
+ {
+  "investigation_id": "PSI-62",
+  "title": "Radiative flamelet generated manifolds for solid fuel flame spread in microgravity (2023)",
+  "doi": "10.1016/j.combustflame.2023.112939",
+  "authors": "Budzinski Kenneth, DesJardin Paul E."
+ },
+ {
+  "investigation_id": "PSI-62",
+  "title": "Theoretical estimates of flammability bounds for thin condensed fuel diffusion flames in microgravity using detailed models of chemistry and radiation (2023)",
+  "doi": "10.1016/j.combustflame.2023.112910",
+  "authors": "Budzinski Kenneth, DesJardin Paul E."
+ },
+ {
+  "investigation_id": "PSI-62",
+  "title": "Two-color pyrometry based flame to fuel surface radiative heat flux diagnostic using flamelets",
+  "doi": "10.1016/j.combustflame.2021.111395",
+  "authors": "Aphale Siddhant S., DesJardin Paul E."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Experimental Study of Initial Diameter Effects on Convection-free Droplet Combustion in the Standard Atmosphere for n-Heptane, n-Octane, and n-Decane: International Space Station and Ground-based Experiments",
+  "doi": "10.2514/6.2014-1019",
+  "authors": "YC Liu, CT Avedisian, KN Trenou, JK Rah, MC Hicks"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "n-Butanol droplet combustion: Numerical modeling and reduced gravity experiments",
+  "doi": "10.1007/s12217-014-9372-2",
+  "authors": "FE Alam, YC Liu, CT Avedisian, FL Dryer, TI Farouk"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Droplet Combustion Experiments Aboard the International Space Station",
+  "doi": "10.1080/00102202.2015.1072176",
+  "authors": "Dietrich Daniel L., Nayagam Vedha, Hicks Michael C., Ferkul Paul V., Dryer Frederick L., Farouk Tanvir, Shaw Benjamin D., Suh Hyun Kyu, Choi Mun Y., Liu Yu Cheng, Avedisian C. Thomas, Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Multistage oscillatory “Cool Flame” behavior for isolated alkane droplet combustion in elevated pressure microgravity condition",
+  "doi": "10.1007/s12217-014-9377-x",
+  "authors": "TI Farouk, MC Hicks, FL Dryer"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Computational modeling of the effects of support fibers on evaporation of fiber-supported droplets in reduced gravity",
+  "doi": "10.1021/acs.energyfuels.5b00158",
+  "authors": "N Ghata, BD Shaw"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Oxygen Lewis Number Effects on Reduced Gravity Combustion of Methanol and Heptane Droplets",
+  "doi": "10.1080/00102202.2014.971950",
+  "authors": "Shaw Benjamin D., Vang Chang L."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "ISS Droplet Combustion Experiments - Uncertainties in Droplet Sizes and Burning Rates",
+  "doi": "10.1080/13647830.2014.934296",
+  "authors": "Shaw Benjamin D."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Combustion of Butanol, Gasoline, and Butanol/Gasoline Mixture Droplets",
+  "doi": "10.1155/2013/154202",
+  "authors": "Xu Yuhao, Avedisian C. Thomas"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Computational Modeling of Unsupported and Fiber-Supported n-Heptane Droplet Combustion in Reduced Gravity: A Study of Fiber Effects",
+  "doi": "10.1016/j.combustflame.2013.09.011",
+  "authors": "Ghata Narugopal, Shaw Benjamin D."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "The effect of support fibers on micro-convection in droplet combustion experiments",
+  "doi": "10.1016/j.proci.2012.07.074",
+  "authors": "YC Liu, Y Xu, CT Avedisian, MC Hicks"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Cool-flame extinction during n-alkane droplet combustion in microgravity",
+  "doi": "10.5566/ias.v31.p137-148",
+  "authors": "V Nayagam, DL Dietrich, MC Hicks, FA Williams"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "A short mechanism for the low-temperature ignition of n-heptane at high pressures",
+  "doi": "10.1016/j.combustflame.2012.04.005",
+  "authors": "JC Prince, FA Williams, GE Ovando"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "The role of cool-flame chemistry in quasi-steady combustion and extinction of n-heptane droplets",
+  "doi": "10.1016/j.combustflame.2011.08.015",
+  "authors": "Paczko Guenter, Peters Norbert, Seshadri Kalyanasundaram, Williams Forman Arthur"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Combustion of Submillimeter Heptane/Methanol and Heptane/Ethanol Droplets in Reduced Gravity",
+  "doi": "10.1021/ef3007849",
+  "authors": "Aharon I., Tam V. K., Shaw B. D."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Isolated n-heptane droplet combustion in microgravity: “Cool Flames” – Two-stage combustion",
+  "doi": "10.1016/j.combustflame.2012.07.012",
+  "authors": "Farouk Tanvir I., Dryer Frederick L."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Sub-millimeter sized methyl butanoate droplet combustion: Microgravity experiments and detailed numerical modeling",
+  "doi": "10.1080/00102202.2012.759946",
+  "authors": "Farouk T.I., Liu Y.C., Savas A.J., Avedisian C.T., Dryer F.L."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "On the spherically symmetrical combustion of methyl decanoate droplets and comparisons with detailed numerical modeling",
+  "doi": "10.1155/2012/587987",
+  "authors": "YC Liu, T Farouk, AJ Savas, FL Dryer, CT Avedisian"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "The spherically symmetric droplet burning characteristics of Jet-A and biofuels derived from camelina and tallow",
+  "doi": "10.1080/13647830.2010.547601",
+  "authors": "YC Liu, AJ Savas, CT Avedisian"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Spherically symmetric droplet combustion of three and four component miscible mixtures as surrogates for Jet-A",
+  "doi": "10.1080/00102202.2010.498798",
+  "authors": "YC Liu, AJ Savas, CT Avedisian"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "AUTOMATED DATA ANALYSIS FOR CONSECUTIVE IMAGES FROM DROPLET COMBUSTION EXPERIMENTS",
+  "doi": "10.1016/j.icheatmasstransfer.2009.10.006",
+  "authors": "Dembia Christopher Lee, Liu Yu Cheng, Avedisian C. Thomas"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "On the extinction characteristics of alcohol droplet combustion under microgravity conditions – A numerical study",
+  "doi": "10.1016/j.ijheatmasstransfer.2010.08.005",
+  "authors": "Farouk Tanvir I., Dryer Frederick L."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "A comparison of the spherical flame characteristics of sub-millimeter droplets of binary mixtures of n-heptane/iso-octane and n-heptane/toluene with a commercial unleaded gasoline",
+  "doi": "10.1007/s12217-008-9096-2",
+  "authors": "Liu Yu Cheng, Avedisian C. Thomas"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Comparison of the Burning Characteristics of Indolene and Commercial Grade Gasoline Droplets without Convection",
+  "doi": "10.1016/j.proci.2008.06.221",
+  "authors": "Liu Yu Cheng, Savas Anthony J., Avedisian C. Thomas"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Can cool flames support quasi-steady alkane droplet burning?",
+  "doi": "10.1016/j.optlaseng.2009.05.004",
+  "authors": "V Nayagam, DL Dietrich, PV Ferkul, MC Hicks, FA Williams"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Experiments on Submillimeter Free Droplet Flame Extinction",
+  "doi": "10.1080/00102200903190851",
+  "authors": "Shaw B. D., Wang D. F."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Influences of support fibers on vaporizing fuel droplets",
+  "doi": "10.1080/00102200601057394",
+  "authors": "D Shringi, HA Dwyer, BD Shaw"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Combustion of Methanol Droplets in Air-Diluent Environments with Reduced and Normal Gravity",
+  "doi": "10.1007/978-81-322-2211-8_16",
+  "authors": "Shaw Benjamin, Wei Jingbin"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Microgravity droplet combustion: effect of tethering fiber on burning rate and flame structure",
+  "doi": "10.1080/00102202.2016.1225730",
+  "authors": "Farouk T., Dryer F. L."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Influence of Gravity and Ambient Pressure on Combustion and Flammability of n-Heptane and 1-Propanol Droplets in Air-Diluent Environments",
+  "doi": "10.1016/j.combustflame.2019.10.036",
+  "authors": "Shaw B. D., Wei J. B."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Ignition and combustion of n-heptane droplets in carbon dioxide enriched environments",
+  "doi": "10.1080/13647830.2019.1588380",
+  "authors": "Dzik Justin, Nayagam Vedha, Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Computational modeling of n-heptane droplet combustion in air–diluent environments under reduced-gravity",
+  "doi": "10.1016/j.combustflame.2019.04.027",
+  "authors": "Jin Y., Shaw B.D."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Numerical Simulation of Unsteady Flows and Shape Oscillations in Liquid Droplets Induced by Deployment Needle Retraction",
+  "doi": "10.1016/j.combustflame.2018.01.035",
+  "authors": "Yan Jin, Shaw Benjamin D."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Nonane droplet combustion with and without buoyant convection: Flame structure, burning rate and extinction in air and helium",
+  "doi": "10.1016/j.combustflame.2018.04.023",
+  "authors": "Bae J.H., Avedisian C.T."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Temperature and fiber optic spectroscopy composition measurements of heated propanol–acetone droplets",
+  "doi": "10.1016/j.icheatmasstransfer.2017.06.016",
+  "authors": "Xiao J.S., Wei J.B., Shaw B.D., Peng Z."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Laser-induced fluorescence imaging of acetone inside evaporating and burning fuel droplets",
+  "doi": "10.1080/13647830.2017.1280182",
+  "authors": "DS Shringi, BD Shaw, HA Dwyer"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Reduced Gravity Combustion of Propanol Droplets in Oxygen-Inert Environments",
+  "doi": "10.2478/gsr-2014-0007",
+  "authors": "Wei J. B., Shaw B. D."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "PROPANOL DROPLET FLAMMABILITY AND COMBUSTION IN AIR-DILUENT ENVIRONMENTS UNDER NORMAL AND REDUCED GRAVITY",
+  "doi": null,
+  "authors": "SHAW B. D., WEI J. B."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Developing Surrogates for Liquid Transportation Fuels: The Role of Spherically Symmetric Droplet Combustion",
+  "doi": null,
+  "authors": "Avedisian C. Thomas"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Experimental Observations of the Low-Temperature Burning of Decane/Hexanol Droplets in Microgravity",
+  "doi": null,
+  "authors": "Dietrich D. L., Calabria R., Massoli P., Nayagam V., Williams F. A."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Cool-flame dodecane-droplet extinction diameters",
+  "doi": null,
+  "authors": "Williams Forman A., Nayagam Vedha"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Quasi-steady combustion of normal-alkane droplets supported by Cool-Flame chemistry near diffusive extinction",
+  "doi": null,
+  "authors": "Williams Forman A., Nayagam Vedha"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Radiative extinction of burner-supported spherical diffusion flames: A scaling analysis",
+  "doi": null,
+  "authors": "Nayagam Vedha, Dietrich Daniel L., Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Unsteady droplet combustion with fuel thermal expansion",
+  "doi": null,
+  "authors": "Nayagam Vedha, Dietrich Daniel L., Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Radiative extinction of large n-alkane droplets in oxygen-inert mixtures in microgravity",
+  "doi": null,
+  "authors": "Nayagam Vedha, Dietrich Daniel L., Hicks Michael C., Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "A Burke-Schumann analysis of dual-flame structure supported by a burning droplet",
+  "doi": null,
+  "authors": "Nayagam Vedha, Dietrich Daniel L., Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "A Burke–Schumann analysis of diffusion-flame structures supported by a burning droplet",
+  "doi": null,
+  "authors": "Nayagam Vedha, Dietrich Daniel L., Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Dynamic Differential Image Circle Diameter Measurement Precision Assessment: Application to Burning Droplets",
+  "doi": null,
+  "authors": "RB Rasul, CT Avedisian, Y Xu, MC Hicks, AP Reeves"
+ },
+ {
+  "investigation_id": "PSI-68",
+  "title": "Interpretation of Backlit Droplet Images from ISS Droplet Combustion Experiments",
+  "doi": null,
+  "authors": "Yu Fei, Shaw Benjamin D."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Methanol Droplet Combustion in Oxygen-Inert Environments in Microgravity",
+  "doi": "10.2514/6.2012-1252",
+  "authors": "V Nayagam, DL Dietrich, MC Hicks, FA Williams"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Methanol Droplet Extinction in Oxygen/Carbon-dioxide/Nitrogen Mixtures in Microgravity: Results from the International Space Station Experiments",
+  "doi": "10.1016/j.combustflame.2011.06.014",
+  "authors": "V. Nayagam"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "A Numerical Study On The Extinction Characteristics Of Droplet Combustion Under Microgravity Conditions",
+  "doi": "10.1016/j.combustflame.2013.05.011",
+  "authors": "Farouk Tanvir, Dryer Frederick"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Tethered methanol droplet combustion in carbon-dioxide enriched environment under microgravity conditions",
+  "doi": "10.2514/6.2014-1019",
+  "authors": "Farouk Tanvir, Dryer Frederick L."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "FLEX: A Decisive Step Forward in NASA's Combustion Research Program",
+  "doi": "10.1016/j.combustflame.2013.09.011",
+  "authors": "JM Hickman, DL Dietrich, MC Hicks, V Nayagam, D Stocker"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Dynamics of Water Absorption and Evaporation During Methanol Droplet Combustion in Microgravity",
+  "doi": "10.1016/j.combustflame.2010.08.015",
+  "authors": "MC Hicks, DL Dietrich, V Nayagam, FA Williams"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Activation energy asymptotics for methanol droplet extinction in microgravity",
+  "doi": "10.1017/jfm.2011.349",
+  "authors": "Nayagam Vedha"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Experimental Study of Initial Diameter Effects on Convection-free Droplet Combustion in the Standard Atmosphere for n-Heptane, n-Octane, and n-Decane: International Space Station and Ground-based Experiments",
+  "doi": "10.2514/1.J054437",
+  "authors": "Liu Yu Cheng, Rah Jeff K., Trenou Koffi N., Hicks Michael C., Avedisian C Thomas"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Isolated n-heptane droplet combustion in microgravity: “Cool Flames” – Two-stage combustion",
+  "doi": "10.1080/13647830.2016.1248494",
+  "authors": "Farouk Tanvir I., Dryer Frederick L."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Theory of the propagation dynamics of spiral edges of diffusion flames in von Kármán swirling flows",
+  "doi": "10.1016/j.proci.2014.06.043",
+  "authors": "Urzay Javier, Nayagam Vedha, Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Analysis of the melt phase of a rotating polymer disc supporting a diffusion flame",
+  "doi": "10.1007/s12217-014-9372-2",
+  "authors": "Nayagam Vedha, Williams F. A."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Partial-Burning Regime for Quasi-Steady Droplet Combustion Supported by Cool Flames",
+  "doi": "10.1080/00102202.2015.1072176",
+  "authors": "Nayagam Vedha, Dietrich Daniel L., Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Asymptotic analysis of quasi-steady n-heptane droplet combustion supported by cool-flame chemistry",
+  "doi": "10.1007/s12217-014-9377-x",
+  "authors": "Seshadri Kalyanasundaram, Peters Norbert, Williams Forman A., Nayagam Vedha, Paczko Guenter"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "n-Butanol droplet combustion: Numerical modeling and reduced gravity experiments",
+  "doi": "10.1021/acs.energyfuels.5b00158",
+  "authors": "Alam Fahd E., Liu Y.C., Avedisian C.T., Dryer F.L., Farouk T.I."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Droplet Combustion Experiments Aboard the International Space Station",
+  "doi": "10.1080/00102202.2014.971950",
+  "authors": "Dietrich Daniel L., Nayagam Vedha, Hicks Michael C., Ferkul Paul V., Dryer Frederick L., Farouk Tanvir, Shaw Benjamin D., Suh Hyun Kyu, Choi Mun Y., Liu Yu Cheng, Avedisian C. Thomas, Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Computational modeling of the effects of support fibers on evaporation of fiber-supported droplets in reduced gravity",
+  "doi": "10.1016/j.proci.2014.07.022",
+  "authors": "N Ghata, BD Shaw"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Oxygen Lewis Number Effects on Reduced Gravity Combustion of Methanol and n-Heptane Droplets",
+  "doi": "10.1016/j.combustflame.2015.01.012",
+  "authors": "Shaw Benjamin D., Vang Chang L."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "ISS Droplet Combustion Experiments - Uncertainties in Droplet Sizes and Burning Rates",
+  "doi": "10.1016/j.fuel.2014.08.063",
+  "authors": "Shaw Benjamin D."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Combustion of n-Butanol, Gasoline, and n-Butanol/Gasoline Mixture Droplets",
+  "doi": "10.1080/13647830.2014.934296",
+  "authors": "Xu Yuhao, Avedisian C. Thomas"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Computational Modeling of Unsupported and Fiber-Supported n-Heptane Droplet Combustion in Reduced Gravity: A Study of Fiber Effects",
+  "doi": "10.1155/2013/154202",
+  "authors": "Ghata Narugopal, Shaw Benjamin D."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "The effect of support fibers on micro-convection in droplet combustion experiments",
+  "doi": "10.1016/j.proci.2012.07.074",
+  "authors": "Liu Y.C., Xu Y., Avedisian C.T., Hicks M.C."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Cool-flame extinction during n-alkane droplet combustion in microgravity",
+  "doi": "10.1016/j.combustflame.2012.11.006",
+  "authors": "Nayagam Vedha, Dietrich Daniel L., Hicks Michael C., Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "A short mechanism for the low-temperature ignition of n-heptane at high pressures",
+  "doi": "10.1016/j.fuel.2013.02.025",
+  "authors": "Prince Juan C., Williams Forman A., Ovando Guillermo E."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "The role of cool-flame chemistry in quasi-steady combustion and extinction of n-heptane droplets",
+  "doi": "10.1016/j.proci.2012.05.065",
+  "authors": "Paczko Guenter, Peters Norbert, Seshadri Kalyanasundaram, Williams Forman Arthur"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Combustion of Submillimeter Heptane/Methanol and Heptane/Ethanol Droplets in Reduced Gravity",
+  "doi": "10.5566/ias.v31.p137-148",
+  "authors": "Aharon I., Tam V. K., Shaw B. D."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Sub-millimeter sized methyl butanoate droplet combustion: Microgravity experiments and detailed numerical modeling",
+  "doi": "10.1016/j.combustflame.2012.04.005",
+  "authors": "Farouk T.I., Liu Y.C., Savas A.J., Avedisian C.T., Dryer F.L."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "On the spherically symmetrical combustion of methyl decanoate droplets and comparisons with detailed numerical modeling",
+  "doi": "10.1016/j.combustflame.2011.08.015",
+  "authors": "Liu Yu Cheng, Farouk Tanvir, Savas Anthony J., Dryer Frederick L., Thomas Avedisian C."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "The spherically symmetric droplet burning characteristics of Jet-A and biofuels derived from camelina and tallow",
+  "doi": "10.1021/ef3007849",
+  "authors": "Liu Yu Cheng, Savas Anthony J., Avedisian C. Thomas"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Spherically symmetric droplet combustion of three and four component miscible mixtures as surrogates for Jet-A",
+  "doi": "10.1016/j.combustflame.2012.07.012",
+  "authors": "Liu Yu Cheng, Savas Anthony J., Thomas Avedisian C."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "AUTOMATED DATA ANALYSIS FOR CONSECUTIVE IMAGES FROM DROPLET COMBUSTION EXPERIMENTS",
+  "doi": "10.1080/00102202.2012.759946",
+  "authors": "Dembia Christopher Lee, Liu Yu Cheng, Avedisian C. Thomas"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "On the extinction characteristics of alcohol droplet combustion under microgravity conditions – A numerical study",
+  "doi": "10.1016/j.compfluid.2013.02.005",
+  "authors": "Farouk Tanvir I., Dryer Frederick L."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "A comparison of the spherical flame characteristics of sub-millimeter droplets of binary mixtures of n-heptane/iso-octane and n-heptane/toluene with a commercial unleaded gasoline",
+  "doi": "10.1016/j.compfluid.2013.02.011",
+  "authors": "Liu Yu Cheng, Avedisian C. Thomas"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Comparison of the Burning Characteristics of Indolene and Commercial Grade Gasoline Droplets without Convection",
+  "doi": "10.2478/gsr-2014-0007",
+  "authors": "Liu Yu Cheng, Savas Anthony J., Avedisian C. Thomas"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Can cool flames support quasi-steady alkane droplet burning?",
+  "doi": "10.1155/2012/587987",
+  "authors": "Nayagam Vedha, Dietrich Daniel L., Ferkul Paul V., Hicks Michael C., Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Experiments on Submillimeter Free Droplet Flame Extinction",
+  "doi": "10.1080/13647830.2010.547601",
+  "authors": "Shaw B. D., Wang D. F."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Influences of support fibers on vaporizing fuel droplets",
+  "doi": "10.1080/00102202.2010.498798",
+  "authors": "Shringi D., Dwyer H.A., Shaw B.D."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Numerical studies of flows over liquid droplets on cylindrical fibers",
+  "doi": "10.1016/j.icheatmasstransfer.2009.10.006",
+  "authors": "Shringi D., Dwyer H.A., Shaw B.D."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Interpretation of Backlit Droplet Images from ISS Droplet Combustion Experiments",
+  "doi": "10.1016/j.ijheatmasstransfer.2010.08.005",
+  "authors": "Yu Fei, Shaw Benjamin D."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Combustion of Methanol Droplets in Air-Diluent Environments with Reduced and Normal Gravity",
+  "doi": "10.1007/s12217-008-9096-2",
+  "authors": "BD Shaw, J Wei"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Microgravity droplet combustion: effect of tethering fiber on burning rate and flame structure",
+  "doi": "10.1016/j.proci.2008.06.221",
+  "authors": "Farouk T., Dryer F. L."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Influence of Gravity and Ambient Pressure on Combustion and Flammability of n-Heptane and 1-Propanol Droplets in Air-Diluent Environments",
+  "doi": "10.1016/j.optlaseng.2009.05.004",
+  "authors": "Shaw B. D., Wei J. B."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Ignition and combustion of n-heptane droplets in carbon dioxide enriched environments",
+  "doi": "10.1016/j.optlaseng.2008.08.002",
+  "authors": "Dzik Justin, Nayagam Vedha, Williams Forman A."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Computational modeling of n-heptane droplet combustion in air–diluent environments under reduced-gravity",
+  "doi": "10.1080/00102200903190851",
+  "authors": "Jin Y., Shaw B.D."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Numerical Simulation of Unsteady Flows and Shape Oscillations in Liquid Droplets Induced by Deployment Needle Retraction",
+  "doi": "10.1080/00102200601057394",
+  "authors": "Yan Jin, Shaw Benjamin D."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Nonane droplet combustion with and without buoyant convection: Flame structure, burning rate and extinction in air and helium",
+  "doi": "10.1007/978-81-322-2211-8_16",
+  "authors": "Bae J.H., Avedisian C.T."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Temperature and fiber optic spectroscopy composition measurements of heated propanol–acetone droplets",
+  "doi": null,
+  "authors": "Xiao J.S., Wei J.B., Shaw B.D., Peng Z."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Laser-induced fluorescence imaging of acetone inside evaporating and burning fuel droplets",
+  "doi": null,
+  "authors": "Shringi D.S., Shaw B.D., Dwyer H.A."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Reduced Gravity Combustion of Propanol Droplets in Oxygen-Inert Environments",
+  "doi": null,
+  "authors": "Wei J. B., Shaw B. D."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "PROPANOL DROPLET FLAMMABILITY AND COMBUSTION IN AIR-DILUENT ENVIRONMENTS UNDER NORMAL AND REDUCED GRAVITY",
+  "doi": null,
+  "authors": "SHAW B. D., WEI J. B."
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Developing Surrogates for Liquid Transportation Fuels: The Role of Spherically Symmetric Droplet Combustion",
+  "doi": null,
+  "authors": "Avedisian C. Thomas"
+ },
+ {
+  "investigation_id": "PSI-69",
+  "title": "Detailed results from the flame extinugishment experiment (FLEX) - March 2009 to December 2011",
+  "doi": null,
+  "authors": "DL Dietrich, VM Bryg, PV Ferkul, FA Williams, FL Dryer, BD Shaw, MY Choi, MV Nayagam, MC Hicks, CT Avedisian"
+ },
+ {
+  "investigation_id": "PSI-98",
+  "title": "The Spacecraft Fire Experiment (Saffire) - Objectives, Development and Status",
+  "doi": "10.1016/j.combustflame.2018.10.012",
+  "authors": "W Schoren, GA Ruff, DL Urban"
+ },
+ {
+  "investigation_id": "PSI-98",
+  "title": "Buoyant Effects on the Flammability of Silicone Samples Planned for the Spacecraft Fire Experiment (Saffire)",
+  "doi": "10.1016/j.proci.2018.05.168",
+  "authors": "JE Niehaus, PV Ferkul, SA Gokoglu, GA Ruff"
+ },
+ {
+  "investigation_id": "PSI-98",
+  "title": "Flame spread: Effects of microgravity and scale",
+  "doi": "10.1016/j.actaastro.2014.11.025",
+  "authors": "Urban David L., Ferkul Paul, Olson Sandra, Ruff Gary A., Easton John, T'ien James S., Liao Ya-Ting T., Li Chengyao, Fernandez-Pello Carlos, Torero Jose L., Legros Guillaume, Eigenbrod Christian, Smirnov Nickolay, Fujita Osamu, Rouvreau Sébastien, Toth Balazs, Jomaas Grunde"
+ },
+ {
+  "investigation_id": "PSI-98",
+  "title": "Transient flame growth and spread processes over a large solid fabric in concurrent low-speed flows in microgravity – Model versus experiment",
+  "doi": null,
+  "authors": "Li Chengyao, Liao Ya-Ting T., T'ien James S., Urban David L., Ferkul Paul, Olson Sandra, Ruff Gary A., Easton John"
+ },
+ {
+  "investigation_id": "PSI-98",
+  "title": "Fire safety in space – beyond flammability testing of small samples",
+  "doi": null,
+  "authors": "Jomaas Grunde, Torero Jose L., Eigenbrod Christian, Niehaus Justin, Olson Sandra L., Ferkul Paul V., Legros Guillaume, Fernandez-Pello A. Carlos, Cowlard Adam J., Rouvreau Sebastien, Smirnov Nickolay, Fujita Osamu, T׳ien James S., Ruff Gary A., Urban David L."
+ },
+ {
+  "investigation_id": "PSI-98",
+  "title": "Operation and Development Status of the Spacecraft Fire Experiments (Saffire)",
+  "doi": null,
+  "authors": "Gary A. Ruff and David L. Urban."
+ },
+ {
+  "investigation_id": "PSI-99",
+  "title": "Buoyant Effects on the Flammability of Silicone Samples Planned for the Spacecraft Fire Experiment (Saffire), Conference: 45th International Conference on Environmental Systems ICES-2015-[293] 12-16 July 2015, Bellevue, Washington",
+  "doi": "10.1016/j.combustflame.2018.10.012",
+  "authors": "JE Niehaus, PV Ferkul, SA Gokoglu, GA Ruff"
+ },
+ {
+  "investigation_id": "PSI-99",
+  "title": "The Spacecraft Fire Experiment (Saffire) - Objectives, Development and Status",
+  "doi": "10.1016/j.combustflame.2018.10.016",
+  "authors": "W Schoren, GA Ruff, DL Urban"
+ },
+ {
+  "investigation_id": "PSI-99",
+  "title": "Flame spread: Effects of microgravity and scale",
+  "doi": "10.1007/s10694-019-00863-3",
+  "authors": "Urban David L., Ferkul Paul, Olson Sandra, Ruff Gary A., Easton John, T'ien James S., Liao Ya-Ting T., Li Chengyao, Fernandez-Pello Carlos, Torero Jose L., Legros Guillaume, Eigenbrod Christian, Smirnov Nickolay, Fujita Osamu, Rouvreau Sébastien, Toth Balazs, Jomaas Grunde"
+ },
+ {
+  "investigation_id": "PSI-99",
+  "title": "Buoyancy effects on concurrent flame spread over thick PMMA",
+  "doi": "10.1016/j.proci.2018.05.168",
+  "authors": "Thomsen Maria, Fernandez-Pello Carlos, Ruff Gary A., Urban David L."
+ },
+ {
+  "investigation_id": "PSI-99",
+  "title": "Concurrent Flame Spread Over Two-Sided Thick PMMA Slabs in Microgravity",
+  "doi": "10.1016/j.firesaf.2020.102977",
+  "authors": "Olson Sandra L., Urban David L., Ruff Gary A., Ferkul Paul V., Toth Balazs, Eigenbrod Christian, Meyer Florian, Jomaas Grunde"
+ },
+ {
+  "investigation_id": "PSI-99",
+  "title": "Transient flame growth and spread processes over a large solid fabric in concurrent low-speed flows in microgravity – Model versus experiment",
+  "doi": null,
+  "authors": "Li Chengyao, Liao Ya-Ting T., T'ien James S., Urban David L., Ferkul Paul, Olson Sandra, Ruff Gary A., Easton John"
+ },
+ {
+  "investigation_id": "PSI-99",
+  "title": "Evaluation of gas and particle sensors for detecting spacecraft-relevant fire emissions",
+  "doi": null,
+  "authors": "Wang Xiaoliang, Zhou Hao, Arnott W. Patrick, Meyer Marit E., Taylor Samuel, Firouzkouhi Hatef, Moosmüller Hans, Chow Judith C., Watson John G."
+ }
+]

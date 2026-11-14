@@ -1,0 +1,16 @@
+investigation_id,n_cards,n_cards_with_o2_and_pressure,o2_pct_min,o2_pct_max,pressure_kpa_min,pressure_kpa_max,closest_card_id,closest_distance_to_8p2psi_34pct,closest_o2_pct,closest_pressure_kpa,n_tier_A,n_tier_B,n_tier_C,n_tier_D,n_tier_F,n_tier_E,fuel_classes,fuel_names,best_tier
+LUCI,4,4,20.0,21.0,101.32,101.32,LUCI-0004,1.716,21.0,101.325,0,0,0,4,0,0,solid,PMMA;SIBAL (cotton-fiberglass fabric),D
+PSI-10,327,316,19.8,85.0,43.16,305.82,PSI-10-0290,0.178,32.736,51.504,3,220,3,73,16,12,gas,Ethylene;Propane,A
+PSI-100,2,0,,,,,,,,,0,0,0,0,0,2,solid,SIBAL (cotton-fiberglass fabric),E
+PSI-102,8,8,21.0,21.0,101.4,101.4,PSI-102-0001,1.718,21.0,101.4,0,0,0,8,0,0,solid,Dibutyl phthalate (on wick);Kapton;Lampwick;Silicone Rubber;Teflon,D
+PSI-107,435,435,21.0,21.0,101.4,101.4,PSI-107-0001,1.718,21.0,101.4,0,0,0,435,0,0,gas,Ethane;Ethylene;Propane;Propylene,D
+PSI-159,333,333,12.0,85.0,49.54,330.99,PSI-159-0128,0.146,34.081,50.665,26,182,17,86,19,3,gas,Butane;Ethane;Propane,A
+PSI-25,129,129,13.6,22.2,101.4,101.4,PSI-25-0001,1.629,22.2,101.4,0,0,0,129,0,0,solid,Nomex blend fabric;PMMA;SIBAL (cotton-fiberglass fabric);Unspecified;Unspecified (film);Unspecified (rod);Unspecified (sphere);Wax (candle or paraffin),D
+PSI-26,122,0,,,,,,,,,0,0,0,0,0,122,solid,Nomex blend fabric;PMMA;SIBAL (cotton-fiberglass fabric);Ultem sheet;Unspecified;Unspecified (sphere);Wax (candle or paraffin),E
+PSI-39,79,79,17.0,21.0,50.66,506.62,PSI-39-0063,1.308,21.0,50.663,0,0,3,76,0,0,liquid,Dodecane;Dodecane / iso-dodecane blend,C
+PSI-69,274,273,12.0,34.0,70.17,309.29,PSI-69-0037,0.368,34.0,71.234,23,7,80,163,0,1,liquid,Heptane;Methanol,A
+PSI-98,2,2,21.5,21.6,100.0,100.0,PSI-98-0001,1.649,21.6,100.0,0,0,0,2,0,0,solid,SIBAL (cotton-fiberglass fabric),D
+PSI-99,9,9,21.5,22.1,100.0,100.0,PSI-99-0002,1.612,22.1,100.0,0,0,0,9,0,0,solid,PMMA;PMMA & Nomex;SIBAL (cotton-fiberglass fabric);Silicone,D
+SAFFIRE-IV,2,2,22.0,22.0,100.0,100.0,SAFFIRE-IV-0001,1.619,22.0,100.0,0,0,0,2,0,0,solid,PMMA;SIBAL (cotton-fiberglass fabric),D
+SAFFIRE-V,3,3,25.4,26.2,70.7,72.6,SAFFIRE-V-0001,0.857,26.2,70.7,3,0,0,0,0,0,solid,Cotton jersey;PMMA,A
+SAFFIRE-VI,3,3,28.8,31.0,54.1,55.2,SAFFIRE-VI-0001,0.306,31.0,54.1,3,0,0,0,0,0,solid,PMMA;SIBAL (cotton-fiberglass fabric),A
