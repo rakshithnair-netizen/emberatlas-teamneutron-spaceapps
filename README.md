@@ -15,7 +15,7 @@ NASA's exploration atmosphere is 8.2 psia (56.5 kPa) at 34% O₂. Almost all fli
 | Home (Mission Dashboard) | `/` | The challenge question, evidence-gap chart, "what NASA has tested / what is missing", evidence-grade guide, headline numbers, ranked insights, habitat picker |
 | Envelope Map | `/explorer` | All 1,732 burn cards on O₂ × pressure, habitat crosshairs, coverage hulls, iso-ppO₂ lines, gravity overlay |
 | Condition Matcher | `/matcher` | Evidence tier, 5 nearest cards with deltas, relevant findings, caveats, "what would close this gap"; shareable URL |
-| Ask Atlas | `/atlas` | Retrieval-grounded Q&A with cited sources; works without an API key (Atlas Lite) |
+| Ask Atlas | `/atlas` | Retrieval-grounded Q&A with cited sources, powered by Google Gemini; falls back to Atlas Lite if the model is unavailable |
 | Flame Library | `/library`, `/library/[id]` | Search and filter cards; investigation pages with envelope, findings, campaigns, publications, mini family tree |
 | Family Tree | `/family-tree` | 30 investigations, 138 edges; curated lineage vs computed shared hardware/fuel |
 | Learn | `/learn` | Nine short modules, each with a diagram, sourced facts and a 3-question check |
@@ -31,29 +31,17 @@ NASA's exploration atmosphere is 8.2 psia (56.5 kPa) at 34% O₂. Almost all fli
 - Only 4 cards are not microgravity: all LUCI (2 at lunar g, 2 Earth controls), in normal-pressure air. Nothing exists at Mars gravity or at 34% O₂ in partial gravity.
 - The closest card to 8.2 psia / 34% is PSI-159-0128 (ACME CFI-G ethane, d = 0.146).
 
-## Setup
+## Using the app
 
-```bash
-npm install
-npm run prepare-data
-npm run dev
-npm test
-npm run build
-```
+Open **https://ember-atlas-app.vercel.app** in any modern browser, on desktop or phone. There is nothing to install and no account to create.
 
-`prepare-data` copies the dataset from `~/Desktop/SpaceApps-Data/dataset` (override with `DATASET_DIR`) into `src/data/raw` and `public/data`. It then generates TypeScript types from `data_dictionary.csv` (`src/lib/generated-types.ts`) and precomputes coverage hulls and headline numbers (`src/data/derived.json`). Copies are committed, so builds work without the source folder. `npm run build` runs it automatically.
+1. **Pick a target habitat** with the selector in the header. It sets the atmosphere that every page compares against, and the app remembers it.
+2. **Check a habitat** (`/matcher`): enter an oxygen level, pressure, gravity and fuel to get an evidence grade, the nearest NASA tests and what is still unknown. The URL updates as you go, and **Copy shareable link** gives you a link to that exact result.
+3. **Explore evidence** (`/explorer`): see every NASA burn on one map and click any point for its full record.
+4. **Ask Atlas** (under **More tools**): ask a question in plain English and get an answer drawn only from the NASA dataset, with cited sources.
+5. **Sources & library** and **Method & limits**: trace any number back to its NASA source, and download the dataset as CSV or JSON.
 
-### Ask Atlas with a model (recommended for the demo)
-
-Atlas is the app's SI layer. Locally, copy `.env.example` to `.env.local`. On Vercel, set the same three variables under Project → Settings → Environment Variables and redeploy:
-
-```
-AI_PROVIDER=anthropic   # or openai, gemini
-AI_API_KEY=...
-AI_MODEL=               # optional override
-```
-
-Keys stay server-side in the `/api/atlas` route handler. The model must call at least one tool (`searchFindings`, `queryCards`, `classifyEvidence`, `getInvestigation`, `getSources`). Citations not found in tool results are dropped. With no key, or if the call fails, Atlas Lite answers from the same retrieval with templated text.
+Ask Atlas runs on Google Gemini through a server-side route, so no key or setup is needed to use it. If the model is busy or unavailable, Atlas falls back to **Atlas Lite**, which answers from the same retrieval with templated text, and the answer says which mode produced it.
 
 ## Method in brief
 
@@ -73,14 +61,14 @@ Built only from the NASA PSI repository (psi.nasa.gov) and NASA publications (NT
 
 ## Tools
 
-Next.js 15 (App Router), TypeScript, Tailwind CSS 4, Plotly.js (plotly.js-dist-min, dynamically imported), React Flow (@xyflow/react), MiniSearch, Vitest. Deployable to Vercel (everything is static except `/api/atlas`).
+Next.js 15 (App Router), TypeScript, Tailwind CSS 4, Plotly.js (plotly.js-dist-min, dynamically imported), React Flow (@xyflow/react), MiniSearch, Vitest. Hosted on Vercel: every page is pre-rendered, and the only server code is the `/api/atlas` route, which calls Google Gemini. Every push to `main` redeploys the site.
 
 ## Use of Super Intelligence (SI)
 
 - **SI-assisted code and text.** The code, tests and plain-language summaries were written with the help of an SI coding assistant (Anthropic Claude via Claude Code) and reviewed by the team. This is also recorded as metadata: the `siDisclosure` field in `package.json` and the `si-disclosure` meta tag on every page.
 - The dataset was compiled from NASA sources with SI assistance (table extraction, paraphrased findings) and checked by the team against each source. No data values were invented by SI; every number comes from the dataset.
 - The idea and approach came only from the team's own brainstorming.
-- Ask Atlas can optionally call an LLM through retrieval tools only.
+- Ask Atlas calls an LLM (Google Gemini on the live site) through retrieval tools only.
 - No AI-generated imagery is used; all graphics are hand-built SVG.
 
 Research screening tool, not a certification source.
