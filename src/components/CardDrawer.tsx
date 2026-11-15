@@ -84,43 +84,43 @@ export function CardDrawer({ card, onClose }: { card: BurnCard | null; onClose: 
 
   return (
     <div ref={dialog} className="fixed inset-0 z-50 flex justify-end" role="dialog" aria-modal="true" aria-labelledby="card-drawer-title">
-      <button type="button" className="absolute inset-0 bg-black/60" aria-label="Close card details" onClick={onClose} tabIndex={-1} />
-      <aside className="relative flex h-full w-full max-w-xl flex-col overflow-y-auto border-l border-line bg-panel shadow-2xl">
-        <div className="sticky top-0 z-10 flex items-start justify-between gap-3 border-b border-line bg-panel/95 px-5 py-4 backdrop-blur">
+      <button type="button" className="absolute inset-0 bg-scrim" aria-label="Close card details" onClick={onClose} tabIndex={-1} />
+      <aside className="relative flex h-full w-full max-w-xl flex-col overflow-y-auto border-l border-sand-strong bg-paper shadow-card sm:my-3 sm:mr-3 sm:h-[calc(100%-1.5rem)] sm:rounded-2xl sm:border">
+        <div className="sticky top-0 z-10 flex items-start justify-between gap-3 border-b border-sand-strong bg-paper px-6 py-5">
           <div>
             <p className="eyebrow">Burn card · {card.acronym}</p>
             <h2 id="card-drawer-title" className="num mt-1 text-lg font-semibold">
               {card.card_id}
             </h2>
-            <p className="text-sm text-muted">
+            <p className="text-sm text-ink-muted">
               {card.fuel_name} · {card.fuel_class} · {normalizeGravity(card.gravity_regime)}
             </p>
           </div>
-          <button ref={closeButton} type="button" onClick={onClose} className="rounded-md border border-line px-2.5 py-1 text-sm text-muted hover:text-ink">
+          <button ref={closeButton} type="button" onClick={onClose} className="btn btn-secondary px-4 text-sm">
             Close
           </button>
         </div>
         <div className="space-y-5 px-5 py-4">
           <div className="grid grid-cols-3 gap-2 text-sm">
-            <div className="rounded-lg border border-line bg-panel-2 p-2.5">
+            <div className="rounded-lg border border-sand-strong bg-sand p-2.5">
               <p className="eyebrow">O₂</p>
               <Value value={card.o2_pct} unit="%" basis={card.o2_basis} hasRange={card.o2_pct_low !== null} />
               {card.o2_pct_low !== null ? (
-                <p className="num text-[11px] text-muted">
+                <p className="num text-[11px] text-ink-muted">
                   range {card.o2_pct_low}–{card.o2_pct_high}%
                 </p>
               ) : null}
             </div>
-            <div className="rounded-lg border border-line bg-panel-2 p-2.5">
+            <div className="rounded-lg border border-sand-strong bg-sand p-2.5">
               <p className="eyebrow">Pressure</p>
               <Value value={card.pressure_kpa} unit="kPa" basis={card.pressure_basis} />
             </div>
-            <div className="rounded-lg border border-line bg-panel-2 p-2.5">
+            <div className="rounded-lg border border-sand-strong bg-sand p-2.5">
               <p className="eyebrow">d to 8.2/34</p>
               {distance === null ? <Missing /> : <span className="num">{formatNumber(distance, 2)}</span>}
             </div>
           </div>
-          <p className="text-xs text-muted">
+          <p className="text-xs text-ink-muted">
             O₂ basis: {basisLabels[basisKind(card.o2_basis, card.o2_pct_low !== null)]} ({card.o2_basis}). Pressure basis:{" "}
             {basisLabels[basisKind(card.pressure_basis)]} ({card.pressure_basis}).
           </p>
@@ -133,7 +133,7 @@ export function CardDrawer({ card, onClose }: { card: BurnCard | null; onClose: 
               <ul className="mt-2 space-y-1 text-sm">
                 {card.quality_flags.map((flag) => (
                   <li key={flag}>
-                    {describeFlag(flag)} <span className="num text-[11px] text-faint">({flag})</span>
+                    {describeFlag(flag)} <span className="num text-[11px] text-ink-subtle">({flag})</span>
                   </li>
                 ))}
               </ul>
@@ -149,7 +149,7 @@ export function CardDrawer({ card, onClose }: { card: BurnCard | null; onClose: 
                 {cardDiscrepancies.map((discrepancy, index) => (
                   <li key={index}>
                     <span className="font-medium">{discrepancy.field}</span>: {discrepancy.psi_or_primary_value} vs {discrepancy.conflicting_or_expected_value}.{" "}
-                    <span className="text-muted">{discrepancy.handling}</span>
+                    <span className="text-ink-muted">{discrepancy.handling}</span>
                   </li>
                 ))}
               </ul>
@@ -159,10 +159,10 @@ export function CardDrawer({ card, onClose }: { card: BurnCard | null; onClose: 
           <SourceChips ids={card.source_ids} />
 
           <div className="flex flex-wrap gap-2">
-            <Link href={`/matcher?${cardSearchParams(card)}`} className="rounded-md bg-ember px-3 py-1.5 text-sm font-medium text-black hover:bg-ember-soft">
+            <Link href={`/matcher?${cardSearchParams(card)}`} className="btn btn-primary">
               Find similar in Condition Matcher
             </Link>
-            <Link href={`/library/${encodeURIComponent(card.investigation_id)}`} className="rounded-md border border-line-strong px-3 py-1.5 text-sm hover:border-habitat/60">
+            <Link href={`/library/${encodeURIComponent(card.investigation_id)}`} className="rounded-md border border-stone px-3 py-1.5 text-sm hover:border-clay/60">
               Open {card.acronym} investigation
             </Link>
           </div>
@@ -171,10 +171,10 @@ export function CardDrawer({ card, onClose }: { card: BurnCard | null; onClose: 
             <h3 id="fields-title" className="eyebrow">
               All reported fields
             </h3>
-            <dl className="mt-2 divide-y divide-line rounded-lg border border-line text-sm">
+            <dl className="mt-2 divide-y divide-sand-strong rounded-lg border border-sand-strong text-sm">
               {entries.map(([key, value]) => (
                 <div key={key} className="grid grid-cols-[10rem_1fr] gap-3 px-3 py-1.5">
-                  <dt className="text-muted">{fieldLabel(key)}</dt>
+                  <dt className="text-ink-muted">{fieldLabel(key)}</dt>
                   <dd className="break-words">{renderValue(key, value)}</dd>
                 </div>
               ))}
@@ -187,10 +187,10 @@ export function CardDrawer({ card, onClose }: { card: BurnCard | null; onClose: 
                 Measurements
               </h3>
               <table className="mt-2 w-full text-sm">
-                <tbody className="divide-y divide-line">
+                <tbody className="divide-y divide-sand-strong">
                   {measurementEntries.map(([key, value]) => (
                     <tr key={key}>
-                      <th scope="row" className="num py-1.5 pr-3 text-left text-xs font-normal text-muted">
+                      <th scope="row" className="num py-1.5 pr-3 text-left text-xs font-normal text-ink-muted">
                         {key}
                       </th>
                       <td className="num py-1.5 text-right">{typeof value === "object" ? JSON.stringify(value) : String(value)}</td>

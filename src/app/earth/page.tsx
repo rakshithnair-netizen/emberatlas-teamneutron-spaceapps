@@ -20,38 +20,38 @@ const domains: { key: string; title: string; why: string }[] = [
 export default function EarthPage() {
   const withDomain = findings.filter((finding) => finding.earth_domain);
   return (
-    <div className="space-y-6">
+    <div className="space-y-14 sm:space-y-20">
       <div>
         <p className="eyebrow">Earth Applications</p>
-        <h1 className="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">What space fire research does for Earth</h1>
-        <p className="mt-1 max-w-3xl text-sm text-muted">
+        <h1 className="mt-2 text-3xl sm:text-4xl">What space fire research does for Earth</h1>
+        <p className="reading mt-3 text-base text-ink-muted">
           {withDomain.length} findings in the dataset are tagged with an Earth-application domain. Each card links to its NASA source and the investigations behind it. The &ldquo;why&rdquo; line is our plain-language summary of the mechanism, not a NASA quote.
         </p>
       </div>
-      {domains.map((domain) => {
+      {domains.map((domain, domainIndex) => {
         const items = withDomain.filter((finding) => finding.earth_domain === domain.key);
         if (!items.length) return null;
         return (
-          <section key={domain.key} className="space-y-3" aria-labelledby={`domain-${domain.key}`}>
+          <section key={domain.key} className="space-y-4" aria-labelledby={`domain-${domain.key}`}>
             <div className="flex flex-wrap items-baseline gap-x-3">
-              <h2 id={`domain-${domain.key}`} className="text-lg font-semibold">
+              <h2 id={`domain-${domain.key}`} className="text-2xl">
                 {domain.title}
               </h2>
-              <span className="num text-xs text-faint">{items.length} finding(s)</span>
+              <span className="num text-xs text-ink-subtle">{items.length} finding(s)</span>
             </div>
-            <p className="max-w-3xl text-sm text-ember-soft">Why space data helps: {domain.why}</p>
-            <div className="grid gap-3 md:grid-cols-2">
+            <p className="reading text-base text-ink-muted">Why space data helps: {domain.why}</p>
+            <div className="grid gap-6 md:grid-cols-2">
               {items.map((finding) => (
-                <article key={finding.finding_id} className="panel p-4">
+                <article key={finding.finding_id} className={`panel border-t-[3px] p-5 sm:p-6 ${["border-t-clay", "border-t-sky", "border-t-sage"][domainIndex % 3]}`}>
                   <p className="flex items-center gap-2">
-                    <span className="num text-xs text-ember">{finding.finding_id}</span>
+                    <span className="num text-xs text-clay-strong">{finding.finding_id}</span>
                     <span className="eyebrow">{finding.subarea}</span>
                   </p>
-                  <p className="mt-2 text-sm leading-relaxed">{finding.statement}</p>
+                  <p className="mt-3 text-base">{finding.statement}</p>
                   {finding.linked_investigations.length ? (
                     <p className="mt-2 flex flex-wrap gap-1.5 text-xs">
                       {finding.linked_investigations.map((id) => (
-                        <Link key={id} href={`/library/${encodeURIComponent(id)}`} className="rounded border border-line px-1.5 py-0.5 hover:border-habitat/60">
+                        <Link key={id} href={`/library/${encodeURIComponent(id)}`} className="rounded-full border border-sand-strong px-2.5 py-0.5 font-sans hover:border-clay-strong hover:text-clay-strong">
                           {investigationById(id)?.acronym ?? id}
                         </Link>
                       ))}

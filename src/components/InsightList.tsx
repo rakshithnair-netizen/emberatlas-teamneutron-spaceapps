@@ -24,14 +24,14 @@ export function ScoreBreakdown({ insight, weights }: { insight: InsightWithTier;
     <div className="space-y-1">
       {(Object.keys(weights) as (keyof RankingWeights)[]).map((key) => (
         <div key={key} className="grid grid-cols-[8.5rem_1fr_3rem] items-center gap-2 text-[11px]">
-          <span className="text-muted">{weightLabels[key]}</span>
-          <span className="relative h-1.5 rounded bg-panel">
-            <span className="absolute inset-y-0 left-0 rounded bg-ember/80" style={{ width: `${insight.components[key].value * 100}%` }} />
+          <span className="text-ink-muted">{weightLabels[key]}</span>
+          <span className="relative h-1.5 rounded bg-sand">
+            <span className="absolute inset-y-0 left-0 rounded bg-clay/80" style={{ width: `${insight.components[key].value * 100}%` }} />
           </span>
           <span className="num text-right">
             {(insight.components[key].value * (weights[key] / total)).toFixed(3)}
           </span>
-          <span className="col-span-3 -mt-0.5 pl-0 text-[10px] text-faint">{insight.components[key].reason}</span>
+          <span className="col-span-3 -mt-0.5 pl-0 text-[10px] text-ink-subtle">{insight.components[key].reason}</span>
         </div>
       ))}
     </div>
@@ -41,41 +41,41 @@ export function ScoreBreakdown({ insight, weights }: { insight: InsightWithTier;
 export function InsightRow({ insight, rank, weights }: { insight: InsightWithTier; rank: number; weights: RankingWeights }) {
   const href = insight.kind === "investigation" ? `/library/${insight.id}` : `/atlas?q=${encodeURIComponent(insight.title)}`;
   return (
-    <li className="group rounded-xl border border-line bg-panel-2/60 p-3 sm:p-4">
-      <div className="flex items-start gap-3">
-        <span className="num mt-0.5 w-6 shrink-0 text-right text-sm text-faint">{rank}</span>
+    <li className="group rounded-xl border border-sand-strong bg-paper-raised p-4 sm:p-6">
+      <div className="flex items-start gap-4">
+        <span className="num w-10 shrink-0 text-right text-3xl leading-none text-ink-subtle">{rank}</span>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
             <EvidenceBadge tier={insight.tierMicro} size="sm" />
             {insight.habitatGravity === "lunar" ? (
-              <span className="inline-flex items-center gap-1 text-[11px] text-muted" title={`Evidence tier in lunar gravity: ${evidenceTierMeta[insight.tierHabitatGravity].label}`}>
+              <span className="inline-flex items-center gap-1 text-[11px] text-ink-muted" title={`Evidence tier in lunar gravity: ${evidenceTierMeta[insight.tierHabitatGravity].label}`}>
                 <TierIcon tier={insight.tierHabitatGravity} size={11} />
                 lunar g: {evidenceTierMeta[insight.tierHabitatGravity].label}
               </span>
             ) : null}
             <span className="eyebrow">{areaLabels[insight.area] ?? insight.area}</span>
-            <span className="num text-[11px] text-faint">{insight.id}</span>
+            <span className="num text-[11px] text-ink-subtle">{insight.id}</span>
           </div>
-          <p className="mt-1.5 font-medium leading-snug">
-            <Link href={href} className="hover:text-ember">
+          <p className="mt-2 font-display text-lg font-medium leading-snug">
+            <Link href={href} className="hover:text-clay-strong">
               {insight.title}
             </Link>
           </p>
-          <p className="mt-1 text-sm leading-relaxed text-muted">{insight.statement}</p>
+          <p className="mt-1 text-sm leading-relaxed text-ink-muted">{insight.statement}</p>
           <div className="mt-2">
             <SourceChips ids={insight.sourceIds} />
           </div>
           <details className="mt-2">
-            <summary className="cursor-pointer text-[11px] text-habitat">Why this rank? Score {insight.score.toFixed(3)}</summary>
-            <div className="mt-2 rounded-lg border border-line bg-panel p-2.5">
+            <summary className="cursor-pointer text-[11px] text-clay-strong">Why this rank? Score {insight.score.toFixed(3)}</summary>
+            <div className="mt-2 rounded-lg border border-sand-strong bg-paper-raised p-2.5">
               <ScoreBreakdown insight={insight} weights={weights} />
             </div>
           </details>
         </div>
         <div className="hidden w-16 shrink-0 text-right sm:block" title="Weighted score (0–1); open “Why this rank?” for the breakdown">
           <span className="num text-lg">{insight.score.toFixed(2)}</span>
-          <div className="mt-1 h-1 rounded bg-panel">
-            <div className="h-1 rounded bg-ember" style={{ width: `${insight.score * 100}%` }} />
+          <div className="mt-1 h-1 rounded bg-sand">
+            <div className="h-1 rounded bg-clay" style={{ width: `${insight.score * 100}%` }} />
           </div>
         </div>
       </div>
@@ -100,7 +100,7 @@ export function HomeInsights({ byHabitat, limit = 6 }: { byHabitat: Record<strin
   const { habitat } = useHabitat();
   const insights = useMemo(() => rerank(byHabitat[habitat.habitat_id] ?? [], defaultWeights) as InsightWithTier[], [byHabitat, habitat.habitat_id]);
   return (
-    <ol className="space-y-2.5">
+    <ol className="space-y-4">
       {diversify(insights, limit).map((insight, index) => (
         <InsightRow key={insight.id} insight={insight} rank={index + 1} weights={defaultWeights} />
       ))}

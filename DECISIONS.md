@@ -66,3 +66,8 @@ Calls made during the build without stopping to ask, with the reason for each.
 - **The challenge keeps its name.** Text that refers to the challenge (README intro, the Home eyebrow, the SUBMISSION "Challenge" line) still says Flame in Freefall.
 - **The dataset keeps its name.** "Flame in Freefall dataset v1.0" is named after the challenge, and its README and `datapackage.json` are copied from the source dataset by `prepare-data`, so they are left as they are.
 - **New URL.** `ember-atlas.vercel.app` and `emberatlas.vercel.app` are taken by other sites, so the project serves https://ember-atlas-app.vercel.app. The Vercel project id is still `flame-in-freefall`; renaming it would not change any URL.
+
+## Editorial restyle (2026-11-15)
+- **Visual-only.** The dark theme was replaced by a light, warm editorial palette with a system-preference dark mode. No visible text changed, which `scripts/check-text-unchanged.ts` verifies against `main`. Full details are in `DESIGN_NOTES.md`.
+- **Accessibility won over the brief's exact hex values.** Three text tones were darkened until every text/background pair passes WCAG AA.
+- **On-screen colour words win over the brief.** Text such as "cyan line", "green ring" and "Solid orange edges" stays true, so those marks keep matching colours.

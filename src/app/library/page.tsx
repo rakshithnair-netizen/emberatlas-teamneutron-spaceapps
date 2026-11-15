@@ -22,7 +22,7 @@ export default function LibraryPage() {
     }))
     .sort((a, b) => b.cardCount - a.cardCount || a.acronym.localeCompare(b.acronym));
   return (
-    <Suspense fallback={<p className="text-sm text-muted">Loading library…</p>}>
+    <Suspense fallback={<p className="text-sm text-ink-muted">Loading library…</p>}>
       <LibraryView investigations={summaries} />
     </Suspense>
   );

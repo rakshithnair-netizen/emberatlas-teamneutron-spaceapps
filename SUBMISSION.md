@@ -142,12 +142,13 @@ None. All data comes from the NASA sources listed above.
 | React Flow (@xyflow/react) | 12.12.1 | MIT | Family Tree graph | https://reactflow.dev |
 | MiniSearch | 7.2.0 | MIT | Full-text search for the Library and Atlas retrieval | https://github.com/lucaong/minisearch |
 | Vitest | 5.1.0 | MIT | Unit tests | https://vitest.dev |
+| Playwright | 1.65.1 | Apache-2.0 | Dev-only check that the restyle changed no on-screen text | https://playwright.dev |
 | tsx | 4.23.15 | MIT | Runs the data-preparation script | https://github.com/privatenumber/tsx |
 | ESLint + eslint-config-next | 9.39.5 / 15.5.29 | MIT | Linting | https://eslint.org |
 | create-next-app template | 15.5 | MIT | Starting project skeleton and default favicon | https://nextjs.org/docs/app/api-reference/cli/create-next-app |
 
 ### Fonts
-- **IBM Plex Sans and IBM Plex Mono** (SIL Open Font License 1.1), loaded through Google Fonts via `next/font`. https://github.com/IBM/plex
+- **Poppins, Lora and JetBrains Mono** (all SIL Open Font License 1.1), self-hosted through `next/font/google`. https://fonts.google.com/specimen/Poppins · https://fonts.google.com/specimen/Lora · https://www.jetbrains.com/lp/mono/
 
 ### Images
 - No third-party images. All diagrams, the flame illustration and the site icon in the header are hand-built SVG made by the team.

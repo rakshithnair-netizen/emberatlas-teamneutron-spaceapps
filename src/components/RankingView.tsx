@@ -39,9 +39,9 @@ export function RankingView({ byHabitat }: { byHabitat: Record<string, InsightWi
     <div className="space-y-5">
       <div>
         <p className="eyebrow">Ranking method</p>
-        <h1 className="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">How insights are ranked</h1>
-        <p className="mt-1 max-w-3xl text-sm text-muted">
-          Every finding and in-scope investigation gets five transparent component scores between 0 and 1. The final score is their weighted mean. Move the sliders to change the weights; the list re-ranks for <span className="text-habitat">{habitat.name}</span>.
+        <h1 className="mt-2 text-3xl sm:text-4xl">How insights are ranked</h1>
+        <p className="mt-1 max-w-3xl text-sm text-ink-muted">
+          Every finding and in-scope investigation gets five transparent component scores between 0 and 1. The final score is their weighted mean. Move the sliders to change the weights; the list re-ranks for <span className="text-clay-strong">{habitat.name}</span>.
         </p>
       </div>
       <EvidenceTierGuide compact />
@@ -51,31 +51,31 @@ export function RankingView({ byHabitat }: { byHabitat: Record<string, InsightWi
             <div key={key}>
               <label className="flex items-center justify-between text-sm" htmlFor={`weight-${key}`}>
                 {weightLabels[key]}
-                <span className="num text-xs text-muted">
+                <span className="num text-xs text-ink-muted">
                   {weights[key].toFixed(2)} ({total ? Math.round((weights[key] / total) * 100) : 0}%)
                 </span>
               </label>
               <input id={`weight-${key}`} type="range" min="0" max="1" step="0.05" value={weights[key]} onChange={(event) => setWeights((previous) => ({ ...previous, [key]: Number(event.target.value) }))} className="w-full" />
-              <p className="text-[11px] leading-snug text-muted">{weightHelp[key]}</p>
+              <p className="text-[11px] leading-snug text-ink-muted">{weightHelp[key]}</p>
             </div>
           ))}
           <div className="flex flex-wrap gap-2">
-            <button type="button" onClick={() => setWeights(defaultWeights)} className="rounded-md border border-line px-3 py-1.5 text-xs">
+            <button type="button" onClick={() => setWeights(defaultWeights)} className="rounded-md border border-sand-strong px-3 py-1.5 text-xs">
               Reset weights
             </button>
-            <button type="button" onClick={download} className="rounded-md bg-ember px-3 py-1.5 text-xs font-semibold text-black">
+            <button type="button" onClick={download} className="btn btn-primary">
               Export CSV
             </button>
           </div>
         </aside>
         <section aria-labelledby="ranked-title">
           <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-            <h2 id="ranked-title" className="num text-sm text-muted">
+            <h2 id="ranked-title" className="num text-sm text-ink-muted">
               {ranked.length} ranked items
             </h2>
-            <div className="flex rounded-md border border-line text-xs" role="group" aria-label="Item type">
+            <div className="flex rounded-md border border-sand-strong text-xs" role="group" aria-label="Item type">
               {(["all", "finding", "investigation"] as const).map((value) => (
-                <button key={value} type="button" aria-pressed={kind === value} onClick={() => setKind(value)} className={`px-2.5 py-1 capitalize ${kind === value ? "bg-panel-2 text-ink" : "text-muted"}`}>
+                <button key={value} type="button" aria-pressed={kind === value} onClick={() => setKind(value)} className={`px-2.5 py-1 capitalize ${kind === value ? "bg-sand text-ink" : "text-ink-muted"}`}>
                   {value === "all" ? "All" : `${value}s`}
                 </button>
               ))}

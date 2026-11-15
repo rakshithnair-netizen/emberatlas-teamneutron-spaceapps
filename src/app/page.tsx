@@ -51,36 +51,38 @@ export default function HomePage() {
   const tierASolids = burnCards.filter((card) => tierACardIds.has(card.card_id) && card.fuel_class === "solid").length;
 
   return (
-    <div className="space-y-12">
-      <section className="relative overflow-hidden rounded-3xl border border-line bg-panel/60 px-5 py-8 sm:px-10 sm:py-12">
-        <div className="grid-lines pointer-events-none absolute inset-0 opacity-60" aria-hidden />
-        <div className="relative grid items-center gap-8 lg:grid-cols-[1fr_auto]">
+    <div className="space-y-14 sm:space-y-24">
+      <section className="relative pt-2 sm:pt-6">
+        <div className="relative grid items-center gap-10 lg:grid-cols-[1fr_auto]">
           <div>
-            <p className="eyebrow text-ember">NASA Space Apps 2026 · Flame in Freefall challenge</p>
-            <h1 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight tracking-tight sm:text-5xl">
+            <p className="eyebrow text-clay-strong">NASA Space Apps 2026 · Flame in Freefall challenge</p>
+            <h1 className="mt-4 max-w-3xl text-4xl font-medium sm:text-5xl">
               Will a fire test from near Earth conditions tell us what happens inside a Moon habitat?
             </h1>
             {/* The challenge's central question, kept verbatim under the plain-language headline so judges
                 can match the app to the brief. Atmosphere numbers come from the HAB-03 dataset row. */}
-            <p className="mt-4 max-w-2xl border-l-2 border-habitat pl-3 text-base leading-relaxed">
-              <span className="eyebrow block text-habitat">The challenge question</span>
-              How relevant is the existing research to a habitat with <span className="text-habitat">higher oxygen</span> and <span className="text-habitat">lower pressure</span>? NASA&apos;s exploration atmosphere is <span className="num">{exploration.pressure_psia} psia ({exploration.pressure_kpa} kPa) at {exploration.o2_pct}% O₂</span>.
+            <p className="mt-8 max-w-2xl border-l-2 border-clay pl-4 text-base">
+              <span className="eyebrow block text-clay-strong">The challenge question</span>
+              How relevant is the existing research to a habitat with <span className="text-clay-strong">higher oxygen</span> and <span className="text-clay-strong">lower pressure</span>? NASA&apos;s exploration atmosphere is <span className="num">{exploration.pressure_psia} psia ({exploration.pressure_kpa} kPa) at {exploration.o2_pct}% O₂</span>.
             </p>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
-              NASA has decades of spacecraft fire research. But most tests used air-like oxygen levels and near-Earth pressure. A future habitat may use <span className="text-habitat">more oxygen and lower pressure</span>, changing how well those tests apply. Ember Atlas lets you compare a habitat with the conditions NASA tested, see the strength of the evidence, and find what is still unknown.
+            <p className="reading mt-6 text-base text-ink-muted">
+              NASA has decades of spacecraft fire research. But most tests used air-like oxygen levels and near-Earth pressure. A future habitat may use <span className="text-clay-strong">more oxygen and lower pressure</span>, changing how well those tests apply. Ember Atlas lets you compare a habitat with the conditions NASA tested, see the strength of the evidence, and find what is still unknown.
             </p>
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
+            <p className="reading mt-4 text-sm text-ink-muted">
               This is a research screening tool. It helps explore evidence and gaps; it does not certify a habitat or predict fire safety.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-3">
               <HomeMatcherLink />
-              <Link href="/method" className="rounded-lg border border-line-strong px-4 py-2.5 text-sm hover:border-habitat/60">
+              <Link href="/method" className="btn btn-secondary">
                 How we grade evidence
               </Link>
             </div>
           </div>
-          <div className="mx-auto hidden sm:block">
-            <SphericalFlame size={260} label={false} />
+          <div className="relative mx-auto hidden sm:block">
+            <div className="hero-wash pointer-events-none absolute -inset-20" aria-hidden />
+            <div className="relative">
+              <SphericalFlame size={260} label={false} />
+            </div>
           </div>
         </div>
       </section>
@@ -90,34 +92,34 @@ export default function HomePage() {
       <section aria-labelledby="journey-title">
         <div className="mb-3">
           <p className="eyebrow">A clear path through the evidence</p>
-          <h2 id="journey-title" className="mt-1 text-xl font-semibold">Start with a habitat. Follow the evidence.</h2>
+          <h2 id="journey-title" className="mt-2 text-3xl">Start with a habitat. Follow the evidence.</h2>
         </div>
-        <div className="grid gap-3 md:grid-cols-3">
-          <article className="panel p-4">
-            <p className="num text-xs text-habitat">01 · Choose a target</p>
+        <div className="grid gap-6 md:grid-cols-3">
+          <article className="panel p-5 sm:p-6">
+            <p className="num text-xs text-clay-strong">01 · Choose a target</p>
             <h3 className="mt-2 font-semibold">Set the habitat conditions</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">Choose an atmosphere with the habitat selector. The selected conditions set the question for the map, matcher, and ranked findings.</p>
+            <p className="mt-1 text-sm leading-relaxed text-ink-muted">Choose an atmosphere with the habitat selector. The selected conditions set the question for the map, matcher, and ranked findings.</p>
           </article>
           <article className="panel p-4">
-            <p className="num text-xs text-habitat">02 · Inspect what was tested</p>
+            <p className="num text-xs text-clay-strong">02 · Inspect what was tested</p>
             <h3 className="mt-2 font-semibold">Find the nearest evidence</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">The matcher compares oxygen, pressure, fuel, and gravity, then links you to the underlying NASA test cards and findings.</p>
+            <p className="mt-1 text-sm leading-relaxed text-ink-muted">The matcher compares oxygen, pressure, fuel, and gravity, then links you to the underlying NASA test cards and findings.</p>
           </article>
           <article className="panel p-4">
-            <p className="num text-xs text-habitat">03 · Read the limits</p>
+            <p className="num text-xs text-clay-strong">03 · Read the limits</p>
             <h3 className="mt-2 font-semibold">See what is known—and missing</h3>
-            <p className="mt-1 text-sm leading-relaxed text-muted">Each result describes its evidence tier, caveats, and gaps. Follow the source IDs to check the original NASA material.</p>
+            <p className="mt-1 text-sm leading-relaxed text-ink-muted">Each result describes its evidence tier, caveats, and gaps. Follow the source IDs to check the original NASA material.</p>
           </article>
         </div>
       </section>
 
       <HabitatEvidenceSummary />
 
-      <section className="panel p-5" aria-labelledby="tiers-title">
+      <section className="panel p-5 sm:p-6" aria-labelledby="tiers-title">
         <div className="max-w-3xl">
           <p className="eyebrow">Read the evidence grades</p>
-          <h2 id="tiers-title" className="mt-1 text-xl font-semibold">What each label means</h2>
-          <p className="mt-2 text-sm leading-relaxed text-muted">These labels describe how closely the available tests support a question. They are not safety ratings.</p>
+          <h2 id="tiers-title" className="mt-2 text-3xl">What each label means</h2>
+          <p className="mt-2 text-sm leading-relaxed text-ink-muted">These labels describe how closely the available tests support a question. They are not safety ratings.</p>
         </div>
         <div className="mt-4"><EvidenceTierGuide /></div>
       </section>
@@ -126,54 +128,54 @@ export default function HomePage() {
         <h2 id="stats-title" className="sr-only">
           Headline numbers
         </h2>
-        <div className="grid gap-3 md:grid-cols-3">
-          <div className="panel p-5">
+        <div className="stat-row grid border-y border-sand-strong md:grid-cols-3">
+          <div className="py-6 md:px-6 md:first:pl-0">
             <p className="eyebrow">Cards in the exploration range</p>
-            <p className="num mt-2 text-4xl font-medium text-tier-measured">{headline.tierA.pct}%</p>
-            <p className="mt-1 text-sm text-muted">
+            <p className="mt-3 font-display text-4xl font-medium text-ink">{headline.tierA.pct}<span className="num text-2xl text-ink-subtle">%</span></p>
+            <p className="mt-1 text-sm text-ink-muted">
               {headline.tierA.count} of {burnCards.length} burn cards are tier A (near {exploration.pressure_psia} psia / {exploration.o2_pct}% O₂). Most are gas or liquid tests; {tierASolids} are solid-material tests (Saffire-V/VI).
             </p>
             <div className="mt-3">
               <SourceChips ids={["PSI-159", "PSI-69", "PSI-10", "S01", "S02"]} />
             </div>
-            <p className="mt-3 border-t border-line pt-3 text-sm leading-relaxed"><strong>What this means:</strong> this dataset’s exploration-range band is a small share of all records; most evidence comes from other conditions. <Link href="/explorer" className="text-habitat underline">See the test-condition map</Link>.</p>
+            <p className="mt-3 border-t border-sand-strong pt-3 text-sm leading-relaxed"><strong>What this means:</strong> this dataset’s exploration-range band is a small share of all records; most evidence comes from other conditions. <Link href="/explorer" className="text-clay-strong underline">See the test-condition map</Link>.</p>
           </div>
-          <div className="panel p-5">
+          <div className="py-6 md:px-6">
             <p className="eyebrow">Highest O₂ for a solid in microgravity</p>
-            <p className="num mt-2 text-4xl font-medium text-solid">{headline.highestSolidMicrogravity.o2Pct}%</p>
-            <p className="mt-1 text-sm text-muted">
+            <p className="mt-3 font-display text-4xl font-medium text-ink">{headline.highestSolidMicrogravity.o2Pct}<span className="num text-2xl text-ink-subtle">%</span></p>
+            <p className="mt-1 text-sm text-ink-muted">
               {headline.highestSolidMicrogravity.acronym} {headline.highestSolidMicrogravity.fuelName} at {headline.highestSolidMicrogravity.pressureKpa} kPa (card{" "}
               <span className="num">{headline.highestSolidMicrogravity.cardId}</span>). That is {o2Difference} oxygen percentage points below the exploration target in the habitat data, and the table is flagged for re-verification against the PDF.
             </p>
             <div className="mt-3">
               <SourceChips ids={["S01"]} />
             </div>
-            <p className="mt-3 border-t border-line pt-3 text-sm leading-relaxed"><strong>What this means:</strong> the highest located solid-fuel oxygen value in microgravity remains below the selected exploration target; it is not a test at the target. The record is flagged for verification. <Link href={`/library?card=${encodeURIComponent(headline.highestSolidMicrogravity.cardId)}`} className="text-habitat underline">Open this card</Link>.</p>
+            <p className="mt-3 border-t border-sand-strong pt-3 text-sm leading-relaxed"><strong>What this means:</strong> the highest located solid-fuel oxygen value in microgravity remains below the selected exploration target; it is not a test at the target. The record is flagged for verification. <Link href={`/library?card=${encodeURIComponent(headline.highestSolidMicrogravity.cardId)}`} className="text-clay-strong underline">Open this card</Link>.</p>
           </div>
-          <div className="panel p-5">
+          <div className="py-6 md:px-6 md:last:pr-0">
             <p className="eyebrow">Partial-gravity burn cards</p>
-            <p className="num mt-2 text-4xl font-medium text-tier-analog">{headline.partialGravity.nonMicrogravityCount}</p>
-            <p className="mt-1 text-sm text-muted">
+            <p className="mt-3 font-display text-4xl font-medium text-ink">{headline.partialGravity.nonMicrogravityCount}</p>
+            <p className="mt-1 text-sm text-ink-muted">
               All {headline.partialGravity.acronyms.join(", ")}: {headline.partialGravity.lunarCount} lunar-gravity cards and {earthControlCount} Earth-gravity controls, in normal-pressure air. No card is labelled Mars gravity, and {partialAtTargetO2 === 0 ? `none of the lunar-gravity cards is at the exploration target of ${exploration.o2_pct}% O₂` : `${partialAtTargetO2} lunar-gravity card${partialAtTargetO2 === 1 ? "" : "s"} report the exploration target of ${exploration.o2_pct}% O₂`}.
             </p>
             <div className="mt-3">
               <SourceChips ids={["S07", "S33"]} />
             </div>
-            <p className="mt-3 border-t border-line pt-3 text-sm leading-relaxed"><strong>What this means:</strong> these non-microgravity tests cover only the listed conditions; they cannot stand in for untested lunar or Mars habitat atmospheres. <Link href="/explorer" className="text-habitat underline">Inspect gravity coverage</Link>.</p>
+            <p className="mt-3 border-t border-sand-strong pt-3 text-sm leading-relaxed"><strong>What this means:</strong> these non-microgravity tests cover only the listed conditions; they cannot stand in for untested lunar or Mars habitat atmospheres. <Link href="/explorer" className="text-clay-strong underline">Inspect gravity coverage</Link>.</p>
           </div>
         </div>
       </section>
 
-      <section className="grid gap-6 lg:grid-cols-[1fr_22rem]" aria-labelledby="insights-title">
+      <section className="grid gap-10 lg:grid-cols-[1fr_22rem]" aria-labelledby="insights-title">
         <div>
           <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
             <div>
               <p className="eyebrow">Ranked for your habitat</p>
-              <h2 id="insights-title" className="mt-1 text-xl font-semibold">
+              <h2 id="insights-title" className="mt-2 text-3xl">
                 Top insights
               </h2>
             </div>
-            <Link href="/ranking" className="text-xs text-habitat hover:underline" title="Home shows at most 2 insights per area; the full ranking is on the method page">
+            <Link href="/ranking" className="text-xs text-clay-strong hover:underline" title="Home shows at most 2 insights per area; the full ranking is on the method page">
               Ranking method and weights →
             </Link>
           </div>
@@ -181,49 +183,49 @@ export default function HomePage() {
         </div>
         <aside className="space-y-4">
           <HomeHabitatCard />
-          <section className="panel p-4" aria-labelledby="designer-title">
+          <section className="panel p-5 sm:p-6" aria-labelledby="designer-title">
             <h2 id="designer-title" className="font-semibold">
               What these findings may mean
             </h2>
-            <p className="mt-1 text-xs leading-relaxed text-muted">Team interpretation of cited NASA findings. Open each source to review the reported evidence and its limits.</p>
+            <p className="mt-1 text-xs leading-relaxed text-ink-muted">Team interpretation of cited NASA findings. Open each source to review the reported evidence and its limits.</p>
             <ul className="mt-3 space-y-3 text-sm">
               {designerNotes.map((note) => (
                 <li key={note.ids.join()} className="leading-relaxed">
                   {note.text}{" "}
-                  <span className="num text-[11px] text-ember">{note.ids.join(", ")}</span>
+                  <span className="num text-[11px] text-clay-strong">{note.ids.join(", ")}</span>
                   <div className="mt-1">
                     <SourceChips ids={note.sources} label="" />
                   </div>
                 </li>
               ))}
             </ul>
-            <p className="mt-3 text-[11px] text-muted">For research screening only. Not a certification source.</p>
+            <p className="mt-3 text-[11px] text-ink-muted">For research screening only. Not a certification source.</p>
           </section>
         </aside>
       </section>
 
       <section aria-labelledby="primary-tiles-title">
-        <h2 id="primary-tiles-title" className="text-xl font-semibold">Continue with the evidence</h2>
-        <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <h2 id="primary-tiles-title" className="text-3xl">Continue with the evidence</h2>
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {primaryTiles.map((tile) => (
-            <Link key={tile.href} href={tile.href} className="panel group p-4 transition-colors hover:border-ember/50">
-              <p className="font-medium group-hover:text-ember">{tile.title} →</p>
-              <p className="mt-1 text-sm text-muted">{tile.text}</p>
+            <Link key={tile.href} href={tile.href} className="panel card-lift group p-5 sm:p-6 hover:border-stone">
+              <p className="font-display font-medium group-hover:text-clay-strong">{tile.title} →</p>
+              <p className="mt-1 text-sm text-ink-muted">{tile.text}</p>
             </Link>
           ))}
         </div>
-        <details className="mt-5 rounded-xl border border-line bg-panel/40 p-4">
-          <summary className="flex min-h-11 cursor-pointer items-center font-semibold text-habitat">More tools for learning and exploration</summary>
+        <details className="mt-6 rounded-xl border border-sand-strong bg-paper-raised p-5 sm:p-6">
+          <summary className="flex min-h-11 cursor-pointer items-center font-semibold text-clay-strong">More tools for learning and exploration</summary>
           <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {secondaryTiles.map((tile) => (
-              <Link key={tile.href} href={tile.href} className="panel group p-4 transition-colors hover:border-ember/50">
-                <p className="font-medium group-hover:text-ember">{tile.title} →</p>
-                <p className="mt-1 text-sm text-muted">{tile.text}</p>
+              <Link key={tile.href} href={tile.href} className="panel card-lift group p-5 sm:p-6 hover:border-stone">
+                <p className="font-display font-medium group-hover:text-clay-strong">{tile.title} →</p>
+                <p className="mt-1 text-sm text-ink-muted">{tile.text}</p>
               </Link>
             ))}
           </div>
         </details>
-        <p className="num mt-4 text-xs text-faint">
+        <p className="num mt-4 text-xs text-ink-subtle">
           {burnCards.length} burn cards · {investigations.length} investigations ({inScope} in scope) · {findings.length} findings · {sources.length} sources · {discrepancies.length} known discrepancies
         </p>
       </section>

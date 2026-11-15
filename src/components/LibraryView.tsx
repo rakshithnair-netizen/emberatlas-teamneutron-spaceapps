@@ -76,7 +76,7 @@ function Select({ label, value, onChange, options }: { label: string; value: str
   return (
     <label className="block">
       <span className="eyebrow">{label}</span>
-      <select value={value} onChange={(event) => onChange(event.target.value)} className="mt-1 w-full rounded-md border border-line bg-panel-2 px-2 py-1.5 text-xs">
+      <select value={value} onChange={(event) => onChange(event.target.value)} className="mt-1 w-full rounded-md border border-sand-strong bg-sand px-2 py-1.5 text-xs">
         <option value="">All</option>
         {options.map((option) => (
           <option key={option.value} value={option.value}>
@@ -95,8 +95,8 @@ function RangeInputs({ label, min, max, onMin, onMax, unit }: { label: string; m
         {label} ({unit})
       </legend>
       <div className="mt-1 flex gap-1.5">
-        <input type="number" inputMode="decimal" aria-label={`${label} minimum`} placeholder="min" value={min} onChange={(event) => onMin(event.target.value)} className="num w-full rounded-md border border-line bg-panel-2 px-2 py-1.5 text-xs" />
-        <input type="number" inputMode="decimal" aria-label={`${label} maximum`} placeholder="max" value={max} onChange={(event) => onMax(event.target.value)} className="num w-full rounded-md border border-line bg-panel-2 px-2 py-1.5 text-xs" />
+        <input type="number" inputMode="decimal" aria-label={`${label} minimum`} placeholder="min" value={min} onChange={(event) => onMin(event.target.value)} className="num w-full rounded-md border border-sand-strong bg-sand px-2 py-1.5 text-xs" />
+        <input type="number" inputMode="decimal" aria-label={`${label} maximum`} placeholder="max" value={max} onChange={(event) => onMax(event.target.value)} className="num w-full rounded-md border border-sand-strong bg-sand px-2 py-1.5 text-xs" />
       </div>
     </fieldset>
   );
@@ -186,61 +186,61 @@ export function LibraryView({ investigations }: { investigations: InvestigationS
   const activeCount = Object.entries(filters).filter(([key, value]) => key !== "q" && value !== "" && value !== false).length;
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-10">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <p className="eyebrow">Flame Library</p>
-          <h1 className="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">Every burn, every investigation</h1>
-          <p className="mt-1 max-w-2xl text-sm text-muted">
+          <h1 className="mt-2 text-3xl sm:text-4xl">Every burn, every investigation</h1>
+          <p className="mt-1 max-w-2xl text-sm text-ink-muted">
             Search 1,732 burn cards and 30 investigations. Values marked ≈ with a dotted underline are platform-nominal or approximate; ⚑ marks quality flags.
           </p>
         </div>
-        <div className="flex rounded-lg border border-line p-0.5 text-sm" role="tablist" aria-label="Library view">
+        <div className="flex rounded-full border border-sand-strong p-1 text-sm" role="tablist" aria-label="Library view">
           {(["cards", "investigations"] as const).map((value) => (
-            <button key={value} role="tab" aria-selected={tab === value} type="button" onClick={() => setTab(value)} className={`rounded-md px-3 py-1.5 capitalize ${tab === value ? "bg-panel-2 text-ink" : "text-muted"}`}>
+            <button key={value} role="tab" aria-selected={tab === value} type="button" onClick={() => setTab(value)} className={`rounded-full px-4 py-1.5 font-display capitalize ${tab === value ? "bg-ink text-paper" : "text-ink-muted"}`}>
               {value === "cards" ? "Burn cards" : "Investigations"}
             </button>
           ))}
         </div>
       </div>
 
-      <div className="panel p-4">
+      <div className="panel p-5 sm:p-6">
         <p className="text-sm leading-relaxed"><strong>About evidence labels:</strong> the A–F badges on records are dataset relevance bands around the exploration atmosphere. They are distinct from this app’s Measured / Interpolated / Extrapolated / Analog / No data grades.</p>
         <div className="mt-3"><EvidenceTierGuide compact /></div>
       </div>
 
       {tab === "investigations" ? (
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {investigations.map((investigation) => (
-            <Link key={investigation.investigation_id} href={`/library/${encodeURIComponent(investigation.investigation_id)}`} className="panel group p-4 hover:border-ember/50">
+            <Link key={investigation.investigation_id} href={`/library/${encodeURIComponent(investigation.investigation_id)}`} className="panel card-lift group p-5 sm:p-6 hover:border-stone">
               <div className="flex items-start justify-between gap-2">
-                <p className="font-semibold group-hover:text-ember">{investigation.acronym}</p>
-                <span className="num text-[11px] text-faint">{investigation.investigation_id}</span>
+                <p className="font-semibold group-hover:text-clay-strong">{investigation.acronym}</p>
+                <span className="num text-[11px] text-ink-subtle">{investigation.investigation_id}</span>
               </div>
-              <p className="mt-1 text-sm text-muted">{investigation.title}</p>
+              <p className="mt-1 text-sm text-ink-muted">{investigation.title}</p>
               <div className="mt-3 flex flex-wrap gap-1.5 text-[11px]">
-                <span className="num rounded border border-line px-1.5 py-0.5">{investigation.cardCount} cards</span>
-                {investigation.bestTier ? <span className="num rounded border border-line px-1.5 py-0.5">best dataset band {investigation.bestTier}</span> : null}
-                {!investigation.in_scope ? <span className="rounded border border-line px-1.5 py-0.5 text-faint">out of scope</span> : null}
+                <span className="num rounded-full border border-sand-strong px-2 py-0.5">{investigation.cardCount} cards</span>
+                {investigation.bestTier ? <span className="num rounded-full border border-sand-strong px-2 py-0.5">best dataset band {investigation.bestTier}</span> : null}
+                {!investigation.in_scope ? <span className="rounded-full border border-sand-strong px-2 py-0.5 text-ink-subtle">out of scope</span> : null}
                 {(investigation.fire_safety_roles ?? "")
                   .split(";")
                   .filter(Boolean)
                   .map((role) => (
-                    <span key={role} className="rounded border border-ember/30 px-1.5 py-0.5 text-ember-soft">
+                    <span key={role} className="rounded-full border border-clay-strong bg-clay-soft px-2 py-0.5 text-clay-strong">
                       {role}
                     </span>
                   ))}
-                {investigation.status ? <span className="rounded border border-habitat/30 px-1.5 py-0.5 text-habitat">{investigation.status}</span> : null}
+                {investigation.status ? <span className="rounded-full border border-clay-strong bg-clay-soft px-2 py-0.5 text-clay-strong">{investigation.status}</span> : null}
               </div>
             </Link>
           ))}
         </div>
       ) : (
-        <div className="grid gap-4 lg:grid-cols-[15rem_1fr]">
-          <aside className="panel h-fit space-y-3 p-4 lg:sticky lg:top-20" aria-label="Filters">
+        <div className="grid gap-6 lg:grid-cols-[280px_1fr]">
+          <aside className="h-fit space-y-4 rounded-xl bg-sand p-5 lg:sticky lg:top-24" aria-label="Filters">
             <label className="block">
               <span className="eyebrow">Search</span>
-              <input type="search" value={filters.q} onChange={(event) => set("q", event.target.value)} placeholder="PMMA, FLEX, heptane…" className="mt-1 w-full rounded-md border border-line bg-panel-2 px-2.5 py-1.5 text-sm" />
+              <input type="search" value={filters.q} onChange={(event) => set("q", event.target.value)} placeholder="PMMA, FLEX, heptane…" className="mt-1 w-full rounded-md border border-sand-strong bg-sand px-2.5 py-1.5 text-sm" />
             </label>
             {options ? (
               <>
@@ -259,7 +259,7 @@ export function LibraryView({ investigations }: { investigations: InvestigationS
                   Has quality flags
                 </label>
                 {activeCount || filters.q ? (
-                  <button type="button" onClick={() => setFilters(emptyFilters)} className="w-full rounded-md border border-line px-2 py-1.5 text-xs text-muted hover:text-ink">
+                  <button type="button" onClick={() => setFilters(emptyFilters)} className="btn btn-secondary w-full text-sm">
                     Clear {activeCount + (filters.q ? 1 : 0)} filter(s)
                   </button>
                 ) : null}
@@ -267,18 +267,18 @@ export function LibraryView({ investigations }: { investigations: InvestigationS
             ) : null}
           </aside>
           <section aria-labelledby="results-title">
-            <h2 id="results-title" className="num mb-2 text-sm text-muted" aria-live="polite">
+            <h2 id="results-title" className="num mb-2 text-sm text-ink-muted" aria-live="polite">
               {cards ? `${filtered.length} of ${cards.length} cards` : error ?? "Loading burn cards…"}
             </h2>
-            <ul className="grid gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
+            <ul className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
               {filtered.slice(0, shown).map((card) => (
                 <li key={card.card_id}>
-                  <button type="button" onClick={() => setSelected(card)} className="panel block h-full w-full p-3 text-left hover:border-ember/50">
+                  <button type="button" onClick={() => setSelected(card)} className="panel card-lift block h-full w-full p-5 text-left hover:border-stone">
                     <div className="flex items-center justify-between gap-2">
-                      <span className="num text-xs text-habitat">{card.card_id}</span>
+                      <span className="num text-xs text-clay-strong">{card.card_id}</span>
                       <span className="flex items-center gap-2">
                         <FlagIcon flags={card.quality_flags} />
-                        <span className="num rounded border border-line px-1 text-[10px]" aria-label={`Dataset relevance band ${datasetTierLabels[card.habitat_relevance_tier]?.short}: ${datasetTierLabels[card.habitat_relevance_tier]?.label}`} title={datasetTierLabels[card.habitat_relevance_tier]?.label}>
+                        <span className="num rounded border border-sand-strong px-1 text-[10px]" aria-label={`Dataset relevance band ${datasetTierLabels[card.habitat_relevance_tier]?.short}: ${datasetTierLabels[card.habitat_relevance_tier]?.label}`} title={datasetTierLabels[card.habitat_relevance_tier]?.label}>
                           {datasetTierLabels[card.habitat_relevance_tier]?.short}
                         </span>
                       </span>
@@ -287,7 +287,7 @@ export function LibraryView({ investigations }: { investigations: InvestigationS
                       <span className="inline-block h-2 w-2 shrink-0 rounded-full" style={{ background: fuelColors[card.fuel_class] }} aria-hidden />
                       {card.fuel_name}
                     </p>
-                    <p className="truncate text-[11px] text-muted">
+                    <p className="truncate text-[11px] text-ink-muted">
                       {card.acronym} · {card.flame_type}
                     </p>
                     <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
@@ -295,17 +295,17 @@ export function LibraryView({ investigations }: { investigations: InvestigationS
                       <Value value={card.pressure_kpa} unit="kPa" basis={card.pressure_basis} />
                       {card.flow_cm_s !== null ? <Value value={card.flow_cm_s} unit="cm/s" /> : null}
                     </div>
-                    <p className="mt-1.5 text-[11px] text-muted">
+                    <p className="mt-1.5 text-[11px] text-ink-muted">
                       {outcomeLabels[card.outcome] ?? card.outcome} · {normalizeGravity(card.gravity_regime)}
                       {basisKind(card.o2_basis) === "nominal" ? " · nominal atmosphere" : ""}
                     </p>
-                    <p className="mt-1 text-[11px] leading-relaxed text-muted">Dataset band {datasetTierLabels[card.habitat_relevance_tier]?.short}: {datasetTierLabels[card.habitat_relevance_tier]?.label}</p>
+                    <p className="mt-1 text-[11px] leading-relaxed text-ink-muted">Dataset band {datasetTierLabels[card.habitat_relevance_tier]?.short}: {datasetTierLabels[card.habitat_relevance_tier]?.label}</p>
                   </button>
                 </li>
               ))}
             </ul>
             {filtered.length > shown ? (
-              <button type="button" onClick={() => setShown((value) => value + PAGE * 2)} className="mt-4 w-full rounded-md border border-line py-2 text-sm text-muted hover:text-ink">
+              <button type="button" onClick={() => setShown((value) => value + PAGE * 2)} className="mt-4 w-full rounded-md border border-sand-strong py-2 text-sm text-ink-muted hover:text-ink">
                 Show more ({filtered.length - shown} remaining)
               </button>
             ) : null}
