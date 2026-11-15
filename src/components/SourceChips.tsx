@@ -18,7 +18,7 @@ export function SourceChips({ ids, label = "Sources" }: { ids: string[]; label?:
         const source = sourceById.get(id);
         if (!source) {
           return (
-            <a key={id} href={`/library/${encodeURIComponent(id)}`} className="num rounded border border-line px-1.5 py-0.5 text-[11px] text-muted hover:text-ink" title="Investigation record in this dataset (its NASA sources are listed on the investigation page)">
+            <a key={id} href={`/library/${encodeURIComponent(id)}`} className="num inline-flex min-h-11 items-center rounded border border-line px-2 text-[11px] text-muted hover:text-ink" title="Investigation record in this dataset (its NASA sources are listed on the investigation page)">
               {id}
             </a>
           );
@@ -30,7 +30,7 @@ export function SourceChips({ ids, label = "Sources" }: { ids: string[]; label?:
             target="_blank"
             rel="noopener noreferrer"
             title={`${source.title} (${source.nasa_id}), retrieved ${source.retrieved}`}
-            className="num inline-flex items-center gap-1 rounded border border-line-strong bg-panel-2 px-1.5 py-0.5 text-[11px] text-habitat hover:border-habitat/60 hover:bg-habitat/10"
+            className="num inline-flex min-h-11 items-center gap-1 rounded border border-line-strong bg-panel-2 px-2 text-[11px] text-habitat hover:border-habitat/60 hover:bg-habitat/10"
           >
             {id}
             <svg width="9" height="9" viewBox="0 0 12 12" aria-hidden>

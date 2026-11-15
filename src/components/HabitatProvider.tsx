@@ -62,3 +62,7 @@ export function shortHabitatName(habitat: HabitatAtmosphere): string {
   };
   return names[habitat.habitat_id] ?? habitat.name;
 }
+
+export function habitatQueryGravity(habitatId: string): "microgravity" | "lunar" {
+  return habitatId === "HAB-01" || habitatId === "HAB-02" ? "microgravity" : "lunar";
+}

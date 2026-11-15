@@ -8,7 +8,7 @@
   --color-line-strong: #2d3d4f;
   --color-ink: #e7edf3;
   --color-muted: #9aa8b7;
-  --color-faint: #6b7a8a;
+  --color-faint: #8998a8;
   --color-ember: #ff7a3d;
   --color-ember-soft: #ffb07f;
   --color-habitat: #22d3ee;
@@ -47,9 +47,22 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-habitat);
-  outline-offset: 2px;
+  outline: 3px solid var(--color-habitat);
+  outline-offset: 3px;
   border-radius: 4px;
+}
+
+button,
+summary,
+select,
+input:not([type="radio"]):not([type="checkbox"]):not([type="range"]) {
+  min-height: 44px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  min-width: 20px;
+  min-height: 20px;
 }
 
 .num {

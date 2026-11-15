@@ -40,14 +40,34 @@ export function cardSearchParams(card: BurnCard): string {
 
 export function CardDrawer({ card, onClose }: { card: BurnCard | null; onClose: () => void }) {
   const closeButton = useRef<HTMLButtonElement>(null);
+  const dialog = useRef<HTMLDivElement>(null);
+  const onCloseRef = useRef(onClose);
+  useEffect(() => { onCloseRef.current = onClose; }, [onClose]);
 
   useEffect(() => {
     if (!card) return;
+    const previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     closeButton.current?.focus();
-    const handler = (event: KeyboardEvent) => event.key === "Escape" && onClose();
+    const handler = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onCloseRef.current();
+      }
+      if (event.key === "Tab") {
+        const focusable = dialog.current?.querySelectorAll<HTMLElement>('button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])');
+        if (!focusable?.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      }
+    };
     window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [card, onClose]);
+    return () => {
+      window.removeEventListener("keydown", handler);
+      previouslyFocused?.focus();
+    };
+  }, [card]);
 
   if (!card) return null;
   const cardDiscrepancies = discrepanciesForCard(card, discrepancies);
@@ -56,7 +76,7 @@ export function CardDrawer({ card, onClose }: { card: BurnCard | null; onClose: 
   const distance = card.o2_pct !== null && card.pressure_kpa !== null ? habitatDistance(card.o2_pct, card.pressure_kpa) : null;
 
   return (
-    <div className="fixed inset-0 z-50 flex justify-end" role="dialog" aria-modal="true" aria-labelledby="card-drawer-title">
+    <div ref={dialog} className="fixed inset-0 z-50 flex justify-end" role="dialog" aria-modal="true" aria-labelledby="card-drawer-title">
       <button type="button" className="absolute inset-0 bg-black/60" aria-label="Close card details" onClick={onClose} tabIndex={-1} />
       <aside className="relative flex h-full w-full max-w-xl flex-col overflow-y-auto border-l border-line bg-panel shadow-2xl">
         <div className="sticky top-0 z-10 flex items-start justify-between gap-3 border-b border-line bg-panel/95 px-5 py-4 backdrop-blur">

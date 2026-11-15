@@ -44,11 +44,11 @@ export interface EvidenceResult<T extends EvidenceCardInput = EvidenceCardInput>
 }
 
 export const evidenceTierMeta: Record<EvidenceTier, { label: string; description: string }> = {
-  measured: { label: "Measured", description: `A burn card exists at or very near this condition (distance ≤ ${MEASURED_DISTANCE}, same gravity regime, stated basis).` },
-  interpolated: { label: "Interpolated", description: "The condition lies inside the coverage of tested cards for this fuel class and gravity regime." },
-  extrapolated: { label: "Extrapolated", description: "The condition lies outside the tested coverage for this fuel class and gravity regime." },
-  analog: { label: "Analog", description: "No same-regime data; related evidence exists in another gravity regime or fuel class." },
-  no_data: { label: "No data", description: "Nothing relevant in the dataset." },
+  measured: { label: "Measured", description: "A burn was recorded at or very near this condition for the same gravity and fuel group." },
+  interpolated: { label: "Interpolated", description: "Tests cover the conditions around this point for this fuel and gravity; this is an estimate between tests." },
+  extrapolated: { label: "Extrapolated", description: "This condition is outside the tested range for this fuel and gravity, so an estimate extends beyond the tests." },
+  analog: { label: "Analog", description: "No matching test exists for this fuel and gravity, but related tests may offer clues." },
+  no_data: { label: "No data", description: "The dataset has no relevant tests for this question." },
 };
 
 function round(value: number, digits = 1): number {

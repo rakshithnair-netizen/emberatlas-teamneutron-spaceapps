@@ -255,17 +255,14 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
           {result && query ? (
             <>
               <section className="panel p-5" aria-live="polite" aria-labelledby="verdict-title" style={{ borderColor: `${tierHex[result.tier]}55` }}>
+                <h2 id="verdict-title" className="text-lg font-semibold">What the evidence can say</h2>
+                <p className="mt-2 text-base leading-relaxed"><strong>Verdict:</strong> {evidenceTierMeta[result.tier].description} {result.gapStatement} This is a research screening result, not a safety certification.</p>
                 <div className="flex flex-wrap items-center gap-3">
-                  <h2 id="verdict-title" className="sr-only">
-                    Evidence verdict
-                  </h2>
                   <EvidenceBadge tier={result.tier} size="lg" detail={result.distance !== null ? `d ${formatNumber(result.distance, 2)}` : undefined} />
                   <span className="num text-xs text-muted">
                     {formatNumber(o2Pct)}% O₂ · {formatNumber(pressureKpa)} kPa · {gravityLabels[query.gravity]} · {query.fuelName || (query.fuelClass === "any" ? "any fuel" : query.fuelClass)}
                   </span>
                 </div>
-                <p className="mt-3 text-[15px] leading-relaxed">{result.gapStatement}</p>
-                <p className="mt-2 text-xs text-muted">{evidenceTierMeta[result.tier].description}</p>
                 <div className="mt-4 rounded-lg border border-line bg-panel-2 p-3">
                   <p className="eyebrow">What would close this gap</p>
                   <p className="mt-1 text-sm">{result.closeGapStatement}</p>
@@ -342,6 +339,9 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
                   onSelectCard={setSelected}
                   height={420}
                 />
+                <p className="px-3 pb-3 text-xs leading-relaxed text-muted">
+                  Map summary: your {o2Pct}% O₂, {pressureKpa} kPa query is marked against the NASA test envelope. The nearest {query.fuelClass === "any" ? "matching-fuel" : `${query.fuelClass}-fuel`} {query.gravity} card is {result.nearestCards[0]?.card.card_id ?? "not available"}; the table above lists the nearest records and sources.
+                </p>
               </section>
 
               <div className="grid gap-4 md:grid-cols-2">

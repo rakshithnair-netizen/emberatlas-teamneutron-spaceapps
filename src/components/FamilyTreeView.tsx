@@ -153,6 +153,13 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
       </div>
 
       <div className="flex flex-wrap items-center gap-2 text-xs" role="group" aria-label="Tree options">
+        <label className="flex min-h-11 items-center gap-2 rounded-md border border-line bg-panel-2 px-2.5">
+          <span>Inspect investigation</span>
+          <select value={selectedId ?? ""} onChange={(event) => setSelectedId(event.target.value || null)} className="max-w-[14rem] bg-panel-2 py-1" aria-label="Select investigation to inspect">
+            <option value="">Choose an investigation</option>
+            {nodeInfo.map((node) => <option key={node.investigation_id} value={node.investigation_id}>{node.acronym} · {node.investigation_id}</option>)}
+          </select>
+        </label>
         <div className="flex rounded-md border border-line" role="group" aria-label="Layout">
           {(["family", "timeline"] as const).map((value) => (
             <button key={value} type="button" aria-pressed={layout === value} onClick={() => setLayout(value)} className={`px-2.5 py-1.5 capitalize ${layout === value ? "bg-panel-2 text-ink" : "text-muted"}`}>
@@ -188,7 +195,9 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
       </div>
 
       <div className="grid gap-4 lg:grid-cols-[1fr_20rem]">
-        <div className="panel relative h-[560px] overflow-hidden" aria-label="Family tree graph">
+        <div className="panel relative h-[420px] overflow-hidden sm:h-[560px]" aria-label="Family tree graph">
+          <p className="sr-only" id="family-graph-help">Interactive investigation graph. Use the investigation selector and the details panel for a keyboard-accessible text view. The graph can be panned and zoomed with pointer or touch.</p>
+          <p className="absolute left-2 top-2 z-10 rounded bg-panel/90 px-2 py-1 text-[11px] text-muted sm:hidden">Pan or pinch to inspect; choose an investigation above for its readable details.</p>
           <ReactFlow
             nodes={flowNodes}
             edges={flowEdges}
@@ -203,6 +212,9 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
             colorMode="dark"
             style={{ background: "transparent" }}
             minZoom={0.2}
+            nodesFocusable
+            edgesFocusable
+            aria-describedby="family-graph-help"
           >
             <Background color="#1f2b38" gap={24} />
             <Controls showInteractive={false} />

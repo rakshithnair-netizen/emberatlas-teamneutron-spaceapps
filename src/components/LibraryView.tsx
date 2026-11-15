@@ -9,6 +9,7 @@ import type { BurnCard } from "@/lib/types";
 import { CardDrawer } from "./CardDrawer";
 import { fuelColors } from "./EnvelopeMap";
 import { useCards } from "./useCards";
+import { EvidenceTierGuide } from "./EvidenceTierGuide";
 import { FlagIcon, Value } from "./Value";
 
 export interface InvestigationSummary {
@@ -203,6 +204,11 @@ export function LibraryView({ investigations }: { investigations: InvestigationS
         </div>
       </div>
 
+      <div className="panel p-4">
+        <p className="text-sm leading-relaxed"><strong>About evidence labels:</strong> the A–F badges on records are dataset relevance bands around the exploration atmosphere. They are distinct from this app’s Measured / Interpolated / Extrapolated / Analog / No data grades.</p>
+        <div className="mt-3"><EvidenceTierGuide compact /></div>
+      </div>
+
       {tab === "investigations" ? (
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {investigations.map((investigation) => (
@@ -214,7 +220,7 @@ export function LibraryView({ investigations }: { investigations: InvestigationS
               <p className="mt-1 text-sm text-muted">{investigation.title}</p>
               <div className="mt-3 flex flex-wrap gap-1.5 text-[11px]">
                 <span className="num rounded border border-line px-1.5 py-0.5">{investigation.cardCount} cards</span>
-                {investigation.bestTier ? <span className="num rounded border border-line px-1.5 py-0.5">best tier {investigation.bestTier}</span> : null}
+                {investigation.bestTier ? <span className="num rounded border border-line px-1.5 py-0.5">best dataset band {investigation.bestTier}</span> : null}
                 {!investigation.in_scope ? <span className="rounded border border-line px-1.5 py-0.5 text-faint">out of scope</span> : null}
                 {(investigation.fire_safety_roles ?? "")
                   .split(";")
@@ -244,7 +250,7 @@ export function LibraryView({ investigations }: { investigations: InvestigationS
                 <Select label="Gravity regime" value={filters.gravity} onChange={(value) => set("gravity", value)} options={["microgravity", "lunar", "earth"].map((value) => ({ value, label: value }))} />
                 <Select label="Platform" value={filters.platform} onChange={(value) => set("platform", value)} options={options.platforms} />
                 <Select label="Outcome" value={filters.outcome} onChange={(value) => set("outcome", value)} options={options.outcomes} />
-                <Select label="Habitat tier" value={filters.tier} onChange={(value) => set("tier", value)} options={Object.entries(datasetTierLabels).map(([value, meta]) => ({ value, label: `${meta.short}: ${meta.label}` }))} />
+                <Select label="Dataset relevance band" value={filters.tier} onChange={(value) => set("tier", value)} options={Object.entries(datasetTierLabels).map(([value, meta]) => ({ value, label: `${meta.short}: ${meta.label}` }))} />
                 <RangeInputs label="O₂" unit="%" min={filters.o2Min} max={filters.o2Max} onMin={(value) => set("o2Min", value)} onMax={(value) => set("o2Max", value)} />
                 <RangeInputs label="Pressure" unit="kPa" min={filters.pMin} max={filters.pMax} onMin={(value) => set("pMin", value)} onMax={(value) => set("pMax", value)} />
                 <RangeInputs label="Flow" unit="cm/s" min={filters.flowMin} max={filters.flowMax} onMin={(value) => set("flowMin", value)} onMax={(value) => set("flowMax", value)} />
@@ -272,7 +278,7 @@ export function LibraryView({ investigations }: { investigations: InvestigationS
                       <span className="num text-xs text-habitat">{card.card_id}</span>
                       <span className="flex items-center gap-2">
                         <FlagIcon flags={card.quality_flags} />
-                        <span className="num rounded border border-line px-1 text-[10px]" title={datasetTierLabels[card.habitat_relevance_tier]?.label}>
+                        <span className="num rounded border border-line px-1 text-[10px]" aria-label={`Dataset relevance band ${datasetTierLabels[card.habitat_relevance_tier]?.short}: ${datasetTierLabels[card.habitat_relevance_tier]?.label}`} title={datasetTierLabels[card.habitat_relevance_tier]?.label}>
                           {datasetTierLabels[card.habitat_relevance_tier]?.short}
                         </span>
                       </span>
@@ -293,6 +299,7 @@ export function LibraryView({ investigations }: { investigations: InvestigationS
                       {outcomeLabels[card.outcome] ?? card.outcome} · {normalizeGravity(card.gravity_regime)}
                       {basisKind(card.o2_basis) === "nominal" ? " · nominal atmosphere" : ""}
                     </p>
+                    <p className="mt-1 text-[11px] leading-relaxed text-muted">Dataset band {datasetTierLabels[card.habitat_relevance_tier]?.short}: {datasetTierLabels[card.habitat_relevance_tier]?.label}</p>
                   </button>
                 </li>
               ))}

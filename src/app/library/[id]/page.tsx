@@ -7,6 +7,7 @@ import { datasetTierLabels, describeFlag, normalizeGravity } from "@/lib/basis";
 import { campaigns, cardsForInvestigation, discrepancies, envelopes, familyEdges, findings, investigationById, investigations, publications, sources } from "@/lib/data";
 import { discrepanciesForInvestigation } from "@/lib/discrepancy";
 import { isCuratedEdge } from "@/lib/family";
+import { EvidenceTierGuide } from "@/components/EvidenceTierGuide";
 
 export function generateStaticParams() {
   return investigations.map((investigation) => ({ id: investigation.investigation_id }));
@@ -33,6 +34,7 @@ function MiniTree({ id }: { id: string }) {
   const center = size / 2;
   const radius = 112;
   return (
+    <div>
     <svg viewBox={`0 0 ${size} ${size}`} className="mx-auto w-full max-w-[320px]" role="img" aria-label={`Family tree neighbours: ${neighbours.map((entry) => `${investigationById(entry.other)?.acronym ?? entry.other} (${entry.type.replace(/_/g, " ")})`).join(", ")}`}>
       {neighbours.map((entry, index) => {
         const angle = (index / neighbours.length) * Math.PI * 2 - Math.PI / 2;
@@ -41,13 +43,13 @@ function MiniTree({ id }: { id: string }) {
         return (
           <g key={entry.other}>
             <line x1={center} y1={center} x2={x} y2={y} stroke={entry.curated ? "#ff7a3d" : "#4b5d70"} strokeWidth={entry.curated ? 1.8 : 1} strokeDasharray={entry.curated ? undefined : entry.type.startsWith("shared") ? "5 4" : "1.5 3"} />
-            <a href={`/library/${encodeURIComponent(entry.other)}`}>
+            <g>
               <circle cx={x} cy={y} r="18" fill="#111a24" stroke={entry.curated ? "#ff7a3d" : "#2d3d4f"} />
               <text x={x} y={y + 3} textAnchor="middle" fontSize="7.5" fill="#e7edf3" fontFamily="var(--font-plex-mono)">
                 {(investigationById(entry.other)?.acronym ?? entry.other).slice(0, 10)}
               </text>
               <title>{`${investigationById(entry.other)?.acronym ?? entry.other}: ${entry.type.replace(/_/g, " ")} (${entry.basis})`}</title>
-            </a>
+            </g>
           </g>
         );
       })}
@@ -56,6 +58,10 @@ function MiniTree({ id }: { id: string }) {
         {(investigationById(id)?.acronym ?? id).slice(0, 12)}
       </text>
     </svg>
+    <nav aria-label="Linked family investigations" className="mt-2 flex flex-wrap justify-center gap-2 text-xs">
+      {neighbours.map((entry) => <Link key={entry.other} href={`/library/${encodeURIComponent(entry.other)}`} className="min-h-11 rounded border border-line px-3 py-2 text-habitat hover:border-habitat/60">{investigationById(entry.other)?.acronym ?? entry.other} · {entry.type.replace(/_/g, " ")}</Link>)}
+    </nav>
+    </div>
   );
 }
 
@@ -97,6 +103,7 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
         <h1 className="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">
           {investigation.acronym}: <span className="text-muted">{investigation.title}</span>
         </h1>
+        <p className="mt-2 max-w-3xl text-sm text-muted">Investigation record for the evidence library: inspect its objectives, test conditions, findings, caveats and source links.</p>
         <div className="mt-3 flex flex-wrap gap-1.5 text-xs">
           {(investigation.fire_safety_roles ?? "")
             .split(";")
@@ -115,10 +122,12 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
       <div className="grid gap-4 lg:grid-cols-[1fr_20rem]">
         <div className="space-y-4">
           <section className="panel space-y-4 p-5">
+            <dl className="space-y-4">
             <Field label="Objective">{investigation.objective}</Field>
             {investigation.hypothesis ? <Field label="Hypothesis">{investigation.hypothesis}</Field> : null}
             {investigation.approach ? <Field label="Approach">{investigation.approach}</Field> : null}
             {investigation.research_impacts_earth_benefits ? <Field label="Research impacts and Earth benefits">{investigation.research_impacts_earth_benefits}</Field> : null}
+            </dl>
             <SourceChips ids={sourceIds} />
           </section>
 
@@ -127,6 +136,7 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
               Envelope and habitat proximity
             </h2>
             {envelope ? (
+              <div>
               <dl className="mt-3 grid grid-cols-2 gap-4 sm:grid-cols-4">
                 <Field label="Cards">
                   <span className="num">
@@ -135,12 +145,12 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
                 </Field>
                 <Field label="O₂ range">{envelope.o2_pct_min !== null ? <span className="num">{envelope.o2_pct_min}–{envelope.o2_pct_max}%</span> : <Missing />}</Field>
                 <Field label="Pressure range">{envelope.pressure_kpa_min !== null ? <span className="num">{envelope.pressure_kpa_min}–{envelope.pressure_kpa_max} kPa</span> : <Missing />}</Field>
-                <Field label="Best tier">
+                <Field label="Best dataset relevance band">
                   <span className="num">
                     {envelope.best_tier} · {Object.entries(datasetTierLabels).find(([key]) => key.startsWith(envelope.best_tier))?.[1].label}
                   </span>
                 </Field>
-                <Field label="Tier counts">
+                <Field label="Dataset band counts">
                   <span className="num text-xs">
                     A {envelope.n_tier_A} · B {envelope.n_tier_B} · C {envelope.n_tier_C} · D {envelope.n_tier_D} · F {envelope.n_tier_F} · E {envelope.n_tier_E}
                   </span>
@@ -166,6 +176,9 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
                   )}
                 </Field>
               </dl>
+              <p className="mt-3 text-xs leading-relaxed text-muted">The A–F summaries above are dataset relevance bands around the exploration atmosphere. They differ from the condition-specific evidence grades explained here.</p>
+              <div className="mt-2"><EvidenceTierGuide compact /></div>
+              </div>
             ) : (
               <p className="mt-2 text-sm text-muted">No burn cards for this investigation in the dataset{investigationCampaigns.length ? `; it has ${investigationCampaigns.length} campaign rows` : ""}.</p>
             )}
@@ -322,6 +335,7 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
           ) : null}
         </aside>
       </div>
+
     </article>
   );
 }
