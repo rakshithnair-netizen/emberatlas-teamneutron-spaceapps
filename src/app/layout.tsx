@@ -9,7 +9,7 @@ const plexSans = IBM_Plex_Sans({ variable: "--font-plex-sans", subsets: ["latin"
 const plexMono = IBM_Plex_Mono({ variable: "--font-plex-mono", subsets: ["latin"], weight: ["400", "500"] });
 
 export const metadata: Metadata = {
-  title: { default: "Flame in Freefall · Graded fire-safety evidence for Moon and Mars habitats", template: "%s · Flame in Freefall" },
+  title: { default: "Ember Atlas · Graded fire-safety evidence for Moon and Mars habitats", template: "%s · Ember Atlas" },
   description:
     "Summarizes, ranks and explains decades of NASA microgravity combustion results against the 8.2 psia / 34% O₂ exploration atmosphere, with graded evidence and a source for every number.",
   // Space Apps 2026 rules require SI-assisted code to be acknowledged in metadata as well as text.

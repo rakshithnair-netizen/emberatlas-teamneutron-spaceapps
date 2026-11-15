@@ -1,5 +1,5 @@
 {
-  "name": "flame-in-freefall",
+  "name": "ember-atlas",
   "version": "0.1.0",
   "private": true,
   "siDisclosure": "Code, tests and plain-language text written with SI assistance (Anthropic Claude via Claude Code) and reviewed by the team. Dataset compiled from NASA sources with SI assistance (table extraction, paraphrased findings) and checked by the team against each source; no data values were SI-invented. No SI-generated images, video or audio.",

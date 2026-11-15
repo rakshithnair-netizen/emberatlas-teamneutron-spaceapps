@@ -114,7 +114,7 @@ export function SiteHeader() {
         Skip to content
       </a>
       <div className="mx-auto flex h-14 max-w-7xl items-center gap-4 px-4">
-        <Link href="/" className="flex shrink-0 items-center gap-2" aria-label="Flame in Freefall home">
+        <Link href="/" className="flex shrink-0 items-center gap-2" aria-label="Ember Atlas home">
           <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden>
             <defs>
               <radialGradient id="logoFlame" cx="50%" cy="50%" r="50%">
@@ -128,7 +128,7 @@ export function SiteHeader() {
             <circle cx="16" cy="16" r="15" fill="none" stroke="#22d3ee" strokeOpacity="0.5" strokeDasharray="2 3" />
           </svg>
           <span className="text-sm font-semibold tracking-tight">
-            Flame <span className="text-muted">in</span> Freefall
+            Ember <span className="text-muted">Atlas</span>
           </span>
         </Link>
         <nav className="hidden flex-1 items-center gap-0.5 xl:flex" aria-label="Primary">
