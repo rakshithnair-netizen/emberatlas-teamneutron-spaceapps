@@ -4,15 +4,16 @@
 Flame in Freefall: graded fire-safety evidence for Moon and Mars habitats
 
 ## High-level summary (≤150 words)
-NASA's exploration atmosphere is 8.2 psia at 34% O₂, but almost all space-fire data were taken at 1 atm and 21% O₂ in microgravity. Flame in Freefall asks one question: how relevant is that research to a Moon or Mars habitat? It turns 1,732 NASA burn records, 30 investigations and 54 findings into graded evidence. Every answer carries a tier (Measured, Interpolated, Extrapolated, Analog or No data), its distance from the habitat atmosphere, NASA sources and a plain "what we don't know" statement. An envelope map, condition matcher, ranked insights and a source-citing assistant show that only 3.3% of tests are near the exploration atmosphere. No flight solid has burned above 31% O₂, and just four tests (all LUCI) left microgravity. Learn modules, Earth applications and a short game make the evidence usable by designers, students and the public.
+NASA's exploration atmosphere is 8.2 psia at 34% O₂, but almost all space-fire data were taken at 1 atm and 21% O₂ in microgravity. Flame in Freefall asks one question: how relevant is that research to a Moon or Mars habitat? It turns 1,732 NASA burn records, 30 investigations and 54 findings into graded evidence. Every answer carries a tier (Measured, Interpolated, Extrapolated, Analog or No data), its distance from the habitat atmosphere, NASA sources and a plain "what we don't know" statement. An envelope map, condition matcher, ranked insights and a source-citing AI assistant show that only 3.3% of tests are near the exploration atmosphere. No flight solid has burned above 31% O₂, and just four tests (all LUCI) left microgravity. Learn modules, Earth applications and a short game make the evidence usable by designers, students and the public.
 
 ## Detailed description
 
 ### What it does
-- **Mission Dashboard**: the habitat question, three headline numbers computed from the data, insights ranked for a selected habitat (ISS, Shuttle, exploration 34%, 2006 design, design max 40%, EVA suit), and a "what this means for a habitat designer" panel.
+- **Home (Mission Dashboard)**: a plain-language headline plus the challenge question, an evidence-gap chart placing every NASA burn against the selected habitat, a "what NASA has tested / what is missing" panel with the solid-fuel evidence grade, a plain-language guide to the five evidence grades, three headline numbers computed from the data, insights ranked for a selected habitat (ISS, Shuttle, exploration 34%, 2006 design, design max 40%, EVA suit), and a "what these findings may mean" panel for habitat designers.
+- **Navigation for first-time users**: five core steps (Home, Check a habitat, Explore evidence, Sources & library, Method & limits), with the other tools under "More tools". Keyboard and screen-reader friendly, with 44px touch targets.
 - **Envelope Map**: every card plotted by pressure and O₂, coloured by fuel, shaped by gravity, solid or open by data basis. Shows habitat crosshairs, iso-ppO₂ guides, coverage hulls, distance rings, a gravity overlay and coverage bars per investigation.
 - **Condition Matcher**: any O₂ / pressure (kPa or psia) / gravity / fuel / material / flow returns an evidence tier, the 5 nearest cards with per-axis deltas, relevant findings, data caveats and the experiment that would close the gap. Links are shareable.
-- **Ask Atlas**: retrieval-grounded Q&A. It never answers from model memory: tools over the dataset are mandatory and citations are checked against tool results. It works with no API key (Atlas Lite).
+- **Ask Atlas (the SI layer)**: retrieval-grounded Q&A powered by an LLM (Anthropic, OpenAI or Gemini). It never answers from model memory: tool calls over the dataset are mandatory and citations are checked against tool results. If no key is configured or a call fails, Atlas Lite answers from the same retrieval with templated text.
 - **Flame Library and investigation pages**: search and filters, card drawers with every reported field, quality flags in plain English and known discrepancies.
 - **Family Tree**: curated NASA lineage (Saffire I→VI, LUCI→FM2) kept separate from computed shared-hardware/fuel links.
 - **Learn** (9 modules), **Earth Applications**, **Fire Watch** game, and **Data & Method** (pipeline, reconciliation, rejected rows, discrepancies, downloads, AI disclosure).
@@ -25,7 +26,7 @@ NASA's exploration atmosphere is 8.2 psia at 34% O₂, but almost all space-fire
 ### How it addresses the challenge
 - **Summarize**: per-investigation envelopes, Learn modules and Atlas summaries.
 - **Rank**: a transparent five-factor ranking with weight sliders and CSV export.
-- **Explain**: evidence tiers, gap statements, "Not known from this data" lines and source chips everywhere.
+- **Explain**: plain-language evidence grades, gap statements, "Not known from this data" lines and source chips everywhere. Results are labelled as research screening, not safety certification.
 - **Moon/Mars relevance**: every view is scoped to a habitat atmosphere and gravity, and partial-gravity scarcity is shown explicitly.
 
 ### Tools

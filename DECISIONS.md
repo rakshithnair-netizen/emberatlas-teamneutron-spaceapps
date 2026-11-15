@@ -47,3 +47,6 @@ Calls made during the build without stopping to ask, with the reason for each.
 - **Card drawer focus trap ignores `tabindex="-1"`.** The full-screen backdrop button is not focusable, so it must not count as the trap's first element.
 - **Header menus close on navigation.** The desktop "More tools" dropdown closes on route change, outside click and Escape. Mobile nav highlight and `aria-current` use the same active rule.
 - **Air-baseline comparison uses HAB-01 values.** The home habitat card shows the dataset's air reference numbers, and changes its takeaway when HAB-01 itself is selected.
+- **Challenge question restored on Home.** The v2 plain-language headline stays as the `<h1>`; the brief's central question sits verbatim right under it, with the HAB-03 atmosphere numbers read from the dataset, so judges can map the app to the challenge.
+- **Atlas presented as the SI layer.** README, SUBMISSION and the demo script describe Ask Atlas as the LLM-powered part and tell the deployer to set `AI_PROVIDER` / `AI_API_KEY` on Vercel; Atlas Lite is described as the fallback, not the default.
+- **Docs follow the v2 navigation.** DEMO_SCRIPT, SUBMISSION and README use the v2 screen names ("Check a habitat", "Explore evidence", "More tools") and describe the new Home panels.

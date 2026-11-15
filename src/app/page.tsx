@@ -60,6 +60,12 @@ export default function HomePage() {
             <h1 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight tracking-tight sm:text-5xl">
               Will a fire test from near Earth conditions tell us what happens inside a Moon habitat?
             </h1>
+            {/* The challenge's central question, kept verbatim under the plain-language headline so judges
+                can match the app to the brief. Atmosphere numbers come from the HAB-03 dataset row. */}
+            <p className="mt-4 max-w-2xl border-l-2 border-habitat pl-3 text-base leading-relaxed">
+              <span className="eyebrow block text-habitat">The challenge question</span>
+              How relevant is the existing research to a habitat with <span className="text-habitat">higher oxygen</span> and <span className="text-habitat">lower pressure</span>? NASA&apos;s exploration atmosphere is <span className="num">{exploration.pressure_psia} psia ({exploration.pressure_kpa} kPa) at {exploration.o2_pct}% O₂</span>.
+            </p>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
               NASA has decades of spacecraft fire research. But most tests used air-like oxygen levels and near-Earth pressure. A future habitat may use <span className="text-habitat">more oxygen and lower pressure</span>, changing how well those tests apply. Flame in Freefall lets you compare a habitat with the conditions NASA tested, see the strength of the evidence, and find what is still unknown.
             </p>
