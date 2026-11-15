@@ -54,3 +54,9 @@ Calls made during the build without stopping to ask, with the reason for each.
 ## Submission form alignment (2026-11-15)
 - **SI wording follows the 2026 guide.** The guide calls AI "Super Intelligence (SI)" and requires SI-assisted code and data to be acknowledged in descriptive text *and* metadata. Text: README, SUBMISSION and the Method page. Metadata: `siDisclosure` in `package.json` and an `si-disclosure` `<meta>` tag set in `layout.tsx`.
 - **References section added.** SUBMISSION.md now has the form's "Space Agency Partner Data and Other References" field: no partner-agency data, plus every library (version and license from `package-lock.json`), font, hosting service and SI tool.
+
+## Deployment (2026-11-15)
+- **Hosted on Vercel** as project `flame-in-freefall` in the Team Proton team (Hobby plan), production URL https://flame-in-freefall-hazel.vercel.app. The build uses the committed dataset copies because `~/Desktop/SpaceApps-Data` does not exist on Vercel.
+- **Deployed from a clean clone of `main`**, so local-only files such as `.env.local` never reach the build.
+- **Atlas uses Gemini on Vercel** (`AI_PROVIDER=gemini`, `AI_MODEL=gemini-3.5-flash-lite`). The key is a Production secret; without it Atlas falls back to Lite mode. `gemini-2.5-*` is closed to new keys (404) and `gemini-flash-latest` hung, so the faster Lite model was picked; it also has its own free-tier quota (the free tier allows 20 requests per model per day for `gemini-3.5-flash`, about 7–10 Atlas questions).
+- **Atlas model calls are time-limited** (18 s per call, one retry, 50 s total) because about 1 in 6 Gemini calls stalled with no reply, and one stall used to hang the function until Vercel's 300 s limit.
