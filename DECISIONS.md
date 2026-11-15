@@ -56,7 +56,7 @@ Calls made during the build without stopping to ask, with the reason for each.
 - **References section added.** SUBMISSION.md now has the form's "Space Agency Partner Data and Other References" field: no partner-agency data, plus every library (version and license from `package-lock.json`), font, hosting service and SI tool.
 
 ## Deployment (2026-11-15)
-- **Hosted on Vercel** as project `flame-in-freefall` in the Team Proton team (Hobby plan), production URL https://ember-atlas-app.vercel.app (the original https://flame-in-freefall-hazel.vercel.app still works). The build uses the committed dataset copies because `~/Desktop/SpaceApps-Data` does not exist on Vercel.
+- **Hosted on Vercel** as project `flame-in-freefall` in the team's Vercel team (Hobby plan), production URL https://ember-atlas-app.vercel.app (the original https://flame-in-freefall-hazel.vercel.app still works). The build uses the committed dataset copies because `~/Desktop/SpaceApps-Data` does not exist on Vercel.
 - **Deployed from a clean clone of `main`**, so local-only files such as `.env.local` never reach the build.
 - **Atlas uses Gemini on Vercel** (`AI_PROVIDER=gemini`, `AI_MODEL=gemini-3.5-flash-lite`). The key is a Production secret; without it Atlas falls back to Lite mode. `gemini-2.5-*` is closed to new keys (404) and `gemini-flash-latest` hung, so the faster Lite model was picked; it also has its own free-tier quota (the free tier allows 20 requests per model per day for `gemini-3.5-flash`, about 7–10 Atlas questions).
 - **Atlas model calls are time-limited** (18 s per call, one retry, 50 s total) because about 1 in 6 Gemini calls stalled with no reply, and one stall used to hang the function until Vercel's 300 s limit.
@@ -67,7 +67,5 @@ Calls made during the build without stopping to ask, with the reason for each.
 - **The dataset keeps its name.** "Flame in Freefall dataset v1.0" is named after the challenge, and its README and `datapackage.json` are copied from the source dataset by `prepare-data`, so they are left as they are.
 - **New URL.** `ember-atlas.vercel.app` and `emberatlas.vercel.app` are taken by other sites, so the project serves https://ember-atlas-app.vercel.app. The Vercel project id is still `flame-in-freefall`; renaming it would not change any URL.
 
-## Editorial restyle (2026-11-15)
-- **Visual-only.** The dark theme was replaced by a light, warm editorial palette with a system-preference dark mode. No visible text changed, which `scripts/check-text-unchanged.ts` verifies against `main`. Full details are in `DESIGN_NOTES.md`.
-- **Accessibility won over the brief's exact hex values.** Three text tones were darkened until every text/background pair passes WCAG AA.
-- **On-screen colour words win over the brief.** Text such as "cyan line", "green ring" and "Solid orange edges" stays true, so those marks keep matching colours.
+## Team name (2026-11-15)
+- **The team is Team Neutron**, not Team Proton. The GitHub repo is now `emberatlas-teamneutron-spaceapps` (GitHub redirects the old URL). The Vercel team was first created as "Team Proton" and is renamed in the Vercel dashboard; its URL slug may keep the old name, which visitors never see.
