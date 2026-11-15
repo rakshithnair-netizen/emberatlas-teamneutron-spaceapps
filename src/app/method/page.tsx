@@ -39,27 +39,27 @@ export default function MethodPage() {
   const producedTotal = reconciliation.reduce((sum, row) => sum + Number(row.cards_or_campaign_rows), 0);
 
   return (
-    <div className="space-y-8">
-      <div>
+    <div className="space-y-14 sm:space-y-20">
+      <div className="max-w-[760px]">
         <p className="eyebrow">Data &amp; Method</p>
-        <h1 className="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">Where every number comes from</h1>
-        <p className="mt-1 max-w-3xl text-sm text-muted">
+        <h1 className="mt-2 text-3xl sm:text-4xl">Where every number comes from</h1>
+        <p className="mt-3 text-base text-ink-muted">
           The app shows only values present in the dataset. A blank is shown as “—” and means the source did not report it. Platform-nominal or approximate values are prefixed with ≈ and underlined with dots.
         </p>
       </div>
 
       <section aria-labelledby="pipeline-title">
-        <h2 id="pipeline-title" className="text-lg font-semibold">
+        <h2 id="pipeline-title" className="text-2xl">
           Pipeline
         </h2>
-        <ol className="mt-3 grid gap-2 md:grid-cols-5">
+        <ol className="mt-6 grid gap-4 md:grid-cols-5">
           {steps.map((step, index) => (
-            <li key={step.title} className="panel relative p-3">
-              <p className="num text-[11px] text-ember">0{index + 1}</p>
-              <p className="mt-1 text-sm font-medium">{step.title}</p>
-              <p className="mt-1 text-xs text-muted">{step.text}</p>
+            <li key={step.title} className="relative rounded-xl border-[1.5px] border-ink bg-paper-raised p-4">
+              <p className="num text-[11px] text-clay-strong">0{index + 1}</p>
+              <p className="mt-1 font-display text-sm font-medium">{step.title}</p>
+              <p className="mt-1 text-xs text-ink-muted">{step.text}</p>
               {index < steps.length - 1 ? (
-                <span aria-hidden className="absolute -right-2 top-1/2 hidden -translate-y-1/2 text-faint md:block">
+                <span aria-hidden className="absolute -right-3.5 top-1/2 hidden -translate-y-1/2 text-ink md:block">
                   →
                 </span>
               ) : null}
@@ -68,22 +68,22 @@ export default function MethodPage() {
         </ol>
       </section>
 
-      <div className="grid gap-4 lg:grid-cols-2">
-        <section className="panel p-4" aria-labelledby="recon-title">
+      <div className="grid gap-6 lg:grid-cols-2">
+        <section className="panel p-5 sm:p-6" aria-labelledby="recon-title">
           <h2 id="recon-title" className="font-semibold">
             Row reconciliation
           </h2>
-          <p className="mt-1 text-xs text-muted">Every raw record becomes a card or campaign row, or is logged in rejected_rows.</p>
+          <p className="mt-1 text-xs text-ink-muted">Every raw record becomes a card or campaign row, or is logged in rejected_rows.</p>
           <div className="mt-3 overflow-x-auto" tabIndex={0} aria-label="Scrollable row reconciliation table">
             <table className="w-full min-w-[420px] text-xs">
               <thead>
-                <tr className="text-left text-muted">
+                <tr className="text-left text-ink-muted">
                   <th className="py-1 font-normal">Source file</th>
                   <th className="py-1 text-right font-normal">Raw</th>
                   <th className="py-1 text-right font-normal">Rows produced</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-line">
+              <tbody className="divide-y divide-sand-strong">
                 {reconciliation.map((row) => (
                   <tr key={row.source_file}>
                     <td className="py-1 pr-2 break-all">{row.source_file}</td>
@@ -101,7 +101,7 @@ export default function MethodPage() {
           </div>
         </section>
         <div className="space-y-4">
-          <section className="panel p-4" aria-labelledby="rejected-title">
+          <section className="panel p-5 sm:p-6" aria-labelledby="rejected-title">
             <h2 id="rejected-title" className="font-semibold">
               Rejected rows by reason
             </h2>
@@ -114,17 +114,17 @@ export default function MethodPage() {
               ))}
             </ul>
           </section>
-          <section className="panel p-4" aria-labelledby="dist-title">
+          <section className="panel p-5 sm:p-6" aria-labelledby="dist-title">
             <h2 id="dist-title" className="font-semibold">
               Distance and tiers
             </h2>
-            <p className="num mt-2 rounded bg-panel-2 px-3 py-2 text-sm">d = √( ((O₂ − 34)/10)² + ((p_kPa − 56.5)/40)² )</p>
-            <p className="mt-2 text-xs text-muted">The same metric the dataset uses. 10 O₂ points or 40 kPa each count as one unit. 1 psia = 6.894757 kPa.</p>
+            <p className="num mt-2 rounded bg-sand px-3 py-2 text-sm">d = √( ((O₂ − 34)/10)² + ((p_kPa − 56.5)/40)² )</p>
+            <p className="mt-2 text-xs text-ink-muted">The same metric the dataset uses. 10 O₂ points or 40 kPa each count as one unit. 1 psia = 6.894757 kPa.</p>
             <h3 className="eyebrow mt-3">Dataset habitat tiers (per card)</h3>
             <ul className="mt-1 space-y-0.5 text-xs">
               {Object.entries(datasetTierLabels).map(([key, meta]) => (
                 <li key={key}>
-                  <span className="num">{meta.short}</span> {meta.label} <span className="num text-faint">({(derived.tierCounts as Record<string, number>)[key] ?? 0} cards)</span>
+                  <span className="num">{meta.short}</span> {meta.label} <span className="num text-ink-subtle">({(derived.tierCounts as Record<string, number>)[key] ?? 0} cards)</span>
                 </li>
               ))}
             </ul>
@@ -133,25 +133,25 @@ export default function MethodPage() {
               {tierOrder.map((tier) => (
                 <li key={tier} className="flex flex-wrap items-start gap-2">
                   <EvidenceBadge tier={tier} size="sm" compact />
-                  <span className="text-muted">{evidenceTierMeta[tier].description}</span>
+                  <span className="text-ink-muted">{evidenceTierMeta[tier].description}</span>
                 </li>
               ))}
             </ul>
-            <p className="mt-2 text-[11px] text-muted">
+            <p className="mt-2 text-[11px] text-ink-muted">
               Interpolated uses the convex hull of cards in normalized (p/40, O₂/10) space for the same fuel class and gravity regime. Analog requires a related card within d ≤ 3; beyond that the answer is No data. Lunar and Mars habitats rank against lunar-gravity evidence; ISS and Shuttle rank against microgravity evidence.
             </p>
           </section>
         </div>
       </div>
 
-      <section className="panel p-4" id="discrepancies" aria-labelledby="disc-title">
+      <section className="panel p-5 sm:p-6" id="discrepancies" aria-labelledby="disc-title">
         <h2 id="disc-title" className="font-semibold">
           Known discrepancies ({discrepancies.length})
         </h2>
         <div className="mt-3 overflow-x-auto" tabIndex={0} aria-label="Scrollable known discrepancies table">
           <table className="w-full min-w-[720px] text-xs">
             <thead>
-              <tr className="text-left text-muted">
+              <tr className="text-left text-ink-muted">
                 <th className="py-1 pr-2 font-normal">Investigation</th>
                 <th className="py-1 pr-2 font-normal">Record</th>
                 <th className="py-1 pr-2 font-normal">Field</th>
@@ -160,7 +160,7 @@ export default function MethodPage() {
                 <th className="py-1 font-normal">Handling</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-line align-top">
+            <tbody className="divide-y divide-sand-strong align-top">
               {discrepancies.map((row, index) => (
                 <tr key={index}>
                   <td className="num py-1.5 pr-2">{row.investigation}</td>
@@ -168,24 +168,24 @@ export default function MethodPage() {
                   <td className="py-1.5 pr-2">{row.field}</td>
                   <td className="py-1.5 pr-2">{row.psi_or_primary_value}</td>
                   <td className="py-1.5 pr-2">{row.conflicting_or_expected_value}</td>
-                  <td className="py-1.5 text-muted">{row.handling}</td>
+                  <td className="py-1.5 text-ink-muted">{row.handling}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <p className="mt-2 text-xs text-muted">Also from the dataset README: Saffire-VI results could not be re-read from the PDF (flag results_table_recheck_against_pdf); BASS and BASS-II pressure and O₂ are platform-nominal; SPICE has no year; family-tree edges with a derived basis are computed, not NASA statements.</p>
+        <p className="mt-2 text-xs text-ink-muted">Also from the dataset README: Saffire-VI results could not be re-read from the PDF (flag results_table_recheck_against_pdf); BASS and BASS-II pressure and O₂ are platform-nominal; SPICE has no year; family-tree edges with a derived basis are computed, not NASA statements.</p>
       </section>
 
-      <section className="panel p-4" aria-labelledby="flags-title">
+      <section className="panel p-5 sm:p-6" aria-labelledby="flags-title">
         <h2 id="flags-title" className="font-semibold">
           Quality flags in plain English
         </h2>
         <ul className="mt-3 grid gap-x-6 gap-y-1 text-xs md:grid-cols-2">
           {[...flagCounts.entries()].sort((a, b) => b[1] - a[1]).map(([flag, count]) => (
-            <li key={flag} className="flex justify-between gap-3 border-b border-line/50 py-1">
+            <li key={flag} className="flex justify-between gap-3 border-b border-sand-strong/50 py-1">
               <span>
-                {describeFlag(flag)} <span className="num text-faint">{flag}</span>
+                {describeFlag(flag)} <span className="num text-ink-subtle">{flag}</span>
               </span>
               <span className="num">{count}</span>
             </li>
@@ -193,31 +193,31 @@ export default function MethodPage() {
         </ul>
       </section>
 
-      <section className="panel p-4" aria-labelledby="downloads-title">
+      <section className="panel p-5 sm:p-6" aria-labelledby="downloads-title">
         <h2 id="downloads-title" className="font-semibold">
           Downloads
         </h2>
         <ul className="mt-3 grid gap-2 text-sm sm:grid-cols-2 lg:grid-cols-3">
           {tables.map((table) => (
-            <li key={table} className="flex items-center justify-between gap-2 rounded-md border border-line px-3 py-2">
+            <li key={table} className="flex items-center justify-between gap-2 rounded-md border border-sand-strong px-3 py-2">
               <span className="num text-xs">{table}</span>
               <span className="flex gap-2 text-xs">
-                <a href={`/data/csv/${table}.csv`} download className="text-habitat hover:underline">
+                <a href={`/data/csv/${table}.csv`} download className="text-clay-strong hover:underline">
                   CSV
                 </a>
-                <a href={`/data/json/${table}.json`} download className="text-habitat hover:underline">
+                <a href={`/data/json/${table}.json`} download className="text-clay-strong hover:underline">
                   JSON
                 </a>
               </span>
             </li>
           ))}
-          <li className="flex items-center justify-between gap-2 rounded-md border border-line px-3 py-2">
+          <li className="flex items-center justify-between gap-2 rounded-md border border-sand-strong px-3 py-2">
             <span className="num text-xs">data_dictionary · datapackage</span>
             <span className="flex gap-2 text-xs">
-              <a href="/data/csv/data_dictionary.csv" download className="text-habitat hover:underline">
+              <a href="/data/csv/data_dictionary.csv" download className="text-clay-strong hover:underline">
                 CSV
               </a>
-              <a href="/data/csv/datapackage.json" download className="text-habitat hover:underline">
+              <a href="/data/csv/datapackage.json" download className="text-clay-strong hover:underline">
                 JSON
               </a>
             </span>
@@ -225,11 +225,11 @@ export default function MethodPage() {
         </ul>
       </section>
 
-      <section className="panel p-4" aria-labelledby="ai-title">
+      <section className="panel p-5 sm:p-6" aria-labelledby="ai-title">
         <h2 id="ai-title" className="font-semibold">
           Use of Super Intelligence (SI)
         </h2>
-        <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-muted">
+        <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-ink-muted">
           <li>SI-assisted: the app code, the Learn module text, the Fire Watch scenario wording and the Earth Applications summaries were written with the help of an SI coding assistant (Anthropic Claude via Claude Code) and reviewed by the team.</li>
           <li>Ask Atlas can call an LLM (Anthropic, OpenAI or Gemini, set by the deployer) only through retrieval tools over this dataset. Answers must cite tool results; uncited source IDs are dropped. Without a key, Atlas Lite answers with deterministic templates.</li>
           <li>The dataset was compiled from NASA sources with SI assistance (extracting tables, paraphrasing findings) and the team checked every value against its source. No values were invented by SI. Every number comes from the dataset tables listed above. The rankings are a transparent formula, not a model.</li>
@@ -239,19 +239,19 @@ export default function MethodPage() {
         </ul>
       </section>
 
-      <section className="panel p-4" aria-labelledby="sources-title">
+      <section className="panel p-5 sm:p-6" aria-labelledby="sources-title">
         <h2 id="sources-title" className="font-semibold">
           Sources ({sources.length})
         </h2>
         <ul className="mt-3 space-y-1.5 text-sm">
           {sources.map((source) => (
             <li key={source.source_id} className="grid grid-cols-[4.5rem_1fr] gap-2">
-              <span className="num text-xs text-ember">{source.source_id}</span>
+              <span className="num text-xs text-clay-strong">{source.source_id}</span>
               <span>
-                <a href={source.url} target="_blank" rel="noopener noreferrer" className="hover:text-habitat">
+                <a href={source.url} target="_blank" rel="noopener noreferrer" className="hover:text-clay-strong">
                   {source.title}
                 </a>
-                <span className="block text-[11px] text-muted">
+                <span className="block text-[11px] text-ink-muted">
                   {source.source_type} · {source.nasa_id} · retrieved {source.retrieved}
                 </span>
               </span>

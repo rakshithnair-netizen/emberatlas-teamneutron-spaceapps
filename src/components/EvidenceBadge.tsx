@@ -1,20 +1,23 @@
 import type { EvidenceTier } from "@/lib/types";
 import { evidenceTierMeta } from "@/lib/evidence";
+import { chartTheme } from "@/lib/plotlyTheme";
 
-const tierStyle: Record<EvidenceTier, { color: string; border: string; bg: string }> = {
-  measured: { color: "text-tier-measured", border: "border-tier-measured/50", bg: "bg-tier-measured/10" },
-  interpolated: { color: "text-tier-interpolated", border: "border-tier-interpolated/50", bg: "bg-tier-interpolated/10" },
-  extrapolated: { color: "text-tier-extrapolated", border: "border-tier-extrapolated/50", bg: "bg-tier-extrapolated/10" },
-  analog: { color: "text-tier-analog", border: "border-tier-analog/50", bg: "bg-tier-analog/10" },
-  no_data: { color: "text-tier-none", border: "border-tier-none/50", bg: "bg-tier-none/10" },
+const tierStyle: Record<EvidenceTier, string> = {
+  measured: "bg-sage-soft text-sage-strong border-sage-strong",
+  interpolated: "bg-sky-soft text-sky-strong border-sky-strong",
+  extrapolated: "bg-clay-soft text-clay-strong border-clay-strong",
+  analog: "bg-sand text-ink-muted border-sand-strong border-dashed",
+  no_data: "bg-transparent text-ink-subtle border-stone border-dotted",
 };
 
+const tierPalette = chartTheme(false);
+
 export const tierHex: Record<EvidenceTier, string> = {
-  measured: "#4ade80",
-  interpolated: "#60a5fa",
-  extrapolated: "#fbbf24",
-  analog: "#d8a6ff",
-  no_data: "#a8b3bf",
+  measured: tierPalette.sageStrong,
+  interpolated: tierPalette.skyStrong,
+  extrapolated: tierPalette.clay,
+  analog: tierPalette.stone,
+  no_data: tierPalette.stone,
 };
 
 export function TierIcon({ tier, size = 14 }: { tier: EvidenceTier; size?: number }) {
@@ -62,15 +65,15 @@ export function TierIcon({ tier, size = 14 }: { tier: EvidenceTier; size?: numbe
 export function EvidenceBadge({ tier, size = "md", detail, compact = false }: { tier: EvidenceTier; size?: "sm" | "md" | "lg"; detail?: string; compact?: boolean }) {
   const style = tierStyle[tier];
   const meta = evidenceTierMeta[tier];
-  const sizing = size === "lg" ? "px-3 py-1.5 text-sm gap-2" : size === "sm" ? "px-1.5 py-0.5 text-[11px] gap-1" : "px-2 py-1 text-xs gap-1.5";
+  const sizing = size === "lg" ? "px-4 py-2 text-lg font-semibold gap-2" : size === "sm" ? "px-2 py-0.5 text-[11px] font-medium gap-1" : "px-2.5 py-1 text-xs font-medium gap-1.5";
   return (
     <span
-      className={`inline-flex items-center whitespace-nowrap rounded-full border font-medium ${style.color} ${style.border} ${style.bg} ${sizing}`}
+      className={`inline-flex items-center whitespace-nowrap rounded-full border font-display ${style} ${sizing}`}
       title={`${meta.label}: ${meta.description}`}
     >
-      <TierIcon tier={tier} size={size === "lg" ? 16 : size === "sm" ? 11 : 13} />
-      <span>{compact ? "" : <span className="opacity-75">Evidence: </span>}{meta.label}</span>
-      {detail ? <span className="num opacity-80">· {detail}</span> : null}
+      <TierIcon tier={tier} size={size === "lg" ? 18 : size === "sm" ? 11 : 13} />
+      <span>{compact ? "" : <span className="font-normal">Evidence: </span>}{meta.label}</span>
+      {detail ? <span className="num font-normal">· {detail}</span> : null}
     </span>
   );
 }

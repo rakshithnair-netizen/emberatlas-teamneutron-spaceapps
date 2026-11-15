@@ -17,7 +17,7 @@ export default function FamilyTreePage() {
     cardCount: burnCards.filter((card) => card.investigation_id === investigation.investigation_id).length,
   }));
   return (
-    <Suspense fallback={<p className="text-sm text-muted">Loading family tree…</p>}>
+    <Suspense fallback={<p className="text-sm text-ink-muted">Loading family tree…</p>}>
       <FamilyTreeView nodes={nodes} edges={familyEdges} />
     </Suspense>
   );

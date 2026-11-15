@@ -14,11 +14,11 @@ export function Quiz({ questions }: { questions: BankQuestion[] }) {
         const chosen = answers[question.id];
         const answered = chosen !== undefined;
         return (
-          <fieldset key={question.id} className="rounded-lg border border-line bg-panel-2/50 p-3">
-            <legend className="px-1 text-sm font-medium">
+          <fieldset key={question.id} className="rounded-xl border border-sand-strong bg-paper-raised p-4 sm:p-5">
+            <legend className="px-1 font-display text-sm font-medium">
               {index + 1}. {question.prompt}
             </legend>
-            <div className="mt-2 grid gap-1.5">
+            <div className="mt-3 grid gap-2">
               {question.options.map((option, optionIndex) => {
                 const isCorrect = optionIndex === question.answer;
                 const state = !answered ? "idle" : isCorrect ? "correct" : optionIndex === chosen ? "wrong" : "idle";
@@ -28,11 +28,11 @@ export function Quiz({ questions }: { questions: BankQuestion[] }) {
                     type="button"
                     disabled={answered}
                     onClick={() => setAnswers((previous) => ({ ...previous, [question.id]: optionIndex }))}
-                    className={`flex items-center gap-2 rounded-md border px-3 py-1.5 text-left text-sm ${
-                      state === "correct" ? "border-tier-measured/60 bg-tier-measured/10" : state === "wrong" ? "border-tier-extrapolated/60 bg-tier-extrapolated/10" : "border-line hover:border-line-strong"
+                    className={`flex items-center gap-3 rounded-full border px-4 py-2 text-left text-sm ${
+                      state === "correct" ? "border-sage-strong bg-sage-soft text-ink" : state === "wrong" ? "border-clay-strong bg-clay-soft text-ink" : "border-ink hover:bg-sand disabled:border-sand-strong disabled:text-ink-muted"
                     }`}
                   >
-                    <span aria-hidden className="num w-4 text-xs text-muted">
+                    <span aria-hidden className="num w-4 text-xs text-ink-muted">
                       {state === "correct" ? "✓" : state === "wrong" ? "✗" : String.fromCharCode(65 + optionIndex)}
                     </span>
                     {option}
@@ -42,10 +42,10 @@ export function Quiz({ questions }: { questions: BankQuestion[] }) {
               })}
             </div>
             {answered ? (
-              <div className="mt-2 text-xs text-muted" aria-live="polite">
+              <div className="mt-2 text-xs text-ink-muted" aria-live="polite">
                 <p>{question.explanation}</p>
                 <div className="mt-1 flex flex-wrap items-center gap-2">
-                  {question.findingIds.length ? <span className="num text-ember">{question.findingIds.join(", ")}</span> : null}
+                  {question.findingIds.length ? <span className="num text-clay-strong">{question.findingIds.join(", ")}</span> : null}
                   <SourceChips ids={question.sourceIds} label="" />
                 </div>
               </div>
@@ -56,7 +56,7 @@ export function Quiz({ questions }: { questions: BankQuestion[] }) {
       {done ? (
         <p className="num text-sm" aria-live="polite">
           Score: {correct}/{questions.length}
-          <button type="button" onClick={() => setAnswers({})} className="ml-3 text-xs text-habitat hover:underline">
+          <button type="button" onClick={() => setAnswers({})} className="ml-3 text-xs text-clay-strong hover:underline">
             Retry
           </button>
         </p>

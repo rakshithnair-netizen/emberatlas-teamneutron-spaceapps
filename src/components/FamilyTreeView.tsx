@@ -21,13 +21,13 @@ export interface TreeNodeInfo {
 }
 
 const families: { name: string; ids: string[]; color: string }[] = [
-  { name: "Saffire large-scale fire", ids: ["PSI-98", "PSI-99", "PSI-100", "SAFFIRE-IV", "SAFFIRE-V", "SAFFIRE-VI"], color: "#ff7a3d" },
-  { name: "Partial gravity", ids: ["LUCI", "FM2"], color: "#d8a6ff" },
-  { name: "Solids (BASS)", ids: ["PSI-26", "PSI-25", "PSI-62"], color: "#f5d04c" },
-  { name: "Droplets and cool flames", ids: ["PSI-69", "PSI-68", "PSI-39", "PSI-117", "PSI-142"], color: "#b294ff" },
-  { name: "Gas flames (ACME)", ids: ["PSI-20", "PSI-21", "PSI-22", "PSI-23", "PSI-10", "PSI-159"], color: "#ff8a4c" },
-  { name: "Smoke and soot", ids: ["PSI-47", "PSI-102", "PSI-115", "PSI-106", "PSI-107", "PSI-60"], color: "#22d3ee" },
-  { name: "Out of scope", ids: ["PSI-108", "PSI-181"], color: "#6b7a8a" },
+  { name: "Saffire large-scale fire", ids: ["PSI-98", "PSI-99", "PSI-100", "SAFFIRE-IV", "SAFFIRE-V", "SAFFIRE-VI"], color: "var(--color-clay)" },
+  { name: "Partial gravity", ids: ["LUCI", "FM2"], color: "var(--color-sage)" },
+  { name: "Solids (BASS)", ids: ["PSI-26", "PSI-25", "PSI-62"], color: "var(--color-clay-strong)" },
+  { name: "Droplets and cool flames", ids: ["PSI-69", "PSI-68", "PSI-39", "PSI-117", "PSI-142"], color: "var(--color-sky)" },
+  { name: "Gas flames (ACME)", ids: ["PSI-20", "PSI-21", "PSI-22", "PSI-23", "PSI-10", "PSI-159"], color: "var(--color-sky-strong)" },
+  { name: "Smoke and soot", ids: ["PSI-47", "PSI-102", "PSI-115", "PSI-106", "PSI-107", "PSI-60"], color: "var(--color-sage-strong)" },
+  { name: "Out of scope", ids: ["PSI-108", "PSI-181"], color: "var(--color-stone)" },
 ];
 
 const highlightPairs = new Set(["PSI-98>PSI-99", "PSI-99>PSI-100", "PSI-100>SAFFIRE-IV", "SAFFIRE-IV>SAFFIRE-V", "SAFFIRE-V>SAFFIRE-VI", "LUCI>FM2", "SAFFIRE-VI>LUCI"]);
@@ -38,9 +38,9 @@ function startYear(value: string | null): number | null {
 }
 
 const kindStyle = {
-  curated: { stroke: "#ff7a3d", dash: undefined, width: 2 },
-  derived: { stroke: "#4b5d70", dash: "6 5", width: 1 },
-  related: { stroke: "#8ea2b6", dash: "1.5 4", width: 1.3 },
+  curated: { stroke: "var(--color-clay)", dash: undefined, width: 1.5 },
+  derived: { stroke: "var(--color-stone)", dash: "6 5", width: 1 },
+  related: { stroke: "var(--color-sky)", dash: "1.5 4", width: 1.5 },
 };
 
 export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: TreeNodeInfo[]; edges: FamilyTreeEdge[] }) {
@@ -83,23 +83,23 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
           data: {
             label: (
               <div className="text-left">
-                <div className="num text-[10px] opacity-70">
+                <div className="num text-[10px] text-ink-muted">
                   {id}
                   {layout === "timeline" ? ` · ${year ?? "no date"}` : ""}
                 </div>
-                <div className="text-[12px] font-semibold leading-tight">{info.acronym}</div>
-                <div className="text-[10px] opacity-70">{info.cardCount ? `${info.cardCount} cards` : info.status ?? "no cards"}</div>
+                <div className="font-display text-[12px] font-medium leading-tight">{info.acronym}</div>
+                <div className="text-[10px] text-ink-muted">{info.cardCount ? `${info.cardCount} cards` : info.status ?? "no cards"}</div>
               </div>
             ),
           },
           style: {
-            background: selected ? `${family.color}33` : "#0c1219",
-            border: `1.5px solid ${selected ? family.color : `${family.color}88`}`,
-            color: "#e7edf3",
-            borderRadius: 10,
+            background: selected ? "var(--color-clay-soft)" : "var(--color-paper-raised)",
+            border: selected ? "2px solid var(--color-clay)" : "1px solid var(--color-sand-strong)",
+            borderLeft: `4px solid ${family.color}`,
+            color: info.in_scope ? "var(--color-ink)" : "var(--color-ink-muted)",
+            borderRadius: 12,
             width: 150,
             padding: 8,
-            opacity: info.in_scope ? 1 : 0.55,
           },
         });
       });
@@ -127,9 +127,9 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
           target: edge.target_investigation,
           animated: highlighted,
           type: layout === "family" ? "default" : "smoothstep",
-          markerEnd: edge.directed ? { type: MarkerType.ArrowClosed, color: highlighted ? "#ffb07f" : style.stroke, width: 14, height: 14 } : undefined,
+          markerEnd: edge.directed ? { type: MarkerType.ArrowClosed, color: highlighted ? "var(--color-clay-strong)" : style.stroke, width: 14, height: 14 } : undefined,
           style: {
-            stroke: highlighted ? "#ffb07f" : touchesSelected ? "#22d3ee" : style.stroke,
+            stroke: highlighted ? "var(--color-clay-strong)" : touchesSelected ? "var(--color-ink)" : style.stroke,
             strokeWidth: highlighted ? 3 : touchesSelected ? style.width + 1 : style.width,
             strokeDasharray: style.dash,
             opacity: selectedId && !touchesSelected && !highlighted ? 0.25 : 1,
@@ -146,29 +146,29 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
     <div className="space-y-4">
       <div>
         <p className="eyebrow">Family Tree</p>
-        <h1 className="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">How the investigations connect</h1>
-        <p className="mt-1 max-w-3xl text-sm text-muted">
+        <h1 className="mt-2 text-3xl sm:text-4xl">How the investigations connect</h1>
+        <p className="mt-1 max-w-3xl text-sm text-ink-muted">
           Solid orange edges are curated lineage stated by NASA or by investigation titles. Dashed edges are <strong className="text-ink">computed</strong> from shared hardware or fuel in the burn cards, not NASA-stated. Dotted edges are topical relations. The highlighted path follows Saffire-I → VI → LUCI → FM2.
         </p>
       </div>
 
       <div className="flex flex-wrap items-center gap-2 text-xs" role="group" aria-label="Tree options">
-        <label className="flex min-h-11 items-center gap-2 rounded-md border border-line bg-panel-2 px-2.5">
+        <label className="flex min-h-11 items-center gap-2 rounded-md border border-sand-strong bg-sand px-2.5">
           <span>Inspect investigation</span>
-          <select value={selectedId ?? ""} onChange={(event) => setSelectedId(event.target.value || null)} className="max-w-[14rem] bg-panel-2 py-1" aria-label="Select investigation to inspect">
+          <select value={selectedId ?? ""} onChange={(event) => setSelectedId(event.target.value || null)} className="max-w-[14rem] bg-sand py-1" aria-label="Select investigation to inspect">
             <option value="">Choose an investigation</option>
             {nodeInfo.map((node) => <option key={node.investigation_id} value={node.investigation_id}>{node.acronym} · {node.investigation_id}</option>)}
           </select>
         </label>
-        <div className="flex rounded-md border border-line" role="group" aria-label="Layout">
+        <div className="flex rounded-md border border-sand-strong" role="group" aria-label="Layout">
           {(["family", "timeline"] as const).map((value) => (
-            <button key={value} type="button" aria-pressed={layout === value} onClick={() => setLayout(value)} className={`px-2.5 py-1.5 capitalize ${layout === value ? "bg-panel-2 text-ink" : "text-muted"}`}>
+            <button key={value} type="button" aria-pressed={layout === value} onClick={() => setLayout(value)} className={`px-2.5 py-1.5 capitalize ${layout === value ? "bg-sand text-ink" : "text-ink-muted"}`}>
               {value === "family" ? "By family" : "Timeline"}
             </button>
           ))}
         </div>
         {(Object.keys(kinds) as (keyof typeof kinds)[]).map((kind) => (
-          <label key={kind} className="inline-flex items-center gap-1.5 rounded-md border border-line bg-panel-2 px-2.5 py-1.5">
+          <label key={kind} className="chip cursor-pointer">
             <input type="checkbox" checked={kinds[kind]} onChange={(event) => setKinds((previous) => ({ ...previous, [kind]: event.target.checked }))} />
             <svg width="22" height="6" aria-hidden>
               <line x1="0" y1="3" x2="22" y2="3" stroke={kindStyle[kind].stroke} strokeWidth="2" strokeDasharray={kindStyle[kind].dash} />
@@ -176,7 +176,7 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
             {kind === "curated" ? "Curated lineage" : kind === "derived" ? "Derived (computed)" : "Related"}
           </label>
         ))}
-        <select value={sharedFilter} onChange={(event) => { setSharedFilter(event.target.value); if (event.target.value) setKinds((previous) => ({ ...previous, derived: true })); }} className="rounded-md border border-line bg-panel-2 px-2 py-1.5" aria-label="Filter by shared hardware or fuel">
+        <select value={sharedFilter} onChange={(event) => { setSharedFilter(event.target.value); if (event.target.value) setKinds((previous) => ({ ...previous, derived: true })); }} className="rounded-md border border-sand-strong bg-sand px-2 py-1.5" aria-label="Filter by shared hardware or fuel">
           <option value="">Any shared hardware / fuel</option>
           {sharedOptions.map((option) => (
             <option key={option} value={option}>
@@ -184,11 +184,11 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
             </option>
           ))}
         </select>
-        <label className="inline-flex items-center gap-1.5 rounded-md border border-line bg-panel-2 px-2.5 py-1.5">
+        <label className="inline-flex items-center gap-1.5 rounded-md border border-sand-strong bg-sand px-2.5 py-1.5">
           <input type="checkbox" checked={inScopeOnly} onChange={(event) => setInScopeOnly(event.target.checked)} />
           In scope only
         </label>
-        <label className="inline-flex items-center gap-1.5 rounded-md border border-line bg-panel-2 px-2.5 py-1.5">
+        <label className="inline-flex items-center gap-1.5 rounded-md border border-sand-strong bg-sand px-2.5 py-1.5">
           <input type="checkbox" checked={highlight} onChange={(event) => setHighlight(event.target.checked)} />
           Highlight Saffire → LUCI → FM2
         </label>
@@ -197,7 +197,7 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
       <div className="grid gap-4 lg:grid-cols-[1fr_20rem]">
         <div className="panel relative h-[420px] overflow-hidden sm:h-[560px]" aria-label="Family tree graph">
           <p className="sr-only" id="family-graph-help">Interactive investigation graph. Use the investigation selector and the details panel for a keyboard-accessible text view. The graph can be panned and zoomed with pointer or touch.</p>
-          <p className="absolute left-2 top-2 z-10 rounded bg-panel/90 px-2 py-1 text-[11px] text-muted sm:hidden">Pan or pinch to inspect; choose an investigation above for its readable details.</p>
+          <p className="absolute left-2 top-2 z-10 rounded bg-paper-raised/90 px-2 py-1 text-[11px] text-ink-muted sm:hidden">Pan or pinch to inspect; choose an investigation above for its readable details.</p>
           <ReactFlow
             nodes={flowNodes}
             edges={flowEdges}
@@ -209,30 +209,30 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
             onEdgeMouseLeave={() => setHoveredEdge(null)}
             onEdgeClick={(_, edge) => setHoveredEdge((edge.data as { row: FamilyTreeEdge }).row)}
             proOptions={{ hideAttribution: true }}
-            colorMode="dark"
+            colorMode="system"
             style={{ background: "transparent" }}
             minZoom={0.2}
             nodesFocusable
             edgesFocusable
             aria-describedby="family-graph-help"
           >
-            <Background color="#1f2b38" gap={24} />
+            <Background color="var(--color-sand-strong)" gap={24} />
             <Controls showInteractive={false} />
           </ReactFlow>
           {hoveredEdge ? (
-            <div className="pointer-events-none absolute bottom-3 left-3 max-w-sm rounded-lg border border-line-strong bg-panel/95 p-3 text-xs shadow-xl">
+            <div className="pointer-events-none absolute bottom-3 left-3 max-w-sm rounded-md bg-ink p-3 text-[13px] text-paper shadow-card">
               <p className="num">
                 {hoveredEdge.source_investigation} → {hoveredEdge.target_investigation}
               </p>
               <p className="mt-1 font-medium">{hoveredEdge.edge_type.replace(/_/g, " ")}</p>
-              <p className="mt-1 text-muted">{hoveredEdge.shared_items}</p>
+              <p className="mt-1 opacity-80">{hoveredEdge.shared_items}</p>
               <p className="mt-1">
                 Basis: {hoveredEdge.basis.replace(/_/g, " ")}
-                {isComputedBasis(hoveredEdge.basis) ? <span className="text-tier-extrapolated"> (computed, not NASA-stated)</span> : null}
+                {isComputedBasis(hoveredEdge.basis) ? <span className="font-medium"> (computed, not NASA-stated)</span> : null}
               </p>
             </div>
           ) : null}
-          {layout === "timeline" ? <p className="num pointer-events-none absolute right-3 top-3 text-[10px] text-muted">x = start year (undated investigations at left)</p> : null}
+          {layout === "timeline" ? <p className="num pointer-events-none absolute right-3 top-3 text-[10px] text-ink-muted">x = start year (undated investigations at left)</p> : null}
         </div>
 
         <aside className="space-y-3">
@@ -242,20 +242,20 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
               {families.map((family) => (
                 <li key={family.name} className="flex items-center gap-2">
                   <span className="inline-block h-2.5 w-2.5 rounded-sm" style={{ background: family.color }} aria-hidden />
-                  {family.name} <span className="num text-faint">({family.ids.length})</span>
+                  {family.name} <span className="num text-ink-subtle">({family.ids.length})</span>
                 </li>
               ))}
             </ul>
           </section>
           {selected ? (
             <section className="panel p-4" aria-live="polite">
-              <p className="num text-[11px] text-muted">{selected.investigation_id}</p>
+              <p className="num text-[11px] text-ink-muted">{selected.investigation_id}</p>
               <h2 className="font-semibold">{selected.acronym}</h2>
-              <p className="mt-1 text-sm text-muted">{selected.title}</p>
+              <p className="mt-1 text-sm text-ink-muted">{selected.title}</p>
               <p className="mt-2 text-xs">
                 {selected.cardCount} cards · {selected.start_date ?? "start date not given"} {selected.status ? `· ${selected.status}` : ""}
               </p>
-              <Link href={`/library/${encodeURIComponent(selected.investigation_id)}`} className="mt-3 inline-block rounded-md bg-ember px-3 py-1.5 text-sm font-medium text-black">
+              <Link href={`/library/${encodeURIComponent(selected.investigation_id)}`} className="btn btn-primary mt-3">
                 Open investigation page
               </Link>
               <h3 className="eyebrow mt-4">Edges ({selectedEdges.length})</h3>
@@ -265,8 +265,8 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
                     <span className="num">
                       {edge.source_investigation} → {edge.target_investigation}
                     </span>{" "}
-                    <span className={edgeStyleKind(edge.edge_type) === "curated" ? "text-ember" : "text-muted"}>{edge.edge_type.replace(/_/g, " ")}</span>
-                    <span className="block text-muted">
+                    <span className={edgeStyleKind(edge.edge_type) === "curated" ? "text-clay-strong" : "text-ink-muted"}>{edge.edge_type.replace(/_/g, " ")}</span>
+                    <span className="block text-ink-muted">
                       {edge.shared_items} · {isComputedBasis(edge.basis) ? "computed" : edge.basis.replace(/_/g, " ")}
                     </span>
                     <SourceChips ids={edge.evidence_source_ids} label="" />
@@ -275,7 +275,7 @@ export function FamilyTreeView({ nodes: nodeInfo, edges: edgeRows }: { nodes: Tr
               </ul>
             </section>
           ) : (
-            <p className="panel p-4 text-sm text-muted">Select a node to see its edges and open its investigation page. Hover an edge to see how it was established.</p>
+            <p className="panel p-4 text-sm text-ink-muted">Select a node to see its edges and open its investigation page. Hover an edge to see how it was established.</p>
           )}
         </aside>
       </div>

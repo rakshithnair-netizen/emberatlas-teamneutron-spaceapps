@@ -29,7 +29,7 @@ function MiniTree({ id }: { id: string }) {
     if (!existing || (candidate.curated && !existing.curated)) byNeighbour.set(other, candidate);
   }
   const neighbours = [...byNeighbour.values()].sort((a, b) => Number(b.curated) - Number(a.curated)).slice(0, 12);
-  if (!neighbours.length) return <p className="text-sm text-muted">No family-tree edges for this investigation.</p>;
+  if (!neighbours.length) return <p className="text-sm text-ink-muted">No family-tree edges for this investigation.</p>;
   const size = 300;
   const center = size / 2;
   const radius = 112;
@@ -42,10 +42,10 @@ function MiniTree({ id }: { id: string }) {
         const y = center + radius * Math.sin(angle);
         return (
           <g key={entry.other}>
-            <line x1={center} y1={center} x2={x} y2={y} stroke={entry.curated ? "#ff7a3d" : "#4b5d70"} strokeWidth={entry.curated ? 1.8 : 1} strokeDasharray={entry.curated ? undefined : entry.type.startsWith("shared") ? "5 4" : "1.5 3"} />
+            <line x1={center} y1={center} x2={x} y2={y} stroke={entry.curated ? "var(--color-clay)" : "var(--color-stone)"} strokeWidth={entry.curated ? 1.8 : 1} strokeDasharray={entry.curated ? undefined : entry.type.startsWith("shared") ? "5 4" : "1.5 3"} />
             <g>
-              <circle cx={x} cy={y} r="18" fill="#111a24" stroke={entry.curated ? "#ff7a3d" : "#2d3d4f"} />
-              <text x={x} y={y + 3} textAnchor="middle" fontSize="7.5" fill="#e7edf3" fontFamily="var(--font-plex-mono)">
+              <circle cx={x} cy={y} r="18" fill="var(--color-paper-raised)" stroke={entry.curated ? "var(--color-clay)" : "var(--color-sand-strong)"} />
+              <text x={x} y={y + 3} textAnchor="middle" fontSize="7.5" fill="var(--color-ink)" fontFamily="var(--font-jetbrains)">
                 {(investigationById(entry.other)?.acronym ?? entry.other).slice(0, 10)}
               </text>
               <title>{`${investigationById(entry.other)?.acronym ?? entry.other}: ${entry.type.replace(/_/g, " ")} (${entry.basis})`}</title>
@@ -53,13 +53,13 @@ function MiniTree({ id }: { id: string }) {
           </g>
         );
       })}
-      <circle cx={center} cy={center} r="26" fill="#ff7a3d22" stroke="#ff7a3d" />
-      <text x={center} y={center + 3} textAnchor="middle" fontSize="8.5" fill="#ffb07f" fontFamily="var(--font-plex-mono)">
+      <circle cx={center} cy={center} r="26" fill="var(--color-clay-soft)" stroke="var(--color-clay)" />
+      <text x={center} y={center + 3} textAnchor="middle" fontSize="8.5" fill="var(--color-clay-strong)" fontFamily="var(--font-jetbrains)">
         {(investigationById(id)?.acronym ?? id).slice(0, 12)}
       </text>
     </svg>
     <nav aria-label="Linked family investigations" className="mt-2 flex flex-wrap justify-center gap-2 text-xs">
-      {neighbours.map((entry) => <Link key={entry.other} href={`/library/${encodeURIComponent(entry.other)}`} className="min-h-11 rounded border border-line px-3 py-2 text-habitat hover:border-habitat/60">{investigationById(entry.other)?.acronym ?? entry.other} · {entry.type.replace(/_/g, " ")}</Link>)}
+      {neighbours.map((entry) => <Link key={entry.other} href={`/library/${encodeURIComponent(entry.other)}`} className="min-h-11 rounded border border-sand-strong px-3 py-2 text-clay-strong hover:border-clay/60">{investigationById(entry.other)?.acronym ?? entry.other} · {entry.type.replace(/_/g, " ")}</Link>)}
     </nav>
     </div>
   );
@@ -94,29 +94,29 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
   return (
     <article className="space-y-6">
       <div>
-        <Link href="/library?tab=investigations" className="text-xs text-muted hover:text-ink">
+        <Link href="/library?tab=investigations" className="text-xs text-ink-muted hover:text-ink">
           ← All investigations
         </Link>
         <p className="eyebrow mt-3">
           {investigation.investigation_id} · {investigation.data_origin.replace("_", " ")}
         </p>
-        <h1 className="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">
-          {investigation.acronym}: <span className="text-muted">{investigation.title}</span>
+        <h1 className="mt-2 text-3xl sm:text-4xl">
+          {investigation.acronym}: <span className="text-ink-muted">{investigation.title}</span>
         </h1>
-        <p className="mt-2 max-w-3xl text-sm text-muted">Investigation record for the evidence library: inspect its objectives, test conditions, findings, caveats and source links.</p>
+        <p className="mt-2 max-w-3xl text-sm text-ink-muted">Investigation record for the evidence library: inspect its objectives, test conditions, findings, caveats and source links.</p>
         <div className="mt-3 flex flex-wrap gap-1.5 text-xs">
           {(investigation.fire_safety_roles ?? "")
             .split(";")
             .filter(Boolean)
             .map((role) => (
-              <span key={role} className="rounded border border-ember/40 px-2 py-0.5 text-ember-soft">
+              <span key={role} className="rounded border border-clay/40 px-2 py-0.5 text-clay-strong">
                 {role}
               </span>
             ))}
-          <span className="rounded border border-line px-2 py-0.5">{investigation.in_scope ? "in scope for fire safety" : "out of scope for fire safety"}</span>
-          {investigation.status ? <span className="rounded border border-habitat/40 px-2 py-0.5 text-habitat">{investigation.status}</span> : null}
+          <span className="rounded border border-sand-strong px-2 py-0.5">{investigation.in_scope ? "in scope for fire safety" : "out of scope for fire safety"}</span>
+          {investigation.status ? <span className="rounded border border-clay/40 px-2 py-0.5 text-clay-strong">{investigation.status}</span> : null}
         </div>
-        <p className="mt-2 text-xs text-muted">Role curation: {investigation.role_curation_note}</p>
+        <p className="mt-2 text-xs text-ink-muted">Role curation: {investigation.role_curation_note}</p>
       </div>
 
       <div className="grid gap-4 lg:grid-cols-[1fr_20rem]">
@@ -157,7 +157,7 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
                 </Field>
                 <Field label="Closest card to 8.2 psia / 34%">
                   {closestCard ? (
-                    <Link href={`/library?card=${closestCard.card_id}&investigation=${id}`} className="num text-habitat hover:underline">
+                    <Link href={`/library?card=${closestCard.card_id}&investigation=${id}`} className="num text-clay-strong hover:underline">
                       {closestCard.card_id}
                     </Link>
                   ) : (
@@ -176,25 +176,25 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
                   )}
                 </Field>
               </dl>
-              <p className="mt-3 text-xs leading-relaxed text-muted">The A–F summaries above are dataset relevance bands around the exploration atmosphere. They differ from the condition-specific evidence grades explained here.</p>
+              <p className="mt-3 text-xs leading-relaxed text-ink-muted">The A–F summaries above are dataset relevance bands around the exploration atmosphere. They differ from the condition-specific evidence grades explained here.</p>
               <div className="mt-2"><EvidenceTierGuide compact /></div>
               </div>
             ) : (
-              <p className="mt-2 text-sm text-muted">No burn cards for this investigation in the dataset{investigationCampaigns.length ? `; it has ${investigationCampaigns.length} campaign rows` : ""}.</p>
+              <p className="mt-2 text-sm text-ink-muted">No burn cards for this investigation in the dataset{investigationCampaigns.length ? `; it has ${investigationCampaigns.length} campaign rows` : ""}.</p>
             )}
             {cards.length ? (
               <div className="mt-4 flex flex-wrap gap-2 text-xs">
-                <Link href={`/library?investigation=${encodeURIComponent(id)}`} className="rounded-md border border-line-strong px-3 py-1.5 hover:border-habitat/60">
+                <Link href={`/library?investigation=${encodeURIComponent(id)}`} className="rounded-md border border-stone px-3 py-1.5 hover:border-clay/60">
                   Browse {cards.length} cards
                 </Link>
                 {closestCard && closestCard.o2_pct !== null ? (
-                  <Link href={`/matcher?o2=${closestCard.o2_pct}&p=${closestCard.pressure_kpa}&g=${normalizeGravity(closestCard.gravity_regime)}&fuel=${closestCard.fuel_class}&from=${closestCard.card_id}`} className="rounded-md border border-line-strong px-3 py-1.5 hover:border-habitat/60">
+                  <Link href={`/matcher?o2=${closestCard.o2_pct}&p=${closestCard.pressure_kpa}&g=${normalizeGravity(closestCard.gravity_regime)}&fuel=${closestCard.fuel_class}&from=${closestCard.card_id}`} className="rounded-md border border-stone px-3 py-1.5 hover:border-clay/60">
                     Match closest card
                   </Link>
                 ) : null}
               </div>
             ) : null}
-            {fuels.length ? <p className="mt-3 text-xs text-muted">Fuels: {fuels.join(", ")}</p> : null}
+            {fuels.length ? <p className="mt-3 text-xs text-ink-muted">Fuels: {fuels.join(", ")}</p> : null}
           </section>
 
           {investigationFindings.length ? (
@@ -205,7 +205,7 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
               <ul className="mt-3 space-y-3 text-sm">
                 {investigationFindings.map((finding) => (
                   <li key={finding.finding_id}>
-                    <span className="num mr-1 text-xs text-ember">{finding.finding_id}</span>
+                    <span className="num mr-1 text-xs text-clay-strong">{finding.finding_id}</span>
                     {finding.statement}
                     <div className="mt-1">
                       <SourceChips ids={finding.source_ids} label="" />
@@ -224,7 +224,7 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
               <div className="mt-3 overflow-x-auto">
                 <table className="w-full min-w-[560px] text-xs">
                   <thead>
-                    <tr className="text-left text-muted">
+                    <tr className="text-left text-ink-muted">
                       <th className="py-1 font-normal">Type</th>
                       <th className="py-1 font-normal">Date</th>
                       <th className="py-1 font-normal">Fuel</th>
@@ -233,7 +233,7 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
                       <th className="py-1 font-normal">Note</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-line">
+                  <tbody className="divide-y divide-sand-strong">
                     {investigationCampaigns.slice(0, 25).map((campaign) => (
                       <tr key={campaign.campaign_id}>
                         <td className="py-1.5 pr-2">{campaign.record_type.replace(/_/g, " ")}</td>
@@ -241,13 +241,13 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
                         <td className="py-1.5 pr-2">{campaign.fuel ?? <Missing />}</td>
                         <td className="num py-1.5 pr-2">{campaign.o2_text ?? <Missing />}</td>
                         <td className="num py-1.5 pr-2">{campaign.n_flames_ignited ?? <Missing />}</td>
-                        <td className="py-1.5 text-muted">{campaign.burner_or_hardware_note ?? ""}</td>
+                        <td className="py-1.5 text-ink-muted">{campaign.burner_or_hardware_note ?? ""}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
-              {investigationCampaigns.length > 25 ? <p className="mt-2 text-xs text-muted">Showing 25 of {investigationCampaigns.length}; full table in Data &amp; Method downloads.</p> : null}
+              {investigationCampaigns.length > 25 ? <p className="mt-2 text-xs text-ink-muted">Showing 25 of {investigationCampaigns.length}; full table in Data &amp; Method downloads.</p> : null}
             </section>
           ) : null}
 
@@ -260,17 +260,17 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
                 {investigationPublications.slice(0, 20).map((publication, index) => (
                   <li key={index}>
                     {publication.doi ? (
-                      <a href={`https://doi.org/${publication.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-habitat">
+                      <a href={`https://doi.org/${publication.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//, "")}`} target="_blank" rel="noopener noreferrer" className="hover:text-clay-strong">
                         {publication.title}
                       </a>
                     ) : (
                       publication.title
                     )}
-                    <span className="block text-xs text-muted">{publication.authors}</span>
+                    <span className="block text-xs text-ink-muted">{publication.authors}</span>
                   </li>
                 ))}
               </ul>
-              {investigationPublications.length > 20 ? <p className="mt-2 text-xs text-muted">Showing 20 of {investigationPublications.length}.</p> : null}
+              {investigationPublications.length > 20 ? <p className="mt-2 text-xs text-ink-muted">Showing 20 of {investigationPublications.length}.</p> : null}
             </section>
           ) : null}
         </div>
@@ -289,7 +289,7 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
               <Field label="Principal investigators">{investigation.principal_investigators ?? <Missing />}</Field>
               {investigation.psi_url ? (
                 <Field label="PSI page">
-                  <a href={investigation.psi_url} target="_blank" rel="noopener noreferrer" className="break-all text-habitat hover:underline">
+                  <a href={investigation.psi_url} target="_blank" rel="noopener noreferrer" className="break-all text-clay-strong hover:underline">
                     {investigation.psi_url}
                   </a>
                 </Field>
@@ -301,8 +301,8 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
               Family tree
             </h2>
             <MiniTree id={id} />
-            <p className="text-[11px] text-muted">Solid orange = curated lineage; dashed = derived shared hardware/fuel (computed, not NASA-stated).</p>
-            <Link href={`/family-tree?focus=${encodeURIComponent(id)}`} className="mt-2 inline-block text-xs text-habitat hover:underline">
+            <p className="text-[11px] text-ink-muted">Solid orange = curated lineage; dashed = derived shared hardware/fuel (computed, not NASA-stated).</p>
+            <Link href={`/family-tree?focus=${encodeURIComponent(id)}`} className="mt-2 inline-block text-xs text-clay-strong hover:underline">
               Open full family tree →
             </Link>
           </section>
@@ -327,7 +327,7 @@ export default async function InvestigationPage({ params }: { params: Promise<{ 
                     <span className="font-medium">
                       {discrepancy.record}, {discrepancy.field}
                     </span>
-                    : {discrepancy.psi_or_primary_value} vs {discrepancy.conflicting_or_expected_value}. <span className="text-muted">{discrepancy.handling}</span>
+                    : {discrepancy.psi_or_primary_value} vs {discrepancy.conflicting_or_expected_value}. <span className="text-ink-muted">{discrepancy.handling}</span>
                   </li>
                 ))}
               </ul>

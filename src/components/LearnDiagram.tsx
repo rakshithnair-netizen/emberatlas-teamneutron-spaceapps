@@ -1,13 +1,13 @@
-const ink = "#e7edf3";
-const muted = "#9aa8b7";
-const ember = "#ff7a3d";
-const cyan = "#22d3ee";
-const blue = "#60a5fa";
+const ink = "var(--color-ink)";
+const muted = "var(--color-ink-muted)";
+const ember = "var(--color-clay)";
+const cyan = "var(--color-sky-strong)";
+const blue = "var(--color-sky)";
 
 function Frame({ children, label }: { children: React.ReactNode; label: string }) {
   return (
     <svg viewBox="0 0 320 160" className="h-auto w-full" role="img" aria-label={label}>
-      <rect x="0.5" y="0.5" width="319" height="159" rx="10" fill="#0a1017" stroke="#1f2b38" />
+      <rect x="0.5" y="0.5" width="319" height="159" rx="10" fill="var(--color-paper-raised)" stroke="var(--color-sand-strong)" />
       {children}
     </svg>
   );
@@ -21,11 +21,11 @@ export function LearnDiagram({ kind }: { kind: string }) {
           <text x="80" y="20" fill={muted} fontSize="10" textAnchor="middle">Earth (1 g)</text>
           <path d="M80 130 C55 105 62 70 80 35 C98 70 105 105 80 130Z" fill={ember} fillOpacity="0.35" stroke={ember} />
           <path d="M80 30 V8" stroke={muted} strokeDasharray="3 3" markerEnd="url(#arrow)" />
-          <circle cx="80" cy="122" r="5" fill="#f5d04c" />
+          <circle cx="80" cy="122" r="5" fill="var(--color-ink)" />
           <text x="240" y="20" fill={muted} fontSize="10" textAnchor="middle">Microgravity</text>
           <circle cx="240" cy="85" r="45" fill={blue} fillOpacity="0.12" stroke={blue} />
           <circle cx="240" cy="85" r="34" fill="none" stroke={ember} strokeOpacity="0.6" />
-          <circle cx="240" cy="85" r="6" fill="#f5d04c" />
+          <circle cx="240" cy="85" r="6" fill="var(--color-ink)" />
           <text x="160" y="150" fill={muted} fontSize="9" textAnchor="middle">no buoyancy → no plume → round flame</text>
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
@@ -40,7 +40,7 @@ export function LearnDiagram({ kind }: { kind: string }) {
           {[40, 70, 100].map((y) => (
             <path key={y} d={`M20 ${y} H120`} stroke={cyan} strokeOpacity="0.6" markerEnd="url(#flowArrow)" />
           ))}
-          <rect x="140" y="95" width="140" height="8" fill="#f5d04c" fillOpacity="0.6" />
+          <rect x="140" y="95" width="140" height="8" fill="var(--color-ink)" fillOpacity="0.6" />
           <path d="M160 95 C175 70 220 62 270 70 C230 78 190 85 175 95Z" fill={ember} fillOpacity="0.45" stroke={ember} />
           <text x="70" y="128" fill={muted} fontSize="10" textAnchor="middle">ventilation flow</text>
           <text x="210" y="128" fill={muted} fontSize="10" textAnchor="middle">flame fed by the flow</text>
@@ -60,7 +60,7 @@ export function LearnDiagram({ kind }: { kind: string }) {
           <text x="170" y="150" fill={muted} fontSize="9" textAnchor="middle">suppressant fraction (MEC) →</text>
           <text x="14" y="75" fill={muted} fontSize="9" transform="rotate(-90 14 75)" textAnchor="middle">O₂ →</text>
           <path d="M40 95 L290 30" stroke={ember} strokeWidth="2" />
-          <text x="200" y="40" fill={ember} fontSize="10">LOI = 0.209 × (1 − MEC)</text>
+          <text x="200" y="40" fill="var(--color-clay-strong)" fontSize="10">LOI = 0.209 × (1 − MEC)</text>
           <text x="80" y="55" fill={ink} fontSize="10">burns</text>
           <text x="200" y="115" fill={muted} fontSize="10">extinguished</text>
         </Frame>
@@ -76,7 +76,7 @@ export function LearnDiagram({ kind }: { kind: string }) {
             const o2Height = height * (bar.o2 / 100);
             return (
               <g key={bar.label}>
-                <rect x={bar.x} y={130 - height} width="50" height={height} fill="#1f2b38" stroke={muted} />
+                <rect x={bar.x} y={130 - height} width="50" height={height} fill="var(--color-sand-strong)" stroke={muted} />
                 <rect x={bar.x} y={130 - o2Height} width="50" height={o2Height} fill={cyan} fillOpacity="0.55" />
                 <text x={bar.x + 25} y={145} fill={muted} fontSize="9" textAnchor="middle">{bar.label}</text>
                 <text x={bar.x + 25} y={124 - o2Height} fill={cyan} fontSize="9" textAnchor="middle">ppO₂ {(bar.total * bar.o2 / 100).toFixed(1)} kPa</text>
@@ -89,11 +89,11 @@ export function LearnDiagram({ kind }: { kind: string }) {
       return (
         <Frame label="A droplet with a bright hot flame that goes dark, followed by a faint cool flame that keeps reacting.">
           <circle cx="80" cy="80" r="40" fill={ember} fillOpacity="0.3" stroke={ember} />
-          <circle cx="80" cy="80" r="6" fill="#f5d04c" />
+          <circle cx="80" cy="80" r="6" fill="var(--color-ink)" />
           <text x="80" y="140" fill={muted} fontSize="10" textAnchor="middle">hot flame (visible)</text>
           <path d="M135 80 H185" stroke={muted} markerEnd="url(#coolArrow)" />
-          <circle cx="240" cy="80" r="32" fill="#b294ff" fillOpacity="0.08" stroke="#b294ff" strokeDasharray="2 4" />
-          <circle cx="240" cy="80" r="5" fill="#f5d04c" />
+          <circle cx="240" cy="80" r="32" fill="var(--color-sky)" fillOpacity="0.08" stroke="var(--color-sky)" strokeDasharray="2 4" />
+          <circle cx="240" cy="80" r="5" fill="var(--color-ink)" />
           <text x="240" y="140" fill={muted} fontSize="10" textAnchor="middle">cool flame (nearly invisible)</text>
           <defs>
             <marker id="coolArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
@@ -127,9 +127,9 @@ export function LearnDiagram({ kind }: { kind: string }) {
     case "saffire":
       return (
         <Frame label="A Cygnus cargo vehicle containing a Saffire flow duct with a large burning sample.">
-          <rect x="40" y="40" width="240" height="80" rx="30" fill="#111a24" stroke={muted} />
-          <rect x="90" y="62" width="140" height="36" fill="#0a1017" stroke={cyan} strokeOpacity="0.6" />
-          <rect x="105" y="78" width="110" height="5" fill="#f5d04c" fillOpacity="0.6" />
+          <rect x="40" y="40" width="240" height="80" rx="30" fill="var(--color-sand)" stroke={muted} />
+          <rect x="90" y="62" width="140" height="36" fill="var(--color-paper-raised)" stroke={cyan} strokeOpacity="0.6" />
+          <rect x="105" y="78" width="110" height="5" fill="var(--color-ink)" fillOpacity="0.6" />
           <path d="M120 78 C150 68 180 66 210 70 C185 74 150 76 135 78Z" fill={ember} fillOpacity="0.6" />
           <text x="160" y="32" fill={muted} fontSize="10" textAnchor="middle">Cygnus, after leaving the ISS (uncrewed)</text>
           <text x="160" y="140" fill={ink} fontSize="9" textAnchor="middle">Saffire-VI: up to 31% O₂ at about 54 kPa</text>
@@ -145,8 +145,8 @@ export function LearnDiagram({ kind }: { kind: string }) {
           ].map((bar, index) => (
             <g key={bar.label}>
               <text x="20" y={45 + index * 35} fill={muted} fontSize="10">{bar.label}</text>
-              <rect x="95" y={34 + index * 35} width={200 * bar.value} height="14" fill="#d8a6ff" fillOpacity="0.5" />
-              <rect x="95" y={34 + index * 35} width="200" height="14" fill="none" stroke="#2d3d4f" />
+              <rect x="95" y={34 + index * 35} width={200 * bar.value} height="14" fill="var(--color-stone)" fillOpacity="0.5" />
+              <rect x="95" y={34 + index * 35} width="200" height="14" fill="none" stroke="var(--color-sand-strong)" />
               <text x={100 + 200 * bar.value} y={45 + index * 35} fill={ink} fontSize="10">{bar.value}×</text>
             </g>
           ))}
@@ -156,13 +156,13 @@ export function LearnDiagram({ kind }: { kind: string }) {
     default:
       return (
         <Frame label="Concentric distance rings around the exploration atmosphere marker, with tier labels.">
-          <ellipse cx="160" cy="80" rx="120" ry="60" fill="none" stroke="#fbbf24" strokeDasharray="4 4" />
-          <ellipse cx="160" cy="80" rx="70" ry="35" fill="none" stroke="#60a5fa" />
-          <ellipse cx="160" cy="80" rx="30" ry="15" fill="#4ade80" fillOpacity="0.15" stroke="#4ade80" />
+          <ellipse cx="160" cy="80" rx="120" ry="60" fill="none" stroke="var(--color-clay-strong)" strokeDasharray="4 4" />
+          <ellipse cx="160" cy="80" rx="70" ry="35" fill="none" stroke="var(--color-sky)" />
+          <ellipse cx="160" cy="80" rx="30" ry="15" fill="var(--color-sage-strong)" fillOpacity="0.15" stroke="var(--color-sage-strong)" />
           <path d="M150 80 H170 M160 70 V90" stroke={cyan} strokeWidth="2" />
-          <text x="160" y="105" fill="#4ade80" fontSize="9" textAnchor="middle">≤0.35 measured</text>
-          <text x="160" y="126" fill="#60a5fa" fontSize="9" textAnchor="middle">inside coverage: interpolated</text>
-          <text x="160" y="152" fill="#fbbf24" fontSize="9" textAnchor="middle">outside coverage: extrapolated</text>
+          <text x="160" y="105" fill="var(--color-sage-strong)" fontSize="9" textAnchor="middle">≤0.35 measured</text>
+          <text x="160" y="126" fill="var(--color-sky-strong)" fontSize="9" textAnchor="middle">inside coverage: interpolated</text>
+          <text x="160" y="152" fill="var(--color-clay-strong)" fontSize="9" textAnchor="middle">outside coverage: extrapolated</text>
         </Frame>
       );
   }

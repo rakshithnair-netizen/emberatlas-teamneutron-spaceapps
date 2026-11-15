@@ -39,7 +39,7 @@ export function HabitatPicker({ compact = false }: { compact?: boolean }) {
         <select
           value={habitatId}
           onChange={(event) => setHabitatId(event.target.value)}
-          className="num appearance-none rounded-md border border-habitat/40 bg-habitat/10 py-1.5 pl-2.5 pr-7 text-xs text-habitat hover:border-habitat/70"
+          className="w-full max-w-[17rem] appearance-none truncate rounded-full border py-1.5 pl-3 pr-7 text-xs tabular-nums hover:border-stone"
           aria-label="Target habitat atmosphere"
         >
           {habitatList.map((entry) => (
@@ -48,7 +48,7 @@ export function HabitatPicker({ compact = false }: { compact?: boolean }) {
             </option>
           ))}
         </select>
-        <svg className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-habitat" width="10" height="10" viewBox="0 0 10 10" aria-hidden>
+        <svg className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-ink-muted" width="10" height="10" viewBox="0 0 10 10" aria-hidden>
           <path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.5" />
         </svg>
       </span>
@@ -63,6 +63,14 @@ export function SiteHeader() {
   const menuButton = useRef<HTMLButtonElement>(null);
   const mobileNav = useRef<HTMLElement>(null);
   const moreTools = useRef<HTMLDetailsElement>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const update = () => setScrolled(window.scrollY > 4);
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    return () => window.removeEventListener("scroll", update);
+  }, []);
 
   // The header lives in the root layout and stays mounted across client navigations, so menus must be
   // closed explicitly when the route changes. The desktop "More tools" <details> previously stayed open
@@ -109,29 +117,22 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-bg/85 backdrop-blur">
-      <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:rounded focus:bg-panel focus:px-3 focus:py-2">
+    <header className="site-header sticky top-0 z-40 border-b border-sand-strong bg-paper" data-scrolled={scrolled ? "true" : undefined}>
+      <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:rounded focus:bg-paper-raised focus:px-3 focus:py-2">
         Skip to content
       </a>
-      <div className="mx-auto flex h-14 max-w-7xl items-center gap-4 px-4">
+      <div className="mx-auto flex h-16 max-w-[1200px] items-center gap-5 px-4">
         <Link href="/" className="flex shrink-0 items-center gap-2" aria-label="Ember Atlas home">
           <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden>
-            <defs>
-              <radialGradient id="logoFlame" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#fff4d6" />
-                <stop offset="35%" stopColor="#ffb07f" />
-                <stop offset="70%" stopColor="#ff7a3d" stopOpacity="0.7" />
-                <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.15" />
-              </radialGradient>
-            </defs>
-            <circle cx="16" cy="16" r="13" fill="url(#logoFlame)" />
-            <circle cx="16" cy="16" r="15" fill="none" stroke="#22d3ee" strokeOpacity="0.5" strokeDasharray="2 3" />
+            <circle cx="16" cy="16" r="8" fill="var(--color-clay)" />
+            <circle cx="16" cy="16" r="12" fill="none" stroke="var(--color-clay)" strokeOpacity="0.45" strokeWidth="1.5" />
+            <circle cx="16" cy="16" r="15" fill="none" stroke="var(--color-ink)" strokeWidth="1" strokeDasharray="2 3" />
           </svg>
-          <span className="text-sm font-semibold tracking-tight">
-            Ember <span className="text-muted">Atlas</span>
+          <span className="font-display text-[15px] font-semibold tracking-tight">
+            Ember <span className="text-ink-muted">Atlas</span>
           </span>
         </Link>
-        <nav className="hidden flex-1 items-center gap-0.5 xl:flex" aria-label="Primary">
+        <nav className="hidden flex-1 items-center gap-1 xl:flex" aria-label="Primary">
           {primaryNav.map((item) => {
             const active = isActive(pathname, item.href);
             return (
@@ -139,16 +140,16 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 aria-current={active ? "page" : undefined}
-                className={`inline-flex min-h-11 items-center whitespace-nowrap rounded-md px-2 text-[13px] ${active ? "bg-panel-2 text-ink" : "text-muted hover:text-ink"}`}
+                className={`nav-link inline-flex min-h-11 items-center whitespace-nowrap px-1.5 font-display text-[15px] font-medium ${active ? "text-ink" : "text-ink-muted hover:text-ink"}`}
               >
                 {item.label}
               </Link>
             );
           })}
           <details ref={moreTools} className="relative">
-            <summary className="flex min-h-11 cursor-pointer list-none items-center rounded-md px-2 text-[13px] text-muted hover:text-ink">More tools</summary>
-            <ul className="absolute right-0 top-full z-50 mt-1 min-w-52 rounded-lg border border-line bg-panel p-2 shadow-xl">
-              {secondaryNav.map((item) => <li key={item.href}><Link href={item.href} aria-current={pathname.startsWith(item.href) ? "page" : undefined} className="flex min-h-11 items-center rounded px-3 text-sm text-muted hover:bg-panel-2 hover:text-ink">{item.label}</Link></li>)}
+            <summary className="flex min-h-11 cursor-pointer list-none items-center whitespace-nowrap px-1.5 font-display text-[15px] font-medium text-ink-muted hover:text-ink">More tools</summary>
+            <ul className="absolute right-0 top-full z-50 mt-1 min-w-52 rounded-lg border border-sand-strong bg-paper-raised p-2 shadow-card">
+              {secondaryNav.map((item) => <li key={item.href}><Link href={item.href} aria-current={pathname.startsWith(item.href) ? "page" : undefined} className="flex min-h-11 items-center rounded px-3 text-sm text-ink-muted hover:bg-sand hover:text-ink">{item.label}</Link></li>)}
             </ul>
           </details>
         </nav>
@@ -159,7 +160,7 @@ export function SiteHeader() {
           <button
             ref={menuButton}
             type="button"
-            className="flex min-h-11 min-w-11 items-center justify-center rounded-md border border-line xl:hidden"
+            className="flex min-h-11 min-w-11 items-center justify-center rounded-md border border-sand-strong xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? "Close navigation menu" : "Open navigation menu"}
@@ -177,7 +178,7 @@ export function SiteHeader() {
         </div>
       </div>
       {open ? (
-        <nav id="mobile-nav" ref={mobileNav} className="border-t border-line bg-bg px-4 pb-4 pt-2 xl:hidden" aria-label="Primary">
+        <nav id="mobile-nav" ref={mobileNav} className="border-t border-sand-strong bg-paper px-4 pb-4 pt-2 xl:hidden" aria-label="Primary">
           <div className="mb-3 sm:hidden">
             <HabitatPicker />
           </div>
@@ -191,7 +192,7 @@ export function SiteHeader() {
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
-                    className={`flex min-h-11 items-center rounded-md px-3 text-sm ${active ? "bg-panel-2 text-ink" : "text-muted"}`}
+                    className={`flex min-h-11 items-center rounded-md px-3 font-display text-[15px] font-medium ${active ? "bg-clay-soft text-ink" : "text-ink-muted"}`}
                   >
                     {item.label}
                   </Link>
@@ -199,10 +200,10 @@ export function SiteHeader() {
               );
             })}
           </ul>
-          <details className="mt-2 border-t border-line pt-2">
-            <summary className="flex min-h-11 cursor-pointer items-center rounded-md px-3 text-sm font-medium text-habitat">More tools</summary>
+          <details className="mt-2 border-t border-sand-strong pt-2">
+            <summary className="flex min-h-11 cursor-pointer items-center rounded-md px-3 text-sm font-medium text-clay-strong">More tools</summary>
             <ul className="grid gap-1 sm:grid-cols-2">
-              {secondaryNav.map((item) => <li key={item.href}><Link href={item.href} aria-current={pathname.startsWith(item.href) ? "page" : undefined} className="flex min-h-11 items-center rounded-md px-3 text-sm text-muted hover:bg-panel-2 hover:text-ink">{item.label}</Link></li>)}
+              {secondaryNav.map((item) => <li key={item.href}><Link href={item.href} aria-current={pathname.startsWith(item.href) ? "page" : undefined} className="flex min-h-11 items-center rounded-md px-3 text-sm text-ink-muted hover:bg-sand hover:text-ink">{item.label}</Link></li>)}
             </ul>
           </details>
         </nav>

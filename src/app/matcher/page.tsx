@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: "Condition Matcher" };
 
 export default function MatcherPage() {
   return (
-    <Suspense fallback={<p className="text-sm text-muted">Loading matcher…</p>}>
+    <Suspense fallback={<p className="text-sm text-ink-muted">Loading matcher…</p>}>
       <MatcherView hulls={derived.hulls as Hull[]} />
     </Suspense>
   );

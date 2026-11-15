@@ -5,9 +5,11 @@ import type { Data, Layout, PlotMouseEvent } from "plotly.js";
 import { basisKind, isSolidBasis, normalizeGravity, type GravityRegime } from "@/lib/basis";
 import { distanceEllipse } from "@/lib/geometry";
 import type { BurnCard, HabitatAtmosphere } from "@/lib/types";
-import { PlotlyChart, darkAxis } from "./PlotlyChart";
+import { axisStyle, chartTheme, fontDisplay, withAlpha } from "@/lib/plotlyTheme";
+import { useChartTheme } from "@/lib/useChartTheme";
+import { PlotlyChart } from "./PlotlyChart";
 
-export const fuelColors: Record<string, string> = { gas: "#ff8a4c", liquid: "#b294ff", solid: "#f5d04c" };
+export const fuelColors: Record<string, string> = chartTheme(false).fuel;
 const gravitySymbols: Record<GravityRegime, string> = { microgravity: "circle", lunar: "diamond", earth: "square" };
 
 export interface Hull {
@@ -60,6 +62,7 @@ export function EnvelopeMap({
   onSelectCard?: (card: BurnCard) => void;
   height?: number;
 }) {
+  const theme = useChartTheme();
   const byId = useMemo(() => new Map(cards.map((card) => [card.card_id, card])), [cards]);
   const [narrow, setNarrow] = useState(false);
   useEffect(() => {
@@ -92,7 +95,7 @@ export function EnvelopeMap({
           mode: "lines",
           x: xs,
           y: ys,
-          line: { color: ppo2 === 19.2 ? "rgba(34,211,238,0.35)" : "rgba(255,255,255,0.10)", width: 1, dash: "dot" },
+          line: { color: ppo2 === 19.2 ? theme.muted : theme.stone, width: 1, dash: "dash" },
           hoverinfo: "skip",
           name: `ppO₂ ${ppo2} kPa`,
           showlegend: false,
@@ -109,8 +112,8 @@ export function EnvelopeMap({
           x: closed.map((point) => point[0]),
           y: closed.map((point) => point[1]),
           fill: "toself",
-          fillcolor: `${fuelColors[hull.fuelClass]}14`,
-          line: { color: `${fuelColors[hull.fuelClass]}66`, width: 1 },
+          fillcolor: withAlpha(fuelColors[hull.fuelClass], 0.08),
+          line: { color: withAlpha(fuelColors[hull.fuelClass], 0.4), width: 1 },
           hoverinfo: "text",
           text: `${hull.fuelClass} coverage (${hull.count} microgravity cards)`,
           name: `${hull.fuelClass} coverage`,
@@ -120,9 +123,9 @@ export function EnvelopeMap({
     }
 
     const rings = [
-      { radius: 0.35, label: "d ≤ 0.35 (Measured zone)", color: "rgba(74,222,128,0.75)", fill: "rgba(74,222,128,0.07)" },
-      { radius: 0.5, label: "d ≤ 0.5", color: "rgba(34,211,238,0.45)", fill: "rgba(0,0,0,0)" },
-      { radius: 1, label: "d ≤ 1.0", color: "rgba(34,211,238,0.25)", fill: "rgba(0,0,0,0)" },
+      { radius: 0.35, label: "d ≤ 0.35 (Measured zone)", color: theme.sageStrong, fill: withAlpha(theme.sage, 0.1) },
+      { radius: 0.5, label: "d ≤ 0.5", color: theme.muted, fill: "transparent" },
+      { radius: 1, label: "d ≤ 1.0", color: theme.stone, fill: "transparent" },
     ];
     for (const ring of rings) {
       const ellipse = distanceEllipse(selectedHabitat.o2_pct, selectedHabitat.pressure_kpa, ring.radius);
@@ -171,11 +174,11 @@ export function EnvelopeMap({
         name: `${fuelClass}${micro ? "" : ` · ${gravity}`}${stated ? "" : " (nominal/approx)"}`,
         legendgroup: fuelClass,
         marker: {
-          color: stated ? fuelColors[fuelClass] : "rgba(0,0,0,0)",
+          color: stated ? fuelColors[fuelClass] : "transparent",
           size: micro ? (dimmed ? 5 : 7) : 15,
           symbol: micro ? (stated ? gravitySymbols[gravity] : `${gravitySymbols[gravity]}-open`) : gravitySymbols[gravity],
           opacity: dimmed ? 0.12 : stated ? 0.85 : 0.55,
-          line: { color: micro ? fuelColors[fuelClass] : "#ffffff", width: micro ? (stated ? 0 : 1.2) : 2 },
+          line: { color: micro ? fuelColors[fuelClass] : theme.fg, width: micro ? (stated ? 0 : 1.5) : 2 },
         },
         error_y: hasRanges
           ? {
@@ -201,7 +204,7 @@ export function EnvelopeMap({
         customdata: highlighted.map((card) => card.card_id),
         text: highlighted.map(hoverText),
         hovertemplate: "%{text}<extra>nearest</extra>",
-        marker: { size: 16, color: "rgba(0,0,0,0)", line: { color: "#ffffff", width: 2 }, symbol: "circle-open" },
+        marker: { size: 16, color: "transparent", line: { color: theme.fg, width: 2 }, symbol: "circle-open" },
         name: "Nearest cards",
         showlegend: true,
       });
@@ -214,17 +217,30 @@ export function EnvelopeMap({
       y: habitats.map((habitat) => habitat.o2_pct),
       text: habitats.map((habitat) => habitat.habitat_id),
       textposition: "top right",
-      textfont: { color: "#22d3ee", size: 10, family: "var(--font-plex-mono), monospace" },
+      textfont: { color: theme.fg, size: 11, family: fontDisplay, weight: 500 },
       hovertext: habitats.map((habitat) => `<b>${habitat.name}</b><br>${habitat.o2_pct}% O₂ · ${habitat.pressure_kpa} kPa (${habitat.pressure_psia} psia)<br>ppO₂ ${habitat.ppo2_kpa} kPa`),
       hovertemplate: "%{hovertext}<extra>habitat</extra>",
       marker: {
         size: habitats.map((habitat) => (habitat.habitat_id === selectedHabitat.habitat_id ? 26 : 16)),
         symbol: "cross-thin-open",
-        color: "#22d3ee",
-        line: { color: "#22d3ee", width: habitats.map((habitat) => (habitat.habitat_id === selectedHabitat.habitat_id ? 3 : 1.5)) as unknown as number },
+        color: theme.fg,
+        line: { color: theme.fg, width: habitats.map((habitat) => (habitat.habitat_id === selectedHabitat.habitat_id ? 3 : 1.5)) as unknown as number },
       },
       name: "Habitat atmospheres",
     } as Data);
+
+    const exploration = habitats.find((habitat) => habitat.habitat_id === "HAB-03");
+    if (exploration) {
+      traces.push({
+        type: "scatter",
+        mode: "markers",
+        x: [exploration.pressure_kpa, exploration.pressure_kpa],
+        y: [exploration.o2_pct, exploration.o2_pct],
+        marker: { size: [34, 20], symbol: ["circle", "circle-open"], color: [withAlpha(theme.clay, 0.18), theme.clay], line: { color: theme.clay, width: 2 } },
+        hoverinfo: "skip",
+        showlegend: false,
+      } as Data);
+    }
 
     if (query) {
       traces.push({
@@ -233,31 +249,31 @@ export function EnvelopeMap({
         x: [query.pressureKpa],
         y: [query.o2Pct],
         hovertemplate: `${query.label}<br>%{y}% O₂ · %{x} kPa<extra>query</extra>`,
-        marker: { size: 18, symbol: "star", color: query.color, line: { color: "#06090d", width: 1.5 } },
+        marker: { size: 18, symbol: "star", color: query.color, line: { color: theme.surface, width: 1.5 } },
         name: "Your query",
       });
     }
     return traces;
-  }, [cards, hulls, habitats, selectedHabitat, options, highlightIds, query, byId]);
+  }, [cards, hulls, habitats, selectedHabitat, options, highlightIds, query, byId, theme]);
 
   const layout = useMemo<Partial<Layout>>(
     () => ({
       height,
       xaxis: {
-        ...darkAxis,
-        title: { text: options.logX ? "Pressure (kPa, log scale)" : "Pressure (kPa)" },
+        ...axisStyle(theme),
+        title: { ...axisStyle(theme).title, text: options.logX ? "Pressure (kPa, log scale)" : "Pressure (kPa)" },
         type: options.logX ? "log" : "linear",
         range: options.logX ? [Math.log10(22), Math.log10(560)] : [20, 340],
         tickvals: options.logX ? [25, 30, 40, 56.5, 70, 101.3, 150, 200, 300, 500] : undefined,
         ticktext: options.logX ? ["25", "30", "40", "56.5", "70", "101", "150", "200", "300", "500"] : undefined,
       },
-      yaxis: { ...darkAxis, title: { text: "Oxygen (% by volume)" }, range: [8, 60] },
+      yaxis: { ...axisStyle(theme), title: { ...axisStyle(theme).title, text: "Oxygen (% by volume)" }, range: [8, 60] },
       showlegend: !narrow,
-      legend: { orientation: "h", y: 1.01, yanchor: "bottom", x: 0, bgcolor: "rgba(0,0,0,0)", font: { size: 11 } },
+      legend: { orientation: "h", y: 1.01, yanchor: "bottom", x: 0, bgcolor: "transparent", font: { size: 11, color: theme.muted } },
       margin: { l: 48, r: 8, t: narrow ? 12 : 64, b: 48 },
       dragmode: "pan",
     }),
-    [options.logX, height, narrow],
+    [options.logX, height, narrow, theme],
   );
 
   const handleClick = (event: PlotMouseEvent) => {

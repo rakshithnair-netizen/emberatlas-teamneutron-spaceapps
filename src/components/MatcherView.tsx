@@ -164,14 +164,14 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
     <div className="space-y-6">
       <div>
         <p className="eyebrow">Condition Matcher</p>
-        <h1 className="mt-1 text-2xl font-semibold tracking-tight sm:text-3xl">How much do we actually know at this condition?</h1>
-        <p className="mt-1 max-w-2xl text-sm text-muted">
+        <h1 className="mt-2 text-3xl sm:text-4xl">How much do we actually know at this condition?</h1>
+        <p className="mt-1 max-w-2xl text-sm text-ink-muted">
           Enter an atmosphere, gravity and fuel. The matcher grades the evidence, lists the nearest real burn cards and says plainly what is not known.
-          {seededFrom ? <span className="text-habitat"> Seeded from card {seededFrom}.</span> : null}
+          {seededFrom ? <span className="text-clay-strong"> Seeded from card {seededFrom}.</span> : null}
         </p>
       </div>
 
-      <div className="grid gap-4 lg:grid-cols-[20rem_1fr]">
+      <div className="grid gap-6 lg:grid-cols-[20rem_1fr]">
         <form className="panel space-y-4 p-4" onSubmit={(event) => event.preventDefault()} aria-label="Condition">
           <div>
             <p className="eyebrow mb-2">Preset habitat</p>
@@ -181,10 +181,10 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
                   key={habitat.habitat_id}
                   type="button"
                   onClick={() => applyHabitat(habitat.habitat_id)}
-                  className={`rounded-md border px-2 py-1 text-[11px] ${
+                  className={`rounded-full border px-3 py-1 text-xs ${
                     Math.abs(habitat.o2_pct - o2Pct) < 0.01 && Math.abs(habitat.pressure_kpa - pressureKpa) < 0.05
-                      ? "border-habitat bg-habitat/15 text-habitat"
-                      : "border-line text-muted hover:text-ink"
+                      ? "border-clay-strong bg-clay-soft text-clay-strong"
+                      : "border-sand bg-sand text-ink hover:border-sand-strong"
                   }`}
                 >
                   {shortHabitatName(habitat)}
@@ -194,30 +194,30 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
           </div>
           <label className="block">
             <span className="eyebrow">Oxygen (%)</span>
-            <input type="number" inputMode="decimal" step="0.1" min="1" max="100" value={form.o2} onChange={(event) => update("o2", event.target.value)} className="num mt-1 w-full rounded-md border border-line bg-panel-2 px-3 py-2" />
+            <input type="number" inputMode="decimal" step="0.1" min="1" max="100" value={form.o2} onChange={(event) => update("o2", event.target.value)} className="num mt-1 w-full rounded-md border border-sand-strong bg-sand px-3 py-2" />
           </label>
           <div>
             <div className="flex items-center justify-between">
               <label htmlFor="pressure-input" className="eyebrow">
                 Pressure
               </label>
-              <div className="flex rounded-md border border-line text-[11px]" role="group" aria-label="Pressure unit">
+              <div className="flex overflow-hidden rounded-full border border-sand-strong text-xs" role="group" aria-label="Pressure unit">
                 {(["kpa", "psia"] as const).map((unit) => (
                   <button
                     key={unit}
                     type="button"
                     aria-pressed={form.unit === unit}
                     onClick={() => switchUnit(unit)}
-                    className={`px-2 py-0.5 ${form.unit === unit ? "bg-panel-2 text-ink" : "text-muted"}`}
+                    className={`px-3 py-0.5 ${form.unit === unit ? "bg-ink text-paper" : "text-ink-muted hover:text-ink"}`}
                   >
                     {unit === "kpa" ? "kPa" : "psia"}
                   </button>
                 ))}
               </div>
             </div>
-            <input id="pressure-input" type="number" inputMode="decimal" step="0.1" min="1" value={form.pressure} onChange={(event) => update("pressure", event.target.value)} className="num mt-1 w-full rounded-md border border-line bg-panel-2 px-3 py-2" />
+            <input id="pressure-input" type="number" inputMode="decimal" step="0.1" min="1" value={form.pressure} onChange={(event) => update("pressure", event.target.value)} className="num mt-1 w-full rounded-md border border-sand-strong bg-sand px-3 py-2" />
             {valid ? (
-              <p className="num mt-1 text-[11px] text-muted">
+              <p className="num mt-1 text-[11px] text-ink-muted">
                 = {formatNumber(pressureKpa, 2)} kPa · {formatNumber(kpaToPsia(pressureKpa), 2)} psia · ppO₂ {formatNumber(ppO2Kpa(o2Pct, pressureKpa), 2)} kPa
               </p>
             ) : (
@@ -228,7 +228,7 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
             <legend className="eyebrow">Gravity</legend>
             <div className="mt-1 grid grid-cols-2 gap-1.5">
               {gravities.map((gravity) => (
-                <label key={gravity} className={`cursor-pointer rounded-md border px-2 py-1.5 text-xs ${form.gravity === gravity ? "border-ember bg-ember/10 text-ink" : "border-line text-muted"}`}>
+                <label key={gravity} className={`cursor-pointer rounded-full border px-3 py-1.5 text-xs ${form.gravity === gravity ? "border-clay-strong bg-clay-soft text-clay-strong" : "border-sand bg-sand text-ink"}`}>
                   <input type="radio" name="gravity" value={gravity} checked={form.gravity === gravity} onChange={() => update("gravity", gravity)} className="sr-only" />
                   {gravityLabels[gravity]}
                 </label>
@@ -237,7 +237,7 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
           </fieldset>
           <label className="block">
             <span className="eyebrow">Fuel class</span>
-            <select value={form.fuelClass} onChange={(event) => setForm((previous) => ({ ...previous, fuelClass: event.target.value as FuelChoice, fuelName: "" }))} className="mt-1 w-full rounded-md border border-line bg-panel-2 px-3 py-2 text-sm">
+            <select value={form.fuelClass} onChange={(event) => setForm((previous) => ({ ...previous, fuelClass: event.target.value as FuelChoice, fuelName: "" }))} className="mt-1 w-full rounded-md border border-sand-strong bg-sand px-3 py-2 text-sm">
               <option value="any">Any fuel</option>
               <option value="solid">Solid (materials)</option>
               <option value="liquid">Liquid (droplets)</option>
@@ -246,7 +246,7 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
           </label>
           <label className="block">
             <span className="eyebrow">Material (optional)</span>
-            <select value={form.fuelName} onChange={(event) => update("fuelName", event.target.value)} className="mt-1 w-full rounded-md border border-line bg-panel-2 px-3 py-2 text-sm">
+            <select value={form.fuelName} onChange={(event) => update("fuelName", event.target.value)} className="mt-1 w-full rounded-md border border-sand-strong bg-sand px-3 py-2 text-sm">
               <option value="">Any {form.fuelClass === "any" ? "" : form.fuelClass} material</option>
               {fuelNames.map((name) => (
                 <option key={name} value={name}>
@@ -257,16 +257,16 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
           </label>
           <label className="block">
             <span className="eyebrow">Flow (cm/s, optional)</span>
-            <input type="number" inputMode="decimal" step="0.1" min="0" value={form.flow} onChange={(event) => update("flow", event.target.value)} placeholder="e.g. 20" className="num mt-1 w-full rounded-md border border-line bg-panel-2 px-3 py-2" />
+            <input type="number" inputMode="decimal" step="0.1" min="0" value={form.flow} onChange={(event) => update("flow", event.target.value)} placeholder="e.g. 20" className="num mt-1 w-full rounded-md border border-sand-strong bg-sand px-3 py-2" />
           </label>
-          <button type="button" onClick={copyLink} className="w-full rounded-md border border-habitat/50 px-3 py-2 text-sm text-habitat hover:bg-habitat/10">
+          <button type="button" onClick={copyLink} className="btn btn-secondary w-full">
             {copied ? "Link copied" : "Copy shareable link"}
           </button>
         </form>
 
         <div className="space-y-4">
           {error ? <p className="panel p-4 text-sm text-tier-extrapolated">{error}</p> : null}
-          {!cards ? <p className="panel p-6 text-sm text-muted">Loading burn cards…</p> : null}
+          {!cards ? <p className="panel p-6 text-sm text-ink-muted">Loading burn cards…</p> : null}
           {result && query ? (
             <>
               <section className="panel p-5" aria-live="polite" aria-labelledby="verdict-title" style={{ borderColor: `${tierHex[result.tier]}55` }}>
@@ -274,11 +274,11 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
                 <p className="mt-2 text-base leading-relaxed"><strong>Verdict:</strong> {evidenceTierMeta[result.tier].description} {result.gapStatement} This is a research screening result, not a safety certification.</p>
                 <div className="flex flex-wrap items-center gap-3">
                   <EvidenceBadge tier={result.tier} size="lg" detail={result.distance !== null ? `d ${formatNumber(result.distance, 2)}` : undefined} />
-                  <span className="num text-xs text-muted">
+                  <span className="num text-xs text-ink-muted">
                     {formatNumber(o2Pct)}% O₂ · {formatNumber(pressureKpa)} kPa · {gravityLabels[query.gravity]} · {query.fuelName || (query.fuelClass === "any" ? "any fuel" : query.fuelClass)}
                   </span>
                 </div>
-                <div className="mt-4 rounded-lg border border-line bg-panel-2 p-3">
+                <div className="mt-4 rounded-lg border border-sand-strong bg-sand p-3">
                   <p className="eyebrow">What would close this gap</p>
                   <p className="mt-1 text-sm">{result.closeGapStatement}</p>
                 </div>
@@ -296,7 +296,7 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
                 <div className="overflow-x-auto">
                   <table className="mt-2 w-full min-w-[640px] text-sm">
                     <thead>
-                      <tr className="border-b border-line text-left text-xs text-muted">
+                      <tr className="border-b border-sand-strong text-left text-xs text-ink-muted">
                         <th className="px-4 py-2 font-normal">Card</th>
                         <th className="px-2 py-2 font-normal">Fuel</th>
                         <th className="px-2 py-2 text-right font-normal">O₂</th>
@@ -310,9 +310,9 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
                     </thead>
                     <tbody>
                       {result.nearestCards.map((entry) => (
-                        <tr key={entry.card.card_id} className="border-b border-line/60 hover:bg-panel-2">
+                        <tr key={entry.card.card_id} className="border-b border-sand-strong/60 hover:bg-sand">
                           <td className="px-4 py-2">
-                            <button type="button" onClick={() => setSelected(entry.card as unknown as BurnCard)} className="num text-left text-habitat hover:underline">
+                            <button type="button" onClick={() => setSelected(entry.card as unknown as BurnCard)} className="num text-left text-clay-strong hover:underline">
                               {entry.card.card_id}
                             </button>{" "}
                             <FlagIcon flags={entry.card.quality_flags ?? []} />
@@ -327,7 +327,7 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
                           </td>
                           <td className="num px-2 py-2 text-right text-xs">{signed(entry.deltaPressureKpa)}</td>
                           <td className="num px-2 py-2 text-right text-xs">{entry.deltaFlowCmS === null ? <span title="Flow not reported or not queried">—</span> : signed(entry.deltaFlowCmS)}</td>
-                          <td className="num px-2 py-2 text-right text-habitat">{formatNumber(entry.distance, 2)}</td>
+                          <td className="num px-2 py-2 text-right text-clay-strong">{formatNumber(entry.distance, 2)}</td>
                           <td className="px-4 py-2 text-xs">{normalizeGravity(entry.card.gravity_regime)}</td>
                         </tr>
                       ))}
@@ -354,7 +354,7 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
                   onSelectCard={setSelected}
                   height={420}
                 />
-                <p className="px-3 pb-3 text-xs leading-relaxed text-muted">
+                <p className="px-3 pb-3 text-xs leading-relaxed text-ink-muted">
                   Map summary: your {formatNumber(o2Pct)}% O₂, {formatNumber(pressureKpa)} kPa query is marked against the NASA test envelope. {mapSummaryNearest(result.nearestCards[0], query)} The table above lists the nearest records and sources.
                 </p>
               </section>
@@ -369,10 +369,10 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
                       {related.map(({ finding, reason }) => (
                         <li key={finding.finding_id} className="text-sm">
                           <p>
-                            <span className="num mr-1 text-xs text-ember">{finding.finding_id}</span>
+                            <span className="num mr-1 text-xs text-clay-strong">{finding.finding_id}</span>
                             {finding.statement}
                           </p>
-                          <p className="mt-0.5 text-[11px] text-muted">{reason}</p>
+                          <p className="mt-0.5 text-[11px] text-ink-muted">{reason}</p>
                           <div className="mt-1">
                             <SourceChips ids={finding.source_ids} label="" />
                           </div>
@@ -380,7 +380,7 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
                       ))}
                     </ul>
                   ) : (
-                    <p className="mt-2 text-sm text-muted">No finding in the dataset addresses this condition directly.</p>
+                    <p className="mt-2 text-sm text-ink-muted">No finding in the dataset addresses this condition directly.</p>
                   )}
                 </section>
                 <section className="panel p-4" aria-labelledby="disc-list-title">
@@ -392,14 +392,14 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
                       {relatedDiscrepancies.map((discrepancy, index) => (
                         <li key={index}>
                           <span className="num text-xs text-tier-analog">{discrepancy.investigation}</span> {discrepancy.record}, {discrepancy.field}: {discrepancy.psi_or_primary_value} vs {discrepancy.conflicting_or_expected_value}.{" "}
-                          <span className="text-muted">{discrepancy.handling}</span>
+                          <span className="text-ink-muted">{discrepancy.handling}</span>
                         </li>
                       ))}
                     </ul>
                   ) : (
-                    <p className="mt-2 text-sm text-muted">No known discrepancies recorded for the nearest investigations.</p>
+                    <p className="mt-2 text-sm text-ink-muted">No known discrepancies recorded for the nearest investigations.</p>
                   )}
-                  <Link href="/method#discrepancies" className="mt-3 inline-block text-xs text-habitat hover:underline">
+                  <Link href="/method#discrepancies" className="mt-3 inline-block text-xs text-clay-strong hover:underline">
                     All known discrepancies →
                   </Link>
                 </section>

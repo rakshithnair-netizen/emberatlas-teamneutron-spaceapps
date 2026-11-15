@@ -8,7 +8,7 @@ export function formatNumber(value: number, digits = 1): string {
 
 export function Missing() {
   return (
-    <span className="num text-faint" title="Not reported in the source">
+    <span className="num text-ink-subtle" title="Not reported in the source">
       —<span className="sr-only">not reported</span>
     </span>
   );
@@ -37,7 +37,7 @@ export function Value({
     >
       {solid ? "" : "≈"}
       {formatNumber(value, digits)}
-      <span className="ml-0.5 text-muted">{unit}</span>
+      <span className="ml-0.5 text-ink-muted">{unit}</span>
     </span>
   );
 }
@@ -48,7 +48,7 @@ export function FlagIcon({ flags }: { flags: string[] }) {
   return (
     <span className="inline-flex items-center gap-1 text-tier-extrapolated" title={text}>
       <svg width="12" height="12" viewBox="0 0 16 16" aria-hidden>
-        <path d="M3 15V2m0 0h9l-2 3.5L12 9H3" fill="currentColor" fillOpacity="0.25" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M3 15V2m0 0h9l-2 3.5L12 9H3" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
       <span className="num text-[11px]">{flags.length}</span>
       <span className="sr-only">quality flags: {flags.map(describeFlag).join("; ")}</span>

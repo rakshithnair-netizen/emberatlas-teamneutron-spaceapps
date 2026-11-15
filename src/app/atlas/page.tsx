@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Ask Atlas" };
 
 export default function AtlasPage() {
   return (
-    <Suspense fallback={<p className="text-sm text-muted">Loading Atlas…</p>}>
+    <Suspense fallback={<p className="text-sm text-ink-muted">Loading Atlas…</p>}>
       <AtlasView />
     </Suspense>
   );

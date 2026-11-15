@@ -1,12 +1,15 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
-import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import { JetBrains_Mono, Lora, Poppins } from "next/font/google";
 import { HabitatProvider } from "@/components/HabitatProvider";
+import { RevealOnScroll } from "@/components/RevealOnScroll";
 import { SiteHeader } from "@/components/SiteHeader";
+import { themePalette } from "@/lib/plotlyTheme";
 import "./globals.css";
 
-const plexSans = IBM_Plex_Sans({ variable: "--font-plex-sans", subsets: ["latin"], weight: ["400", "500", "600", "700"] });
-const plexMono = IBM_Plex_Mono({ variable: "--font-plex-mono", subsets: ["latin"], weight: ["400", "500"] });
+const poppins = Poppins({ variable: "--font-poppins", subsets: ["latin"], weight: ["400", "500", "600"], display: "swap" });
+const lora = Lora({ variable: "--font-lora", subsets: ["latin"], weight: ["400", "500"], style: ["normal", "italic"], display: "swap", preload: false });
+const jetbrains = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["latin"], weight: ["400", "500"], display: "swap", preload: false });
 
 export const metadata: Metadata = {
   title: { default: "Ember Atlas · Graded fire-safety evidence for Moon and Mars habitats", template: "%s · Ember Atlas" },
@@ -20,20 +23,24 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#06090d",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: themePalette.paper },
+    { media: "(prefers-color-scheme: dark)", color: themePalette.ink },
+  ],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${plexSans.variable} ${plexMono.variable} antialiased`}>
+    <html lang="en" className={`${poppins.variable} ${lora.variable} ${jetbrains.variable}`}>
+      <body className="antialiased">
         <HabitatProvider>
           <SiteHeader />
-          <main id="main" className="mx-auto min-h-[calc(100vh-9rem)] max-w-7xl px-4 pb-16 pt-6">
+          <RevealOnScroll />
+          <main id="main" className="mx-auto min-h-[calc(100vh-9rem)] max-w-[1200px] px-4 pb-24 pt-8 sm:pt-12">
             {children}
           </main>
-          <footer className="border-t border-line">
-            <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+          <footer className="border-t border-sand-strong bg-sand">
+            <div className="mx-auto flex max-w-[1200px] flex-col gap-2 px-4 py-8 text-xs text-ink-muted sm:flex-row sm:items-center sm:justify-between">
               <p>Data: NASA PSI repository and NASA publications. Research screening tool, not a certification source.</p>
               <p className="flex gap-3">
                 <Link href="/method" className="hover:text-ink">
