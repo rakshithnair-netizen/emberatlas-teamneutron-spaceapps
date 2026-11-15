@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   title: { default: "Flame in Freefall · Graded fire-safety evidence for Moon and Mars habitats", template: "%s · Flame in Freefall" },
   description:
     "Summarizes, ranks and explains decades of NASA microgravity combustion results against the 8.2 psia / 34% O₂ exploration atmosphere, with graded evidence and a source for every number.",
+  // Space Apps 2026 rules require SI-assisted code to be acknowledged in metadata as well as text.
+  other: {
+    "si-disclosure":
+      "Code and plain-language text written with SI assistance (Anthropic Claude via Claude Code) and reviewed by the team. Dataset compiled from NASA sources with SI assistance (table extraction, paraphrased findings) and checked by the team against each source; no data values were SI-invented. No SI-generated images, video or audio.",
+  },
 };
 
 export const viewport: Viewport = {

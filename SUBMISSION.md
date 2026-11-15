@@ -32,6 +32,17 @@ NASA's exploration atmosphere is 8.2 psia at 34% O₂, but almost all space-fire
 ### Tools
 Next.js 15, TypeScript, Tailwind CSS 4, Plotly.js, React Flow, MiniSearch, Vitest, Vercel. Optional LLM providers for Atlas: Anthropic, OpenAI or Gemini.
 
+## Use of Super Intelligence (SI)
+Yes. SI tools were used as follows.
+
+- **The idea (not SI).** The idea and approach for solving the challenge came only from the team's own brainstorming. SI was used afterwards as a tool to build it.
+- **Code (SI-assisted).** Anthropic Claude, through the Claude Code coding assistant, helped write the application code, tests and build scripts. The team reviewed and tested every change (typecheck, lint, 30 unit tests, production build). This is acknowledged in descriptive text (README, this page and the in-app **Data & Method** page) and in metadata: an `siDisclosure` field in `package.json` and an `si-disclosure` meta tag on every page of the site.
+- **Text (SI-assisted).** The plain-language Learn module text, the Fire Watch scenario wording, the "why space data helps" summaries on Earth Applications and these submission documents were drafted with Claude and edited by the team. The Earth Applications summaries are labelled in the app as our summary, not NASA quotes.
+- **Data (SI-assisted compilation, no SI-generated values).** SI helped compile the dataset: extracting tables from NASA PSI records and publications, and paraphrasing the 54 NASA findings. The team checked every value against its NASA source. SI did not invent, estimate or alter any data value. Every number shown in the app traces to a NASA source ID, and missing values are shown as "—", never filled in. This is acknowledged in the metadata too: the `si-disclosure` tag and the `package.json` field.
+- **SI inside the product: Ask Atlas.** Atlas can call an LLM (Anthropic Claude, OpenAI or Google Gemini, chosen by the deployer). It is only allowed to answer through retrieval tools over the NASA dataset. It must call at least one tool, and any citation not found in the tool results is dropped server-side. Every Atlas answer shows which mode produced it (model name, or "Atlas Lite" when no model is configured or a call fails).
+- **Images, video and audio.** No SI-generated images, video or audio are used in the app. All graphics are hand-built SVG, so no watermarks are needed.
+- **NASA branding.** No SI-generated content uses, contains or modifies NASA logos, flags, mission identifiers or other NASA design elements.
+
 ## NASA data used
 Dataset built only from the NASA Physical Sciences Informatics (PSI) repository and NASA publications.
 
@@ -105,7 +116,42 @@ Dataset built only from the NASA Physical Sciences Informatics (PSI) repository 
 | PSI-98 | PSI-98 SAFFIRE-I | https://psi.nasa.gov/physci/repo/data/investigations/PSI-98 |
 | PSI-99 | PSI-99 SAFFIRE-II | https://psi.nasa.gov/physci/repo/data/investigations/PSI-99 |
 
-## AI tools used
-- **Anthropic Claude (Claude Code)**: helped write the application code, tests, plain-language Learn text and these documents; the team reviewed the output. It did not generate or alter any data values.
-- **Optional LLM in Ask Atlas** (Anthropic, OpenAI or Gemini, set by the deployer): answers questions only via retrieval tools over the dataset, with citations validated server-side. The default demo runs Atlas Lite, which uses no model.
-- No AI-generated images are used. All graphics are hand-built SVG.
+## Space Agency Partner Data and Other References
+
+### Space Agency Partner data
+None. All data comes from the NASA sources listed above.
+
+### Dataset
+- **Flame in Freefall dataset v1.0 (2026-11-14)**, compiled by the team only from the NASA PSI repository and the NASA publications listed above. It ships with the app as CSV and JSON under `/data`, with a data dictionary and a Frictionless `datapackage.json`.
+
+### Software and libraries (all open source)
+| Name | Version | License | Use | URL |
+|---|---|---|---|---|
+| Next.js | 15.5.29 | MIT | Web framework (App Router), static pages and the `/api/atlas` route | https://nextjs.org |
+| React / React DOM | 19.1.0 | MIT | UI | https://react.dev |
+| TypeScript | 5.9.3 | Apache-2.0 | Language | https://www.typescriptlang.org |
+| Tailwind CSS (+ @tailwindcss/postcss) | 4.3.5 | MIT | Styling | https://tailwindcss.com |
+| Plotly.js (plotly.js-dist-min) | 4.3.0 | MIT | Envelope Map and charts | https://plotly.com/javascript/ |
+| React Flow (@xyflow/react) | 12.12.1 | MIT | Family Tree graph | https://reactflow.dev |
+| MiniSearch | 7.2.0 | MIT | Full-text search for the Library and Atlas retrieval | https://github.com/lucaong/minisearch |
+| Vitest | 5.1.0 | MIT | Unit tests | https://vitest.dev |
+| tsx | 4.23.15 | MIT | Runs the data-preparation script | https://github.com/privatenumber/tsx |
+| ESLint + eslint-config-next | 9.39.5 / 15.5.29 | MIT | Linting | https://eslint.org |
+| create-next-app template | 15.5 | MIT | Starting project skeleton and default favicon | https://nextjs.org/docs/app/api-reference/cli/create-next-app |
+
+### Fonts
+- **IBM Plex Sans and IBM Plex Mono** (SIL Open Font License 1.1), loaded through Google Fonts via `next/font`. https://github.com/IBM/plex
+
+### Images
+- No third-party images. All diagrams, the flame illustration and the site icon in the header are hand-built SVG made by the team.
+
+### SI tools and services
+- **Anthropic Claude (Claude Code)**: coding and writing assistant (see "Use of Super Intelligence" above). https://www.anthropic.com/claude-code
+- **Optional Ask Atlas model providers**: Anthropic Claude API (https://docs.anthropic.com), OpenAI API (https://platform.openai.com/docs) and Google Gemini API (https://ai.google.dev). Only one is used, set by the deployer.
+
+### Hosting and tools
+- **Vercel**: hosting. https://vercel.com
+- **GitHub**: source code. https://github.com/rakshithnair-netizen/emberatlas-teamproton-spaceapps
+
+### Methods
+- The distance formula `d = sqrt(((o2 − 34)/10)² + ((p_kPa − 56.5)/40)²)` and the A–F relevance bands come from the dataset. The convex hull, point-in-polygon test, evidence grades and ranking formula were written by the team (`src/lib/geometry.ts`, `src/lib/evidence.ts`, `src/lib/ranking.ts`).

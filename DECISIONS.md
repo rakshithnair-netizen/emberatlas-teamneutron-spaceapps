@@ -50,3 +50,7 @@ Calls made during the build without stopping to ask, with the reason for each.
 - **Challenge question restored on Home.** The v2 plain-language headline stays as the `<h1>`; the brief's central question sits verbatim right under it, with the HAB-03 atmosphere numbers read from the dataset, so judges can map the app to the challenge.
 - **Atlas presented as the SI layer.** README, SUBMISSION and the demo script describe Ask Atlas as the LLM-powered part and tell the deployer to set `AI_PROVIDER` / `AI_API_KEY` on Vercel; Atlas Lite is described as the fallback, not the default.
 - **Docs follow the v2 navigation.** DEMO_SCRIPT, SUBMISSION and README use the v2 screen names ("Check a habitat", "Explore evidence", "More tools") and describe the new Home panels.
+
+## Submission form alignment (2026-11-15)
+- **SI wording follows the 2026 guide.** The guide calls AI "Super Intelligence (SI)" and requires SI-assisted code and data to be acknowledged in descriptive text *and* metadata. Text: README, SUBMISSION and the Method page. Metadata: `siDisclosure` in `package.json` and an `si-disclosure` `<meta>` tag set in `layout.tsx`.
+- **References section added.** SUBMISSION.md now has the form's "Space Agency Partner Data and Other References" field: no partner-agency data, plus every library (version and license from `package-lock.json`), font, hosting service and SI tool.
