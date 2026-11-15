@@ -29,3 +29,24 @@ Calls made during the build without stopping to ask, with the reason for each.
 - Fire Watch draws 7 of 9 scenarios plus 3 questions from the shared Learn question bank.
 - Earth Applications groups every finding with an `earth_domain` (29), not only `area = earth_application` (10), to match the domain list in the brief.
 - The "why space data helps" lines on Earth Applications are labelled as our summary, not NASA quotes.
+
+## Project rules
+- **Code comments are now allowed (changed 2026-11-15).** The original brief said no comments. That rule is lifted: add comments where they explain *why* (assumptions, data caveats, non-obvious fixes), not to restate what the code does. Decisions still get logged here, and displayed values must still come from the dataset.
+
+## v2 first-time experience (PR #1)
+- **Habitat gravity mapping is shared.** `habitatQueryGravity()` in `HabitatProvider.tsx` is the single source for the Ranking rule above (HAB-01/02 microgravity, HAB-03 to HAB-06 lunar). Home links, the habitat card and the evidence summary all use it instead of hardcoding microgravity.
+- **Two vocabularies, kept apart.** The A–F `habitat_relevance_tier` values from the dataset are labelled "dataset relevance bands". "Evidence grades" means only the five condition-specific tiers (Measured, Interpolated, Extrapolated, Analog, No data) from `lib/evidence.ts`.
+- **Grade descriptions are plain language.** `evidenceTierMeta` was rewritten for first-time readers; the classification rules themselves are unchanged.
+- **Primary vs secondary navigation.** Five core screening links are always visible; Atlas, Rankings, Learn, Fire Watch, Earth and Family Tree sit under "More tools".
+- **Evidence gap chart is a proximity count, not a grade.** It counts cards within d ≤ 0.35 across all fuels and gravities and says so; only the Matcher assigns grades. It is a hand-drawn SVG, not Plotly, to keep the home page light.
+- **Home stat copy is computed from data.** O₂ gap, Earth-control count, lunar cards at the target O₂ and tier-A solid count are derived at build time rather than written into the text.
+
+## v2 review fixes (2026-11-15)
+- **Matcher map summary describes the card, not the query.** For Analog results the nearest card is from another gravity or fuel group, so the summary names the card's own fuel and gravity and calls it an analog.
+- **Touch targets in `@layer base`.** The 44px minimum height is in Tailwind's base layer so utilities can override it, and React Flow's fixed-size zoom buttons are excluded.
+- **Card drawer focus trap ignores `tabindex="-1"`.** The full-screen backdrop button is not focusable, so it must not count as the trap's first element.
+- **Header menus close on navigation.** The desktop "More tools" dropdown closes on route change, outside click and Escape. Mobile nav highlight and `aria-current` use the same active rule.
+- **Air-baseline comparison uses HAB-01 values.** The home habitat card shows the dataset's air reference numbers, and changes its takeaway when HAB-01 itself is selected.
+- **Challenge question restored on Home.** The v2 plain-language headline stays as the `<h1>`; the brief's central question sits verbatim right under it, with the HAB-03 atmosphere numbers read from the dataset, so judges can map the app to the challenge.
+- **Atlas presented as the SI layer.** README, SUBMISSION and the demo script describe Ask Atlas as the LLM-powered part and tell the deployer to set `AI_PROVIDER` / `AI_API_KEY` on Vercel; Atlas Lite is described as the fallback, not the default.
+- **Docs follow the v2 navigation.** DEMO_SCRIPT, SUBMISSION and README use the v2 screen names ("Check a habitat", "Explore evidence", "More tools") and describe the new Home panels.

@@ -2,6 +2,9 @@ import { evidenceTierMeta } from "@/lib/evidence";
 import type { EvidenceTier } from "@/lib/types";
 import { EvidenceBadge, tierOrder } from "./EvidenceBadge";
 
+// Collapsible plain-language glossary of the five condition-specific evidence grades. Descriptions come
+// from evidenceTierMeta so the wording is defined in one place. `compact` uses a two-column grid for
+// narrow sidebars instead of five columns.
 export function EvidenceTierGuide({ compact = false }: { compact?: boolean }) {
   return (
     <details className="rounded-lg border border-line bg-bg/40 p-3">

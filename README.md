@@ -10,7 +10,7 @@ NASA's exploration atmosphere is 8.2 psia (56.5 kPa) at 34% O₂. Almost all fli
 
 | Section | Route | What it answers |
 |---|---|---|
-| Mission Dashboard | `/` | The habitat question, headline numbers, ranked insights, habitat picker |
+| Home (Mission Dashboard) | `/` | The challenge question, evidence-gap chart, "what NASA has tested / what is missing", evidence-grade guide, headline numbers, ranked insights, habitat picker |
 | Envelope Map | `/explorer` | All 1,732 burn cards on O₂ × pressure, habitat crosshairs, coverage hulls, iso-ppO₂ lines, gravity overlay |
 | Condition Matcher | `/matcher` | Evidence tier, 5 nearest cards with deltas, relevant findings, caveats, "what would close this gap"; shareable URL |
 | Ask Atlas | `/atlas` | Retrieval-grounded Q&A with cited sources; works without an API key (Atlas Lite) |
@@ -41,9 +41,9 @@ npm run build
 
 `prepare-data` copies the dataset from `~/Desktop/SpaceApps-Data/dataset` (override with `DATASET_DIR`) into `src/data/raw` and `public/data`. It then generates TypeScript types from `data_dictionary.csv` (`src/lib/generated-types.ts`) and precomputes coverage hulls and headline numbers (`src/data/derived.json`). Copies are committed, so builds work without the source folder. `npm run build` runs it automatically.
 
-### Ask Atlas with a model (optional)
+### Ask Atlas with a model (recommended for the demo)
 
-Copy `.env.example` to `.env.local`:
+Atlas is the app's SI layer. Locally, copy `.env.example` to `.env.local`. On Vercel, set the same three variables under Project → Settings → Environment Variables and redeploy:
 
 ```
 AI_PROVIDER=anthropic   # or openai, gemini
