@@ -56,7 +56,7 @@ export default function HomePage() {
         <div className="grid-lines pointer-events-none absolute inset-0 opacity-60" aria-hidden />
         <div className="relative grid items-center gap-8 lg:grid-cols-[1fr_auto]">
           <div>
-            <p className="eyebrow text-ember">NASA Space Apps 2026 · Flame in Freefall</p>
+            <p className="eyebrow text-ember">NASA Space Apps 2026 · Flame in Freefall challenge</p>
             <h1 className="mt-3 max-w-3xl text-3xl font-semibold leading-tight tracking-tight sm:text-5xl">
               Will a fire test from near Earth conditions tell us what happens inside a Moon habitat?
             </h1>
@@ -67,7 +67,7 @@ export default function HomePage() {
               How relevant is the existing research to a habitat with <span className="text-habitat">higher oxygen</span> and <span className="text-habitat">lower pressure</span>? NASA&apos;s exploration atmosphere is <span className="num">{exploration.pressure_psia} psia ({exploration.pressure_kpa} kPa) at {exploration.o2_pct}% O₂</span>.
             </p>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
-              NASA has decades of spacecraft fire research. But most tests used air-like oxygen levels and near-Earth pressure. A future habitat may use <span className="text-habitat">more oxygen and lower pressure</span>, changing how well those tests apply. Flame in Freefall lets you compare a habitat with the conditions NASA tested, see the strength of the evidence, and find what is still unknown.
+              NASA has decades of spacecraft fire research. But most tests used air-like oxygen levels and near-Earth pressure. A future habitat may use <span className="text-habitat">more oxygen and lower pressure</span>, changing how well those tests apply. Ember Atlas lets you compare a habitat with the conditions NASA tested, see the strength of the evidence, and find what is still unknown.
             </p>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
               This is a research screening tool. It helps explore evidence and gaps; it does not certify a habitat or predict fire safety.

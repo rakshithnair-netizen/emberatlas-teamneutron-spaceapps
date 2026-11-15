@@ -1,10 +1,10 @@
-# Flame in Freefall
+# Ember Atlas
 
-**Graded fire-safety evidence for Moon and Mars habitats.** A dashboard for the NASA Space Apps Challenge 2026 challenge *Flame in Freefall: SI-Powered Fire Safety Insights from Microgravity Combustion Data*. It summarizes, ranks and explains decades of NASA microgravity combustion results against one question:
+**Graded fire-safety evidence for Moon and Mars habitats.** A dashboard built for the NASA Space Apps Challenge 2026 challenge *Flame in Freefall: SI-Powered Fire Safety Insights from Microgravity Combustion Data*. It summarizes, ranks and explains decades of NASA microgravity combustion results against one question:
 
 > How relevant is the existing research to a habitat with higher oxygen and lower pressure?
 
-**Live app:** https://flame-in-freefall-hazel.vercel.app
+**Live app:** https://ember-atlas-app.vercel.app
 
 NASA's exploration atmosphere is 8.2 psia (56.5 kPa) at 34% O₂. Almost all flight data were taken near 1 atm and 21% O₂, in microgravity. This app shows, for any condition, **how much is actually known**, using five evidence tiers: Measured, Interpolated, Extrapolated, Analog and No data. Each answer also gives the distance to the habitat atmosphere, a trail of NASA sources and a plain "what we don't know" statement.
 

@@ -1,14 +1,17 @@
-# Submission: Flame in Freefall
+# Submission: Ember Atlas
 
 ## Project title
-Flame in Freefall: graded fire-safety evidence for Moon and Mars habitats
+Ember Atlas: graded fire-safety evidence for Moon and Mars habitats
+
+## Challenge
+Flame in Freefall: SI-Powered Fire Safety Insights from Microgravity Combustion Data
 
 ## Links
-- **Live app:** https://flame-in-freefall-hazel.vercel.app
+- **Live app:** https://ember-atlas-app.vercel.app
 - **Source code:** https://github.com/rakshithnair-netizen/emberatlas-teamproton-spaceapps
 
 ## High-level summary (≤150 words)
-NASA's exploration atmosphere is 8.2 psia at 34% O₂, but almost all space-fire data were taken at 1 atm and 21% O₂ in microgravity. Flame in Freefall asks one question: how relevant is that research to a Moon or Mars habitat? It turns 1,732 NASA burn records, 30 investigations and 54 findings into graded evidence. Every answer carries a tier (Measured, Interpolated, Extrapolated, Analog or No data), its distance from the habitat atmosphere, NASA sources and a plain "what we don't know" statement. An envelope map, condition matcher, ranked insights and a source-citing AI assistant show that only 3.3% of tests are near the exploration atmosphere. No flight solid has burned above 31% O₂, and just four tests (all LUCI) left microgravity. Learn modules, Earth applications and a short game make the evidence usable by designers, students and the public.
+NASA's exploration atmosphere is 8.2 psia at 34% O₂, but almost all space-fire data were taken at 1 atm and 21% O₂ in microgravity. Ember Atlas asks one question: how relevant is that research to a Moon or Mars habitat? It turns 1,732 NASA burn records, 30 investigations and 54 findings into graded evidence. Every answer carries a tier (Measured, Interpolated, Extrapolated, Analog or No data), its distance from the habitat atmosphere, NASA sources and a plain "what we don't know" statement. An envelope map, condition matcher, ranked insights and a source-citing AI assistant show that only 3.3% of tests are near the exploration atmosphere. No flight solid has burned above 31% O₂, and just four tests (all LUCI) left microgravity. Learn modules, Earth applications and a short game make the evidence usable by designers, students and the public.
 
 ## Detailed description
 
@@ -126,7 +129,7 @@ Dataset built only from the NASA Physical Sciences Informatics (PSI) repository 
 None. All data comes from the NASA sources listed above.
 
 ### Dataset
-- **Flame in Freefall dataset v1.0 (2026-11-14)**, compiled by the team only from the NASA PSI repository and the NASA publications listed above. It ships with the app as CSV and JSON under `/data`, with a data dictionary and a Frictionless `datapackage.json`.
+- **Flame in Freefall dataset v1.0 (2026-11-14)**, the team's dataset for this challenge (named after the challenge, not the app), compiled by the team only from the NASA PSI repository and the NASA publications listed above. It ships with the app as CSV and JSON under `/data`, with a data dictionary and a Frictionless `datapackage.json`.
 
 ### Software and libraries (all open source)
 | Name | Version | License | Use | URL |
@@ -154,7 +157,7 @@ None. All data comes from the NASA sources listed above.
 - **Optional Ask Atlas model providers**: Anthropic Claude API (https://docs.anthropic.com), OpenAI API (https://platform.openai.com/docs) and Google Gemini API (https://ai.google.dev). Only one is used, set by the deployer.
 
 ### Hosting and tools
-- **Vercel**: hosting. https://vercel.com (live at https://flame-in-freefall-hazel.vercel.app)
+- **Vercel**: hosting. https://vercel.com (live at https://ember-atlas-app.vercel.app)
 - **GitHub**: source code. https://github.com/rakshithnair-netizen/emberatlas-teamproton-spaceapps
 
 ### Methods
