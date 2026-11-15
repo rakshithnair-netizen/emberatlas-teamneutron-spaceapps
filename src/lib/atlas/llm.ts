@@ -71,6 +71,7 @@ Rules:
 - Cite source ids from tool results in square brackets, e.g. [S07] or [PSI-69]. Cite card ids and finding ids where used.
 - Values with basis platform_nominal are not measured; say so if you use them.
 - Keep the answer under 180 words: a direct answer first, then key evidence.
+- Write plain text with Unicode symbols (O₂, ≈, ×). No LaTeX or $...$ math: the UI shows text as-is.
 - End with one line starting exactly "Not known from this data:" naming the most important gap.
 - Never give engineering certification or flight-approval advice; frame everything as research screening.`;
 
@@ -118,13 +119,41 @@ function collectSourceIds(value: unknown, into: Set<string>) {
 
 const MAX_STEPS = 5;
 
-async function postJson(url: string, headers: Record<string, string>, body: unknown): Promise<Record<string, unknown>> {
-  const response = await fetch(url, { method: "POST", headers: { "content-type": "application/json", ...headers }, body: JSON.stringify(body) });
+// The whole model conversation must finish well inside Vercel's function limit (300 s on Hobby).
+// Gemini sometimes accepts a request and never answers it (measured 2026-11-15: most calls took
+// 3-6 s, about 1 in 6 hung). Without these limits a single stalled request hung /api/atlas until
+// Vercel killed it with a 504, so the user never even got the Atlas Lite fallback. A stalled call
+// is retried once (as is a 503 "overloaded" reply), since the retry usually comes back in a few seconds.
+const TOTAL_BUDGET_MS = 50_000;
+const PER_CALL_MS = 18_000;
+
+async function fetchWithTimeout(url: string, init: RequestInit, deadline: number): Promise<Response> {
+  for (let attempt = 1; ; attempt++) {
+    const remaining = deadline - Date.now();
+    if (remaining <= 1_000) throw new Error("model time budget used up");
+    const started = Date.now();
+    try {
+      const response = await fetch(url, { ...init, signal: AbortSignal.timeout(Math.min(PER_CALL_MS, remaining)) });
+      // Logged so slow providers show up in Vercel's function logs.
+      console.log(`[atlas] ${new URL(url).hostname} ${response.status} in ${Date.now() - started} ms (attempt ${attempt})`);
+      // 503 means the model is briefly overloaded; one retry usually succeeds.
+      if (response.status === 503 && attempt < 2) continue;
+      return response;
+    } catch (error) {
+      const timedOut = (error as Error).name === "TimeoutError";
+      console.log(`[atlas] ${new URL(url).hostname} ${timedOut ? "timed out" : "failed"} after ${Date.now() - started} ms (attempt ${attempt})`);
+      if (!timedOut || attempt >= 2) throw new Error(timedOut ? `model call timed out after ${Date.now() - started} ms` : (error as Error).message);
+    }
+  }
+}
+
+async function postJson(url: string, headers: Record<string, string>, body: unknown, deadline: number): Promise<Record<string, unknown>> {
+  const response = await fetchWithTimeout(url, { method: "POST", headers: { "content-type": "application/json", ...headers }, body: JSON.stringify(body) }, deadline);
   if (!response.ok) throw new Error(`${response.status} ${(await response.text()).slice(0, 300)}`);
   return response.json();
 }
 
-async function runAnthropic(question: string, apiKey: string, model: string, runs: ToolRun[]): Promise<string> {
+async function runAnthropic(question: string, apiKey: string, model: string, runs: ToolRun[], deadline: number): Promise<string> {
   const messages: Record<string, unknown>[] = [{ role: "user", content: question }];
   for (let step = 0; step < MAX_STEPS; step++) {
     const data = await postJson(
@@ -138,6 +167,7 @@ async function runAnthropic(question: string, apiKey: string, model: string, run
         tool_choice: step === 0 ? { type: "any" } : { type: "auto" },
         messages,
       },
+      deadline,
     );
     const content = data.content as { type: string; text?: string; id?: string; name?: string; input?: ToolArgs }[];
     const toolUses = content.filter((block) => block.type === "tool_use");
@@ -155,7 +185,7 @@ async function runAnthropic(question: string, apiKey: string, model: string, run
   throw new Error("Tool loop did not finish");
 }
 
-async function runOpenAI(question: string, apiKey: string, model: string, runs: ToolRun[]): Promise<string> {
+async function runOpenAI(question: string, apiKey: string, model: string, runs: ToolRun[], deadline: number): Promise<string> {
   const messages: Record<string, unknown>[] = [
     { role: "system", content: systemPrompt },
     { role: "user", content: question },
@@ -170,6 +200,7 @@ async function runOpenAI(question: string, apiKey: string, model: string, runs: 
         tools: toolSpecs.map((tool) => ({ type: "function", function: { name: tool.name, description: tool.description, parameters: tool.parameters } })),
         tool_choice: step === 0 ? "required" : "auto",
       },
+      deadline,
     );
     const message = (data.choices as { message: { content: string | null; tool_calls?: { id: string; function: { name: string; arguments: string } }[] } }[])[0].message;
     if (!message.tool_calls?.length) return message.content ?? "";
@@ -187,7 +218,7 @@ async function runOpenAI(question: string, apiKey: string, model: string, runs: 
   throw new Error("Tool loop did not finish");
 }
 
-async function runGemini(question: string, apiKey: string, model: string, runs: ToolRun[]): Promise<string> {
+async function runGemini(question: string, apiKey: string, model: string, runs: ToolRun[], deadline: number): Promise<string> {
   const contents: Record<string, unknown>[] = [{ role: "user", parts: [{ text: question }] }];
   for (let step = 0; step < MAX_STEPS; step++) {
     const data = await postJson(
@@ -199,6 +230,7 @@ async function runGemini(question: string, apiKey: string, model: string, runs: 
         tools: [{ functionDeclarations: toolSpecs.map((tool) => ({ name: tool.name, description: tool.description, parameters: tool.parameters })) }],
         toolConfig: { functionCallingConfig: { mode: step === 0 ? "ANY" : "AUTO" } },
       },
+      deadline,
     );
     const parts = ((data.candidates as { content: { parts: { text?: string; functionCall?: { name: string; args: ToolArgs } }[] } }[])?.[0]?.content?.parts ?? []);
     const calls = parts.filter((part) => part.functionCall);
@@ -219,7 +251,8 @@ async function runGemini(question: string, apiKey: string, model: string, runs: 
 const defaultModels: Record<string, string> = {
   anthropic: "claude-sonnet-5-5",
   openai: "gpt-4.1-mini",
-  gemini: "gemini-2.5-flash",
+  // gemini-2.5-* and the gemini-flash-latest alias stopped working for new keys (404 / hangs) in Nov 2026.
+  gemini: "gemini-3.5-flash-lite",
 };
 
 export function configuredProvider(): { provider: string; apiKey: string; model: string } | null {
@@ -236,7 +269,7 @@ export async function askAtlas(question: string): Promise<AtlasAnswer> {
   const runs: ToolRun[] = [];
   try {
     const runner = config.provider === "anthropic" ? runAnthropic : config.provider === "openai" ? runOpenAI : runGemini;
-    const text = (await runner(question, config.apiKey, config.model, runs)).trim();
+    const text = (await runner(question, config.apiKey, config.model, runs, Date.now() + TOTAL_BUDGET_MS)).trim();
     if (!runs.length || !text) throw new Error("Model answered without tools");
     const allowed = new Set<string>();
     runs.forEach((run) => collectSourceIds(run.result, allowed));
