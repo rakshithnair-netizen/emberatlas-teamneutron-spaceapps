@@ -58,4 +58,4 @@ Calls made during the build without stopping to ask, with the reason for each.
 ## Deployment (2026-11-15)
 - **Hosted on Vercel** as project `flame-in-freefall` in the Team Proton team (Hobby plan), production URL https://flame-in-freefall-hazel.vercel.app. The build uses the committed dataset copies because `~/Desktop/SpaceApps-Data` does not exist on Vercel.
 - **Deployed from a clean clone of `main`**, so local-only files such as `.env.local` never reach the build.
-- **Atlas provider is set on Vercel** (`AI_PROVIDER=anthropic`). Atlas stays in Lite mode until `AI_API_KEY` is added to Production and the app is redeployed.
+- **Atlas uses Gemini on Vercel** (`AI_PROVIDER=gemini`, default model `gemini-2.5-flash`). The key is stored as a Production secret; without it Atlas falls back to Lite mode.
