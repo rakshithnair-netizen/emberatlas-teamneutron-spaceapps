@@ -71,6 +71,7 @@ Rules:
 - Cite source ids from tool results in square brackets, e.g. [S07] or [PSI-69]. Cite card ids and finding ids where used.
 - Values with basis platform_nominal are not measured; say so if you use them.
 - Keep the answer under 180 words: a direct answer first, then key evidence.
+- Write plain text with Unicode symbols (O₂, ≈, ×). No LaTeX or $...$ math: the UI shows text as-is.
 - End with one line starting exactly "Not known from this data:" naming the most important gap.
 - Never give engineering certification or flight-approval advice; frame everything as research screening.`;
 
@@ -119,25 +120,35 @@ function collectSourceIds(value: unknown, into: Set<string>) {
 const MAX_STEPS = 5;
 
 // The whole model conversation must finish well inside Vercel's function limit (300 s on Hobby).
-// Without these limits a single stalled provider request hung /api/atlas until Vercel killed it
-// with a 504, so the user never even got the Atlas Lite fallback.
-const TOTAL_BUDGET_MS = 45_000;
-const PER_CALL_MS = 25_000;
+// Gemini sometimes accepts a request and never answers it (measured 2026-11-15: most calls took
+// 3-6 s, about 1 in 6 hung). Without these limits a single stalled request hung /api/atlas until
+// Vercel killed it with a 504, so the user never even got the Atlas Lite fallback. A stalled call
+// is retried once (as is a 503 "overloaded" reply), since the retry usually comes back in a few seconds.
+const TOTAL_BUDGET_MS = 50_000;
+const PER_CALL_MS = 18_000;
+
+async function fetchWithTimeout(url: string, init: RequestInit, deadline: number): Promise<Response> {
+  for (let attempt = 1; ; attempt++) {
+    const remaining = deadline - Date.now();
+    if (remaining <= 1_000) throw new Error("model time budget used up");
+    const started = Date.now();
+    try {
+      const response = await fetch(url, { ...init, signal: AbortSignal.timeout(Math.min(PER_CALL_MS, remaining)) });
+      // Logged so slow providers show up in Vercel's function logs.
+      console.log(`[atlas] ${new URL(url).hostname} ${response.status} in ${Date.now() - started} ms (attempt ${attempt})`);
+      // 503 means the model is briefly overloaded; one retry usually succeeds.
+      if (response.status === 503 && attempt < 2) continue;
+      return response;
+    } catch (error) {
+      const timedOut = (error as Error).name === "TimeoutError";
+      console.log(`[atlas] ${new URL(url).hostname} ${timedOut ? "timed out" : "failed"} after ${Date.now() - started} ms (attempt ${attempt})`);
+      if (!timedOut || attempt >= 2) throw new Error(timedOut ? `model call timed out after ${Date.now() - started} ms` : (error as Error).message);
+    }
+  }
+}
 
 async function postJson(url: string, headers: Record<string, string>, body: unknown, deadline: number): Promise<Record<string, unknown>> {
-  const remaining = deadline - Date.now();
-  if (remaining <= 0) throw new Error("Model time budget used up");
-  const started = Date.now();
-  const response = await fetch(url, {
-    method: "POST",
-    headers: { "content-type": "application/json", ...headers },
-    body: JSON.stringify(body),
-    signal: AbortSignal.timeout(Math.min(PER_CALL_MS, remaining)),
-  }).catch((error: Error) => {
-    throw new Error(error.name === "TimeoutError" ? `model call timed out after ${Date.now() - started} ms` : error.message);
-  });
-  // Logged so slow providers show up in Vercel's function logs.
-  console.log(`[atlas] ${new URL(url).hostname} ${response.status} in ${Date.now() - started} ms`);
+  const response = await fetchWithTimeout(url, { method: "POST", headers: { "content-type": "application/json", ...headers }, body: JSON.stringify(body) }, deadline);
   if (!response.ok) throw new Error(`${response.status} ${(await response.text()).slice(0, 300)}`);
   return response.json();
 }
@@ -240,7 +251,8 @@ async function runGemini(question: string, apiKey: string, model: string, runs: 
 const defaultModels: Record<string, string> = {
   anthropic: "claude-sonnet-5-5",
   openai: "gpt-4.1-mini",
-  gemini: "gemini-2.5-flash",
+  // gemini-2.5-* and the gemini-flash-latest alias stopped working for new keys (404 / hangs) in Nov 2026.
+  gemini: "gemini-3.5-flash-lite",
 };
 
 export function configuredProvider(): { provider: string; apiKey: string; model: string } | null {
