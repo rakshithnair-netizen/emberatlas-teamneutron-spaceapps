@@ -11,31 +11,44 @@ import { relevantFindings } from "@/lib/relevance";
 import type { Finding, KnownDiscrepancy } from "@/lib/types";
 import { EvidenceBadge } from "./EvidenceBadge";
 import { habitatQueryGravity, useHabitat } from "./HabitatProvider";
-import { gravityLabels } from "@/lib/basis";
 import { SourceChips } from "./SourceChips";
 import { useCards } from "./useCards";
 
 const findings = findingsJson as unknown as Finding[];
 const discrepancies = discrepanciesJson as unknown as KnownDiscrepancy[];
 
+// Reads naturally after "in". The first v2 heading put gravityLabels before the word "gravity", which
+// produced "at Microgravity gravity" and "at Lunar (0.165 g) gravity".
+const gravityPhrase: Record<ReturnType<typeof habitatQueryGravity>, string> = {
+  microgravity: "microgravity",
+  lunar: "lunar gravity (0.165 g)",
+};
+
+// Home-page "known vs missing" panel for the selected habitat. Left column: the closest located burn
+// cards (any fuel or gravity) plus findings linked to them. Right column: the evidence grade for a
+// solid-fuel query at the habitat's assumed gravity, which is the case that matters most for cabin fires.
 export function HabitatEvidenceSummary() {
   const { cards, error } = useCards();
   const { habitat } = useHabitat();
   const summary = useMemo(() => {
     if (!cards) return null;
+    // Every card with both O₂ and pressure, sorted by the project's normalized condition distance.
     const nearby = cards
       .filter((card) => card.o2_pct !== null && card.pressure_kpa !== null)
       .map((card) => ({ card, distance: conditionDistance(card.o2_pct!, card.pressure_kpa!, habitat.o2_pct, habitat.pressure_kpa) }))
       .sort((a, b) => a.distance - b.distance);
+    // Investigations behind the 8 closest cards drive which findings and discrepancies are shown.
     const investigations = [...new Set(nearby.slice(0, 8).map(({ card }) => card.investigation_id))];
+    // Gravity is an analysis assumption per habitat (see DECISIONS.md, "Ranking"), not a dataset field.
     const gravity = habitatQueryGravity(habitat.habitat_id);
     const query = { o2Pct: habitat.o2_pct, pressureKpa: habitat.pressure_kpa, gravity, fuelClass: "solid" as const };
-    const lunarSolid = classifyEvidence(query, cards);
+    const solidResult = classifyEvidence(query, cards);
     const nearestSources = [...new Set(nearby.slice(0, 4).flatMap(({ card }) => card.source_ids ?? []))];
     const tiedFindings = relevantFindings(query, investigations, findings, 3);
     const findingSources = [...new Set(tiedFindings.flatMap(({ finding }) => finding.source_ids))];
+    // De-duplicate discrepancies that list several investigations, then keep the first three.
     const tiedDiscrepancies = [...new Map(investigations.flatMap((id) => discrepanciesForInvestigation(id, discrepancies)).map((item) => [`${item.investigation}:${item.record}:${item.field}`, item])).values()].slice(0, 3);
-    return { nearby, lunarSolid, nearestSources, tiedFindings, findingSources, tiedDiscrepancies, gravity };
+    return { nearby, solidResult, nearestSources, tiedFindings, findingSources, tiedDiscrepancies, gravity };
   }, [cards, habitat]);
 
   if (error) return <p className="panel p-4 text-sm text-tier-extrapolated">Could not load the burn records: {error}</p>;
@@ -60,10 +73,10 @@ export function HabitatEvidenceSummary() {
           <div className="mt-2"><SourceChips ids={summary.findingSources} label="Finding sources" /></div>
         </div>
         <div className="rounded-lg border border-tier-extrapolated/40 bg-bg/50 p-4">
-          <h3 className="font-semibold">What is missing for solid fuel at {gravityLabels[summary.gravity]} gravity</h3>
-          <div className="mt-2 flex flex-wrap items-center gap-2"><EvidenceBadge tier={summary.lunarSolid.tier} size="sm" /><span className="text-xs leading-relaxed text-muted">{evidenceTierMeta[summary.lunarSolid.tier].description}</span></div>
-          <p className="mt-2 text-sm leading-relaxed">{summary.lunarSolid.gapStatement}</p>
-          <p className="mt-3 text-sm leading-relaxed"><strong>Interpretation:</strong> {summary.lunarSolid.tier === "measured" ? "The dataset includes a close test for this query; that record does not certify safety or establish behavior beyond its reported conditions." : summary.lunarSolid.tier === "interpolated" ? "The dataset supports an estimate between nearby tests, not a burn measured at the exact selected condition." : "The available evidence does not establish solid-fuel behavior for this selected atmosphere and gravity."} Use the matcher to inspect the nearest cards, caveats, and the stated gap-closing experiment.</p>
+          <h3 className="font-semibold">What is missing for solid fuel in {gravityPhrase[summary.gravity]}</h3>
+          <div className="mt-2 flex flex-wrap items-center gap-2"><EvidenceBadge tier={summary.solidResult.tier} size="sm" /><span className="text-xs leading-relaxed text-muted">{evidenceTierMeta[summary.solidResult.tier].description}</span></div>
+          <p className="mt-2 text-sm leading-relaxed">{summary.solidResult.gapStatement}</p>
+          <p className="mt-3 text-sm leading-relaxed"><strong>Interpretation:</strong> {summary.solidResult.tier === "measured" ? "The dataset includes a close test for this query; that record does not certify safety or establish behavior beyond its reported conditions." : summary.solidResult.tier === "interpolated" ? "The dataset supports an estimate between nearby tests, not a burn measured at the exact selected condition." : "The available evidence does not establish solid-fuel behavior for this selected atmosphere and gravity."} Use the matcher to inspect the nearest cards, caveats, and the stated gap-closing experiment.</p>
           {summary.tiedDiscrepancies.length ? <div className="mt-3 border-t border-line pt-3"><p className="text-xs font-semibold">Known source discrepancies in nearby investigations</p><ul className="mt-2 space-y-2 text-xs leading-relaxed text-muted">{summary.tiedDiscrepancies.map((item) => <li key={`${item.investigation}:${item.record}:${item.field}`}><span className="text-tier-analog">{item.investigation}</span> {item.record}, {item.field}: {item.psi_or_primary_value} vs {item.conflicting_or_expected_value}. {item.handling}</li>)}</ul></div> : null}
           <p className="mt-2 text-xs leading-relaxed text-muted">The gravity choice follows the project’s mapping: reference habitats use microgravity; exploration atmospheres and the suit use lunar gravity. These are analysis assumptions, not new test records.</p>
           <Link href={`/matcher?o2=${habitat.o2_pct}&p=${habitat.pressure_kpa}&g=${summary.gravity}&fuel=solid`} className="mt-3 inline-flex min-h-11 items-center rounded-md border border-habitat/50 px-3 text-sm text-habitat hover:bg-habitat/10">Inspect what is missing →</Link>

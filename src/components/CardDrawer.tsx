@@ -41,11 +41,14 @@ export function cardSearchParams(card: BurnCard): string {
 export function CardDrawer({ card, onClose }: { card: BurnCard | null; onClose: () => void }) {
   const closeButton = useRef<HTMLButtonElement>(null);
   const dialog = useRef<HTMLDivElement>(null);
+  // Keep the latest onClose in a ref so the keyboard effect below only re-runs when the card changes,
+  // not on every parent render that passes a new inline callback.
   const onCloseRef = useRef(onClose);
   useEffect(() => { onCloseRef.current = onClose; }, [onClose]);
 
   useEffect(() => {
     if (!card) return;
+    // Remember what had focus before the drawer opened so it can be restored on close.
     const previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     closeButton.current?.focus();
     const handler = (event: KeyboardEvent) => {
@@ -54,7 +57,10 @@ export function CardDrawer({ card, onClose }: { card: BurnCard | null; onClose: 
         onCloseRef.current();
       }
       if (event.key === "Tab") {
-        const focusable = dialog.current?.querySelectorAll<HTMLElement>('button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])');
+        // Focus trap. Every selector excludes tabindex="-1": the full-screen backdrop is a <button> with
+        // tabIndex -1 and comes first in DOM order, so without the exclusion it became the trap's "first"
+        // element, could never actually hold focus, and Shift+Tab from the Close button escaped the dialog.
+        const focusable = dialog.current?.querySelectorAll<HTMLElement>('button:not([disabled]):not([tabindex="-1"]), a[href]:not([tabindex="-1"]), input:not([disabled]):not([tabindex="-1"]), select:not([disabled]):not([tabindex="-1"]), textarea:not([disabled]):not([tabindex="-1"]), [tabindex]:not([tabindex="-1"])');
         if (!focusable?.length) return;
         const first = focusable[0];
         const last = focusable[focusable.length - 1];
@@ -63,6 +69,7 @@ export function CardDrawer({ card, onClose }: { card: BurnCard | null; onClose: 
       }
     };
     window.addEventListener("keydown", handler);
+    // On close (or when switching to another card), detach the listener and return focus.
     return () => {
       window.removeEventListener("keydown", handler);
       previouslyFocused?.focus();

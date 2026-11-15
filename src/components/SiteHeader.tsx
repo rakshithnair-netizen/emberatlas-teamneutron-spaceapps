@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { habitatList, shortHabitatName, useHabitat } from "./HabitatProvider";
 
+// The five core screening steps are always visible; the rest live under "More tools" to keep the
+// first-time path short.
 const primaryNav = [
   { href: "/", label: "Home" },
   { href: "/matcher", label: "Check a habitat" },
@@ -21,6 +23,11 @@ const secondaryNav = [
   { href: "/earth", label: "Earth Applications" },
   { href: "/family-tree", label: "Family Tree" },
 ];
+
+// "/" only matches the home page itself; every other entry also matches its nested routes.
+function isActive(pathname: string, href: string): boolean {
+  return href === "/" ? pathname === "/" : pathname.startsWith(href);
+}
 
 export function HabitatPicker({ compact = false }: { compact?: boolean }) {
   const { habitatId, setHabitatId, habitat } = useHabitat();
@@ -55,7 +62,38 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
   const mobileNav = useRef<HTMLElement>(null);
-  useEffect(() => setOpen(false), [pathname]);
+  const moreTools = useRef<HTMLDetailsElement>(null);
+
+  // The header lives in the root layout and stays mounted across client navigations, so menus must be
+  // closed explicitly when the route changes. The desktop "More tools" <details> previously stayed open
+  // over the new page after clicking one of its links.
+  useEffect(() => {
+    setOpen(false);
+    if (moreTools.current) moreTools.current.open = false;
+  }, [pathname]);
+
+  // Close the desktop "More tools" dropdown on a click outside it or on Escape, like a normal menu.
+  useEffect(() => {
+    const onPointerDown = (event: PointerEvent) => {
+      const details = moreTools.current;
+      if (details?.open && !details.contains(event.target as Node)) details.open = false;
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      const details = moreTools.current;
+      if (event.key === "Escape" && details?.open) {
+        details.open = false;
+        details.querySelector("summary")?.focus();
+      }
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, []);
+
+  // Mobile menu: move focus into it when opened, and let Escape close it and return focus to the toggle.
   useEffect(() => {
     if (!open) return;
     const firstLink = mobileNav.current?.querySelector<HTMLElement>("a, summary");
@@ -95,7 +133,7 @@ export function SiteHeader() {
         </Link>
         <nav className="hidden flex-1 items-center gap-0.5 xl:flex" aria-label="Primary">
           {primaryNav.map((item) => {
-            const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+            const active = isActive(pathname, item.href);
             return (
               <Link
                 key={item.href}
@@ -107,7 +145,7 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <details className="relative">
+          <details ref={moreTools} className="relative">
             <summary className="flex min-h-11 cursor-pointer list-none items-center rounded-md px-2 text-[13px] text-muted hover:text-ink">More tools</summary>
             <ul className="absolute right-0 top-full z-50 mt-1 min-w-52 rounded-lg border border-line bg-panel p-2 shadow-xl">
               {secondaryNav.map((item) => <li key={item.href}><Link href={item.href} aria-current={pathname.startsWith(item.href) ? "page" : undefined} className="flex min-h-11 items-center rounded px-3 text-sm text-muted hover:bg-panel-2 hover:text-ink">{item.label}</Link></li>)}
@@ -144,17 +182,22 @@ export function SiteHeader() {
             <HabitatPicker />
           </div>
           <ul className="grid gap-1 sm:grid-cols-2">
-            {primaryNav.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  aria-current={pathname === item.href ? "page" : undefined}
-                  className={`flex min-h-11 items-center rounded-md px-3 text-sm ${pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href)) ? "bg-panel-2 text-ink" : "text-muted"}`}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {primaryNav.map((item) => {
+              // Use the same rule for the highlight and for aria-current, so screen readers announce the
+              // current section on nested pages like /library/PSI-100 just as sighted users see it.
+              const active = isActive(pathname, item.href);
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    aria-current={active ? "page" : undefined}
+                    className={`flex min-h-11 items-center rounded-md px-3 text-sm ${active ? "bg-panel-2 text-ink" : "text-muted"}`}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <details className="mt-2 border-t border-line pt-2">
             <summary className="flex min-h-11 cursor-pointer items-center rounded-md px-3 text-sm font-medium text-habitat">More tools</summary>

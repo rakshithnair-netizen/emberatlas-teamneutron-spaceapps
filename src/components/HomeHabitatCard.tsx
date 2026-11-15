@@ -9,7 +9,12 @@ import { formatNumber } from "./Value";
 
 export function HomeHabitatCard() {
   const { habitat } = useHabitat();
+  // HAB-03 is the current exploration atmosphere (8.2 psia / 34% O₂), the app's reference target.
   const exploration = habitatList.find((entry) => entry.habitat_id === "HAB-03")!;
+  // HAB-01 (standard air / ISS cabin) stands in for the near-Earth conditions most tests used. Its values
+  // come from the dataset rather than hardcoded text so the comparison box stays honest.
+  const airBaseline = habitatList.find((entry) => entry.habitat_id === "HAB-01")!;
+  const isBaseline = habitat.habitat_id === airBaseline.habitat_id;
   const gravity = habitatQueryGravity(habitat.habitat_id);
   const distance = conditionDistance(habitat.o2_pct, habitat.pressure_kpa, exploration.o2_pct, exploration.pressure_kpa);
   return (
@@ -45,8 +50,8 @@ export function HomeHabitatCard() {
         <div className="mt-2 grid grid-cols-[1fr_auto_1fr] items-center gap-2 text-center">
           <div>
             <p className="text-xs text-muted">Many spacecraft tests</p>
-            <p className="mt-1 text-sm font-medium">Air-like oxygen</p>
-            <p className="text-xs text-muted">Near-normal pressure</p>
+            <p className="num mt-1 text-sm font-medium">{airBaseline.o2_pct}% O₂</p>
+            <p className="num text-xs text-muted">{airBaseline.pressure_kpa} kPa (air-like)</p>
           </div>
           <span className="text-habitat" aria-hidden="true">→</span>
           <div>
@@ -55,7 +60,13 @@ export function HomeHabitatCard() {
             <p className="num text-xs text-muted">{habitat.pressure_kpa} kPa</p>
           </div>
         </div>
-        <p className="mt-2 text-center text-xs leading-relaxed text-muted">Takeaway: evidence from different conditions may not directly answer the habitat question.</p>
+        {/* With the air reference selected, both sides are the same atmosphere, so the generic
+            "different conditions" takeaway would contradict the numbers shown above it. */}
+        <p className="mt-2 text-center text-xs leading-relaxed text-muted">
+          {isBaseline
+            ? "Takeaway: this target matches the air-like baseline, so it is the condition most tests were run near."
+            : "Takeaway: evidence from different conditions may not directly answer the habitat question."}
+        </p>
       </div>
       <p className="num mt-1 text-xs text-muted">Normalized distance to exploration-atmosphere reference: {formatNumber(distance, 2)}; lower means closer.</p>
       <div className="mt-3">

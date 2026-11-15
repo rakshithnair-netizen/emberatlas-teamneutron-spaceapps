@@ -7,7 +7,7 @@ import discrepanciesJson from "@/data/raw/known_discrepancies.json";
 import findingsJson from "@/data/raw/findings.json";
 import { gravityLabels, normalizeGravity, type QueryGravity } from "@/lib/basis";
 import { discrepanciesForInvestigation } from "@/lib/discrepancy";
-import { classifyEvidence, evidenceTierMeta } from "@/lib/evidence";
+import { classifyEvidence, evidenceTierMeta, type NearestCard } from "@/lib/evidence";
 import { kpaToPsia, ppO2Kpa, psiaToKpa } from "@/lib/geometry";
 import { relevantFindings } from "@/lib/relevance";
 import type { BurnCard, ConditionQuery, Finding, KnownDiscrepancy } from "@/lib/types";
@@ -51,6 +51,21 @@ function readParams(params: URLSearchParams): FormState {
 function signed(value: number, digits = 1): string {
   const text = formatNumber(Math.abs(value), digits);
   return value > 0 ? `+${text}` : value < 0 ? `−${text}` : "0";
+}
+
+// Describes the nearest card in the map summary using the card's OWN fuel class and gravity regime.
+// For Analog (and No data) results, classifyEvidence returns cards from other gravity regimes or fuel
+// classes, so labelling them with the query's fuel/gravity (as the first v2 text did) stated something
+// false, e.g. calling a microgravity FLEX droplet the "nearest liquid-fuel lunar card".
+function mapSummaryNearest(nearest: NearestCard<BurnCard> | undefined, query: ConditionQuery): string {
+  if (!nearest) return "No located card is close enough to compare.";
+  const cardGravity = gravityLabels[normalizeGravity(nearest.card.gravity_regime)].toLowerCase();
+  const described = `${nearest.card.card_id} (${nearest.card.fuel_class} fuel, ${cardGravity})`;
+  if (nearest.sameRegime && nearest.sameFuelClass) {
+    const scope = query.fuelClass === "any" ? "any-fuel" : `${query.fuelClass}-fuel`;
+    return `The nearest ${scope} ${gravityLabels[query.gravity].toLowerCase()} card is ${described}.`;
+  }
+  return `No card matches this fuel and gravity; the nearest related card is ${described}, which is an analog, not a test at your conditions.`;
 }
 
 export function MatcherView({ hulls }: { hulls: Hull[] }) {
@@ -340,7 +355,7 @@ export function MatcherView({ hulls }: { hulls: Hull[] }) {
                   height={420}
                 />
                 <p className="px-3 pb-3 text-xs leading-relaxed text-muted">
-                  Map summary: your {o2Pct}% O₂, {pressureKpa} kPa query is marked against the NASA test envelope. The nearest {query.fuelClass === "any" ? "matching-fuel" : `${query.fuelClass}-fuel`} {query.gravity} card is {result.nearestCards[0]?.card.card_id ?? "not available"}; the table above lists the nearest records and sources.
+                  Map summary: your {formatNumber(o2Pct)}% O₂, {formatNumber(pressureKpa)} kPa query is marked against the NASA test envelope. {mapSummaryNearest(result.nearestCards[0], query)} The table above lists the nearest records and sources.
                 </p>
               </section>
 

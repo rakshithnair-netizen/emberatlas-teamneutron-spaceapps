@@ -8,21 +8,30 @@ import type { BurnCard } from "@/lib/types";
 import { habitatList, useHabitat } from "./HabitatProvider";
 import { useCards } from "./useCards";
 
+// SVG viewBox size and plot margins; the SVG scales to its container, so these are logical units.
 const WIDTH = 760;
 const HEIGHT = 390;
 const PAD = { left: 64, right: 22, top: 24, bottom: 54 };
+
+// Home-page scatter of every located burn card (pressure on a log x-axis, O₂ % on y) with a star at
+// the selected habitat. It is a lightweight hand-drawn SVG rather than Plotly so the home page stays light.
 export function EvidenceGapChart() {
   const { cards, error } = useCards();
   const { habitat } = useHabitat();
   const analysis = useMemo(() => {
     if (!cards) return null;
-    const located = cards.filter((card): card is BurnCard & { o2_pct: number; pressure_kpa: number } => card.o2_pct !== null && card.pressure_kpa !== null);
+    // Only cards with both coordinates can be plotted. Pressure must also be positive because the
+    // x-axis is logarithmic and log(0) would break every position on the chart.
+    const located = cards.filter((card): card is BurnCard & { o2_pct: number; pressure_kpa: number } => card.o2_pct !== null && card.pressure_kpa !== null && card.pressure_kpa > 0);
     const pressures = located.map((card) => card.pressure_kpa);
+    // Axis ranges include every habitat preset, so switching habitats never moves the star off-chart.
     const allPressures = [...pressures, ...habitatList.map((entry) => entry.pressure_kpa)];
     const allO2 = [...located.map((card) => card.o2_pct), ...habitatList.map((entry) => entry.o2_pct)];
     const minPressure = Math.min(...allPressures);
     const maxPressure = Math.max(...allPressures);
     const maxO2 = Math.ceil(Math.max(...allO2) / 10) * 10;
+    // Pure proximity count across all fuels and gravities. It deliberately does not assign a grade:
+    // the Measured grade also needs the same gravity, fuel class and a stated basis (see lib/evidence.ts).
     const nearby = located.filter((card) => conditionDistance(card.o2_pct, card.pressure_kpa, habitat.o2_pct, habitat.pressure_kpa) <= MEASURED_DISTANCE).length;
     return { located, minPressure, maxPressure, maxO2, nearby };
   }, [cards, habitat]);
@@ -30,6 +39,7 @@ export function EvidenceGapChart() {
   if (error) return <p className="panel p-4 text-sm text-tier-extrapolated">{error}</p>;
   if (!analysis) return <div className="panel flex min-h-56 items-center justify-center p-5 text-sm text-muted">Loading the plotted test records…</div>;
 
+  // Log-scale x mapping with 4% padding on each side so edge points are not clipped by the axis.
   const rawLogMin = Math.log(analysis.minPressure);
   const rawLogRange = Math.log(analysis.maxPressure) - rawLogMin || 1;
   const logMin = rawLogMin - rawLogRange * 0.04;

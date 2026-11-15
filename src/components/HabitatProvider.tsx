@@ -63,6 +63,9 @@ export function shortHabitatName(habitat: HabitatAtmosphere): string {
   return names[habitat.habitat_id] ?? habitat.name;
 }
 
+// The gravity each habitat preset is assessed in. The dataset has no gravity field for habitats, so this
+// is an analysis assumption: ISS and Shuttle references (HAB-01, HAB-02) fly in microgravity; exploration
+// atmospheres and the suit (HAB-03 to HAB-06) are for lunar surface operations. See DECISIONS.md.
 export function habitatQueryGravity(habitatId: string): "microgravity" | "lunar" {
   return habitatId === "HAB-01" || habitatId === "HAB-02" ? "microgravity" : "lunar";
 }
